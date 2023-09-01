@@ -4,7 +4,6 @@ import MainColumns from "./components/MainThreeColumns/MainColumns"
 import Products from "./components/DesktopProduct/Products"
 import Billboard from "./components/Billboard/Billboard"
 
-
 export default function mainView() {
   return (
 
@@ -14,6 +13,7 @@ export default function mainView() {
       <MainColumns />
       <MainDesignSection />
       <Products />
+
     </>
   );
 }

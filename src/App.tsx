@@ -6,14 +6,11 @@ import Billboard from "./components/Billboard/Billboard"
 
 export default function mainView() {
   return (
-
     <>
-      <Header />
       <Billboard />
       <MainColumns />
       <MainDesignSection />
       <Products />
-
     </>
   );
 }

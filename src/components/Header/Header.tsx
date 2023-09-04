@@ -1,8 +1,9 @@
-import React, { useState, useEffect } from "react";
-import logo from "../../logo2.svg";
+import { useState, useEffect } from "react"
+import logo from "../../logo2.svg"
+import './header.scss'
 
 function Header() {
-  const [header, setHeader] = useState("header__main");
+  const [header, setHeader] = useState("header__main")
 
   const listenScrollEvent = () => {
     if (window.scrollY < 70) {
@@ -15,28 +16,23 @@ function Header() {
   useEffect(() => {
     window.addEventListener("scroll", listenScrollEvent);
     return () => window.removeEventListener("scroll", listenScrollEvent);
-  }, []);
+  }, [listenScrollEvent]);
 
   return (
-   
-        <div className="header">
-        <header className={header}>
-          <div className="header__logo">
-              <img src={logo} />
-              
-            </div>
-            
-            <ul className="header__links">
-              <li className="header__link__item">home</li>
-              <li className="header__link__item">about</li>
-              <li className="header__link__item">blog</li>
-              <li className="header__link__item">contact</li>
-            </ul>
 
-            
-        </header>
-        </div>
-      
+    <header className={header}>
+      <div className="header__logo">
+        <img src={logo} />
+      </div>
+
+      <ul className="header__links">
+        <li className="header__link__item">home</li>
+        <li className="header__link__item">about</li>
+        <li className="header__link__item">blog</li>
+        <li className="header__link__item">contact</li>
+      </ul>
+
+    </header>
   );
 }
 

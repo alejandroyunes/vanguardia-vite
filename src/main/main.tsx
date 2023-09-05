@@ -10,6 +10,7 @@ import Header from '../components/Header/Header.tsx'
 import "../scss/styles.scss"
 import { ThemeProvider } from "styled-components"
 import { darkTheme } from "../styles/themes/darkTheme"
+import HeaderTwo from '../components/Header/headerTwo.tsx'
 
 // const [ theme ] = useLocalStorage('theme', darkTheme)
 
@@ -18,7 +19,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     {/* <ThemeProvider theme={theme}> */}
 
-      <Header />
+      <HeaderTwo />
       <RouterProvider router={router} />
 
     {/* </ThemeProvider> */}

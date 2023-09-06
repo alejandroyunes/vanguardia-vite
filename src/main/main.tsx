@@ -1,28 +1,26 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import {
-  RouterProvider,
-} from "react-router-dom"
+import { RouterProvider } from "react-router-dom"
 import { useLocalStorage } from "usehooks-ts"
 
 import router from './routes/index.tsx'
-import Header from '../components/Header/Header.tsx'
 import "../scss/styles.scss"
 import { ThemeProvider } from "styled-components"
 import { darkTheme } from "../styles/themes/darkTheme"
-import HeaderTwo from '../components/Header/headerTwo.tsx'
+import Header from '../components/Header/Header.tsx'
 
-// const [ theme ] = useLocalStorage('theme', darkTheme)
 
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
-  <React.StrictMode>
-    {/* <ThemeProvider theme={theme}> */}
 
-      <HeaderTwo />
+  
+  <React.StrictMode>
+    <ThemeProvider theme={darkTheme}>
+
+      <Header />
       <RouterProvider router={router} />
 
-    {/* </ThemeProvider> */}
+    </ThemeProvider>
 
   </React.StrictMode>,
 )

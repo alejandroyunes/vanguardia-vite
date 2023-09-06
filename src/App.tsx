@@ -1,4 +1,3 @@
-import Header from "./components/Header/Header"
 import { MainDesignSection } from "./components/MainDesignSection/MainDesignSection"
 import MainColumns from "./components/MainThreeColumns/MainColumns"
 import Products from "./components/DesktopProduct/Products"

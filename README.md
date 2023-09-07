@@ -12,7 +12,7 @@ Currently, two official plugins are available:
 If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
 
 - Configure the top-level `parserOptions` property like this:
-
+##https://youtu.be/cNcV30ulSXs?si=jB-krkyVnhdOBmYk&t=2183
 ```js
    parserOptions: {
     ecmaVersion: 'latest',

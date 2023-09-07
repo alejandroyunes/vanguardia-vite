@@ -1,10 +1,8 @@
 import logo from "../../logo2.svg"
 import { HeaderContainer, Logo, NavContainer, NavItems, HamburgerMenu } from "./header.styled"
-import './styles.scss'
 import ColorSwitcher from "../ThemeSwitcher/colorSwitcher"
 
 export default function Header() {
-
   return (
     <HeaderContainer>
       <Logo className="nav-logo">
@@ -38,8 +36,6 @@ export default function Header() {
           </div>
         </HamburgerMenu>
       </NavContainer>
-
-
     </HeaderContainer>
   )
 }

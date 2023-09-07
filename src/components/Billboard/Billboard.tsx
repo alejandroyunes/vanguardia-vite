@@ -1,15 +1,11 @@
-import React from "react";
-
-import Animation from "../animation";
+import Animation from "./animation";
+import { BillboardContainer } from "./billboard.styled";
 
 export default function Billboard() {
   return (
     <>
-
-      <div className="showcase__content">
-        
-
-        <div className="showcase__content__title">
+      <BillboardContainer>
+        <div className="billboard-title">
           <h1>
             Building Amazing  <br />Web Experiences
           </h1>
@@ -18,21 +14,18 @@ export default function Billboard() {
             We build mobile and web products for startups and design intricate
             trading platforms.
           </h2>
-          <div className="showcase__content__email">
-              <input type="text" placeholder="Email address" name="mail" />
+          <div className="billboard-email">
+            <input type="text" placeholder="Email address" name="mail" />
             <input type="submit" value="Submit" />
           </div>
         </div>
 
-        <div className="showcase__content__svg">
+        <div className="billboard-svg">
           <Animation />
         </div>
 
-      </div>
+      </BillboardContainer>
 
-
-     
-      
     </>
   );
 }

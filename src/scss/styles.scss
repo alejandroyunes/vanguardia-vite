@@ -113,137 +113,6 @@ a {
   text-decoration: none;
 }
 
-//billboard__title__and__paragraph
-.showcase__content {
-  padding: $default-padding32 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto;
-  max-width: 1140px;
-  &__svg {
-    width: 50%;
-    text-align: center;
-  }
-  &__title {
-    width: 50%;
-    padding: $default-padding20;
-    h1 {
-      font-weight: bold;
-      color: $dark-blue;
-      font-size: 3.8em;
-      line-height: 1.2;
-    }
-    h2 {
-      color: $lighter-black;
-      font-size: 1.2rem;
-      line-height: 2rem;
-      padding: $default-padding16 0;
-    }
-  }
-  &__email {
-    display: flex;
-    padding: $default-padding8 0;
-    input[type="text"],
-    input[type="submit"] {
-      width: 70%;
-      padding: 12px;
-      display: inline-block;
-      border: 1px solid #ccc;
-    }
-    input[type="submit"] {
-      background-color: $dark-blue;
-      color: white;
-      border: none;
-      width: 30%;
-      margin-left: 8px;
-      cursor: pointer;
-    }
-    input[type="submit"]:hover {
-      opacity: 0.8;
-    }
-  }
-}
-
-.three__card__container {
-  display: flex;
-  align-items: center;
-  margin: 0 auto;
-  justify-content: center;
-  max-width: 1140px;
-  padding: $default-padding32 0;
-  &__wrapper {
-    padding: $default-padding24;
-    margin: $default-padding32;
-    background-color: #fff;
-    border-radius: 0.5rem;
-    width: 320px;
-    height: 480px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  }
-
-  &__img__div {
-    text-align: center;
-  }
-  img {
-    width: 150px;
-    height: 150px;
-  }
-  h2 {
-    font-size: 1.5rem;
-    padding: $default-padding8 0;
-    font-weight: 700;
-    color: #666666;
-  }
-  h3 {
-    color: #ae3c43;
-    padding: $default-padding8 0;
-    font-weight: 600;
-  }
-  h6 {
-    color: $light-gray;
-    padding: $default-padding8 0;
-    font-weight: 600;
-    text-decoration: underline;
-    cursor: pointer;
-  }
-  p {
-    padding: $default-padding8 0;
-  }
-}
-
-#rocket {
-  animation: topBottom 5s infinite;
-}
-
-@keyframes topBottom {
-  0% {
-    transform: translate(0, 0);
-  }
-  50% {
-    transform: translate(0, -200px);
-  }
-  100% {
-    transform: translate(0, 0);
-  }
-}
-
-#circle {
-  animation-name: rotateme;
-  animation-duration: 40s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-}
-
-@keyframes rotateme {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
 .design__section {
   img{
     width: 100%;
@@ -288,12 +157,8 @@ a {
    
       }
     
-    }
-
-
+  }
 } 
-
-
 
 .main-title {
   display: flex;

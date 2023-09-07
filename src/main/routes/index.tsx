@@ -1,4 +1,4 @@
-import App from '../../App.tsx'
+import App from '../../pages/index.tsx'
 import ErrorPage from '../../pages/error-page.tsx'
 import { createBrowserRouter } from "react-router-dom"
 

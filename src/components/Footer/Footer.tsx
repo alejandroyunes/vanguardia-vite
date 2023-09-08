@@ -1,25 +1,25 @@
-import React, { FC, useEffect, useState } from "react";
-import "./Footer.scss";
-import MailOutlineIcon from "@mui/icons-material/MailOutline";
-import PhoneAndroidIcon from "@mui/icons-material/PhoneAndroid";
-import InstagramIcon from "@mui/icons-material/Instagram";
-import TwitterIcon from "@mui/icons-material/Twitter";
-import FacebookIcon from "@mui/icons-material/Facebook";
-import GitHubIcon from "@mui/icons-material/GitHub";
+import { FC, useEffect, useState } from "react"
+import MailOutlineIcon from "./svgs/email"
+import PhoneAndroidIcon from "./svgs/phone"
+import InstagramIcon from "./svgs/instagram"
+import TwitterIcon from "./svgs/twitter"
+import FacebookIcon from "./svgs/facebook"
+import GitHubIcon from "./svgs/github"
 import WeatherSpinner from './WeatherIcons/WeatherSpinner/WeatherSpinner'
 import Thunder from './WeatherIcons/Thunder/Thunder'
 import DrizzleDay from './WeatherIcons/Drizzle/Day/DrizzleDay'
 import DrizzleNight from './WeatherIcons/Drizzle/Night/DrizzleNight'
 import Rain from './WeatherIcons/Rain/Rain'
 import Snow from './WeatherIcons/Snow/Snow'
-import LocationOnIcon from '@mui/icons-material/LocationOn';
+import LocationOnIcon from './svgs/location'
 
 import ClearNight from './WeatherIcons/NightClear/ClearNight'
 import ClearDay from './WeatherIcons/DayClear/ClearDay'
 import CloudsDay from './WeatherIcons/Clouds/Day/CloudsDay'
 import CloudsNight from './WeatherIcons/Clouds/Night/CloudsNight'
-
 import Mist from './WeatherIcons/Mist/Mist'
+
+import { FooterContainer } from './Footer.styled'
 
 const Footer: FC = () => {
 
@@ -29,7 +29,7 @@ const Footer: FC = () => {
   const [main, setMain] = useState('');
   const [time, setTime] = useState(0);
 
-  
+
   useEffect(() => {
     fetch('https://api.openweathermap.org/data/2.5/weather?q=Medellín,co&APPID=' + key + '&units=metric')
       .then(res => res.json())
@@ -46,7 +46,7 @@ const Footer: FC = () => {
   }, [])
 
   return (
-    <>
+    <FooterContainer>
       <div className="footer">
         <div className="section__grid footer__grid">
           <div className="footer-child-one">
@@ -57,30 +57,22 @@ const Footer: FC = () => {
                 <h3>El clima en Medellín:</h3>
               </div>
               <div className="climate-data-two">
-
-
                 {(() => {
                   switch (main) {
-
                     case "Thunderstorm": return <Thunder />;
-                    case "Drizzle": return (time >= 6 && time < 18? <DrizzleDay /> : <DrizzleNight />);
+                    case "Drizzle": return (time >= 6 && time < 18 ? <DrizzleDay /> : <DrizzleNight />);
                     case "Rain": return <Rain />;
                     case "Snow": return <Snow />;
-                    case "Clear": return (time >= 6 && time < 18? <ClearDay /> : <ClearNight />);
-                    case "Clouds": return (time >= 6 && time < 18? <CloudsDay /> : <CloudsNight />);
-
-                    case "Mist" || "Smoke" || "Haze" || "Dust" || "Fog"|| "Sand"|| "Ash"|| "Squall"|| "Tornado": return <Mist />;
-
-
+                    case "Clear": return (time >= 6 && time < 18 ? <ClearDay /> : <ClearNight />);
+                    case "Clouds": return (time >= 6 && time < 18 ? <CloudsDay /> : <CloudsNight />);
+                    case "Mist" || "Smoke" || "Haze" || "Dust" || "Fog" || "Sand" || "Ash" || "Squall" || "Tornado": return <Mist />;
                     default: return <WeatherSpinner />
                   }
                 })()}
               </div>
-
             </div>
-
             <div className="footer__icon">
-              <MailOutlineIcon /> <p>Alejandro@website.com</p>
+              <MailOutlineIcon /> <p>alejandroyunes@outlook.com</p>
             </div>
             <div className="footer__icon">
               <PhoneAndroidIcon /> <p>304 669 5598</p>
@@ -90,10 +82,10 @@ const Footer: FC = () => {
               <p>En algún lugar del mundo</p>
             </div>
             <div className="footer__social">
-              <InstagramIcon fontSize="large" />
-              <FacebookIcon fontSize="large" />
-              <TwitterIcon fontSize="large" />
-              <GitHubIcon fontSize="large" />
+              <InstagramIcon />
+              <FacebookIcon />
+              <TwitterIcon />
+              <GitHubIcon />
             </div>
           </div>
           <div className="footer-child-two">
@@ -120,7 +112,7 @@ const Footer: FC = () => {
           </div>
         </div>
       </div>
-    </>
-  );
-};
+    </FooterContainer>
+  )
+}
 export default Footer;

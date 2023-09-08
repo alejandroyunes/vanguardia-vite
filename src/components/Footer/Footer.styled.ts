@@ -1,11 +1,10 @@
-@import "../../sass/config";
-@import "../../sass/utilities";
-@import "../../sass/mixins";
+import styled from 'styled-components'
 
-.footer {
+export const FooterContainer = styled.div`
   margin: 0 auto;
   max-width: 2000px;
-  background-color: $secondary-color;
+  background-color: ${({ theme }) => theme.palette.black};
+
   .footer__grid {
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(2, 1fr);
@@ -14,15 +13,16 @@
       "footer-child-one"
       "footer-child-two";
     padding-bottom: 40px;
-    @include mq($screen-tablet-footer) {
+
+  	@media(max-width: ${({ theme }) => theme.breakpoint.sm}){ 
       margin: 0 auto;
       padding-bottom: 40px;
       grid-template-columns: repeat(2, 1fr);
       grid-template-rows: 1fr;
       grid-template-areas: "footer-child-one footer-child-two";
-    }
+     }
 
-    .footer-child-one {
+     .footer-child-one {
       grid-area: footer-child-one;
       padding: 40px 0 0 16px;
       h1 {
@@ -35,7 +35,7 @@
         color: white;
         font-size: 1.2rem;
         line-height: 2rem;
-        padding: $default-padding16 0;
+        padding: 16px 0;
       }
       h3 {
         color: white;
@@ -46,7 +46,7 @@
       .footer__icon {
         color: white;
         display: flex;
-        padding: $default-padding8 0;
+        padding: 8px 0;
 
         p {
           padding-left: 16px;
@@ -88,9 +88,7 @@
       grid-area: footer-child-two;
       margin-top: 60px;
       padding: 0 16px;
-    }
-    @include mq($screen-tablet) {
-      .footer-child-two {
+  	  @media(max-width: ${({ theme }) => theme.breakpoint.sm}){
         padding: 0 32px;
       }
     }
@@ -102,7 +100,7 @@
       border-radius: 5px;
       line-height: 22px;
       background-color: transparent;
-      border: 2px solid $primary-color;
+      border: 2px solid ${({ theme }) => theme.palette.primary.main};
       transition: all 0.3s;
       padding: 13px;
       margin-bottom: 15px;
@@ -112,7 +110,7 @@
     }
 
     .feedback-input:focus {
-      border: 2px solid $dark-red;
+      border: 2px solid ${({ theme }) => theme.palette.red};
     }
 
     textarea {
@@ -123,7 +121,7 @@
 
     [type="submit"] {
       width: 100%;
-      background: $primary-color;
+      background: ${({ theme }) => theme.palette.red};
       border-radius: 5px;
       border: 0;
       cursor: pointer;
@@ -136,7 +134,8 @@
       font-weight: 700;
     }
     [type="submit"]:hover {
-      background: $dark-red;
+      background: ${({ theme }) => theme.palette.red};
     }
   }
-}
+`
+

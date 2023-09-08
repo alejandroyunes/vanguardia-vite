@@ -1,6 +1,3 @@
-import ResponsiveDesignIcon from "../../images/responsive-design-icon.svg";
-import MobileDesignIcon from "../../images/mobile-design-icon.svg";
-import RocketAnimation from "./rocket-animation.svg"
 import { ThreeCardContainer, MobileCardContainer, DesktopCardContainer } from "./three-colums.styled";
 import 'react-responsive-carousel/lib/styles/carousel.min.css'
 import { Carousel as CarouselContainer } from 'react-responsive-carousel'

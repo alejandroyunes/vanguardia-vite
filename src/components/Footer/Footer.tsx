@@ -47,70 +47,66 @@ const Footer: FC = () => {
 
   return (
     <FooterContainer>
-      <div className="footer">
-        <div className="section__grid footer__grid">
-          <div className="footer-child-one">
-            <h1>Nuestra Oficina</h1>
-            <h2>Agencia digital líder con sólida experiencia en diseño y desarrollo.</h2>
-            <div className="climate-data">
-              <div className="climate-data-one">
-                <h3>El clima en Medellín:</h3>
-              </div>
-              <div className="climate-data-two">
-                {(() => {
-                  switch (main) {
-                    case "Thunderstorm": return <Thunder />;
-                    case "Drizzle": return (time >= 6 && time < 18 ? <DrizzleDay /> : <DrizzleNight />);
-                    case "Rain": return <Rain />;
-                    case "Snow": return <Snow />;
-                    case "Clear": return (time >= 6 && time < 18 ? <ClearDay /> : <ClearNight />);
-                    case "Clouds": return (time >= 6 && time < 18 ? <CloudsDay /> : <CloudsNight />);
-                    case "Mist" || "Smoke" || "Haze" || "Dust" || "Fog" || "Sand" || "Ash" || "Squall" || "Tornado": return <Mist />;
-                    default: return <WeatherSpinner />
-                  }
-                })()}
-              </div>
-            </div>
-            <div className="footer__icon">
-              <MailOutlineIcon /> <p>alejandroyunes@outlook.com</p>
-            </div>
-            <div className="footer__icon">
-              <PhoneAndroidIcon /> <p>304 669 5598</p>
-            </div>
-            <div className="footer__icon">
-              <LocationOnIcon />
-              <p>En algún lugar del mundo</p>
-            </div>
-            <div className="footer__social">
-              <InstagramIcon />
-              <FacebookIcon />
-              <TwitterIcon />
-              <GitHubIcon />
-            </div>
+      <div className="footer-child-one">
+        <h1>Nuestra Oficina</h1>
+        <h2>Agencia digital líder con sólida experiencia en diseño y desarrollo.</h2>
+        <div className="climate-data">
+          <div className="climate-data-one">
+            <h3>El clima en Medellín:</h3>
           </div>
-          <div className="footer-child-two">
-            <form>
-              <input
-                name="name"
-                type="text"
-                className="feedback-input"
-                placeholder="Nombre"
-              />
-              <input
-                name="email"
-                type="text"
-                className="feedback-input"
-                placeholder="Email"
-              />
-              <textarea
-                name="text"
-                className="feedback-input"
-                placeholder="Comentario"
-              ></textarea>
-              <input type="submit" value="Enviar" />
-            </form>
+          <div className="climate-data-two">
+            {(() => {
+              switch (main) {
+                case "Thunderstorm": return <Thunder />;
+                case "Drizzle": return (time >= 6 && time < 18 ? <DrizzleDay /> : <DrizzleNight />);
+                case "Rain": return <Rain />;
+                case "Snow": return <Snow />;
+                case "Clear": return (time >= 6 && time < 18 ? <ClearDay /> : <ClearNight />);
+                case "Clouds": return (time >= 6 && time < 18 ? <CloudsDay /> : <CloudsNight />);
+                case "Mist" || "Smoke" || "Haze" || "Dust" || "Fog" || "Sand" || "Ash" || "Squall" || "Tornado": return <Mist />;
+                default: return <WeatherSpinner />
+              }
+            })()}
           </div>
         </div>
+        <div className="footer__icon">
+          <MailOutlineIcon /> <p>alejandroyunes@outlook.com</p>
+        </div>
+        <div className="footer__icon">
+          <PhoneAndroidIcon /> <p>304 669 5598</p>
+        </div>
+        <div className="footer__icon">
+          <LocationOnIcon />
+          <p>En algún lugar del mundo</p>
+        </div>
+        <div className="footer__social">
+          <InstagramIcon />
+          <FacebookIcon />
+          <TwitterIcon />
+          <GitHubIcon />
+        </div>
+      </div>
+      <div className="footer-child-two">
+        <form>
+          <input
+            name="name"
+            type="text"
+            className="feedback-input"
+            placeholder="Nombre"
+          />
+          <input
+            name="email"
+            type="text"
+            className="feedback-input"
+            placeholder="Email"
+          />
+          <textarea
+            name="text"
+            className="feedback-input"
+            placeholder="Comentario"
+          ></textarea>
+          <input type="submit" value="Enviar" />
+        </form>
       </div>
     </FooterContainer>
   )

@@ -1,44 +1,33 @@
 import styled from 'styled-components'
 
 export const FooterContainer = styled.div`
-  margin: 0 auto;
-  max-width: 2000px;
-  background-color: ${({ theme }) => theme.palette.black};
-
-  .footer__grid {
-    grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    grid-template-rows: 1fr;
-    grid-template-areas:
-      "footer-child-one"
-      "footer-child-two";
+    margin: 0 auto;
     padding-bottom: 40px;
-
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    padding: 40px 24px 0;
   	@media(max-width: ${({ theme }) => theme.breakpoint.sm}){ 
-      margin: 0 auto;
-      padding-bottom: 40px;
-      grid-template-columns: repeat(2, 1fr);
-      grid-template-rows: 1fr;
-      grid-template-areas: "footer-child-one footer-child-two";
+      grid-template-columns: repeat(1, auto);
+      grid-template-rows: repeat(2, auto);
      }
-
-     .footer-child-one {
-      grid-area: footer-child-one;
-      padding: 40px 0 0 16px;
+    .footer-child-one {
       h1 {
         font-weight: bold;
-        color: white;
+        color: ${({ theme }) => theme.palette.primary.main};
         font-size: 3.8em;
         line-height: 1.2;
       }
       h2 {
-        color: white;
+        color: ${({ theme }) => theme.palette.primary.contrastText};
+        font-weight: 400;
         font-size: 1.2rem;
         line-height: 2rem;
-        padding: 16px 0;
+        padding: 8px 0;
+        font-weight: 400;
       }
       h3 {
-        color: white;
+        color: ${({ theme }) => theme.palette.red};
         font-size: 1.2rem;
         line-height: 2rem;
         padding: 0 0 8px 0;
@@ -47,20 +36,19 @@ export const FooterContainer = styled.div`
         color: white;
         display: flex;
         padding: 8px 0;
-
         p {
           padding-left: 16px;
-          color: #7f7f7f;
+          color: ${({ theme }) => theme.palette.primary.contrastText};
         }
         p:hover {
-          color: $primary-color;
+          color: ${({ theme }) => theme.palette.primary.main};
           cursor: pointer;
         }
       }
       .footer__social {
         color: white;
         display: flex;
-        padding: $default-padding8 0;
+        padding: 8px 0;
         :nth-child(1) {
           margin-right: 16px;
         }
@@ -71,7 +59,7 @@ export const FooterContainer = styled.div`
           margin-right: 16px;
         }
         :hover {
-          color: $primary-color;
+          color: ${({ theme }) => theme.palette.primary.main};
           cursor: pointer;
         }
       }
@@ -83,14 +71,8 @@ export const FooterContainer = styled.div`
         padding-right: 10px;
       }
     }
-
     .footer-child-two {
-      grid-area: footer-child-two;
-      margin-top: 60px;
-      padding: 0 16px;
-  	  @media(max-width: ${({ theme }) => theme.breakpoint.sm}){
-        padding: 0 32px;
-      }
+      margin: 40px 0;
     }
 
     .feedback-input {
@@ -121,7 +103,7 @@ export const FooterContainer = styled.div`
 
     [type="submit"] {
       width: 100%;
-      background: ${({ theme }) => theme.palette.red};
+      background: ${({ theme }) => theme.palette.primary.main};
       border-radius: 5px;
       border: 0;
       cursor: pointer;
@@ -134,8 +116,7 @@ export const FooterContainer = styled.div`
       font-weight: 700;
     }
     [type="submit"]:hover {
-      background: ${({ theme }) => theme.palette.red};
+      background: "rgb(33, 99, 151, .6)";
     }
-  }
 `
 

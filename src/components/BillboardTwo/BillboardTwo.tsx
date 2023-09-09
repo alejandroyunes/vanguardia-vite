@@ -1,6 +1,6 @@
 import { BillboardTwoContainer, BillboardRight, BillboardLeft } from './billboard-two.styled'
 import dashboard from '../../assets/billboard-two.webp'
-import Checkmark from './checkmark';
+import Checkmark from './Checkmark'
 
 export default function BillboardTwo() {
 	return (
@@ -14,19 +14,19 @@ export default function BillboardTwo() {
 				<ul>
 					<li>
 						<Checkmark />
-						Sitio web completamente personalizado
+						<p>Especialización en desarrollo web</p>
 					</li>
 					<li>
 						<Checkmark />
-						Diseño profesional
+						<p>Resultados medibles y métricas de tráfico</p>
 					</li>
 					<li>
 						<Checkmark />
-						Optimizado para la conversión
+						<p>Creatividad, marketing digital, SEO, y más</p> 
 					</li>
 					<li>
 						<Checkmark />
-						Soporte continuo
+						<p>Soporte y escalabilidad</p>
 					</li>
 				</ul>
 				<h2>

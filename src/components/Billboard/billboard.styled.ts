@@ -32,7 +32,7 @@ export const BillboardContainer = styled.div`
         }
       }
       h2 {
-        color: ${({ theme }) => theme.palette.primary.contrastText};
+        color: ${({ theme }) => theme.palette.gray};
         font-size: 1.2rem;
         line-height: 2rem;
         padding: 20px 0 28px;

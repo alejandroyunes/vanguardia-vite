@@ -50,6 +50,9 @@ export const BillboardLeft = styled.div`
 		line-height: 2;
   	display: flex;
   	align-items: center;
+		p {
+			padding-left: 4px;
+		}
   }
 `
 

@@ -17,6 +17,7 @@ export default function Header() {
     { text: 'Sobre mi', path: '/sobre-mi' },
     { text: 'Servicios', path: '/servicios' },
     { text: 'Portafolio', path: '/portafolio' },
+    { text: 'Blog', path: '/blog' },
   ];
 
   const handleClick = (path: string, isMobile?: boolean) => {

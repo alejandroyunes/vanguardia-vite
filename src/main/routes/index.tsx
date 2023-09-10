@@ -1,13 +1,33 @@
 import App from '../../pages/index.tsx'
-import ErrorPage from '../../pages/error-page.tsx'
-import { createBrowserRouter } from "react-router-dom"
+import About from '../../pages/about.tsx'
+import Services from '../../pages/services.tsx'
+import Portfolio from '../../pages/portfolio.tsx'
 
-const router = createBrowserRouter([
+import ErrorPage from '../../pages/error-page.tsx'
+import { RouteObject } from "react-router-dom"
+
+const routerConfig: RouteObject[] = [
   {
-    path: "/",
+    path: '/',
     element: <App />,
     errorElement: <ErrorPage />
   },
-])
+  {
+    path: '/sobre-mi',
+    element: <About />,
+    errorElement: <ErrorPage />
+  },
+  {
+    path: '/servicios',
+    element: <Services />,
+    errorElement: <ErrorPage />
+  },
+  {
+    path: '/portafolio',
+    element: <Portfolio />,
+    errorElement: <ErrorPage />
+  },
+];
 
-export default router
+
+export default routerConfig

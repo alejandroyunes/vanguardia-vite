@@ -45,7 +45,7 @@ li {
   margin-right: 16px;
   padding: 0 8px;
   color: ${({ theme }) => theme.palette.primary.main};
-  font-weight: 500;
+  font-weight: 400;
 }
 
 li:hover::before {
@@ -215,6 +215,7 @@ export const HamburgerMenu = styled.div`
     font-size: 18px;
     color: ${({ theme }) => theme.palette.primary.main};
   }
+  
   #menu li:hover {
     background: lightgray;
     cursor: pointer;

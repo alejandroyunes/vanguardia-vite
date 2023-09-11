@@ -5,7 +5,7 @@ import { breakpoint, fontSizes, fonts, zIndices } from "./darkTheme";
 export const lightTheme: DefaultTheme = {
   name: "lightmode",
   bodyColor: "#ffffff",
-  textColor: "#000000",
+  textColor: "#212121",
   palette: {
     black: "#212121",
     white: "#ffffff",
@@ -16,8 +16,8 @@ export const lightTheme: DefaultTheme = {
       contrastText: "#031027",
     },
     secondary: {
-      main: "#d946ef",
-      contrastText: "#ffffff",
+      main: "#555555",
+      contrastText: "#b6b6b6",
     },
   },
   breakpoint,

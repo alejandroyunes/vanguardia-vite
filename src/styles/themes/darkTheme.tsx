@@ -51,18 +51,18 @@ export const fonts = {
 export const darkTheme: DefaultTheme = {
   name: "darkmode",
   bodyColor: "#031027",
-  textColor: "#508ebc",
+  textColor: "#fff",
   palette: {
     black: "#212121",
     white: "#ffffff",
     gray: "#666666",
     red: "#ae3c43",
     primary: {
-      main: "#216397",
+      main: "#508ebc",
       contrastText: "#868686",
     },
     secondary: {
-      main: "#d946ef",
+      main: "#777777",
       contrastText: "#ffffff",
     },
   },

@@ -1,6 +1,4 @@
-import * as React from "react"
-
-function PhoneFloating(props) {
+function PhoneFloating(props: any) {
   return (
     <svg
       className="animated"

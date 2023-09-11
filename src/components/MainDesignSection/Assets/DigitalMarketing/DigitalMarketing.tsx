@@ -1,6 +1,4 @@
-import * as React from "react"
-
-function DigitalMarketing(props) {
+function DigitalMarketing(props: any) {
   return (
     <svg
       className="animated"

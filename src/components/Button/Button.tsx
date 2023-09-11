@@ -16,10 +16,8 @@ interface ButtonProps {
 const Button: FC<ButtonProps> = ({
   type,
   label,
-  category,
   onClick,
   disabled,
-  size,
   icon: Icon,
   autofocus
 }) => (

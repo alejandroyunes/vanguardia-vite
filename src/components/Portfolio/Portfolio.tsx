@@ -9,7 +9,7 @@ import hotels from "../../assets/portfolio/hotels.jpg"
 import punkies from "../../assets/portfolio/punkies2.jpg"
 import Title from "../../components/Title/Title";
 import Button from "../../components/Button/Button";
-import WorkOutlineIcon from '../Footer/svgs/email'
+// import WorkOutlineIcon from '../Footer/svgs/email'
 import Suitcase from "./svgs/suitcase";
 
 export default function Portfolio() {

@@ -1,4 +1,3 @@
-import React from 'react'
 import laptopImage from '../images/laptop-half.png'
 
 export default function halfLaotop() {

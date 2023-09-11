@@ -1,6 +1,4 @@
-import * as React from "react"
-
-function Branding(props) {
+function Branding(props: any) {
   return (
     <svg
       className="animated"

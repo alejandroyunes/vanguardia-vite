@@ -1,6 +1,4 @@
-import * as React from "react"
-
-function WebDesign(props) {
+function WebDesign(props: any) {
   return (
     <svg
       className="animated"

@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 import { BlogContainer } from "./blog.styled";
 
 export default function Blog() {
-  let history = useNavigate();
+  // let history = useNavigate();
 
   const [posts, setPosts] = useState([] as any);
 

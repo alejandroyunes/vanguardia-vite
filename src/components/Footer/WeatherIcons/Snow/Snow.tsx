@@ -1,4 +1,3 @@
-import React from "react";
 import '../sass/WeatherIcons.scss'
 
 export default function Snow() {

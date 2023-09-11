@@ -25,7 +25,7 @@ const Footer: FC = () => {
 
   const key = '3a306e66fcf53df61a19eb62070a3d84';
 
-  const [description, setDescription] = useState('');
+  const [,setDescription] = useState('');
   const [main, setMain] = useState('');
   const [time, setTime] = useState(0);
 

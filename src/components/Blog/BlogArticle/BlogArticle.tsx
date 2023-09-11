@@ -4,9 +4,7 @@ import { blogDataProps } from "../blog-data"
 import { useLocation } from "react-router-dom"
 import { BlogArticleContainer } from "./blog-article.styled"
 import Time from "./svgs/time"
-import Author from "./svgs/author"
 import Twitter from "./svgs/twitter"
-import Tags from './svgs/tags'
 import Tool from './svgs/tool'
 import Star from "./svgs/star"
 

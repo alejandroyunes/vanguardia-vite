@@ -1,6 +1,4 @@
-import * as React from "react"
-
-function Rocket(props) {
+function Rocket(props: any) {
   return (
     <>
     <a href="https://www.freepik.com/vectors/marketing" style={{display: 'none'}}>Marketing vector created by stories - www.freepik.com</a>

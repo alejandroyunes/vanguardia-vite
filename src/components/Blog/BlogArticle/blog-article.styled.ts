@@ -43,6 +43,9 @@ export const BlogArticleContainer = styled.div`
           font-style: italic;
           color: ${({ theme }) => theme.palette.red};
         }
+        @media (max-width: ${({ theme }) => theme.breakpoint.sm}) {
+          padding-bottom: 16px;
+        }
       }
       .article-title {
         margin-bottom: 16px;
@@ -146,6 +149,9 @@ export const BlogArticleContainer = styled.div`
   .article-author {
     grid-area: author;
     padding-right: 16px;
+    @media (max-width: ${({ theme }) => theme.breakpoint.sm}) {
+      padding-top: 16px;
+    }
     .article-header {
       display: flex;
       .article-author-image {

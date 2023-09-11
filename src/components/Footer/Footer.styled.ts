@@ -71,6 +71,11 @@ export const FooterContainer = styled.div`
       .climate-data-one{
         padding-right: 10px;
       }
+      @media(max-width: ${({ theme }) => theme.breakpoint.sm}){ 
+        h1 {
+          font-size: 2em;
+        }
+     }
     }
     .footer-child-two {
       margin: 40px 0;

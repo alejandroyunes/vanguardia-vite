@@ -61,6 +61,9 @@ export const PortfolioContainer = styled.div`
 		"portfolio-billboard-child-one"
 		"portfolio-billboard-child-two";
 	  margin: 0px auto 60px;
+		h1 {
+			font-size: 2em;
+		}
 		.portfolio-billboard-child-two {
 			grid-area: portfolio-billboard-child-two;
       img {
@@ -122,6 +125,9 @@ export const PortfolioContainer = styled.div`
 		grid-area: portfolio-billboard-two-child-two;
 		padding-right: 24px;
 		margin: auto 0;
+		}
+		h1 {
+			font-size: 2em;
 		}
 	}
 }

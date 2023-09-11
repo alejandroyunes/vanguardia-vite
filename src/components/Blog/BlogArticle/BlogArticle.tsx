@@ -16,7 +16,7 @@ export default function BlogArticle() {
     const fetch = async () => {
       try {
         const article: any[] = await blogDataProps
-        const uniqueAriticle = article.filter((e, i) => e.id == id)
+        const uniqueAriticle = article.filter((e: any) => e.id == id)
         setPosts([...uniqueAriticle])
       } catch (error) {
         console.error(error)

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 // import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { blogDataProps } from "./blog-data";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 import Title from "../../components/Title/Title";
 import { Link } from "react-router-dom";
 import { BlogContainer } from "./blog.styled";

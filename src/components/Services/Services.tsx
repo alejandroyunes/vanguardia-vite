@@ -20,7 +20,7 @@ export default function Services() {
       <Title message={"Servicios"} title={""} />
       <ServicesContainer>
         <div className="services-main-content">
-          <p>Somos una empresa especializada en diseño y desarrollo web que se dedica a la creación de sitios web altamente efectivos para marcas y startups líderes en la industria en Medellín. Nuestros proyectos se enfocan en generar tráfico, fomentar la participación y aumentar las conversiones.</p>
+          <p>Somos una empresa especializada en diseño y desarrollo web que se dedica a la creación de sitios web altamente efectivos para marcas y startups líderes en la industria en Medellín y el mundo. Nuestros proyectos se enfocan en generar tráfico, fomentar la participación y aumentar las conversiones.</p>
         </div>
 
         <div className="services-three-columns">

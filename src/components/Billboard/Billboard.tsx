@@ -7,12 +7,10 @@ export default function Billboard() {
       <BillboardContainer>
         <div className="billboard-title">
           <h1>
-            Building Amazing  <br />Web Experiences
+            Construimos Experiencias <br /> Web Asombrosas
           </h1>
           <h2>
-            Leading digital agency with solid design and development expertise.
-            We build mobile and web products for startups and design intricate
-            trading platforms.
+          Somos una agencia digital líder con amplia experiencia en diseño y desarrollo. Nos especializamos en la creación de productos móviles y web para plataformas comerciales de alta complejidad.
           </h2>
           <div className="billboard-email">
             <input type="text" placeholder="Email address" name="mail" />

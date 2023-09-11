@@ -7,7 +7,7 @@ export default function About() {
       <div className="about-us-info">
         <div className="about-title">
           <h1>
-            Soy un desarrollador autodidacta con más de 4 años de experiencia en JavaScript, TypeScript y React. También tengo varios años de experiencia profesional en el área de IT.
+          Soy un desarrollador autodidacta con más de 4 años de experiencia en JavaScript, TypeScript y React, además de una sólida trayectoria profesional en el campo de la tecnología de la información.
           </h1>
         </div>
         <div className="about-image">

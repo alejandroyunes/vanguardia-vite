@@ -17,9 +17,6 @@ export default function Portfolio() {
     <>
       <Title message={"Portafolio"} title={""} />
       <PortfolioContainer>
-        {/* <div className="portfolio-page-hero">
-      <img src={portfolioImg} alt="services" />
-    </div> */}
         <div className="portfolio-billboard">
           <div className="portfolio-billboard-child-one">
             <h1>Punkies y Cerebro</h1>

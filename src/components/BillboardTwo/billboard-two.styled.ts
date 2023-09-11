@@ -15,7 +15,7 @@ export const BillboardTwoContainer = styled.div`
 			font-family: ${({ theme }) => theme.fonts.primary};
 		}
 		h2 {
-			color: ${({ theme }) => theme.palette.gray};
+			color: ${({ theme }) => theme.textColor};
 			font-size: 1.2rem;
 			line-height: 2rem;
 			padding: 16px 0;
@@ -27,7 +27,7 @@ export const BillboardTwoContainer = styled.div`
 			font-size: 16px;
 		}
 		p {
-		color: ${({ theme }) => theme.palette.gray};
+		color: ${({ theme }) => theme.textColor};
 		}
 		img {
 			max-height: 380px;

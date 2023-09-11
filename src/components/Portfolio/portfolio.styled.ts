@@ -8,7 +8,7 @@ export const PortfolioContainer = styled.div`
 		line-height: 1.2;
 	}
 	h2 {
-		color: ${({ theme }) => theme.palette.gray};
+		color: ${({ theme }) => theme.textColor};
 		font-size: 1.2rem;
 		line-height: 2rem;
 		padding: 16px 0;
@@ -61,7 +61,6 @@ export const PortfolioContainer = styled.div`
 		"portfolio-billboard-child-one"
 		"portfolio-billboard-child-two";
 	  margin: 0px auto 60px;
-	  padding: 0 16px;
 		.portfolio-billboard-child-two {
 			grid-area: portfolio-billboard-child-two;
       img {
@@ -110,7 +109,6 @@ export const PortfolioContainer = styled.div`
 		  "portfolio-billboard-two-child-two"
 		  "portfolio-billboard-two-child-one";
 	  margin: 60px auto;
-	  padding: 0 16px;
 
 	.portfolio-billboard-two-child-one {
 		grid-area: portfolio-billboard-two-child-one;

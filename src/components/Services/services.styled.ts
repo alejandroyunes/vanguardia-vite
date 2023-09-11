@@ -7,7 +7,7 @@ export const ServicesContainer = styled.div`
 		margin: 0 auto;
     p {
 		  font-size: 1.2rem;
-      color: ${({ theme }) => theme.palette.gray};
+      color: ${({ theme }) => theme.textColor};
 		  text-align: center;
 	  }
 	}
@@ -33,7 +33,6 @@ export const ServicesContainer = styled.div`
   .services-main-content {
 	margin: 0 auto;
   max-width:  ${({ theme }) => theme.breakpoint.md};
-	padding: 0 16px;
   }
 }
 
@@ -63,7 +62,7 @@ export const ServicesContainer = styled.div`
 		margin: 0 auto;
 		text-align: center;
 		padding: 0 32px;
-		color: ${({ theme }) => theme.palette.gray};
+		color: ${({ theme }) => theme.textColor};
 	}
 	.design-svg {
 		max-width: 340px;

@@ -32,11 +32,11 @@ export const BillboardContainer = styled.div`
         }
       }
       h2 {
-        color: ${({ theme }) => theme.palette.gray};
+        color: ${({ theme }) => theme.textColor};
         font-size: 1.2rem;
         line-height: 2rem;
         padding: 20px 0 28px;
-        font-weight: 500;
+        font-weight: 400;
         @media(max-width: ${({theme}) => theme.breakpoint.sm}){
           font-size: 1rem;
           font-weight: 400;

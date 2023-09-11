@@ -46,7 +46,7 @@ const Footer: FC = () => {
   }, [])
 
   return (
-    <FooterContainer>
+    <FooterContainer id="contact"> 
       <div className="footer-child-one">
         <h1>Nuestra Oficina</h1>
         <h2>Agencia digital líder con sólida experiencia en diseño y desarrollo.</h2>

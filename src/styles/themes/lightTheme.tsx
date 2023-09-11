@@ -13,11 +13,11 @@ export const lightTheme: DefaultTheme = {
     red: "#ae3c43",
     primary: {
       main: "#216397",
-      contrastText: "#031027",
+      contrastText: "#172846",
     },
     secondary: {
       main: "#555555",
-      contrastText: "#b6b6b6",
+      contrastText: "#d4eafa",
     },
   },
   breakpoint,

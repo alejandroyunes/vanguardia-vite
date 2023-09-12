@@ -29,8 +29,8 @@ export default function Blog() {
 
       <BlogContainer>
         {posts.map((e: any, i: React.Key | null | undefined) => (
-          <Link to={`/blog-article/${e.id}`} style={{ textDecoration: "none" }}>
-            <div className="child-card" key={i}>
+          <Link to={`/blog-article/${e.id}`} style={{ textDecoration: "none" }} key={i}>
+            <div className="child-card">
               <img className="about-logo" src={`${e.url}`} alt="" />
               <h4>{e.title}</h4>
               <p>{e.blogSummary}</p>

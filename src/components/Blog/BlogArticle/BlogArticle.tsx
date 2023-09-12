@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react"
+import React, {  Key, useEffect, useState } from "react"
 import avatarImg from "../../../assets/people/alejo-developer.png"
 import { blogDataProps } from "../blog-data"
 import { useLocation } from "react-router-dom"
@@ -27,8 +27,8 @@ export default function BlogArticle() {
 
   return (
     <BlogArticleContainer>
-      {posts.map((e: any) => (
-        <div className="article">
+      {posts.map((e: any, index: Key | null | undefined) => (
+        <div className="article" key={index}>
 
           <div className="title">
             <div className="article-date">
@@ -44,14 +44,14 @@ export default function BlogArticle() {
               {e.articleSummary}
             </section>
             <section className="article-summary__body">
-              {e.step.map((e: any) => (
-                <>
+              {e.step.map((e: any, index: Key | null | undefined) => (
+                <React.Fragment key={index}>
                   <h2>{e.title}</h2>
                   <p>
                     <strong>{e.step} </strong>
                     {e.description}
                   </p>
-                </>
+                </React.Fragment >
               ))}
             </section>
           </div>
@@ -63,12 +63,12 @@ export default function BlogArticle() {
                 {e.time} min read
               </li>
               <li className="item tags">
-                {e.related.map((e: any) => (
-                  <>
+                {e.related.map((e: any,  index: Key | null | undefined) => (
+                  <React.Fragment key={index}>
                     <Tool />
                     <a href="/category/css">{e}</a>
                     <span>,</span>
-                  </>
+                  </React.Fragment>
                 ))}
               </li>
               <li className="item author">

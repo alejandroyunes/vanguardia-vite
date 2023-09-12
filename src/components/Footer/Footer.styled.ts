@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const FooterContainer = styled.div`
+export const FooterContainer = styled.footer`
     margin: 0 auto;
     padding-bottom: 40px;
     display: grid;

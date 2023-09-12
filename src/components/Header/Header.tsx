@@ -1,7 +1,7 @@
 import logo from "../../logo2.svg"
 import { HeaderContainer, Logo, NavContainer, NavItems, HamburgerMenu } from "./header.styled"
 import ColorSwitcher from "../ThemeSwitcher/colorSwitcher"
-import { useLocation, useNavigate } from "react-router-dom"
+import { useLocation, useNavigate, Outlet } from "react-router-dom"
 import { useState } from "react"
 
 export default function Header() {
@@ -28,6 +28,7 @@ export default function Header() {
   }
 
   return (
+    <>
     <HeaderContainer>
       <Logo className="nav-logo">
         <img src={logo} alt="Alejandro Web Logo" />
@@ -52,7 +53,7 @@ export default function Header() {
             <input
               type="checkbox"
               checked={isActive}
-              defaultChecked={isActive}
+              // defaultChecked={isActive}
               onChange={() => setIsActive(!isActive)}
             />
             <span></span>
@@ -69,5 +70,7 @@ export default function Header() {
         </HamburgerMenu>
       </NavContainer>
     </HeaderContainer>
+    <Outlet/>
+    </>
   )
 }

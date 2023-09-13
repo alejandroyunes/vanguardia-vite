@@ -7,7 +7,7 @@ export default function Billboard() {
       <BillboardContainer>
         <div className="billboard-title">
           <h1>
-            Construimos Experiencias <br /> Web Asombrosas
+            Construimos Experiencias Web Asombrosas
           </h1>
           <h2>
           Somos una agencia digital líder con amplia experiencia en diseño y desarrollo. Nos especializamos en la creación de productos móviles y web para plataformas comerciales de alta complejidad.

@@ -1,7 +1,7 @@
 import logo from "../../logo2.svg"
 import { HeaderContainer, Logo, NavContainer, NavItems, HamburgerMenu } from "./header.styled"
 import ColorSwitcher from "../ThemeSwitcher/colorSwitcher"
-import { useLocation, useNavigate, Outlet, ScrollRestoration } from "react-router-dom"
+import { useLocation, useNavigate, Outlet, ScrollRestoration, Link } from "react-router-dom"
 import { useState } from "react"
 
 export default function Header() {
@@ -31,7 +31,9 @@ export default function Header() {
     <>
       <HeaderContainer>
         <Logo className="nav-logo">
+          <Link to='/'>
           <img src={logo} alt="Alejandro Web Logo" />
+          </Link>
         </Logo>
         <NavContainer>
           <ColorSwitcher />

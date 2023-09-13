@@ -1,44 +1,43 @@
 import styled from 'styled-components'
 
 export const BillboardTwoContainer = styled.div`
-		max-width: ${({ theme }) => theme.breakpoint.md};
-		margin: 60px auto;
-		display: grid;
-		grid-template-columns: 1fr 1fr;
-		grid-template-rows: 1fr;
-		grid-gap: 10px;
-		padding: 0 24px;
-		h1 {
-			color: ${({ theme }) => theme.palette.primary.main};
-			font-size: 2.4rem;
-			line-height: 1.2;
-			font-family: ${({ theme }) => theme.fonts.primary};
-		}
-		h2 {
-			color: ${({ theme }) => theme.textColor};
-			font-size: 1.2rem;
-			line-height: 2rem;
-			padding: 16px 0;
-			font-weight: 400;
-		}
-		h3 {
-			color: ${({ theme }) => theme.palette.red};
-			font-weight: 500;
-			font-size: 16px;
-		}
-		p {
+	max-width: ${({ theme }) => theme.breakpoint.md};
+	margin: 60px auto;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr;
+	grid-gap: 10px;
+	padding: 0 24px;
+	h1 {
+		color: ${({ theme }) => theme.palette.primary.main};
+		font-size: 2.4rem;
+		line-height: 1.2;
+		font-family: ${({ theme }) => theme.fonts.primary};
+	}
+	h2 {
 		color: ${({ theme }) => theme.textColor};
-		}
-		img {
-			max-height: 380px;
-			width: auto;
-		}
+		font-size: 1.2rem;
+		line-height: 2rem;
+		padding: 16px 0;
+		font-weight: 400;
+	}
+	h3 {
+		color: ${({ theme }) => theme.palette.red};
+		font-weight: 500;
+		font-size: 16px;
+	}
+	p {
+	color: ${({ theme }) => theme.textColor};
+	}
+	img {
+		max-height: 380px;
+		width: auto;
+	}
 @media(max-width: ${({ theme }) => theme.breakpoint.sm}) {
 	grid-template-columns: repeat(1, auto);
 	grid-template-rows: repeat(2, auto);
 }
 `
-
 export const BillboardLeft = styled.div`
  ul {
     list-style-type: none;

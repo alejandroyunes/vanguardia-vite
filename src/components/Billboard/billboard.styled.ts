@@ -22,7 +22,7 @@ export const BillboardContainer = styled.div`
       h1 {
         font-weight: bold;
         color: ${({ theme }) => theme.palette.primary.main};
-        font-size: 3.2rem;
+        font-size: 3rem;
         line-height: 1.2;
         @media(max-width: ${({theme}) => theme.breakpoint.sm}){
           font-size: 2.6rem;

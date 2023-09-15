@@ -17,6 +17,7 @@ export const Logo = styled.div`
   margin: 0 24px;
   width: 45px;
   padding-top: 2px;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   @media(max-width: ${({theme}) => theme.breakpoint.xs}){
     width: 38px;
     padding-top: 4px;

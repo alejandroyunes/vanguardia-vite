@@ -195,6 +195,12 @@ const Footer: FC = () => {
             </div>
             {contacted ?
               <div id='slide'>
+                <div
+                  className="close"
+                  onClick={() => { setContacted(false) }}>
+                  <span ></span>
+                  <span ></span>
+                </div>
                 <p>Gracias, responderemos lo más pronto posible 🚀</p>
               </div>
               : null}

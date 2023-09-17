@@ -127,7 +127,7 @@ export const FooterContainer = styled.footer`
       width: 100%;
       height: 80px;
       padding: 0 4px;
-      background: ${({ theme }) => theme.palette.black};;
+      background: ${({ theme }) => theme.palette.black};
       transition: 1s;
       outline: none;
       border: none;
@@ -138,6 +138,37 @@ export const FooterContainer = styled.footer`
       animation-name: commentSlide;
       animation-duration: 1s;
       animation-timing-function: ease-in-out;
+
+      .close {
+        position: absolute;
+        top: 12px;
+        right: 8px;
+        span {
+          display: block;
+          width: 36px;
+          height: 4px;
+          right: 18px;
+          margin-bottom: 5px;
+          position: relative;
+          background: #fff;
+          border-radius: 2px;
+          z-index: 1000;
+          cursor: pointer;
+          transform: rotate(-45deg) translate(-7px, 10px);
+          transform-origin: 4px 0px;
+          transition: transform 0.5s 
+            cubic-bezier(0.77, 0.2, 0.05, 1) 0s, 
+            background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1) 0s, 
+            opacity 0.55s ease 0s;
+        }
+        span:first-child {
+          transform-origin: 0% 0%;
+          transform: rotate(45deg) translate(4px, -6px);
+        }
+        span:nth-last-child(1) {
+          transform: rotate(-45deg) translate(-7px, 10px);
+        }
+      }
     }
 
   @keyframes commentSlide {

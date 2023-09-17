@@ -193,11 +193,11 @@ const Footer: FC = () => {
                 />
               </div>
             </div>
-            {/* {contacted ? */}
+            {contacted ?
               <div id='slide'>
                 <p>Gracias, responderemos lo más pronto posible 🚀</p>
               </div>
-              {/* : null} */}
+              : null}
           </div>
 
         </form>

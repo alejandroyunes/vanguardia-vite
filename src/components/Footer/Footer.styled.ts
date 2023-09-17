@@ -8,11 +8,11 @@ export const FooterContainer = styled.footer`
     grid-template-rows: 1fr;
     padding: 40px 24px 0;
     max-width: ${({ theme }) => theme.breakpoint.md};
-  	@media(max-width: ${({ theme }) => theme.breakpoint.sm}){ 
+  	@media(max-width: ${({ theme }) => theme.breakpoint.sm}){
       grid-template-columns: repeat(1, auto);
       grid-template-rows: repeat(2, auto);
      }
-    .footer-child-one {
+    .footer-left {
       h1 {
         font-weight: bold;
         color: ${({ theme }) => theme.palette.primary.main};
@@ -71,18 +71,18 @@ export const FooterContainer = styled.footer`
       .climate-data-one{
         padding-right: 10px;
       }
-      @media(max-width: ${({ theme }) => theme.breakpoint.sm}){ 
+      @media(max-width: ${({ theme }) => theme.breakpoint.sm}){
         h1 {
           font-size: 2em;
         }
      }
     }
-    .footer-child-two {
+    .footer-right {
       margin: 40px 0;
     }
 
     .feedback-input {
-      color: white;
+      color: ${({ theme }) => theme.textColor};
       font-weight: 500;
       font-size: 18px;
       border-radius: 5px;
@@ -105,18 +105,52 @@ export const FooterContainer = styled.footer`
       height: 150px;
       line-height: 150%;
       resize: vertical;
+      background-color: transparent;
+      color: ${({ theme }) => theme.textColor};
     }
 
     .submit-section {
+      position: relative;
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 20px 20px;
-      @media(max-width: ${({ theme }) => theme.breakpoint.xs}){ 
+      @media(max-width: ${({ theme }) => theme.breakpoint.xs}){
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr;
         gap: 4px 0;
       }
     }
+
+    #slide {
+      position: absolute;
+      right: 0%;
+      width: 100%;
+      height: 80px;
+      background: ${({ theme }) => theme.palette.black};;
+      transition: 1s;
+      outline: none;
+      border: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      @media (max-width: ${({ theme }) => theme.breakpoint.sm}) {
+        height: 440px;
+      }
+      animation-name: commentSlide;
+      animation-duration: 1s;
+      animation-timing-function: ease-in-out;
+    }
+
+  @keyframes commentSlide {
+    from {
+      right: -100%;
+    }
+    to {
+      right: 0%;
+    }
+  }
+
+
     button {
       width: 100%;
       background: ${({ theme }) => theme.palette.primary.main};

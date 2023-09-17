@@ -36,6 +36,8 @@ const Footer: FC = () => {
   const [main, setMain] = useState('');
   const [time, setTime] = useState(0);
 
+  const [contacted, setContacted] = useState(false)
+
   const [inputValues, setInputValue] = useState<ContactTypes>({
     name: '',
     email: '',
@@ -87,6 +89,7 @@ const Footer: FC = () => {
       email: "",
       message: "",
     })
+    setContacted(true)
   }
 
   function handleChange(e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) {
@@ -104,7 +107,7 @@ const Footer: FC = () => {
 
   return (
     <FooterContainer id="contact">
-      <div className="footer-child-one">
+      <div className="footer-left">
         <h1>Nuestra Oficina</h1>
         <h2>Agencia digital líder con sólida experiencia en diseño y desarrollo.</h2>
         <div className="climate-data">
@@ -143,7 +146,7 @@ const Footer: FC = () => {
           <GitHubIcon />
         </div>
       </div>
-      <div className="footer-child-two">
+      <div className="footer-right">
         <form onSubmit={handleSubmit}>
           <input
             name="name"
@@ -171,7 +174,6 @@ const Footer: FC = () => {
             placeholder="Comentarios, dudas o sugerencias"
           ></textarea>
 
-
           <div className='submit-section'>
             <div className='submit-button'>
               <button
@@ -191,10 +193,16 @@ const Footer: FC = () => {
                 />
               </div>
             </div>
+            {contacted ?
+              <div id='slide'>
+                <p>Gracias, responderemos lo más pronto posible 🚀</p>
+              </div>
+              : null}
           </div>
 
         </form>
       </div>
+
     </FooterContainer>
   )
 }

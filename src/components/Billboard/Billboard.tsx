@@ -1,4 +1,3 @@
-import { useState } from "react";
 import Animation from "./animation";
 import { BillboardContainer } from "./billboard.styled";
 

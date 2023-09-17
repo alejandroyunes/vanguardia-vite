@@ -20,15 +20,27 @@ import CloudsNight from './WeatherIcons/Clouds/Night/CloudsNight'
 import Mist from './WeatherIcons/Mist/Mist'
 
 import { FooterContainer } from './Footer.styled'
+import ReCAPTCHA from "react-google-recaptcha"
+
+interface ContactTypes {
+  name: string
+  email: string
+  message: string
+}
 
 const Footer: FC = () => {
 
   const key = '3a306e66fcf53df61a19eb62070a3d84';
 
-  const [,setDescription] = useState('');
+  const [, setDescription] = useState('');
   const [main, setMain] = useState('');
   const [time, setTime] = useState(0);
 
+  const [inputValues, setInputValue] = useState<ContactTypes>({
+    name: '',
+    email: '',
+    message: ''
+  })
 
   useEffect(() => {
     fetch('https://api.openweathermap.org/data/2.5/weather?q=Medellín,co&APPID=' + key + '&units=metric')
@@ -45,8 +57,53 @@ const Footer: FC = () => {
     setTime(time)
   }, [])
 
+  const postFetch = async () => {
+    try {
+      const data = await fetch('http://localhost:5000/contacto', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(inputValues)
+      })
+
+      if (!data.ok) {
+        throw new Error('Network response was not ok')
+      }
+
+      const res = await data.json()
+
+      console.log('res', res)
+    } catch (err) {
+      console.error('Error catch:', err);
+    }
+  }
+
+  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault()
+    postFetch()
+    setInputValue({
+      name: "",
+      email: "",
+      message: "",
+    })
+  }
+
+  function handleChange(e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) {
+    const { value, name } = e.target
+    setInputValue({ ...inputValues, [name]: value })
+  }
+
+  const [isBtnDisabled, setBtnDisabled] = useState(true)
+
+  const handleRecaptcha = async (recaptcha: string | null) => {
+    if (recaptcha) {
+      setBtnDisabled(false)
+    }
+  }
+
   return (
-    <FooterContainer id="contact"> 
+    <FooterContainer id="contact">
       <div className="footer-child-one">
         <h1>Nuestra Oficina</h1>
         <h2>Agencia digital líder con sólida experiencia en diseño y desarrollo.</h2>
@@ -87,25 +144,55 @@ const Footer: FC = () => {
         </div>
       </div>
       <div className="footer-child-two">
-        <form>
+        <form onSubmit={handleSubmit}>
           <input
             name="name"
             type="text"
-            className="feedback-input"
+            value={inputValues.name}
+            className={`feedback-input ${inputValues.name === '' ? "feedback-check" : ''}`}
+            onChange={handleChange}
             placeholder="Nombre"
+            required
           />
           <input
             name="email"
-            type="text"
-            className="feedback-input"
+            type="email"
+            className={`feedback-input ${inputValues.email === '' ? "feedback-check" : ''}`}
+            value={inputValues.email}
+            onChange={handleChange}
             placeholder="Email"
+            required
           />
           <textarea
-            name="text"
-            className="feedback-input"
-            placeholder="Comentario"
+            name="message"
+            className={`feedback-input ${inputValues.message === '' ? "feedback-check" : ''}`}
+            value={inputValues.message}
+            onChange={handleChange}
+            placeholder="Comentarios, dudas o sugerencias"
           ></textarea>
-          <input type="submit" value="Enviar" />
+
+
+          <div className='submit-section'>
+            <div className='submit-button'>
+              <button
+                type='submit'
+                disabled={isBtnDisabled}
+              >
+                Enviar
+              </button>
+            </div>
+            <div className='recaptcha'>
+              <div className='google-recaptcha'>
+                <ReCAPTCHA
+                  sitekey={import.meta.env.VITE_RECAPTCHA}
+                  onChange={handleRecaptcha}
+                  theme={'dark'}
+                  hl={'es'}
+                />
+              </div>
+            </div>
+          </div>
+
         </form>
       </div>
     </FooterContainer>

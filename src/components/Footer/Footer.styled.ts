@@ -97,7 +97,7 @@ export const FooterContainer = styled.footer`
       outline: 0;
     }
 
-    .feedback-input:focus {
+    .feedback-check {
       border: 2px solid ${({ theme }) => theme.palette.red};
     }
 
@@ -107,22 +107,35 @@ export const FooterContainer = styled.footer`
       resize: vertical;
     }
 
-    [type="submit"] {
+    .submit-section {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px 20px;
+      @media(max-width: ${({ theme }) => theme.breakpoint.xs}){ 
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 4px 0;
+      }
+    }
+    button {
       width: 100%;
       background: ${({ theme }) => theme.palette.primary.main};
       border-radius: 5px;
       border: 0;
       cursor: pointer;
       color: white;
+      margin-top: 15px;
       font-size: 24px;
       padding-top: 10px;
       padding-bottom: 10px;
       transition: all 0.3s;
-      margin-top: -4px;
       font-weight: 700;
     }
-    [type="submit"]:hover {
+    button:hover {
       background: "rgb(33, 99, 151, .6)";
+    }
+    button:disabled {
+      background: ${({ theme }) => theme.palette.red};
     }
 `
 

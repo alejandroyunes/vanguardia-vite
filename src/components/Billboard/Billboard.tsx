@@ -1,7 +1,9 @@
+import { useState } from "react";
 import Animation from "./animation";
 import { BillboardContainer } from "./billboard.styled";
 
 export default function Billboard() {
+
   return (
     <>
       <BillboardContainer>
@@ -13,8 +15,7 @@ export default function Billboard() {
             Vanguardia.tech es una agencia digital líder con amplia experiencia en diseño y desarrollo. Especializada en la creación de productos móviles y web para plataformas comerciales de alta complejidad.
           </h2>
           <div className="billboard-email">
-            <input type="text" placeholder="Email address" name="mail" />
-            <input type="submit" value="Enviar" />
+            <a href="#contact" >Contáctanos</a>
           </div>
         </div>
 

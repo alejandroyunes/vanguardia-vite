@@ -7,7 +7,7 @@ export const BillboardContainer = styled.div`
     justify-content: center;
     margin: 0 auto;
     max-width: ${({ theme }) => theme.breakpoint.md};
-    @media(max-width: ${({theme}) => theme.breakpoint.xs}){
+    @media(max-width: ${({ theme }) => theme.breakpoint.xs}){
       display: grid;
       grid-template-columns: 1fr;
       grid-template-rows: 2fr;
@@ -15,7 +15,7 @@ export const BillboardContainer = styled.div`
     }
   	.billboard-title {
       padding-right: 20px;
-      @media(max-width: ${({theme}) => theme.breakpoint.xs}){
+      @media(max-width: ${({ theme }) => theme.breakpoint.xs}){
       padding-right: 0;
       padding-bottom: 32px; 
       }
@@ -24,10 +24,10 @@ export const BillboardContainer = styled.div`
         color: ${({ theme }) => theme.palette.primary.main};
         font-size: 3rem;
         line-height: 1.2;
-        @media(max-width: ${({theme}) => theme.breakpoint.sm}){
+        @media(max-width: ${({ theme }) => theme.breakpoint.sm}){
           font-size: 2.6rem;
         }
-        @media(max-width: ${({theme}) => theme.breakpoint.xs}){
+        @media(max-width: ${({ theme }) => theme.breakpoint.xs}){
           font-size: 2rem;
         }
       }
@@ -37,7 +37,7 @@ export const BillboardContainer = styled.div`
         line-height: 2rem;
         padding: 20px 0 28px;
         font-weight: 400;
-        @media(max-width: ${({theme}) => theme.breakpoint.sm}){
+        @media(max-width: ${({ theme }) => theme.breakpoint.sm}){
           font-size: 1rem;
           font-weight: 400;
           line-height: 1.225;
@@ -49,34 +49,29 @@ export const BillboardContainer = styled.div`
       svg {
         max-width: 400px;
       }
-      @media(max-width: ${({theme}) => theme.breakpoint.xs}){
+      @media(max-width: ${({ theme }) => theme.breakpoint.xs}){
         svg {
           max-width: 280px;
         }
       }
     }
     .billboard-email {
-      display: flex;
-      input[type="text"],
-      input[type="submit"] {
-        width: 70%;
-        max-width: 460px;
-        padding: 12px;
-        display: inline-block;
-        border: none;
-        outline: none;
-        background: lightgray;
-      }
-      input[type="submit"] {
+      display: inline-flex;
+      scroll-behavior: smooth;
+      a {
         background-color: ${({ theme }) => theme.palette.primary.main};
         color: white;
         border: none;
-        width: 30%;
+        width: 140px;
+        height: 42px;
         margin-left: 8px;
         cursor: pointer;
+        text-decoration: none;
+        display: grid;
+        place-items: center;
       }
-      input[type="submit"]:hover {
+      a:hover {
         opacity: 0.8;
       }
-    }
+     }
 `

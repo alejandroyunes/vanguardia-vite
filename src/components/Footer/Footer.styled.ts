@@ -117,7 +117,7 @@ export const FooterContainer = styled.footer`
       @media(max-width: ${({ theme }) => theme.breakpoint.xs}){
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr;
-        gap: 4px 0;
+        gap: 16px 0;
       }
     }
 
@@ -126,6 +126,7 @@ export const FooterContainer = styled.footer`
       right: 0%;
       width: 100%;
       height: 80px;
+      padding: 0 4px;
       background: ${({ theme }) => theme.palette.black};;
       transition: 1s;
       outline: none;
@@ -133,9 +134,7 @@ export const FooterContainer = styled.footer`
       display: flex;
       align-items: center;
       justify-content: center;
-      @media (max-width: ${({ theme }) => theme.breakpoint.sm}) {
-        height: 440px;
-      }
+
       animation-name: commentSlide;
       animation-duration: 1s;
       animation-timing-function: ease-in-out;

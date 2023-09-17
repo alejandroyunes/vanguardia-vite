@@ -184,7 +184,7 @@ const Footer: FC = () => {
             <div className='recaptcha'>
               <div className='google-recaptcha'>
                 <ReCAPTCHA
-                  sitekey={import.meta.env.VITE_RECAPTCHA}
+                  sitekey={import.meta.env.VITE_RECAPTCHA ?? '123'}
                   onChange={handleRecaptcha}
                   theme={'dark'}
                   hl={'es'}

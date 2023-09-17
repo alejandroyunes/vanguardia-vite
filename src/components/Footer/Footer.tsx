@@ -59,7 +59,7 @@ const Footer: FC = () => {
 
   const postFetch = async () => {
     try {
-      const data = await fetch('http://localhost:5000/contacto', {
+      const data = await fetch(import.meta.env.VITE_EXPRESS, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'

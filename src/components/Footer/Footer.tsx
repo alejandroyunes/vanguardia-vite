@@ -180,12 +180,12 @@ const Footer: FC = () => {
             <div className='submit-button'>
               <button
                 type='submit'
-                // disabled={isBtnDisabled}
+                disabled={isBtnDisabled}
               >
                 Enviar
               </button>
             </div>
-            {/* <div className='recaptcha'>
+            <div className='recaptcha'>
               <div className='google-recaptcha'>
                 <ReCAPTCHA
                   sitekey={import.meta.env.VITE_RECAPTCHA ?? '123'}
@@ -205,7 +205,7 @@ const Footer: FC = () => {
                 </div>
                 <p>Gracias, responderemos lo más pronto posible 🚀</p>
               </div>
-              : null} */}
+              : null}
           </div>
 
         </form>

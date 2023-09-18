@@ -143,10 +143,15 @@ export const FooterContainer = styled.footer`
       animation-duration: 1s;
       animation-timing-function: ease-in-out;
 
+      p {
+        color: #fff;
+      }
+
       .close {
         position: absolute;
         top: 12px;
         right: 8px;
+        width: 10px;
         span {
           display: block;
           width: 36px;

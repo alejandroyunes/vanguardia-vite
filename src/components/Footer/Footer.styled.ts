@@ -81,6 +81,10 @@ export const FooterContainer = styled.footer`
       margin: 40px 0;
     }
 
+    input[type="email"] {
+      background: transparent;
+    }
+
     .feedback-input {
       color: ${({ theme }) => theme.textColor};
       font-weight: 500;

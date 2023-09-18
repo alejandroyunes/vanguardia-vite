@@ -13,7 +13,7 @@ export const ThreeCardContainer = styled.div`
 			margin: 16px;
       background-color: ${({ theme }) => theme.palette.white};
       border-radius: 0.5rem;
-      width: 300px;
+      width: 280px;
       height: 460px;
       box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 			@media(max-width: ${({ theme }) => theme.breakpoint.sm}){

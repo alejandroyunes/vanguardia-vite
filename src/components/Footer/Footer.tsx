@@ -142,10 +142,10 @@ const Footer: FC = () => {
           <p>En algún lugar del mundo</p>
         </div>
         <div className="footer__social">
-          <InstagramIcon />
-          <FacebookIcon />
-          <TwitterIcon />
-          <GitHubIcon />
+          <a href="https://www.instagram.com/vanguardiawebtech" target="_blank"><InstagramIcon /></a>
+          <a href="https://www.facebook.com/vanguardiawebtech" target="_blank"><FacebookIcon /></a>
+          <a href="https://www.twitter.com/vanguardiawebt"><TwitterIcon /></a>
+          <a href="https://www.github.com/alejandroyunes" target="_blank"><GitHubIcon /></a>
         </div>
       </div>
       <div className="footer-right">

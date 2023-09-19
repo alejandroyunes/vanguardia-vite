@@ -143,6 +143,10 @@ export const FooterContainer = styled.footer`
       animation-duration: 1s;
       animation-timing-function: ease-in-out;
 
+      @media(max-width: ${({ theme }) => theme.breakpoint.xs}){
+        padding: 0 36px 0 16px;
+      }
+
       p {
         color: #fff;
       }
@@ -151,12 +155,10 @@ export const FooterContainer = styled.footer`
         position: absolute;
         top: 12px;
         right: 8px;
-        width: 10px;
         span {
           display: block;
-          width: 36px;
+          width: 30px;
           height: 4px;
-          right: 18px;
           margin-bottom: 5px;
           position: relative;
           background: #fff;
@@ -164,7 +166,7 @@ export const FooterContainer = styled.footer`
           z-index: 1000;
           cursor: pointer;
           transform: rotate(-45deg) translate(-7px, 10px);
-          transform-origin: 4px 0px;
+          transform-origin: -1px -2px;
           transition: transform 0.5s 
             cubic-bezier(0.77, 0.2, 0.05, 1) 0s, 
             background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1) 0s, 

@@ -1,23 +1,24 @@
 import { FC, useEffect, useState } from "react"
-import MailOutlineIcon from "./svgs/email"
-import PhoneAndroidIcon from "./svgs/phone"
-import InstagramIcon from "./svgs/instagram"
-import TwitterIcon from "./svgs/twitter"
+
 import FacebookIcon from "./svgs/facebook"
 import GitHubIcon from "./svgs/github"
-import WeatherSpinner from './WeatherIcons/WeatherSpinner/WeatherSpinner'
-import Thunder from './WeatherIcons/Thunder/Thunder'
-import DrizzleDay from './WeatherIcons/Drizzle/Day/DrizzleDay'
-import DrizzleNight from './WeatherIcons/Drizzle/Night/DrizzleNight'
-import Rain from './WeatherIcons/Rain/Rain'
-import Snow from './WeatherIcons/Snow/Snow'
+import InstagramIcon from "./svgs/instagram"
 import LocationOnIcon from './svgs/location'
+import MailOutlineIcon from "./svgs/email"
+import PhoneAndroidIcon from "./svgs/phone"
+import TwitterIcon from "./svgs/twitter"
 
-import ClearNight from './WeatherIcons/NightClear/ClearNight'
 import ClearDay from './WeatherIcons/DayClear/ClearDay'
+import ClearNight from './WeatherIcons/NightClear/ClearNight'
 import CloudsDay from './WeatherIcons/Clouds/Day/CloudsDay'
 import CloudsNight from './WeatherIcons/Clouds/Night/CloudsNight'
+import DrizzleDay from './WeatherIcons/Drizzle/Day/DrizzleDay'
+import DrizzleNight from './WeatherIcons/Drizzle/Night/DrizzleNight'
 import Mist from './WeatherIcons/Mist/Mist'
+import Rain from './WeatherIcons/Rain/Rain'
+import Snow from './WeatherIcons/Snow/Snow'
+import Thunder from './WeatherIcons/Thunder/Thunder'
+import WeatherSpinner from './WeatherIcons/WeatherSpinner/WeatherSpinner'
 
 import { FooterContainer } from './Footer.styled'
 import ReCAPTCHA from "react-google-recaptcha"
@@ -30,32 +31,34 @@ interface ContactTypes {
 
 const Footer: FC = () => {
 
-  const key = '3a306e66fcf53df61a19eb62070a3d84';
+  const key = '3a306e66fcf53df61a19eb62070a3d84'
 
-  const [, setDescription] = useState('');
-  const [main, setMain] = useState('');
-  const [time, setTime] = useState(0);
+  const [, setDescription] = useState('')
+  const [main, setMain] = useState('')
+  const [time, setTime] = useState(0)
 
   const [contacted, setContacted] = useState(false)
 
-  const [inputValues, setInputValue] = useState<ContactTypes>({
+  const defaultContactValues = {
     name: '',
     email: '',
     message: ''
-  })
+  }
+
+  const [inputValues, setInputValue] = useState<ContactTypes>(defaultContactValues)
 
   useEffect(() => {
     fetch('https://api.openweathermap.org/data/2.5/weather?q=Medellín,co&APPID=' + key + '&units=metric')
       .then(res => res.json())
       .then(data => {
-        setDescription(data.weather[0].description);
-        setMain(data.weather[0].main);
+        setDescription(data.weather[0].description)
+        setMain(data.weather[0].main)
       })
   }, [])
 
   useEffect(() => {
-    let today = new Date();
-    let time = today.getHours();
+    let today = new Date()
+    let time = today.getHours()
     setTime(time)
   }, [])
 
@@ -69,28 +72,21 @@ const Footer: FC = () => {
         body: JSON.stringify(inputValues)
       })
 
-      if (!data.ok) {
-        throw new Error('Network response was not ok')
-      }
+      if (!data.ok) { throw new Error('Network response was not okay') }
 
-      const res = await data.json()
+      // const res = await data.json()
+      // console.log('res', res)
 
-      console.log('res', res)
     } catch (err) {
-      console.error('Error catch:', err);
+      console.error('Error catch:', err)
     }
   }
 
   function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault()
-    console.log(inputValues)
 
     postFetch()
-    setInputValue({
-      name: "",
-      email: "",
-      message: "",
-    })
+    setInputValue(defaultContactValues)
     setContacted(true)
   }
 
@@ -102,6 +98,7 @@ const Footer: FC = () => {
   const [isBtnDisabled, setBtnDisabled] = useState(true)
 
   const handleRecaptcha = async (recaptcha: string | null) => {
+
     if (recaptcha) {
       setBtnDisabled(false)
     }
@@ -119,13 +116,13 @@ const Footer: FC = () => {
           <div className="climate-data-two">
             {(() => {
               switch (main) {
-                case "Thunderstorm": return <Thunder />;
-                case "Drizzle": return (time >= 6 && time < 18 ? <DrizzleDay /> : <DrizzleNight />);
-                case "Rain": return <Rain />;
-                case "Snow": return <Snow />;
-                case "Clear": return (time >= 6 && time < 18 ? <ClearDay /> : <ClearNight />);
-                case "Clouds": return (time >= 6 && time < 18 ? <CloudsDay /> : <CloudsNight />);
-                case "Mist" || "Smoke" || "Haze" || "Dust" || "Fog" || "Sand" || "Ash" || "Squall" || "Tornado": return <Mist />;
+                case "Thunderstorm": return <Thunder />
+                case "Drizzle": return (time >= 6 && time < 18 ? <DrizzleDay /> : <DrizzleNight />)
+                case "Rain": return <Rain />
+                case "Snow": return <Snow />
+                case "Clear": return (time >= 6 && time < 18 ? <ClearDay /> : <ClearNight />)
+                case "Clouds": return (time >= 6 && time < 18 ? <CloudsDay /> : <CloudsNight />)
+                case "Mist" || "Smoke" || "Haze" || "Dust" || "Fog" || "Sand" || "Ash" || "Squall" || "Tornado": return <Mist />
                 default: return <WeatherSpinner />
               }
             })()}
@@ -174,8 +171,7 @@ const Footer: FC = () => {
             value={inputValues.message}
             onChange={handleChange}
             placeholder="Comentarios, dudas o sugerencias"
-          ></textarea>
-
+          />
           <div className='submit-section'>
             <div className='submit-button'>
               <button
@@ -199,7 +195,7 @@ const Footer: FC = () => {
               <div id='slide'>
                 <div
                   className="close"
-                  onClick={() => { setContacted(false) }}>
+                  onClick={() => setContacted(false)}>
                   <span ></span>
                   <span ></span>
                 </div>
@@ -207,11 +203,10 @@ const Footer: FC = () => {
               </div>
               : null}
           </div>
-
         </form>
       </div>
 
     </FooterContainer>
   )
 }
-export default Footer;
+export default Footer

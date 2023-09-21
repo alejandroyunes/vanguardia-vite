@@ -29,93 +29,86 @@ export const NavContainer = styled.div`
 `
 
 export const NavItems = styled.div`
-display: block;
-@media(max-width: ${({theme}) => theme.breakpoint.xs}){
-  display: none;
-}
-ul {
-  display: inline-flex;
-  list-style-type: none;
-  height: 48px;
-  align-items: center;
-}
-
-li {
-  position: relative;
-  cursor: pointer;
-  margin-right: 16px;
-  padding: 0 8px;
-  color: ${({ theme }) => theme.palette.primary.main};
-  font-weight: 400;
-}
-
-li:hover::before {
-  content: "[";
-  color: ${({ theme }) => theme.palette.primary.main};
-  animation: left-bracket;
-  animation-duration: 0.5s;
-  animation-timing-function: ease-out;
-  position: absolute;
-  animation-fill-mode: forwards;
-}
-
-li:hover::after {
-  content: "]";
-  color: ${({ theme }) => theme.palette.primary.main};
-  animation: right-bracket;
-  animation-duration: 0.5s;
-  animation-timing-function: ease-out;
-  position: absolute;
-  animation-fill-mode: forwards;
-}
-
-li.active::before {
-  content: "[";
-  color: ${({ theme }) => theme.palette.primary.main};
-  animation: left-bracket;
-  animation-duration: 0.5s;
-  animation-timing-function: ease-out;
-  position: absolute;
-  animation-fill-mode: forwards;
-}
-
-li.active::after {
-  content: "]";
-  color: ${({ theme }) => theme.palette.primary.main};
-  animation: right-bracket;
-  animation-duration: 0.5s;
-  animation-timing-function: ease-out;
-  position: absolute;
-  animation-fill-mode: forwards;
-}
-
-@keyframes left-bracket {
-  0% {
-    left: -4px;
-    opacity: 0;
-    transform: rotate(90deg);
+  display: block;
+  @media(max-width: ${({theme}) => theme.breakpoint.xs}){
+    display: none;
   }
-
-  100% {
-    left: -4px;
-    opacity: 1;
-    transform: rotate(0deg);
+  ul {
+    display: inline-flex;
+    list-style-type: none;
+    height: 48px;
+    align-items: center;
   }
-}
-
-@keyframes right-bracket {
-  from {
-    right: -4px;
-    opacity: 0;
-    transform: rotate(-90deg);
+  li {
+    position: relative;
+    cursor: pointer;
+    margin-right: 16px;
+    padding: 0 8px;
+    color: ${({ theme }) => theme.palette.primary.main};
+    font-weight: 400;
   }
-
-  to {
-    right: -4px;
-    opacity: 1;
-    transform: rotate(0deg);
+  li:hover::before {
+    content: "[";
+    color: ${({ theme }) => theme.palette.primary.main};
+    animation: left-bracket;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-out;
+    position: absolute;
+    animation-fill-mode: forwards;
   }
-}
+  li:hover::after {
+    content: "]";
+    color: ${({ theme }) => theme.palette.primary.main};
+    animation: right-bracket;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-out;
+    position: absolute;
+    animation-fill-mode: forwards;
+  }
+  li.active::before {
+    content: "[";
+    color: ${({ theme }) => theme.palette.primary.main};
+    animation: left-bracket;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-out;
+    position: absolute;
+    animation-fill-mode: forwards;
+  }
+  li.active::after {
+    content: "]";
+    color: ${({ theme }) => theme.palette.primary.main};
+    animation: right-bracket;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-out;
+    position: absolute;
+    animation-fill-mode: forwards;
+  }
+  @keyframes left-bracket {
+    0% {
+      left: -4px;
+      opacity: 0;
+      transform: rotate(90deg);
+    }
+
+    100% {
+      left: -4px;
+      opacity: 1;
+      transform: rotate(0deg);
+    }
+  }
+  @keyframes right-bracket {
+    from {
+      right: -4px;
+      opacity: 0;
+      transform: rotate(-90deg);
+    }
+
+    to {
+      right: -4px;
+      opacity: 1;
+      transform: rotate(0deg);
+    }
+  }
 `
 
 export const HamburgerMenu = styled.div`

@@ -1,4 +1,4 @@
-import { MainDesignSection } from "../components/MainDesignSection/MainDesignSection"
+import MainDesign from "../components/MainDesignSection/MainDesign"
 import MainCards from "../components/MainCards/MainCards"
 import Billboard from "../components/Billboard/Billboard"
 import Title from "../components/Title/Title"
@@ -12,7 +12,7 @@ export default function index() {
       <MainCards />
       <BillboardTwo />
       <Title title="Diseñado para todos los dispositivos" message="Diseños Creativos" />
-      <MainDesignSection />
+      <MainDesign />
     </>
   );
 }

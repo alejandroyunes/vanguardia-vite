@@ -1,4 +1,3 @@
-
 import styled from 'styled-components'
 
 export const CardContainer = styled.div`
@@ -61,18 +60,16 @@ export const CardContainer = styled.div`
 export const MobileCardContainer = styled.div`
 	display: none;
 	@media(max-width: ${({ theme }) => theme.breakpoint.sm}){
-
+		display: block;
+		width: 100%;
+    .card-wrapper {
+      margin: 8px auto;
+    }
     .control-dots {
       .dot {
         background: ${({ theme }) => theme.palette.red};
         box-shadow: 1px 1px 2px rgb(112 54 54 / 90%)
       }
-    }
-
-		display: block;
-		width: 100%;
-    .card-wrapper {
-      margin: 8px auto;
     }
   }
 `

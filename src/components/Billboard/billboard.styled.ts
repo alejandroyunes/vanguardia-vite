@@ -64,7 +64,6 @@ export const BillboardContainer = styled.div`
         border: none;
         width: 140px;
         height: 42px;
-        margin-left: 8px;
         cursor: pointer;
         text-decoration: none;
         display: grid;
@@ -73,5 +72,5 @@ export const BillboardContainer = styled.div`
       a:hover {
         opacity: 0.8;
       }
-     }
+    }
 `

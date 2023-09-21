@@ -38,6 +38,7 @@ export const BillboardTwoContainer = styled.div`
 	grid-template-rows: repeat(2, auto);
 }
 `
+
 export const BillboardLeft = styled.div`
  ul {
     list-style-type: none;
@@ -107,4 +108,3 @@ export const BillboardRight = styled.div`
 			visibility: visible;
 		}
 `
-

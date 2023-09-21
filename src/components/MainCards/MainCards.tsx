@@ -1,17 +1,19 @@
-import { ThreeCardContainer, MobileCardContainer, DesktopCardContainer } from "./three-colums.styled";
+import { CardContainer, MobileCardContainer, DesktopCardContainer } from "./main-cards.styled";
 import 'react-responsive-carousel/lib/styles/carousel.min.css'
 import { Carousel as CarouselContainer } from 'react-responsive-carousel'
-import { three_columns } from "./data";
+import { cardData } from "./data";
 
-export default function MainColumns() {
+export default function MainCards() {
+  const { cards } = cardData
+
   return (
-    <ThreeCardContainer>
+    <CardContainer>
       <MobileCardContainer>
         <CarouselContainer showThumbs={false}>
-          {three_columns.cards.map((e, i) => {
+          {cards.map((e, i) => {
             return (
-              <div className="three-card__wrapper" key={i}>
-                <div className="three-card__img">
+              <div className="card-wrapper" key={i}>
+                <div className="card-img">
                   <img src={e.image} />
                 </div>
                 <h2>{e.title}</h2>
@@ -27,10 +29,10 @@ export default function MainColumns() {
       </MobileCardContainer>
 
       <DesktopCardContainer>
-        {three_columns.cards.map((e, i) => {
+        {cards.map((e, i) => {
           return (
-            <div className="three-card__wrapper" key={i}>
-              <div className="three-card__img">
+            <div className="card-wrapper" key={i}>
+              <div className="card-img">
                 <img src={e.image} />
               </div>
               <h2>{e.title}</h2>
@@ -43,6 +45,6 @@ export default function MainColumns() {
           )
         })}
       </DesktopCardContainer>
-    </ThreeCardContainer>
+    </CardContainer>
   );
 }

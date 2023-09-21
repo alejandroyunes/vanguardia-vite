@@ -1,5 +1,5 @@
-import MobileDesignIcon from "../../images/mobile-design-icon.svg";
-import ResponsiveDesignIcon from "../../images/responsive-design-icon.svg";
+import MobileDesignIcon from "./mobile-design-icon.svg"
+import ResponsiveDesignIcon from "./responsive-design-icon.svg"
 import RocketAnimation from "./rocket.svg"
 
 interface CardTypes {
@@ -12,7 +12,7 @@ interface CardTypes {
 	}[]
 }
 
-export const three_columns: CardTypes = {
+export const cardData: CardTypes = {
 	cards: [
 		{
 			image: ResponsiveDesignIcon,

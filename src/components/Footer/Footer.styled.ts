@@ -191,7 +191,6 @@ export const FooterContainer = styled.footer`
     }
   }
 
-
     button {
       width: 100%;
       background: ${({ theme }) => theme.palette.primary.main};

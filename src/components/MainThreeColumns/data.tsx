@@ -2,7 +2,7 @@ import MobileDesignIcon from "../../images/mobile-design-icon.svg";
 import ResponsiveDesignIcon from "../../images/responsive-design-icon.svg";
 import RocketAnimation from "./rocket.svg"
 
-interface ThreeColumns {
+interface CardTypes {
 	cards: {
 		image: string
 		title: string
@@ -12,7 +12,7 @@ interface ThreeColumns {
 	}[]
 }
 
-export const three_columns: ThreeColumns = {
+export const three_columns: CardTypes = {
 	cards: [
 		{
 			image: ResponsiveDesignIcon,

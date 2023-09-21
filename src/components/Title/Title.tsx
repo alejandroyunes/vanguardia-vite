@@ -1,4 +1,3 @@
-import { FC } from 'react';
 import { TitleContainer } from './title.styled';
 
 interface TitleProps {
@@ -6,11 +5,7 @@ interface TitleProps {
   message: string
 }
 
-const Title: FC<TitleProps> = ({
-  title,
-  message,
-}) => {
-
+export default function Title({ title, message }: TitleProps) {
   return (
     <TitleContainer>
       <h3>{title}</h3>
@@ -18,4 +13,3 @@ const Title: FC<TitleProps> = ({
     </TitleContainer>
   )
 }
-export default Title

@@ -8,31 +8,16 @@ import MailOutlineIcon from "./svgs/email"
 import PhoneAndroidIcon from "./svgs/phone"
 import TwitterIcon from "./svgs/twitter"
 
-import ClearDay from './WeatherIcons/DayClear/ClearDay'
-import ClearNight from './WeatherIcons/NightClear/ClearNight'
-import CloudsDay from './WeatherIcons/Clouds/Day/CloudsDay'
-import CloudsNight from './WeatherIcons/Clouds/Night/CloudsNight'
-import DrizzleDay from './WeatherIcons/Drizzle/Day/DrizzleDay'
-import DrizzleNight from './WeatherIcons/Drizzle/Night/DrizzleNight'
-import Mist from './WeatherIcons/Mist/Mist'
-import Rain from './WeatherIcons/Rain/Rain'
-import Snow from './WeatherIcons/Snow/Snow'
-import Thunder from './WeatherIcons/Thunder/Thunder'
-import WeatherSpinner from './WeatherIcons/WeatherSpinner/WeatherSpinner'
 
 import { FooterContainer } from './Footer.styled'
 import ReCAPTCHA from "react-google-recaptcha"
 
-import useWeather from './hooks/useWeather'
-import useDate from "./hooks/useDate"
 import useCommentApi, { ContactTypes } from "./api/useCommentApi"
+import Weather from "../weather"
 
 const Footer: FC = () => {
 
-  const { weather } = useWeather()
-  const { time } = useDate()
   const {postFetch, defaultContactValues} = useCommentApi()
-
 
   const [inputValues, setInputValue] = useState<ContactTypes>(defaultContactValues)
   const [contacted, setContacted] = useState(false)
@@ -65,18 +50,7 @@ const Footer: FC = () => {
             <h3>El clima en Medellín:</h3>
           </div>
           <div className="climate-data-two">
-            {(() => {
-              switch (weather) {
-                case "Thunderstorm": return <Thunder />
-                case "Drizzle": return (time >= 6 && time < 18 ? <DrizzleDay /> : <DrizzleNight />)
-                case "Rain": return <Rain />
-                case "Snow": return <Snow />
-                case "Clear": return (time >= 6 && time < 18 ? <ClearDay /> : <ClearNight />)
-                case "Clouds": return (time >= 6 && time < 18 ? <CloudsDay /> : <CloudsNight />)
-                case "Mist" || "Smoke" || "Haze" || "Dust" || "Fog" || "Sand" || "Ash" || "Squall" || "Tornado": return <Mist />
-                default: return <WeatherSpinner />
-              }
-            })()}
+            <Weather />
           </div>
         </div>
         <div className="footer__icon">

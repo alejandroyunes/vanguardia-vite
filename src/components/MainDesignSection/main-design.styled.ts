@@ -10,7 +10,6 @@ export const MainDesignContainer = styled.div`
   grid-template-areas:
     "image-one image-one image-two image-three"
     "image-one image-one image-four image-five";
-    outline: 3px solid red;
   img {
     width: 100%;
     height: 100%;
@@ -55,7 +54,6 @@ export const MainDesignContainer = styled.div`
   }
 
 @media(max-width: ${({ theme }) => theme.breakpoint.sm}) {
-  outline: 3px solid green;
     grid-template-columns: auto;
     grid-template-rows: repeat(4, .5);
     gap: 16px 16px;

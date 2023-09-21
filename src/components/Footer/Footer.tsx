@@ -1,4 +1,4 @@
-import { FC, useEffect, useState } from "react"
+import { FC, useState } from "react"
 
 import FacebookIcon from "./svgs/facebook"
 import GitHubIcon from "./svgs/github"
@@ -23,69 +23,25 @@ import WeatherSpinner from './WeatherIcons/WeatherSpinner/WeatherSpinner'
 import { FooterContainer } from './Footer.styled'
 import ReCAPTCHA from "react-google-recaptcha"
 
-interface ContactTypes {
-  name: string
-  email: string
-  message: string
-}
+import useWeather from './hooks/useWeather'
+import useDate from "./hooks/useDate"
+import useCommentApi, { ContactTypes } from "./api/useCommentApi"
 
 const Footer: FC = () => {
 
-  const key = '3a306e66fcf53df61a19eb62070a3d84'
+  const { weather } = useWeather()
+  const { time } = useDate()
+  const {postFetch, defaultContactValues} = useCommentApi()
 
-  const [, setDescription] = useState('')
-  const [main, setMain] = useState('')
-  const [time, setTime] = useState(0)
-
-  const [contacted, setContacted] = useState(false)
-
-  const defaultContactValues = {
-    name: '',
-    email: '',
-    message: ''
-  }
 
   const [inputValues, setInputValue] = useState<ContactTypes>(defaultContactValues)
-
-  useEffect(() => {
-    fetch('https://api.openweathermap.org/data/2.5/weather?q=Medellín,co&APPID=' + key + '&units=metric')
-      .then(res => res.json())
-      .then(data => {
-        setDescription(data.weather[0].description)
-        setMain(data.weather[0].main)
-      })
-  }, [])
-
-  useEffect(() => {
-    let today = new Date()
-    let time = today.getHours()
-    setTime(time)
-  }, [])
-
-  const postFetch = async () => {
-    try {
-      const data = await fetch(import.meta.env.VITE_EXPRESS, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(inputValues)
-      })
-
-      if (!data.ok) { throw new Error('Network response was not okay') }
-
-      // const res = await data.json()
-      // console.log('res', res)
-
-    } catch (err) {
-      console.error('Error catch:', err)
-    }
-  }
+  const [contacted, setContacted] = useState(false)
+  const [isBtnDisabled, setBtnDisabled] = useState(true)
 
   function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault()
 
-    postFetch()
+    postFetch(inputValues)
     setInputValue(defaultContactValues)
     setContacted(true)
   }
@@ -95,13 +51,8 @@ const Footer: FC = () => {
     setInputValue({ ...inputValues, [name]: value })
   }
 
-  const [isBtnDisabled, setBtnDisabled] = useState(true)
-
   const handleRecaptcha = async (recaptcha: string | null) => {
-
-    if (recaptcha) {
-      setBtnDisabled(false)
-    }
+    if (recaptcha) { setBtnDisabled(false) }
   }
 
   return (
@@ -115,7 +66,7 @@ const Footer: FC = () => {
           </div>
           <div className="climate-data-two">
             {(() => {
-              switch (main) {
+              switch (weather) {
                 case "Thunderstorm": return <Thunder />
                 case "Drizzle": return (time >= 6 && time < 18 ? <DrizzleDay /> : <DrizzleNight />)
                 case "Rain": return <Rain />

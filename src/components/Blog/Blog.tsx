@@ -1,43 +1,28 @@
-import React, { useState, useEffect } from "react";
-// import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import { blogDataProps } from "./blog-data";
-// import { useNavigate } from "react-router-dom";
-import Title from "../../components/Title/Title";
-import { Link } from "react-router-dom";
-import { BlogContainer } from "./blog.styled";
+import { Key } from "react"
+import Title from "../../components/Title/Title"
+import { Link } from "react-router-dom"
+import { BlogContainer } from "./blog.styled"
+import useFetchBlogData from "./hooks/useFetchBlogData"
+import { BlogDataTypes } from "./blog-data"
 
 export default function Blog() {
-  // let history = useNavigate();
-
-  const [posts, setPosts] = useState([] as any);
-
-  useEffect(() => {
-    const fetch = async () => {
-      try {
-        const article: any[] = await blogDataProps;
-        setPosts([...article]);
-      } catch (err) {
-        console.error(err);
-      }
-    };
-    fetch();
-  }, []);
+  const { posts } = useFetchBlogData()
 
   return (
     <>
       <Title message={"Blog"} title={""} />
 
       <BlogContainer>
-        {posts.map((e: any, i: React.Key | null | undefined) => (
-          <Link to={`/blog-article/${e.id}`} style={{ textDecoration: "none" }} key={i}>
+        {posts.map((post: BlogDataTypes, i: Key ) => (
+          <Link to={`/blog-article/${post.id}`} key={i}>
             <div className="child-card">
-              <img className="about-logo" src={`${e.url}`} alt="" />
-              <h4>{e.title}</h4>
-              <p>{e.blogSummary}</p>
+              <img className="about-logo" src={`${post.url}`} alt="" />
+              <h4>{post.title}</h4>
+              <p>{post.blogSummary}</p>
             </div>
           </Link>
         ))}
       </BlogContainer>
     </>
-  );
+  )
 }

@@ -2,27 +2,22 @@ import styled from "styled-components"
 
 export const BlogContainer = styled.div`
   max-width:  ${({ theme }) => theme.breakpoint.md};
-  margin: 20px auto;
+  margin: 0 auto;
   display: grid;
   grid-gap: 10px;
-  grid-template-columns: repeat(3, 1fr);
-  @media (max-width: ${({ theme }) => theme.breakpoint.sm}) {
-    grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(3, auto);
+  grid-template-columns: repeat(3, auto);
+  a {
+    text-decoration: none;
   }
   h4 {
-    font-size: 24px;
+    font-size: 1.6rem;
     font-weight: 600;
     margin: 0 0 16px;
     line-height: 1.3;
-    padding: 0 32px;
     max-width: 660px;
     margin: 16px auto;
     text-align: center;
     color: ${({ theme }) => theme.palette.primary.main};
-    @media (max-width: ${({ theme }) => theme.breakpoint.sm}){
-      padding: 0 16px;
-    }
   }
   p {
     font-size: 1.125rem;
@@ -30,13 +25,14 @@ export const BlogContainer = styled.div`
     max-width: 660px;
     margin: 0 auto;
     text-align: center;
-    padding: 0 32px;
     color: ${({ theme }) => theme.textColor};
-    @media (max-width: ${({ theme }) => theme.breakpoint.sm}){
-      padding: 0 16px;
-    }
   }
 
+  @media (max-width: ${({ theme }) => theme.breakpoint.sm}) {
+    grid-template-columns: repeat(1, auto);
+    grid-template-rows: repeat(3, auto);
+  }
+  
   .child-card {
     text-align: center;
     margin: 24px 0;

@@ -28,7 +28,7 @@ export const BlogArticleContainer = styled.div`
     border-bottom: none;
 
     @media (max-width: ${({ theme }) => theme.breakpoint.sm}) {
-      grid-template-columns: 1fr;
+      grid-template-columns: auto;
       grid-template-rows: repeat(3, auto);
       grid-template-areas:
         "title"

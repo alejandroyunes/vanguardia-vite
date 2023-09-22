@@ -1,9 +1,7 @@
-import Blog from "../components/Blog/Blog";
+import Blog from "../components/Blog/Blog"
 
 export default function index() {
   return (
-    <>
-      <Blog />
-    </>
-  );
+    <Blog />
+  )
 }

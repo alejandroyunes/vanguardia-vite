@@ -1,50 +1,38 @@
-import React, {  Key, useEffect, useState } from "react"
+import { Key } from "react"
 import avatarImg from "../../../assets/people/alejo-developer.png"
-import { blogDataProps } from "../blog-data"
-import { useLocation } from "react-router-dom"
+import { BlogDataTypes } from "../blog-data"
 import { BlogArticleContainer } from "./blog-article.styled"
 import Time from "./svgs/time"
 import Twitter from "./svgs/twitter"
 import Tool from './svgs/tool'
 import Star from "./svgs/star"
+import React from "react"
+import useFetchBlogArticle from "../hooks/useFetchBlogArticle"
 
 export default function BlogArticle() {
-  let id = useLocation().pathname.substring(14)
-  const [posts, setPosts] = useState([] as any)
 
-  useEffect(() => {
-    const fetch = async () => {
-      try {
-        const article: any[] = await blogDataProps
-        const uniqueAriticle = article.filter((e: any) => e.id == id)
-        setPosts([...uniqueAriticle])
-      } catch (error) {
-        console.error(error)
-      }
-    }
-    fetch()
-  }, [id])
+  const { postFiltered } = useFetchBlogArticle()
 
   return (
     <BlogArticleContainer>
-      {posts.map((e: any, index: Key | null | undefined) => (
+      {postFiltered.map((post: BlogDataTypes, index: Key) => (
         <div className="article" key={index}>
 
           <div className="title">
             <div className="article-date">
-              <p>{e.date}</p>
+              <p>{post.date}</p>
             </div>
             <div className="article-title">
-              <h2>{e.title}</h2>
+              <h2>{post.title}</h2>
             </div>
           </div>
 
           <div className="content">
             <section className="article-summary">
-              {e.articleSummary}
+              {post.articleSummary}
             </section>
             <section className="article-summary__body">
-              {e.step.map((e: any, index: Key | null | undefined) => (
+              {post.step.map((e: any, index: Key | null | undefined) => (
                 <React.Fragment key={index}>
                   <h2>{e.title}</h2>
                   <p>
@@ -60,10 +48,10 @@ export default function BlogArticle() {
             <ul>
               <li className="item published">
                 <Time />
-                {e.time} min read
+                {post.time} min read
               </li>
               <li className="item tags">
-                {e.related.map((e: any,  index: Key | null | undefined) => (
+                {post.related.map((e: any, index: Key | null | undefined) => (
                   <React.Fragment key={index}>
                     <Tool />
                     <a href="/category/css">{e}</a>

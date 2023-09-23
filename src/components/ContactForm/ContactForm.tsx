@@ -38,7 +38,7 @@ export default function contactForm() {
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
-
+      <label htmlFor="name">Nombre</label>
       <input {...register("name")} placeholder="Nombre" />
       <p className="error">{errors.name?.message}</p>
 
@@ -51,7 +51,7 @@ export default function contactForm() {
       <div className='submit-section'>
         <div className='submit-button'>
 
-          <button type='submit' disabled={ !isValid || !recaptchaValid}>
+          <button className={!isValid || !recaptchaValid ? 'invalid' : ''} type='submit' disabled={!recaptchaValid}>
             Enviar
           </button>
 

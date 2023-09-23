@@ -214,7 +214,7 @@ export const FooterContainer = styled.footer`
   button:hover {
     background: "rgb(33, 99, 151, .6)";
   }
-  button:disabled {
+  .invalid {
     background: ${({ theme }) => theme.palette.red};
   }
 `

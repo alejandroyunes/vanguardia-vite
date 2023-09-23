@@ -276,7 +276,7 @@ export const blogData: BlogDataTypes[] = [
     blogSummary: "Si ya tienes un dominio y hosting en SiteGround, es más sencillo, pero si no, no te preocupes.",
     articleSummary: "Si ya tienes un dominio y hosting en SiteGround, realmente lo podemos hacer en menos de 5 minutos, pero si no, no te preocupes, vamos a instalarlo en nuestro equipo local.",
     time: "12",
-    related: ["HTML", "CSS", "JavaScript", "Wordpress", "Herramientas", "Marketing"],
+    related: ["HTML", "CSS", "JavaScript"],
     shared: ["Twitter", "LinkedIn", "Facebook"],
     date: "Febrero 1, 2021",
     step: [

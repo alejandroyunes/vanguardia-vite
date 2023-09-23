@@ -2,11 +2,10 @@ import styled from 'styled-components'
 
 export const FooterContainer = styled.footer`
   margin: 0 auto;
-  padding-bottom: 40px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
-  padding: 40px 24px 0;
+  padding: 60px 24px 40px;
   max-width: ${({ theme }) => theme.breakpoint.md};
   @media(max-width: ${({ theme }) => theme.breakpoint.sm}){
     grid-template-columns: repeat(1, auto);
@@ -78,38 +77,44 @@ export const FooterContainer = styled.footer`
     }
   }
   .footer-right {
-    margin: 40px 0;
+    margin: auto 0;
   }
 
-  input[type="email"] {
-    background: transparent;
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover, 
+  input:-webkit-autofill:focus, 
+  input:-webkit-autofill:active{
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: #ffffff;
+    transition: background-color 5000s ease-in-out 0s;
+    box-shadow: inset 0 0 20px 20px #23232329;
   }
 
-  .feedback-input {
+  input, textarea {
     color: ${({ theme }) => theme.textColor};
     font-weight: 500;
     font-size: 18px;
     border-radius: 5px;
     line-height: 22px;
-    background-color: transparent;
+    background: transparent;
     border: 2px solid ${({ theme }) => theme.palette.primary.main};
     transition: all 0.3s;
     padding: 13px;
-    margin-bottom: 15px;
     width: 100%;
     box-sizing: border-box;
+    margin-top: 15px;
     outline: 0;
   }
 
-  .feedback-check {
-    border: 2px solid ${({ theme }) => theme.palette.red};
+  .error {
+    color: ${({ theme }) => theme.palette.red};
+    font-size: 1rem;
   }
 
   textarea {
-    height: 150px;
+    height: 100px;
     line-height: 150%;
     resize: vertical;
-    background-color: transparent;
     color: ${({ theme }) => theme.textColor};
   }
 
@@ -118,6 +123,7 @@ export const FooterContainer = styled.footer`
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px 20px;
+    padding-top: 10px;
     @media(max-width: ${({ theme }) => theme.breakpoint.xs}){
       grid-template-columns: 1fr;
       grid-template-rows: 1fr 1fr;
@@ -129,7 +135,7 @@ export const FooterContainer = styled.footer`
     position: absolute;
     right: 0%;
     width: 100%;
-    height: 80px;
+    height: 90px;
     padding: 0 4px;
     background: ${({ theme }) => theme.palette.black};
     transition: 1s;

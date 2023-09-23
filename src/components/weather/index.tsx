@@ -16,15 +16,23 @@ export default function Weather() {
 
   const { weather } = useWeather()
   const { time } = useDate()
+  const isDaytime = time >= 6 && time < 18;
 
   switch (weather) {
     case "Thunderstorm": return <Thunder />
-    case "Drizzle": return (time >= 6 && time < 18 ? <DrizzleDay /> : <DrizzleNight />)
+    case "Drizzle": return (isDaytime ? <DrizzleDay /> : <DrizzleNight />)
     case "Rain": return <Rain />
     case "Snow": return <Snow />
-    case "Clear": return (time >= 6 && time < 18 ? <ClearDay /> : <ClearNight />)
-    case "Clouds": return (time >= 6 && time < 18 ? <CloudsDay /> : <CloudsNight />)
-    case "Mist" || "Smoke" || "Haze" || "Dust" || "Fog" || "Sand" || "Ash" || "Squall" || "Tornado": return <Mist />
+    case "Clear": return (isDaytime ? <ClearDay /> : <ClearNight />)
+    case "Clouds": return (isDaytime ? <CloudsDay /> : <CloudsNight />)
+    case "Fog": return <Mist/>
+    case "Haze": return <Mist/>
+    case "Dust": return <Mist/>
+    case "Sand": return <Mist/>
+    case "Ash": return <Mist/>
+    case "Squall": return <Mist/>
+    case "Tornado": return <Mist/>
+    case "Mist": return <Mist />
     default: return <WeatherSpinner />
   }
 }

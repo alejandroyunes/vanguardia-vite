@@ -1,4 +1,4 @@
-import { useEffect, useState, useRef } from "react"
+import { useEffect, useState, useRef, startTransition } from "react"
 
 export default function useWeather() {
 	const [weather, setWeather] = useState('')
@@ -22,7 +22,9 @@ export default function useWeather() {
 	useEffect(() => {
 		if (!didMount.current) {
 			didMount.current = true
-			getWeather()
+			startTransition(()=>{
+				getWeather()
+			})
 		}
 	})
 

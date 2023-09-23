@@ -9,7 +9,7 @@ import TwitterIcon from "./svgs/twitter"
 import { FooterContainer } from './Footer.styled'
 
 import Weather from "../weather"
-import ContactForm from "../ContactForm/ContactForm"
+import ContactForm from "./ContactForm/ContactForm"
 
 export default function Footer() {
 

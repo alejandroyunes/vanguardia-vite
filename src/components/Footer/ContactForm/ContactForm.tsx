@@ -3,7 +3,7 @@ import { yupResolver } from "@hookform/resolvers/yup"
 import * as yup from "yup"
 import ReCAPTCHA from "react-google-recaptcha"
 import useCommentApi from "./api/useCommentApi"
-import { useState, useTransition } from "react"
+import { useState, useTransition, useRef } from "react"
 
 export default function contactForm() {
 
@@ -11,6 +11,7 @@ export default function contactForm() {
   const [recaptchaValid, setRecaptchaValid] = useState(false)
   const [_isPending, startTransition] = useTransition()
   const { postFetch } = useCommentApi()
+  const recaptcharef = useRef<ReCAPTCHA>(null);
 
   const schema = yup.object({
     name: yup.string().max(20, 'El nombre debe tener un máximo de 20 caracteres').required('Este campo es obligatorio'),
@@ -26,14 +27,11 @@ export default function contactForm() {
     postFetch(data)
     setContacted(true)
     reset()
+    recaptcharef.current?.reset()
   }
 
   const handleRecaptcha = (recaptchaValue: string | null) => {
-    if (typeof recaptchaValue === 'string') {
-      setRecaptchaValid(true);
-    } else {
-      setRecaptchaValid(false);
-    }
+    setRecaptchaValid(typeof recaptchaValue === 'string')
   }
 
   return (
@@ -59,6 +57,7 @@ export default function contactForm() {
         <div className='recaptcha'>
           <div className='google-recaptcha'>
             <ReCAPTCHA
+              ref={recaptcharef}
               sitekey={import.meta.env.VITE_RECAPTCHA ?? '123'}
               onChange={handleRecaptcha}
               theme={'dark'}
@@ -85,3 +84,4 @@ export default function contactForm() {
     </form>
   )
 }
+

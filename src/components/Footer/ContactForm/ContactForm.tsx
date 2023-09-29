@@ -3,7 +3,7 @@ import { useForm } from "react-hook-form"
 import { yupResolver } from "@hookform/resolvers/yup"
 import * as yup from "yup"
 import ReCAPTCHA from "react-google-recaptcha"
-import useCommentApi from "./api/useCommentApi"
+import useCommentApi from "./hooks/useCommentApi"
 
 export default function contactForm() {
 
@@ -14,7 +14,7 @@ export default function contactForm() {
   const recaptcharef = useRef<ReCAPTCHA>(null);
 
   const schema = yup.object({
-    name: yup.string().max(20, 'El nombre debe tener un máximo de 20 caracteres').required('Este campo es obligatorio'),
+    name: yup.string().max(25, 'El nombre debe tener un máximo de 25 caracteres').required('Este campo es obligatorio'),
     email: yup.string().email('Este campo debe ser un email').max(30).required('Este campo es obligatorio'),
     message: yup.string().max(150, 'El comentario debe tener un máximo de 150 caracteres').required('Este campo es obligatorio'),
   }).required()

@@ -1,23 +1,27 @@
-import { useReadLocalStorage } from "usehooks-ts";
-import Animation from "./animation";
-import { BillboardContainer } from "./billboard.styled";
-import { spanish, english } from "./translate";
+import Animation from "./animation"
+import { BillboardContainer } from "./billboard.styled"
 
-export default function Billboard() {
-  const lang = useReadLocalStorage('language')
-  const language = lang === 'spanish' ? spanish : english
+export interface AppProps {
+  title: string
+  subtitle: string
+  button: string
+}
+
+export default function Billboard(props: AppProps) {
+
+  const { title, subtitle, button } = props
 
   return (
     <BillboardContainer>
       <div className="billboard-title">
         <h1>
-          {language.title}
+          {title}
         </h1>
         <h2>
-          {language.subtitle}
+          {subtitle}
         </h2>
         <div className="billboard-email">
-          <a href="#contact">{language.button}</a>
+          <a href="#contact">{button}</a>
         </div>
       </div>
 

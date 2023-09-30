@@ -46,6 +46,6 @@ export const english: SpanishItem[] = [
   },
   {
     link: "Blog",
-    path: '/',
+    path: '/blog',
   },
 ]

@@ -55,22 +55,23 @@ export const BillboardContainer = styled.div`
         }
       }
     }
-    .billboard-email {
+    .billboard-contact {
       display: inline-flex;
       scroll-behavior: smooth;
-      a {
-        background-color: ${({ theme }) => theme.palette.primary.main};
-        color: white;
-        border: none;
-        width: 140px;
-        height: 42px;
-        cursor: pointer;
-        text-decoration: none;
-        display: grid;
-        place-items: center;
-      }
-      a:hover {
-        opacity: 0.8;
-      }
+      line-height: 42px; 
+        a {
+          background-color: ${({ theme }) => theme.palette.primary.main};
+          color: white;
+          border: none;
+          width: 140px;
+          height: 42px;
+          cursor: pointer;
+          text-decoration: none;
+          display: grid;
+          place-items: center;
+        }
+        a:hover {
+          opacity: 0.8;
+        }
     }
 `

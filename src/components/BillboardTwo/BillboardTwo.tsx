@@ -35,7 +35,7 @@ export default function BillboardTwo() {
 			</BillboardLeft>
 
 			<BillboardRight>
-				<a href="https://www.youtube.com/watch?v=mwtbEGNABWU&amp;t=9s" className="btn-video" data-fancybox="">
+				<a href="" className="btn-video">
 					<img src={dashboard} alt="" />
 					<span className="wrap-icon-play">
 						<svg width="1em" height="1em" viewBox="0 0 16 16" fill="#AE3C43" xmlns="http://www.w3.org/2000/svg">

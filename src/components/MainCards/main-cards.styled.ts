@@ -25,9 +25,6 @@ export const CardContainer = styled.div`
     text-align: center;
   }
 
-  svg {
-    height: 140px;
-  }
   img {
     width: 140px;
     height: 140px;
@@ -40,7 +37,7 @@ export const CardContainer = styled.div`
   }
   h3 {
     color: ${({ theme }) => theme.palette.red};
-    padding: 2px 0;
+    padding: 8px 0 0px;
     font-weight: 500;
     font-size: 16px;
   }

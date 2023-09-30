@@ -14,8 +14,8 @@ export default function App() {
   return (
     <>
       <Billboard {...language.billboard} />
-      <Title title="Tecnologías" message="La Era Móvil" />
-      <MainCards />
+      <Title title={language.titleOne.title} message={language.titleOne.message} />
+      <MainCards cards={[...language.mainCards]} />
       <BillboardTwo />
       <Title title="Diseñado para todos los dispositivos" message="Diseños Creativos" />
       <MainDesign />

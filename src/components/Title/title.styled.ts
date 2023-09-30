@@ -4,14 +4,14 @@ export const TitleContainer = styled.div`
   margin: 32px auto;
   padding: 0 16px;
 	max-width: ${({ theme }) => theme.breakpoint.md};
-  h3 {
+  h4 {
     margin-top: 0px;
     text-align: center;
     font-size: 1.2rem;
 		font-weight: 400;
     color: ${({ theme }) => theme.palette.gray};
   }
-  h2 {
+  h3 {
     text-align: center;
     font-size: 2rem;
 		font-weight: 600;

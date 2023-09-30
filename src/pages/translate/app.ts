@@ -37,7 +37,22 @@ export const spanish = {
 			message: 'Estrategias digitales para promover marcas, interactuar con el público y lograr objetivos comerciales con eficacia',
 			viewMore: false,
 		}
-  ]
+  ],
+  billboardTwo: {
+    label: "SOLUCIONES EN LÍNEA",
+    title: "¿Necesitas un Sitio Web?",
+    subtitle: "Principales razones para contratar profesionales en la web.",
+    listOne: "Especialización en desarrollo web",
+    listTwo: "Resultados medibles y métricas de tráfico",
+    listThree: "Creatividad, marketing digital, SEO y más",
+    listFour: "Soporte y escalabilidad",
+    labelFooter: "Podemos ayudarte a conseguir un dominio que se ajuste a tu negocio, el alojamiento y un diseño web profesional de calidad.",
+    alt: 'Imagen con estadísticas de un sitio web'
+  },
+  titleTwo: {
+    title: "Diseñado para Todos los dispositivos",
+    message: "Diseños Creativos"
+  }
 }
 
 export const english = {
@@ -75,5 +90,20 @@ export const english = {
 			message: 'Digital strategies to promote brands, engage with the audience, and achieve business goals effectively',
 			viewMore: false,
 		}
-  ]
+  ],
+  billboardTwo: {
+    label: "ONLINE SOLUTIONS",
+    title: "Need a Website?",
+    subtitle: "Top reasons to hire web professionals.",
+    listOne: "Specialization in web development",
+    listTwo: "Measurable results and traffic metrics",
+    listThree: "Creativity, digital marketing, SEO, and more",
+    listFour: "Support and scalability",
+    labelFooter: "We can assist you in getting a domain that fits your business, hosting, and high-quality professional web design.",
+    alt: "Image with website statistics"
+  },
+  titleTwo: {
+    title: "Designed for All Devices",
+    message: "Creative Designs"
+  }
 }

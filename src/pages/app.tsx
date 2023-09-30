@@ -4,7 +4,7 @@ import Billboard from "../components/Billboard/Billboard"
 import Title from "../components/Title/Title"
 import BillboardTwo from "../components/BillboardTwo/BillboardTwo"
 
-export default function index() {
+export default function App() {
   return (
     <>
       <Billboard />

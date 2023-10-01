@@ -18,7 +18,7 @@ const routerConfig: RouteObject[] = [
     children: [
       { index: true, element: <App /> },
       {
-        path: '/about-me',
+        path: '/about-us',
         element: <About />,
         errorElement: <ErrorPage />
       },

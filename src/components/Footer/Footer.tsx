@@ -11,19 +11,37 @@ import { FooterContainer } from './Footer.styled'
 import Weather from "../weather"
 import ContactForm from "./ContactForm/ContactForm"
 
-export default function Footer() {
+export interface FooterProps {
+  title: string
+  subtitle: string
+  label: string,
+  contact: {
+    name: string
+    email: string
+    comment: string
+    button: string
+    nameValid: string
+    emailValid: string
+    commentValid: string
+    required: string
+    langRecaptcha: boolean
+  }
+}
+
+export default function Footer(props: FooterProps) {
+
+  const {title, subtitle, label, contact} = props
 
   return (
     <FooterContainer id="contact">
       <div className="footer-left">
-        <h1>Nuestra Oficina</h1>
-        <h2>Agencia digital líder con sólida experiencia en diseño y desarrollo.</h2>
+        <h1>{title}</h1>
+        <h2>{subtitle}</h2>
         <div className="climate-data">
           <div className="climate-data-one">
-            <h3>El clima en Medellín:</h3>
+            <h3>{label}</h3>
           </div>
           <div className="climate-data-two">
-
             <Weather />
           </div>
         </div>
@@ -35,7 +53,7 @@ export default function Footer() {
         </div>
         <div className="footer__icon">
           <LocationOnIcon />
-          <p>En algún lugar del mundo</p>
+          <p>Medellín, Colombia</p>
         </div>
         <div className="footer__social">
           <a href="https://www.instagram.com/vanguardiawebtech" target="_blank"><InstagramIcon /></a>
@@ -46,7 +64,7 @@ export default function Footer() {
       </div>
 
       <div className="footer-right">
-        <ContactForm />
+        <ContactForm {...contact} />
       </div>
 
     </FooterContainer>

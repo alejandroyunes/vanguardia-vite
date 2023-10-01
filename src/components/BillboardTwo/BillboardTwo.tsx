@@ -2,7 +2,7 @@ import { BillboardTwoContainer, BillboardRight, BillboardLeft } from './billboar
 import dashboard from '../../assets/billboard-two.webp'
 import Checkmark from './Checkmark'
 
-type SolutionsOnline = {
+type BillboardTwoTypes = {
 	label: string
 	title: string
 	subtitle: string
@@ -14,7 +14,7 @@ type SolutionsOnline = {
 	alt: string
 }
 
-export default function BillboardTwo(props: SolutionsOnline) {
+export default function BillboardTwo(props: BillboardTwoTypes) {
 
 	const {
 		label,
@@ -66,5 +66,5 @@ export default function BillboardTwo(props: SolutionsOnline) {
 				</a>
 			</BillboardRight>
 		</BillboardTwoContainer>
-	);
+	)
 }

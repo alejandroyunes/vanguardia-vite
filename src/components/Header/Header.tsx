@@ -4,19 +4,21 @@ import logo from "/vanguardia-logo.svg"
 import { HeaderContainer, Logo, NavContainer, NavItems, HamburgerMenu } from "./header.styled"
 import ColorSwitcher from "../ThemeSwitcher/colorSwitcher"
 import LanguageSwitcher from "../LanguageSwitcher/LanguageSwitcher"
-import { spanish, english } from "./translate";
-import { useReadLocalStorage } from "usehooks-ts"
 
-export default function Header() {
-  
-  const lang = useReadLocalStorage('language')
-  const language = lang === 'spanish' ? spanish : english
+interface LinkItemProps {
+  links: {
+    link: string;
+    path: string;
+  }[]
+}
+
+export default function Header({ links } : LinkItemProps) {
 
   let navigate = useNavigate()
   const location = useLocation()
   const { pathname } = location
 
-  const [isActive, setIsActive] = useState(false);
+  const [isActive, setIsActive] = useState(false)
 
   const handleClick = (path: string, isMobile?: boolean) => {
     if (isMobile) {
@@ -38,7 +40,7 @@ export default function Header() {
           <ColorSwitcher />
           <NavItems>
             <ul>
-              {language.map((link: any) => (
+              {links.map((link) => (
                 <li
                   key={link.path}
                   onClick={() => handleClick(link.path)}
@@ -61,7 +63,7 @@ export default function Header() {
               <span></span>
               <span></span>
               <ul id="menu">
-                {language.map((link) => (
+                {links.map((link) => (
                   <li key={link.path} onClick={() => handleClick(link.path, true)}>
                     {link.link}
                   </li>

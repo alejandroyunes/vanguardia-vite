@@ -7,6 +7,7 @@ export const FooterContainer = styled.footer`
   grid-template-rows: 1fr;
   padding: 60px 24px 40px;
   max-width: ${({ theme }) => theme.breakpoint.md};
+  gap: 10px;
   @media(max-width: ${({ theme }) => theme.breakpoint.sm}){
     grid-template-columns: repeat(1, auto);
     grid-template-rows: repeat(2, auto);

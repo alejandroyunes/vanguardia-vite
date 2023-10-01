@@ -4,8 +4,13 @@ import { yupResolver } from "@hookform/resolvers/yup"
 import * as yup from "yup"
 import ReCAPTCHA from "react-google-recaptcha"
 import useCommentApi from "./hooks/useCommentApi"
+import { FooterProps } from "../Footer"
 
-export default function contactForm() {
+type ContactProps = Pick<FooterProps['contact'], 'name' | 'email' | 'comment' | 'button' | 'required' | 'nameValid' | 'emailValid' | 'commentValid' | 'langRecaptcha'>;
+
+export default function contactForm(props: ContactProps) {
+
+  const {name, email, comment, button, required, nameValid, emailValid, commentValid, langRecaptcha } = props
 
   const [contacted, setContacted] = useState(false)
   const [recaptchaValid, setRecaptchaValid] = useState(false)
@@ -14,9 +19,9 @@ export default function contactForm() {
   const recaptcharef = useRef<ReCAPTCHA>(null);
 
   const schema = yup.object({
-    name: yup.string().max(25, 'El nombre debe tener un máximo de 25 caracteres').required('Este campo es obligatorio'),
-    email: yup.string().email('Este campo debe ser un email').max(30).required('Este campo es obligatorio'),
-    message: yup.string().max(150, 'El comentario debe tener un máximo de 150 caracteres').required('Este campo es obligatorio'),
+    name: yup.string().max(25, nameValid).required(required),
+    email: yup.string().email(emailValid).max(30).required(required),
+    message: yup.string().max(150, commentValid).required(required),
   }).required()
 
   const { register, handleSubmit, reset, formState: { errors, isValid } } = useForm({
@@ -36,21 +41,20 @@ export default function contactForm() {
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
-      <label htmlFor="name">Nombre</label>
-      <input {...register("name")} placeholder="Nombre" />
+      <input {...register("name")} placeholder={name} />
       <p className="error">{errors.name?.message}</p>
 
-      <input {...register("email")} placeholder="Email" type="email" />
+      <input {...register("email")} placeholder={email} type="email" />
       <p className="error">{errors.email?.message}</p>
 
-      <textarea {...register("message")} placeholder="Comentarios, dudas o sugerencias" />
+      <textarea {...register("message")} placeholder={comment} />
       <p className="error">{errors.message?.message}</p>
 
       <div className='submit-section'>
         <div className='submit-button'>
 
           <button className={!isValid || !recaptchaValid ? 'invalid' : ''} type='submit' disabled={!recaptchaValid}>
-            Enviar
+            {button}
           </button>
 
         </div>
@@ -61,7 +65,7 @@ export default function contactForm() {
               sitekey={import.meta.env.VITE_RECAPTCHA ?? '123'}
               onChange={handleRecaptcha}
               theme={'dark'}
-              hl={'es'}
+              hl={langRecaptcha ? 'es' : 'en'}
             />
           </div>
         </div>

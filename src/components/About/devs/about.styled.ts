@@ -26,14 +26,12 @@ export const AboutContainer = styled.div`
       h1 {
         font-weight: bold;
         color: ${({ theme }) => theme.textColor};
-        font-size: 2rem;
+        font-size: 1.5rem;
         padding: 0 32px;
         line-height: 1.2;
         text-align: center;
         @media (max-width: ${({ theme }) => theme.breakpoint.sm}) {
-          font-size: 1.6rem;
-        }
-        @media (max-width: ${({ theme }) => theme.breakpoint.sm}) {
+          font-size: 1.3rem;
           padding: 0 16px;
         }
       }
@@ -42,7 +40,7 @@ export const AboutContainer = styled.div`
       display: flex;
       align-items: center;
       .about-logo {
-        max-width: 300px;
+        max-width: 450px;
         height: auto;
         margin: 32px auto 0;
         padding: 0 16px;
@@ -50,20 +48,23 @@ export const AboutContainer = styled.div`
       img {
         width: 100%;
         height: auto;
+        border-radius: 50%; 
+        overflow: hidden; 
+        background-color: rgba(0, 0, 0, 0.5);
       }
     }
   }
 
   .about-subtitle {
-    h1 {
+    h2 {
       font-weight: 400;
       color: ${({ theme }) => theme.palette.secondary.main};
-      font-size: 2rem;
+      font-size: 1.3rem;
       line-height: 1.2;
       max-width: 760px;
       text-align: center;
       @media (max-width: ${({ theme }) => theme.breakpoint.sm}) {
-        font-size: 1.4rem;
+        font-size: 1.2rem;
       }
     }
   }

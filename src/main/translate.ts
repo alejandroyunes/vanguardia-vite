@@ -5,8 +5,8 @@ export const spanish = {
       path: '/',
     },
     {
-      link: 'Sobre mi',
-      path: '/about-me'
+      link: 'Nosotros',
+      path: '/about-us'
     },
     {
       link: 'Servicios',
@@ -46,8 +46,8 @@ export const english = {
       path: '/',
     },
     {
-      link: 'About me',
-      path: '/about-me'
+      link: 'About us',
+      path: '/about-us'
     },
     {
       link: "Services",

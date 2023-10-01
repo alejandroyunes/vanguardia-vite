@@ -17,7 +17,7 @@ export default function VanguardiaApp() {
 	return (
 		<ThemeProvider theme={theme}>
 			<GlobalStyle />
-			<Header links={...language.links} />
+			<Header links={language.links} />
 			<Footer {...language.footer}/> 
 		</ThemeProvider>
 	)

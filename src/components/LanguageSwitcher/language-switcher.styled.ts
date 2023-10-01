@@ -4,7 +4,6 @@ export const LanguageContainer = styled.div`
   height: 42px;
   display: flex;
   margin-right: 4px;
-  outline: 1px solid red;
   span {
     color: ${({ theme }) => theme.palette.primary.main};
     padding: 12px 10px;

@@ -23,7 +23,7 @@ export const AboutContainer = styled.div`
         color: ${({ theme }) => theme.textColor};
         font-size: 1.5rem;
         line-height: 1.2;
-        text-align: center;
+        text-align: left;
         @media (max-width: ${({ theme }) => theme.breakpoint.sm}) {
           font-size: 1.3rem;
         }

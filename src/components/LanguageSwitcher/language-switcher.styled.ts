@@ -1,12 +1,13 @@
 import styled from "styled-components"
 
 export const LanguageContainer = styled.div`
-  height: 50px;
+  height: 42px;
   display: flex;
-  margin-right: 10px;
+  margin-right: 4px;
+  outline: 1px solid red;
   span {
     color: ${({ theme }) => theme.palette.primary.main};
-    padding: 15px 10px;
+    padding: 12px 10px;
     -webkit-tap-highlight-color: transparent;
     cursor: pointer;
     font-size: .9rem;

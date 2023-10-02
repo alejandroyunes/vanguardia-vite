@@ -22,10 +22,14 @@ export default function Portfolio({ title, items }: PorfolioProps) {
       {items.map((e, i) => (
         <div className="portfolio-billboard" key={i}>
           <div className="child-one">
-            <h1>{e.title}</h1>
             <h2>
-              {e.subtitle}
+              <strong>
+                {e.title}
+              </strong>
             </h2>
+            <p>
+              {e.subtitle}
+            </p>
             <div className="buttons">
               <Button
                 label="Ver Sitio"

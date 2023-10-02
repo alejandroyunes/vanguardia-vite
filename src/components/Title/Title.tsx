@@ -8,8 +8,8 @@ interface TitleProps {
 export default function Title({ title, message }: TitleProps) {
   return (
     <TitleContainer>
-      <h3>{title}</h3>
-      <h4>{message}</h4>
+      <h1>{title}</h1>
+      <h2>{message}</h2>
     </TitleContainer>
   )
 }

@@ -30,7 +30,9 @@ export default function Services({ title, subtitle, cards }: ServicesProps) {
       <Title title={title} />
 
       <div className="subtitle">
-        <p>{subtitle}</p>
+        <p>
+          <strong>{subtitle}</strong>
+        </p>
       </div>
 
       <div className="services-three-columns">

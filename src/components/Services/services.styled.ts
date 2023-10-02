@@ -6,9 +6,11 @@ export const ServicesContainer = styled.div`
 		max-width:  ${({ theme }) => theme.breakpoint.md};
 		margin: 0 auto;
     p {
-		  font-size: 1.2rem;
       color: ${({ theme }) => theme.textColor};
 		  text-align: center;
+			font-weight: bold;
+    	font-size: 1.4rem;
+    	line-height: 1.2;
 	  }
 	}
 

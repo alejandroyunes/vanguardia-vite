@@ -9,13 +9,13 @@ export const PortfolioContainer = styled.div`
 		margin: 0px auto 80px;
 		padding: 0 24px;
 		grid-template-columns: repeat(2, .5fr);
-		h1 {
+		h2 {
 			font-weight: bold;
 			color: ${({ theme }) => theme.palette.primary.main};
 			font-size: 2.8rem;
 			line-height: 1.2;
 		}
-		h2 {
+		p {
 			color: ${({ theme }) => theme.textColor};
 			font-size: 1.2rem;
 			line-height: 2rem;
@@ -39,7 +39,7 @@ export const PortfolioContainer = styled.div`
 			grid-template-columns: repeat(1, auto);
 			grid-template-rows: repeat(2, auto);
 			margin: 0px auto 60px;
-			h1 {
+			h2 {
 				font-size: 2em;
 			}
 		}

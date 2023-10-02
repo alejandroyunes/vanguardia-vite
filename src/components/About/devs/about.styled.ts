@@ -18,7 +18,7 @@ export const AboutContainer = styled.div`
     .about-title {
       display: flex;
       align-items: center;
-      h1 {
+      p {
         font-weight: bold;
         color: ${({ theme }) => theme.textColor};
         font-size: 1.5rem;
@@ -50,7 +50,7 @@ export const AboutContainer = styled.div`
 
   .about-subtitle {
     padding-top: 12px;
-    h2 {
+    p {
       font-weight: 400;
       color: ${({ theme }) => theme.palette.secondary.main};
       font-size: 1.3rem;

@@ -12,9 +12,11 @@ export default function About({ title, subtitle, alt }: AboutProps) {
     <AboutContainer>
       <div className="about-us-info">
         <div className="about-title">
-          <h1>
-            {title}
-          </h1>
+          <p>
+            <strong>
+              {title}
+            </strong>
+          </p>
         </div>
         <div className="about-image">
           <img className="about-logo" src={linkedin} alt={alt} />
@@ -22,9 +24,11 @@ export default function About({ title, subtitle, alt }: AboutProps) {
       </div>
 
       <div className="about-subtitle">
-        <h2>
-          {subtitle}
-        </h2>
+        <p>
+          <strong>
+            {subtitle}
+          </strong>
+        </p>
       </div>
     </AboutContainer>
   )

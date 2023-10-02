@@ -10,19 +10,19 @@ export const spanish = {
         title: "Diseño Web",
         subtitle: "Creamos páginas web, tiendas virtuales, blogs, landing pages y plantillas de alta calidad.",
         image: WebDesign,
-        alt: ""
+        alt: "hombre selecionando componente en aplicación web"
       },
       {
         title: "Marketing Digital",
         subtitle: "Aplicamos estrategias de marketing utilizando medios digitales y canales en línea para promocionar productos, servicios o marcas.",
         image: DigitalMarketing,
-        alt: ""
+        alt: "Megafono y celular redes sociales"
       },
       {
         title: "Marca y Branding",
         subtitle: "Diseñamos la identidad única y distintiva de un producto, servicio, empresa o entidad en el mercado.",
         image: GuyWebsite,
-        alt: ""
+        alt: "Hombre viendo celular"
       }
     ]
 }
@@ -35,19 +35,19 @@ export const english = {
         title: "Web Design",
         subtitle: "We create high-quality web pages, online stores, blogs, landing pages, and templates.",
         image: WebDesign,
-        alt: ""
+        alt: "Man selecting component in web application."
       },
       {
         title: "Digital Marketing",
         subtitle: "Marketing strategies using digital media and online channels to promote products, services, or brands.",
         image: DigitalMarketing,
-        alt: ""
+        alt: "Megaphone and cellphone social media."
       },
       {
         title: "Brand and Branding",
         subtitle: "We design the unique and distinctive identity of a product, service, company, or entity in the market.",
         image: GuyWebsite,
-        alt: ""
+        alt: "Megaphone and cellphone social media."
       }
     ]
 }

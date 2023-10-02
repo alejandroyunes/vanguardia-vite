@@ -1,8 +1,7 @@
 import styled from "styled-components"
 
 export const PortfolioContainer = styled.div`
-	.portfolio-billboard, 
-	.portfolio-billboard-two {
+	.portfolio-billboard {
 		display: grid;
 		max-width: ${({ theme }) => theme.breakpoint.md};
 		min-height: 100%;
@@ -34,6 +33,7 @@ export const PortfolioContainer = styled.div`
 				max-height: auto;
 				}
 		}
+
 		@media (max-width: ${({ theme }) => theme.breakpoint.sm}) {
 			grid-gap: 30px 30px;
 			grid-template-columns: repeat(1, auto);
@@ -44,19 +44,18 @@ export const PortfolioContainer = styled.div`
 			}
 		}
 	}
-	
-.portfolio-billboard-two {
-	.child-one {
-		margin: auto 0;
-		img {
-			width: 100%;
-			max-height: auto;
+
+	.portfolio-billboard:nth-child(odd) {
+		.child-two {
+			order: -1
+		}
+		@media (max-width: ${({ theme }) => theme.breakpoint.sm}) {
+			.child-two {
+				order: 1
+			}
 		}
 	}
-	@media (max-width: ${({ theme }) => theme.breakpoint.sm}){
-	.child-two {
-		order: -1;
-	}
-}
-}
+	.portfolio-billboard:last-child {
+		margin-bottom: 0;
+	}	
 `

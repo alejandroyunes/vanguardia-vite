@@ -37,7 +37,7 @@ export default function Services({ title, subtitle, cards }: ServicesProps) {
         {cards.map((e, i) => (
           <div className="child-one" key={i}>
             <div className="design-svg">
-              <e.image />
+              <e.image  arial-label={e.alt}/>
             </div>
             <h2>{e.title}</h2>
             <p>

@@ -6,9 +6,12 @@ export const LanguageContainer = styled.div`
   margin-right: 4px;
   span {
     color: ${({ theme }) => theme.palette.primary.main};
-    padding: 12px 10px;
+    padding: 16px 10px;
     -webkit-tap-highlight-color: transparent;
     cursor: pointer;
     font-size: .9rem;
+    @media (max-width: 768px) {
+      padding: 12px 10px;
+    }
   }
 `

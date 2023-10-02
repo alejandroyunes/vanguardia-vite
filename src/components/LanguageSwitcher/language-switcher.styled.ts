@@ -11,7 +11,7 @@ export const LanguageContainer = styled.div`
     cursor: pointer;
     font-size: .9rem;
     @media (max-width: 768px) {
-      padding: 12px 10px;
+      padding: 13px 10px;
     }
   }
 `

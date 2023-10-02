@@ -1,14 +1,14 @@
 import Title from "../Title/Title"
 
-import HtmlSvg from "./assets/html.svg"
-import CssSvg from "./assets/css.svg"
-import JsSvg from "./assets/javascript.svg"
-import ReactSvg from "./assets/reactsvg.svg"
-import NodeSvg from "./assets/node-js.svg"
-import WordpressSvg from "./assets/wordpress.svg"
-import TypescriptSvg from "./assets/typescript.svg"
-import NginxSvg from "./assets/nginx-n.svg"
-import ApacheSvg from "./assets/apache.svg"
+import HtmlSvg from '../../pages/translate/svgs/services/technologies/html.svg'
+import CssSvg from "../../pages/translate/svgs/services/technologies/css.svg"
+import JsSvg from "../../pages/translate/svgs/services/technologies/javascript.svg"
+import ReactSvg from "../../pages/translate/svgs/services/technologies/reactsvg.svg"
+import NodeSvg from "../../pages/translate/svgs/services/technologies/node-js.svg"
+import WordpressSvg from "../../pages/translate/svgs/services/technologies/wordpress.svg"
+import TypescriptSvg from "../../pages/translate/svgs/services/technologies/typescript.svg"
+import NginxSvg from "../../pages/translate/svgs/services/technologies//nginx-n.svg"
+import ApacheSvg from "../../pages/translate/svgs/services/technologies/apache.svg"
 
 import { ServicesContainer } from "./services.styled"
 

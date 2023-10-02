@@ -1,4 +1,3 @@
-import { Key } from "react"
 import Title from "../../components/Title/Title"
 import { Link } from "react-router-dom"
 import { BlogContainer } from "./blog.styled"
@@ -13,10 +12,10 @@ export default function Blog() {
       <Title title={"Blog"}  />
 
       <BlogContainer>
-        {posts.map((post: BlogDataTypes, i: Key ) => (
+        {posts.map((post: BlogDataTypes, i: React.Key ) => (
           <Link to={`/blog-article/${post.id}`} key={i}>
             <div className="child-card">
-              <img className="about-logo" src={`${post.url}`} alt="" />
+              <img src={`${post.url}`} alt="" />
               <h4>{post.title}</h4>
               <p>{post.blogSummary}</p>
             </div>

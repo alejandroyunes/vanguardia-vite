@@ -1,5 +1,4 @@
-import { Key } from "react"
-import avatarImg from "../../../assets/people/alejo-developer.png"
+import avatarImg from "./alejo.webp"
 import { BlogDataTypes } from "../blog-data"
 import { BlogArticleContainer } from "./blog-article.styled"
 import Time from "./svgs/time"
@@ -15,7 +14,7 @@ export default function BlogArticle() {
 
   return (
     <BlogArticleContainer>
-      {postFiltered.map((post: BlogDataTypes, index: Key) => (
+      {postFiltered.map((post: BlogDataTypes, index: React.Key) => (
         <div className="article" key={index}>
 
           <div className="title">
@@ -32,7 +31,7 @@ export default function BlogArticle() {
               {post.articleSummary}
             </section>
             <section className="article-summary__body">
-              {post.step.map((e: any, index: Key | null | undefined) => (
+              {post.step.map((e, index: React.Key) => (
                 <React.Fragment key={index}>
                   <h2>{e.title}</h2>
                   <p>
@@ -51,7 +50,7 @@ export default function BlogArticle() {
                 {post.time} min read
               </li>
               <li className="item tags">
-                {post.related.map((e: any, index: Key | null | undefined) => (
+                {post.related.map((e, index: React.Key) => (
                   <React.Fragment key={index}>
                     <Tool />
                     <a href="/category/css">{e}</a>
@@ -65,15 +64,18 @@ export default function BlogArticle() {
               </li>
               <li className="item twitter">
                 <Twitter />
-                Share on <a href="/">Twitter </a>&
-                <a href="/"> LinkedIn</a>
+                  Share on 
+                  <a href="/">Twitter </a>&
+                  <a href="/"> LinkedIn</a>
               </li>
             </ul>
           </div>
 
         </div>
       ))}
+
       <div className="article-author">
+
         <div className="article-header">
           <div className="article-author-image">
             <img src={avatarImg} alt="Avatar" className="avatar" />
@@ -87,7 +89,9 @@ export default function BlogArticle() {
             Un diseñador independiente y desarrollador front-end dedicado a mejorar la experiencia de todos en la web, con un enfoque centrado en la mejora progresiva y el perfeccionamiento constante.
           </p>
         </div>
+
       </div>
+
     </BlogArticleContainer>
   )
 }

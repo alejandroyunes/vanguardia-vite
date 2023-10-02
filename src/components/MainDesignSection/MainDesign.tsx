@@ -1,8 +1,8 @@
-import WhiteMountains from "./Assets/white-mountains.jpg"
-import GreenDesign from "./Assets/green-design-mockup.jpg"
-import Rocket from './Assets/Rocket'
-import GirlFloating from './Assets/GirlFloating/GirlFloating'
-import MiniVan from "./Assets/minivan-design.jpg"
+import WhiteMountains from "./Assets/images/white-mountains.webp"
+import GreenDesign from "./Assets/images/green-design-mockup.webp"
+import Rocket from "./Assets/svgs/rocket/Rocket"
+import GirlFloating from './Assets/svgs/GirlFloating'
+import MiniVan from './Assets/images/minivan-design.webp'
 import { MainDesignContainer } from "./main-design.styled"
 
 export default function MainDesign() {

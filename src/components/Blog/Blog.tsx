@@ -10,7 +10,7 @@ export default function Blog() {
 
   return (
     <>
-      <Title message={"Blog"} title={""} />
+      <Title title={"Blog"}  />
 
       <BlogContainer>
         {posts.map((post: BlogDataTypes, i: Key ) => (

@@ -1,12 +1,19 @@
+import Animation from './svgs/app/animation.svg'
+
 import MobileDesignIcon from './svgs/main-cards/mobile-design-icon.svg'
 import ResponsiveDesignIcon from "./svgs/main-cards/responsive-design-icon.svg"
 import RocketAnimation from "./svgs/main-cards/rocket.svg"
+
+import Dashboard from './images/app/billboard-two.webp'
+
 
 export const spanish = {
   billboard: {
     title: "Construimos Experiencias Web Asombrosas",
     subtitle: "Somos una agencia digital líder con amplia experiencia en diseño y desarrollo. Nos especializamos en la creación de productos móviles y aplicativos web.",
-    button: "Contáctanos"
+    button: "Contáctanos",
+    image: Animation,
+    alt: "contruyendo una app con componentes"
   },
   titleOne: {
     title: "Technologías",
@@ -47,7 +54,8 @@ export const spanish = {
     listThree: "Creatividad, marketing digital, SEO y más",
     listFour: "Soporte y escalabilidad",
     labelFooter: "Podemos ayudarte a conseguir un dominio que se ajuste a tu negocio, el alojamiento y un diseño web profesional de calidad.",
-    alt: 'Imagen con estadísticas de un sitio web'
+    image: Dashboard,
+    alt: 'Imagen con estadísticas de un sitio web',
   },
   titleTwo: {
     title: "Diseñado para Todos los dispositivos",
@@ -59,7 +67,9 @@ export const english = {
   billboard: {
     title: "Building Amazing Web Experiences",
     subtitle: "We are a leading digital agency with extensive experience in design and development. We specialize in the creation of mobile products and web applications.",
-    button: "Contact us"
+    button: "Contact us",
+    image: Animation,
+    alt: "web design and development creation"
   },
   titleOne: {
     title: "Technologies",
@@ -100,6 +110,7 @@ export const english = {
     listThree: "Creativity, digital marketing, SEO, and more",
     listFour: "Support and scalability",
     labelFooter: "We can assist you in getting a domain that fits your business, hosting, and high-quality professional web design.",
+    image: Dashboard,
     alt: "Image with website statistics"
   },
   titleTwo: {

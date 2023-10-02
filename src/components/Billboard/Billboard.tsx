@@ -1,15 +1,16 @@
-import Animation from "./animation"
 import { BillboardContainer } from "./billboard.styled"
 
 export interface BillboardProps {
   title: string
   subtitle: string
   button: string
+  image: string
+  alt: string
 }
 
 export default function Billboard(props: BillboardProps) {
 
-  const { title, subtitle, button } = props
+  const { title, subtitle, button, image, alt } = props
 
   return (
     <BillboardContainer>
@@ -26,7 +27,7 @@ export default function Billboard(props: BillboardProps) {
       </div>
 
       <div className="billboard-svg">
-        <Animation arial-label="image about web design and development"/>
+        <img src={image} alt={alt} />
       </div>
 
     </BillboardContainer>

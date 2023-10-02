@@ -19,7 +19,6 @@ export default function Portfolio({ title, items }: PorfolioProps) {
     <PortfolioContainer>
       <Title title={title} />
 
-
       {items.map((e, i) => (
         <div className="portfolio-billboard" key={i}>
           <div className="child-one">

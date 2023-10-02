@@ -6,6 +6,6 @@ export default function index() {
   const lang = useReadLocalStorage('language')
   const language = lang === 'spanish' ? spanish : english
   return (
-    <Services {...language.services} />
-  );
+    <Services {...language} />
+  )
 }

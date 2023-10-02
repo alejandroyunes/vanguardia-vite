@@ -1,10 +1,9 @@
-function DigitalMarketing(props: any) {
+export default function DigitalMarketing() {
   return (
     <svg
       className="animated"
       id="freepik_stories-mobile-marketing"
       viewBox="0 0 500 500"
-      {...props}
     >
       <style>
         {
@@ -985,5 +984,3 @@ function DigitalMarketing(props: any) {
     </svg>
   )
 }
-
-export default DigitalMarketing

@@ -1,14 +1,13 @@
-function WebDesign(props: any) {
+export default function WebDesign() {
   return (
     <svg
       className="animated"
-      id="freepik_stories-asset-selection"
+      id="asset-selection"
       viewBox="0 0 500 500"
-      {...props}
     >
       <style>
         {
-          "@keyframes lightSpeedRight{60%{transform:skewX(10deg);opacity:1}80%{transform:skewX(-2deg)}}@keyframes fadeIn{0%{opacity:0}to{opacity:1}}@keyframes slideLeft{0%{opacity:0;transform:translateX(-30px)}to{opacity:1;transform:translateX(0)}}@keyframes slideRight{0%{opacity:0;transform:translateX(30px)}to{opacity:1;transform:translateX(0)}}@keyframes slideDown{0%{opacity:0;transform:translateY(-30px)}to{opacity:1;transform:translateY(0)}}svg#freepik_stories-asset-selection:not(.animated) .animable{opacity:0}"
+          "@keyframes lightSpeedRight{60%{transform:skewX(10deg);opacity:1}80%{transform:skewX(-2deg)}}@keyframes fadeIn{0%{opacity:0}to{opacity:1}}@keyframes slideLeft{0%{opacity:0;transform:translateX(-30px)}to{opacity:1;transform:translateX(0)}}@keyframes slideRight{0%{opacity:0;transform:translateX(30px)}to{opacity:1;transform:translateX(0)}}@keyframes slideDown{0%{opacity:0;transform:translateY(-30px)}to{opacity:1;transform:translateY(0)}}svg#asset-selection:not(.animated) .animable{opacity:0}"
         }
       </style>
       <g
@@ -3262,5 +3261,3 @@ function WebDesign(props: any) {
     </svg>
   )
 }
-
-export default WebDesign

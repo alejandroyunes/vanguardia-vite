@@ -1,8 +1,8 @@
 import { TitleContainer } from './title.styled';
 
 interface TitleProps {
-  title: string
-  message: string
+  title?: string
+  message?: string
 }
 
 export default function Title({ title, message }: TitleProps) {

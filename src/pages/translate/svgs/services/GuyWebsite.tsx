@@ -1,10 +1,10 @@
-function Branding(props: any) {
+export default function GuyWebsite() {
+  
   return (
     <svg
       className="animated"
       id="freepik_stories-online-world"
       viewBox="0 0 500 500"
-      {...props}
     >
       <style>
         {
@@ -1117,5 +1117,3 @@ function Branding(props: any) {
     </svg>
   )
 }
-
-export default Branding

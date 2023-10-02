@@ -9,52 +9,49 @@ import WordpressSvg from "../../assets/wordpress.svg"
 import TypescriptSvg from "../../assets/typescript.svg"
 import NginxSvg from "../../assets/nginx-n.svg"
 import ApacheSvg from "../../assets/apache.svg"
-import WebDesign from '../MainDesignSection/Assets/WebDesign/WebDesign'
-import DigitalMarketing from "../MainDesignSection/Assets/DigitalMarketing/DigitalMarketing"
-import Branding from "../MainDesignSection/Assets/Branding/Branding"
-import { ServicesContainer } from "./services.styled"
 
-export default function Services() {
+import { ServicesContainer } from "./services.styled"
+import { ReactNode } from "react"
+
+interface ServicesProps {
+  title: string
+  subtitle: string
+  cards: {
+    title: string
+    subtitle: string
+    image: () => ReactNode
+    alt: string
+  }[]
+}
+
+export default function Services({ title, subtitle, cards }: ServicesProps) {
+
   return (
     <ServicesContainer>
-      <Title message={"Servicios"} title={""} />
+      <Title title={title} />
 
       <div className="subtitle">
-        <p>Somos una empresa especializada en diseño y desarrollo web que se dedica a la creación de sitios web altamente efectivos para marcas y startups líderes en la industria en Medellín y el mundo. Nuestros proyectos se enfocan en generar tráfico, fomentar la participación y aumentar las conversiones.</p>
+        <p>{subtitle}</p>
       </div>
 
       <div className="services-three-columns">
-        <div className="child-one">
-          <div className="design-svg">
-            <WebDesign />
+        {cards.map((e, i) => (
+          <div className="child-one" key={i}>
+            <div className="design-svg">
+              <e.image />
+              {/* <img src={e.image} alt={e.alt} /> */}
+            </div>
+            <h2>{e.title}</h2>
+            <p>
+              {e.subtitle}
+            </p>
           </div>
-          <h4>Web Design</h4>
-          <p>
-            Creamos páginas web, tiendas virtuales, blogs, landing pages y plantillas de alta calidad.
-          </p>
-        </div>
-        <div className="child-two">
-          <div className="design-svg">
-            <DigitalMarketing />
-          </div>
-          <h4>Marketing Digital</h4>
-          <p>
-            Diseñamos estrategias para potenciar la presencia de tu marca en línea y generar un impacto significativo en Internet.
-          </p>
-        </div>
-        <div className="child-three">
-          <div className="design-svg-2">
-            <Branding />
-          </div>
-          <h4>Branding / Marca</h4>
-          <p>
-            Diseñamos y estructuramos la identidad de tu marca para que perdure en el tiempo.
-          </p>
-        </div>
+        ))}
+
       </div>
       <br />
 
-      <Title message={"Tecnologías"} title={""} />
+      <Title message={"Tecnologías"} />
 
       <div className="services-tech">
         <div className="child-one">

@@ -1,6 +1,6 @@
-import MobileDesignIcon from "./svgs/mobile-design-icon.svg"
-import ResponsiveDesignIcon from "./svgs/responsive-design-icon.svg"
-import RocketAnimation from "./svgs/rocket.svg"
+import MobileDesignIcon from './svgs/main-cards/mobile-design-icon.svg'
+import ResponsiveDesignIcon from "./svgs/main-cards/responsive-design-icon.svg"
+import RocketAnimation from "./svgs/main-cards/rocket.svg"
 
 export const spanish = {
   billboard: {

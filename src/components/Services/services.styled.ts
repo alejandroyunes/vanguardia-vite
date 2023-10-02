@@ -20,7 +20,7 @@ export const ServicesContainer = styled.div`
 		grid-template-rows: repeat(1, auto);
 		grid-template-areas: "child-one" "child-two" "child-three";
 
-		h4 {
+		h2 {
 			font-size: 24px;
 			font-weight: 600;
 			margin: 0 0 16px;
@@ -46,6 +46,11 @@ export const ServicesContainer = styled.div`
 			pointer-events: none;
 			margin: 0 auto;
 			order: 1;
+			
+  		img {
+    		width: 140px;
+    		height: 140px;
+  		}
 		}
 		.design-svg-2 {
 			max-width: 340px;

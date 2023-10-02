@@ -2,9 +2,8 @@ import styled from 'styled-components'
 
 export const BillboardContainer = styled.div`
     padding: 32px 24px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: auto auto;
     margin: 0 auto;
     max-width: ${({ theme }) => theme.breakpoint.md};
     @media(max-width: ${({ theme }) => theme.breakpoint.xs}){
@@ -15,6 +14,7 @@ export const BillboardContainer = styled.div`
     }
   	.billboard-title {
       padding-right: 20px;
+      margin: auto 0;
       @media(max-width: ${({ theme }) => theme.breakpoint.xs}){
       padding-right: 0;
       padding-bottom: 32px; 
@@ -46,8 +46,9 @@ export const BillboardContainer = styled.div`
     }
 		.billboard-svg {
       text-align: center;
-      svg {
-        max-width: 400px;
+      img {
+        width: 100%;
+        max-height: auto;
       }
       @media(max-width: ${({ theme }) => theme.breakpoint.xs}){
         svg {

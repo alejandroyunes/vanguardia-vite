@@ -27,7 +27,6 @@ export const spanish = {
     ]
 }
 
-
 export const english = {
     title: "Services",
     subtitle: "We are a company specialized in web design and development, dedicated to creating highly effective websites for leading brands and startups in Medellín and around the world. Our projects focus on generating traffic, encouraging engagement, and increasing conversions.",

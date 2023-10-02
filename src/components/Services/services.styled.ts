@@ -1,9 +1,9 @@
 import styled from 'styled-components'
 
 export const ServicesContainer = styled.div`
+	padding: 0 24px;
 	.subtitle {
 		max-width:  ${({ theme }) => theme.breakpoint.md};
-		padding: 0 24px;
 		margin: 0 auto;
     p {
 		  font-size: 1.2rem;
@@ -18,7 +18,6 @@ export const ServicesContainer = styled.div`
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
 		grid-template-rows: repeat(1, auto);
-		grid-template-areas: "child-one" "child-two" "child-three";
 
 		h2 {
 			font-size: 24px;
@@ -41,45 +40,17 @@ export const ServicesContainer = styled.div`
 			color: ${({ theme }) => theme.textColor};
 		}
 		.design-svg {
-			max-width: 340px;
+			max-width: 220px;
 			width: 100%;
-			pointer-events: none;
+			/* pointer-events: none; */
 			margin: 0 auto;
-			order: 1;
-			
-  		img {
-    		width: 140px;
-    		height: 140px;
-  		}
+			order: -1;
 		}
-		.design-svg-2 {
-			max-width: 340px;
-			width: 100%;
-			pointer-events: none;
-			margin: 0 auto;
-			order: 1;
-		}
-
 		.child-one {
 			text-align: center;
 			margin: 0 auto;
 			display: grid;
 			padding-top: 16px;
-		}
-		.child-two {
-			text-align: center;
-			margin: 0 auto;
-			display: grid;
-			padding-top: 16px;
-		}
-		.child-three {
-			text-align: center;
-			margin: 0 auto;
-			display: grid;
-			padding-top: 16px;
-		}
-		img {
-			margin: 0 auto;
 		}
 	}
 
@@ -88,18 +59,8 @@ export const ServicesContainer = styled.div`
 			grid-template-columns: repeat(1, 1fr);
 			grid-template-rows: repeat(3, auto);
 			grid-gap: 10px;
-			grid-template-areas:
-			"child-one"
-			"child-two"
-			"child-three";
 			.design-svg {
 				order: 0;
-			}
-			.design-svg-2 {
-				order: 0;
-			}
-			.child-one {
-				padding-top: 0;
 			}
 		}
 	}

@@ -17,7 +17,7 @@ export default function Blog() {
             <div className="child-card">
               <img src={`${post.url}`} alt="" />
               <h2>{post.title}</h2>
-              <p>{post.blogSummary}</p>
+              <p>{post.blogPageSummary}</p>
             </div>
           </Link>
         ))}

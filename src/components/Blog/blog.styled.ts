@@ -9,7 +9,7 @@ export const BlogContainer = styled.div`
   a {
     text-decoration: none;
   }
-  h4 {
+  h2 {
     font-size: 1.6rem;
     font-weight: 600;
     margin: 0 0 16px;

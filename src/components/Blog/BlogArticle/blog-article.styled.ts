@@ -1,9 +1,9 @@
 import styled from "styled-components"
 
-export const BlogArticleContainer = styled.div`
+export const BlogArticleContainer = styled.section`
   max-width: ${({ theme }) => theme.breakpoint.md};
   margin: 0 auto;
-  padding: 24px 24px;
+  padding: 24px 24px 0;
   display: grid;
   grid-template-columns: 0.2fr 0.8fr;
   grid-template-rows: auto;
@@ -39,8 +39,9 @@ export const BlogArticleContainer = styled.div`
     .title {
       grid-area: title;
       .article-date {
-        p {
-          font-style: italic;
+        span {
+        font-style: italic;
+        display: block;
           color: ${({ theme }) => theme.palette.red};
         }
         @media (max-width: ${({ theme }) => theme.breakpoint.sm}) {
@@ -49,25 +50,25 @@ export const BlogArticleContainer = styled.div`
       }
       .article-title {
         margin-bottom: 16px;
-        h2 {
+        h1 {
           text-align: left;
           font-size: 2rem;
           font-weight: bold;
           color: ${({ theme }) => theme.palette.primary.main};
           line-height: 3rem;
         }
-        @media (max-width: ${({ theme }) => theme.breakpoint.sm}) { 
-          h2 {
+        @media (max-width: ${({ theme }) => theme.breakpoint.sm}) {
+          h1 {
             font-size: 1.5rem;
             line-height: 1.5rem;
           }
         }
       }
-    
 
     }
     .content {
       grid-area: content;
+      margin-right: 16px;
       .article-summary::before {
         content: "Breve Resumen ↬ ";
         display: inline;
@@ -82,66 +83,109 @@ export const BlogArticleContainer = styled.div`
       .article-summary {
         color: ${({ theme }) => theme.textColor};
         font-style: italic;
-        padding: 0 16px 24px 0;
+        padding-bottom: 24px;
         border-bottom: 2px solid ${({ theme }) => theme.palette.gray};
       }
-      .article-summary__body {
-        padding: 24px 0;
-        p {
-          padding-bottom: 8px;
-          color: ${({ theme }) => theme.textColor};
-          strong {
-            font-weight: bold;
-            color: ${({ theme }) => theme.palette.red};
-          }
+      .article-image {
+        margin: 24px 0;
+        img {
+          height: auto;
+          max-width: 100%;
+
         }
-        h2 {
-          font-size: 24px;
-          padding: 8px 0;
-          color: ${({ theme }) => theme.palette.primary.main};
+      @media (max-width: ${({ theme }) => theme.breakpoint.sm}) {
+        text-align: center;
+      }
+      }
+      .article-summary__body {
+        .step {
+          margin-bottom: 24px;
+          h2 {
+            font-size: 24px;
+            padding: 8px 0;
+            color: ${({ theme }) => theme.palette.primary.main};
+            }
+          p {
+            padding-bottom: 8px;
+            color: ${({ theme }) => theme.textColor};
+
+            strong {
+              font-weight: bold;
+              color: ${({ theme }) => theme.palette.red};
+            }
+          }
+          span {
+            a {
+              color: ${({ theme }) => theme.palette.primary.main};
+            }
+          }
         }
       }
     }
-    .meta-box-article {
+    .meta-box {
       grid-area: meta;
-      background: ${({ theme }) => theme.palette.secondary.contrastText};
-      padding: 8px 8px;
-      margin-left: 16px;
-      list-style: none;
-      border-radius: 11px;
-      font-size: 0.8em;
+      position: sticky;
+      top: 60px;
       height: fit-content;
-      width: fit-content;
-      .item {
+      .share {
+        background: ${({ theme }) => theme.palette.secondary.contrastText};
+        padding: 8px 8px;
         list-style: none;
-        line-height: 1.4;
-        padding: 4px 8px;
-        color: ${({ theme }) => theme.palette.black};
-        a {
-          background-color: transparent;
-          text-decoration-skip-ink: auto;
-          text-decoration-line: underline;
-          color: #006fc6;
+        border-radius: 11px;
+        font-size: 0.8em;
+        .item {
+          list-style: none;
+          line-height: 1.4;
+          padding: 4px 8px;
+          color: ${({ theme }) => theme.palette.black};
+          a {
+            background-color: transparent;
+            text-decoration-skip-ink: auto;
+            text-decoration-line: underline;
+            color: #006fc6;
+          }
+          span {
+            padding-right: 4px;
+          }
         }
-        span {
-          padding-right: 4px;
-        }
-      }
 
-      .published, .tags, .author, .twitter {
-        display: flex;
-        svg {
-          height: 18px;
-          width: 18px;
-          margin-right: 8px;
+        .published, .tags, .author, .twitter {
+          display: flex;
+          svg {
+            height: 18px;
+            width: 18px;
+            margin-right: 8px;
+          }
+        }
+
+        @media (max-width: ${({ theme }) => theme.breakpoint.sm}) {
+          margin: 0 0 16px 0;
+        }
+        @media (max-width: ${({ theme }) => theme.breakpoint.xs}) {
+          width: 100%;
         }
       }
-
-      @media (max-width: ${({ theme }) => theme.breakpoint.sm}) {
-        margin: 0 0 16px 0;
-      }
-      @media (max-width: ${({ theme }) => theme.breakpoint.xs}) {
+      .ad-banner__short {
+        margin: 0 0 20px 0;
+        height: 180px;
         width: 100%;
+        /* background-color: lightpink; */
+      }
+      .ad-banner__long {
+        margin-top: 20px;
+        height: 400px;
+        width: 100%;
+        /* background-color: lightblue; */
+      }
+      @media (max-width: ${({ theme }) => theme.breakpoint.sm}) {
+        position: relative;
+        top: 0;
+        .ad-banner__long {
+          display: none;
+        }
+        .ad-banner__short {
+          display: none;
+        }
       }
     }
   }
@@ -149,6 +193,9 @@ export const BlogArticleContainer = styled.div`
   .article-author {
     grid-area: author;
     padding-right: 16px;
+    position: sticky;
+    top: 60px;
+    height: fit-content;
     @media (max-width: ${({ theme }) => theme.breakpoint.sm}) {
       padding-top: 16px;
     }
@@ -178,6 +225,15 @@ export const BlogArticleContainer = styled.div`
       p {
           color: ${({ theme }) => theme.palette.secondary.main};
         }
+    }
+    .ad-banner__long-left {
+      margin: 20px 0;
+      height: 380px;
+      width: 100%;
+      /* background-color: lightpink; */
+      @media (max-width: ${({ theme }) => theme.breakpoint.sm}) {
+        display: none;
+      }
     }
   }
 `

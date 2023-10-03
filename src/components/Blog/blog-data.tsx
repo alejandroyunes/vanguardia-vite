@@ -6,90 +6,74 @@ import wordpressPlugin from "../../assets/blog/wordpress-plugins.jpg";
 import figma from "../../assets/blog/figma-xd.jpg"
 import bitbucket from "../../assets/blog/githubbitbucket.jpg"
 import htmlcssjs from "../../assets/blog/htmlcssjs.jpg"
+import linuxWindowsArticle from './BlogArticle/images/linux-windows.webp'
 
 export interface BlogDataTypes {
   id: number
   title: string
   url: string
-  blogSummary: string
+  blogPageSummary: string
   articleSummary: string
   time: string
   related: string[]
   shared: string[]
   date: string
+  image?: string
+  imageSmall?: string
+  alt?: string
   step: {
     title: string
     step: string
     description: string
+    resource?: string
   }[]
 }
 
 export const blogData: BlogDataTypes[] = [
   {
     id: 1,
-    title: "Cómo instalar Linux junto con Windows 10 u 8 en modo UEFI de arranque dual.",
+    title: "¿Cómo instalar Linux Mint junto con Windows 11?",
     url: linuxWindows,
-    blogSummary: "Esta guía te mostrará cómo correr Linux y Windows 10 juntos en un solo sistema operativo",
-    articleSummary: "Esta guía te mostrará cómo correr Linux y Windows 10 juntos en un solo sistema operativo. Los pasos mencionados aquí sirven para otras distribuciones de Linux basadas en Ubuntu, como Linux Mint, Manjaro, Deepin OS, etc. Cortando la charla, veamos cómo arrancar Linux de forma dual en un sistema Windows 10/8 habilitado para arranque seguro UEFI.",
-    time: "13",
-    related: ["CSS", "Tools", "Workflow"],
+    blogPageSummary: "Esta guía te mostrará cómo correr Linux Mint y Windows juntos en un mismo PC",
+    articleSummary: "Esta guía te mostrará cómo correr Linux Mint y Windows juntos en un mismo PC. Los pasos mencionados sirven para las distribuciones de Linux Mint. Bueno, veamos cómo arrancar Linux de forma dual en un sistema Windows.",
+    time: "5",
+    related: ["Windows", "Linux", "Systems"],
     shared: ["Twitter", "LinkedIn", "Facebook"],
-    date: "Febrero 1, 2021",
+    date: "Octubre 3, 2023",
+    image: linuxWindowsArticle,
     step: [
       {
         title: "Haz una copia de seguridad [opcional]",
         step: "Paso 1:",
-        description: "Siempre es bueno hacer una copia de seguridad, por si acaso pasa algo."
+        description: "Siempre es bueno tener una copia de seguridad, por si acaso pasa algo. Descarga la imagen ISO según tu sistema operativo de Windows.",
+        resource: "https://www.microsoft.com/en-us/software-download/"
       },
       {
-        title: "Crear un disco o USB de arranque o booteable del sistema operativo Windows",
+        title: "Descarga la distribución de Linux Mint",
         step: "Paso 2:",
-        description: "Lo siguiente que debe hacer es crear un disco o USB de arranque del sistema operativo Windows. Recomiendo la herramienta de creación de medios de Windows (Media Creation Tool). Una vez que inicie la herramienta, ésta te guiará a través de los pasos necesarios para crear los medios de Windows en un USB o DVD-R. Nota: Incluso si ya tiene Windows 10 instalado, es una buena idea crear un dispositivo de arranque de todos modos, en caso de que algo salga mal y necesite re-instalarlo. [Enlace](https://www.microsoft.com/en-us/software-download/windows10)"
+        description: "Ingresa al sitio oficial de Linux Mint y navega hacia la sección de descargas. Busca la distribución que más te guste y descárgala. Posiblemente tomará un poco de tiempo dependiendo de tu conexión a Internet.",
+        resource: "https://linuxmint.com/"
       },
       {
-        title: "Medios de instalación para Ubuntu",
+        title: "Descarga Rufus para crear unidades de arranque USB",
         step: "Paso 3:",
-        description: "Descarga la imagen ISO de kde neon, o cualquier distribución de Linux que desees. [Enlace](https://neon.kde.org/download)"
+        description: "Haz clic derecho sobre el instalador de Rufus y ejecútalo como administrador. Luego, en 'Dispositivo', selecciona la USB y en 'Seleccionar' busca la imagen ISO de Linux.  En 'Esquema de partición', es importante seleccionar 'GPT' si el sistema de destino es UEFI.  Haz clic en 'Empezar' y luego en 'OK' en el modo 'Imagen ISO (recomendado)'.",
+        resource: "https://rufus.ie/es/"
       },
       {
-        title: "Software Linux",
+        title: "Arranque desde el BIOS",
         step: "Paso 4:",
-        description: "Software Linux Live (para hacer una unidad USB de arranque de Linux). Para crear discos de arranque para cualquier distribución de Linux, recomiendo Live Linux. Cuando lo tengas instalado simplemente busca la imagen ISO y listo. [Enlace](http://www.linuxliveusb.com/en/download)"
+        description: "Para acceder a nuestro BIOS depende de nuestro equipo, pero si al iniciar el equipo y presionando F2, F12 o F10 no funciona, debemos buscar con que botón permite ingresar al BIOS."
       },
       {
-        title: "Crear una partición en disco duro",
+        title: "Instalación de Linux Mint",
         step: "Paso 5:",
-        description: "Crear una partición sin formato del disco duro (tanto espacio como desees para su sistema operativo Linux). Haz clic derecho sobre Mi PC > Administrar > Almacenamiento > Administración del disco - luego darle clic en reducir al disco duro C o si lo tienes particionado busca la partición donde quieras instalar Linux. Si tienes más de 100 GBs, esto sería el equivalente a 100,000 MBs. Nota: No formatees el espacio de almacenamiento recién creado."
+        description: "El instalador de Linux Mint nos permite particionar nuestro disco duro. Debemos seleccionar 'OEM install' (for manufacturers), elegimos nuestros ajustes, y seguimos los pasos de instalación. Luego, seleccionamos 'Instalar Linux Mint junto a Windows Boot Manager. Ajustamos nuestro espacio de almacenamiento y continuamos."
       },
       {
-        title: "USB booteable",
+        title: "Seleccionar sistema operativo al iniciar",
         step: "Paso 6:",
-        description: "Cuando ya tengas la USB lista con Linux de arranque, insértala en un puerto USB. Debes reiniciar el equipo y según la marca del equipo es F10 o F12 para entrar al BIOS. Debes elegir la versión de Linux que correrá directamente desde la USB. Se correrá el Linux y podrás ver en el escritorio un ícono que dice 'instalar Linux'. Deberás seguir con los pasos de configuración, pero el que vamos a mirar aquí es el paso de los discos."
-      },
-      {
-        title: "Particionar disco de Windows primero",
-        step: "Paso 7:",
-        description: "Hay que crear tres particiones del espacio particionado en Windows. El primero vamos a crear la partición donde irá Linux que sería el 80% del espacio. Es decir si es de 100 GBs haremos una partición de 80 GBs. Este será nuestro disco principal. Primero le darás a crear partición y elegiremos el 80 % del espacio de nuestro disco y el punto de montaje será '/'. Del espacio que quedó vamos a crear un swap file. Elegirás la mitad de la RAM para el espacio de partición y eligirás en 'Utilizar como: área de intercambio' o swap file."
-      },
-      {
-        title: "Cómo formatear la memoria",
-        step: "Tips:",
-        description: "En ocasiones esto sería suficiente, pero para kde neon es necesario crear un espacio EFI, de igual manera crearás un espacio de partición y seleccionamos EFI sistema de partición. Si tienes problema formateando tu USB puedes seguir los pasos a continuación para formatear la USB y dejarla lista para instalar Linux en ella."
-      },
-      {
-        title: "",
-        step: "1.",
-        description: "cmd > diskpart > list disk > select disk 1 (Importante)."
-      },
-      {
-        title: "",
-        step: "2.",
-        description: "List partition (Inspeccionar que todo esté bien) > clean > list partition (No debe de haber ninguna)."
-      },
-      {
-        title: "",
-        step: "3.",
-        description: "Create partition primary > list partition (Debería de haber una) > format fs=fat32 quick > list partition (Debería de haber una) > exit."
+        description: "Ya solo nos queda reiniciar y seleccionar el sistema operativo que deseamos usar y disfrutar. 🍾🎉"
       }
     ]
   },
@@ -97,7 +81,7 @@ export const blogData: BlogDataTypes[] = [
     id: 2,
     title: "Cómo instalar un sitio web en menos de 20 minutos.",
     url: wordpress,
-    blogSummary: "Si ya tienes un dominio y hosting en SiteGround es más sencillo, pero si no, no te preocupes.",
+    blogPageSummary: "Si ya tienes un dominio y hosting en SiteGround es más sencillo, pero si no, no te preocupes.",
     articleSummary: "Si ya tienes un dominio y hosting en SiteGround realmente lo podemos hacer en menos de 5 minutos, pero si no, no te preocupes vamos a instalarlo en nuestro equipo local.",
     time: "10",
     related: ["Wordpress", "Tools", "Marketing"],
@@ -130,7 +114,7 @@ export const blogData: BlogDataTypes[] = [
     id: 3,
     title: "¿Cosas que puedes hacer con CSS hoy?",
     url: css,
-    blogSummary: "Hoy aprenderemos varias cosas útiles que puedes hacer hoy con CSS moderno.",
+    blogPageSummary: "Hoy aprenderemos varias cosas útiles que puedes hacer hoy con CSS moderno.",
     articleSummary: "Hoy aprenderemos varias cosas útiles que puedes hacer hoy con CSS moderno. Si adoptamos un enfoque pragmático y progresivo para nuestro CSS, las cosas seguirán mejorando cada vez más en nuestros proyectos.",
     time: "12",
     related: ["Wordpress", "Tools", "Marketing"],
@@ -153,7 +137,7 @@ export const blogData: BlogDataTypes[] = [
     id: 4,
     title: "¿Cómo instalar React?",
     url: react,
-    blogSummary:
+    blogPageSummary:
       "Primero que nada necesitamos tener NodeJs instalado para poder correr paquetes npm.",
     articleSummary:
       "Primero que nada necesitamos tener NodeJs instalado para poder correr paquetes npm. Debemos configurar nuestro entorno de desarrollo para que pueda utilizar las últimas funciones de JavaScript, Si no lo tenemos instalado, aquí podemos descargarlo e instalarlo. https://nodejs.org/en/download/.",
@@ -181,7 +165,7 @@ export const blogData: BlogDataTypes[] = [
     id: 5,
     title: "¿Cuáles son los mejores plugins para un sitio en WordPress?",
     url: wordpressPlugin,
-    blogSummary: "Si ya tienes un dominio y hosting en SiteGround, es más sencillo, pero si no, no te preocupes.",
+    blogPageSummary: "Si ya tienes un dominio y hosting en SiteGround, es más sencillo, pero si no, no te preocupes.",
     articleSummary: "Si ya tienes un dominio y hosting en SiteGround, realmente lo podemos hacer en menos de 5 minutos, pero si no, no te preocupes, vamos a instalarlo en nuestro equipo local.",
     time: "12",
     related: ["WordPress", "Tools", "Marketing"],
@@ -204,7 +188,7 @@ export const blogData: BlogDataTypes[] = [
     id: 6,
     title: "¿Cuáles son los mejores programas para diseñar?",
     url: figma,
-    blogSummary: "Si ya tienes un dominio y hosting en SiteGround, es más sencillo, pero si no, no te preocupes.",
+    blogPageSummary: "Si ya tienes un dominio y hosting en SiteGround, es más sencillo, pero si no, no te preocupes.",
     articleSummary: "Si ya tienes un dominio y hosting en SiteGround, realmente lo podemos hacer en menos de 5 minutos, pero si no, no te preocupes, vamos a instalarlo en nuestro equipo local.",
     time: "12",
     related: ["Diseño", "Herramientas", "Marketing"],
@@ -227,7 +211,7 @@ export const blogData: BlogDataTypes[] = [
     id: 7,
     title: "Mejores recursos para aprender a programar",
     url: wordpressPlugin,
-    blogSummary: "Si ya tienes un dominio y hosting en SiteGround, es más sencillo, pero si no, no te preocupes.",
+    blogPageSummary: "Si ya tienes un dominio y hosting en SiteGround, es más sencillo, pero si no, no te preocupes.",
     articleSummary: "Si ya tienes un dominio y hosting en SiteGround, realmente lo podemos hacer en menos de 5 minutos, pero si no, no te preocupes, vamos a instalarlo en nuestro equipo local.",
     time: "12",
     related: ["Aprendizaje", "Herramientas", "Marketing"],
@@ -250,7 +234,7 @@ export const blogData: BlogDataTypes[] = [
     id: 8,
     title: "Github & Bitbucket",
     url: bitbucket,
-    blogSummary: "Si ya tienes un dominio y hosting en SiteGround, es más sencillo, pero si no, no te preocupes.",
+    blogPageSummary: "Si ya tienes un dominio y hosting en SiteGround, es más sencillo, pero si no, no te preocupes.",
     articleSummary: "Si ya tienes un dominio y hosting en SiteGround, realmente lo podemos hacer en menos de 5 minutos, pero si no, no te preocupes, vamos a instalarlo en nuestro equipo local.",
     time: "12",
     related: ["GitHub", "Bitbucket", "Herramientas", "Marketing"],
@@ -273,7 +257,7 @@ export const blogData: BlogDataTypes[] = [
     id: 9,
     title: "Mejores recursos para aprender a programar",
     url: htmlcssjs,
-    blogSummary: "Si ya tienes un dominio y hosting en SiteGround, es más sencillo, pero si no, no te preocupes.",
+    blogPageSummary: "Si ya tienes un dominio y hosting en SiteGround, es más sencillo, pero si no, no te preocupes.",
     articleSummary: "Si ya tienes un dominio y hosting en SiteGround, realmente lo podemos hacer en menos de 5 minutos, pero si no, no te preocupes, vamos a instalarlo en nuestro equipo local.",
     time: "12",
     related: ["HTML", "CSS", "JavaScript"],

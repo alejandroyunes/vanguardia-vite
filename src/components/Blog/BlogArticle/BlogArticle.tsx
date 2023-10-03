@@ -14,61 +14,74 @@ export default function BlogArticle() {
 
   return (
     <BlogArticleContainer>
-      {postFiltered.map((post: BlogDataTypes, index: React.Key) => (
+      {postFiltered.map((post: BlogDataTypes, index) => (
         <div className="article" key={index}>
 
           <div className="title">
+
             <div className="article-date">
-              <p>{post.date}</p>
+              <span>{post.date}</span>
             </div>
             <div className="article-title">
-              <h2>{post.title}</h2>
+              <h1>{post.title}</h1>
             </div>
+
           </div>
 
           <div className="content">
-            <section className="article-summary">
+            <div className="article-summary">
               {post.articleSummary}
-            </section>
-            <section className="article-summary__body">
-              {post.step.map((e, index: React.Key) => (
-                <React.Fragment key={index}>
-                  <h2>{e.title}</h2>
+            </div>
+            <div className="article-image">
+              <img src={post.image} alt="" />
+            </div>
+            <div className="article-summary__body">
+              {post.step.map((step, index) => (
+                <div key={index} className="step">
+                  <h2>{step.title}</h2>
                   <p>
-                    <strong>{e.step} </strong>
-                    {e.description}
+                    <strong>{step.step} </strong>
+                    {step.description}
                   </p>
-                </React.Fragment >
+                  {step.resource && 
+                    <span aria-label="link">⬇️📦 <a href={step.resource}>{step.resource}</a></span>}
+                </div>
               ))}
-            </section>
+            </div>
           </div>
 
-          <div className="meta-box-article">
-            <ul>
-              <li className="item published">
-                <Time />
-                {post.time} min read
-              </li>
-              <li className="item tags">
-                {post.related.map((e, index: React.Key) => (
-                  <React.Fragment key={index}>
-                    <Tool />
-                    <a href="/category/css">{e}</a>
-                    <span>,</span>
-                  </React.Fragment>
-                ))}
-              </li>
-              <li className="item author">
-                <Star />
-                Saved for offline reading
-              </li>
-              <li className="item twitter">
-                <Twitter />
-                  Share on 
+          <div className="meta-box">
+            {/* <div className="ad-banner__short">
+            </div> */}
+            <div className="share">
+              <ul>
+                <li className="item published">
+                  <Time />
+                  {post.time} min read
+                </li>
+                <li className="item tags">
+                  {post.related.map((e, index: React.Key) => (
+                    <React.Fragment key={index}>
+                      <Tool />
+                      <a href="/category/css">{e}</a>
+                      <span>,</span>
+                    </React.Fragment>
+                  ))}
+                </li>
+                <li className="item author">
+                  <Star />
+                  Saved for offline reading
+                </li>
+                <li className="item twitter">
+                  <Twitter />
+                  Share on
                   <a href="/">Twitter </a>&
                   <a href="/"> LinkedIn</a>
-              </li>
-            </ul>
+                </li>
+              </ul>
+            </div>
+            <div className="ad-banner__long">
+            </div>
           </div>
 
         </div>
@@ -81,7 +94,7 @@ export default function BlogArticle() {
             <img src={avatarImg} alt="Avatar" className="avatar" />
           </div>
           <div className="article-author-title">
-            <p>Sobre el autor</p>
+            <p>Alejandro Cano</p>
           </div>
         </div>
         <div className="article-author-description">
@@ -90,8 +103,15 @@ export default function BlogArticle() {
           </p>
         </div>
 
+        <div className="ad-banner__long-left">
+        </div>
+        <div className="ad-banner__long-left">
+        </div>
+
       </div>
 
     </BlogArticleContainer>
   )
 }
+
+

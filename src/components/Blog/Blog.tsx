@@ -16,7 +16,7 @@ export default function Blog() {
           <Link to={`/blog-article/${post.id}`} key={i}>
             <div className="child-card">
               <img src={`${post.url}`} alt="" />
-              <h4>{post.title}</h4>
+              <h2>{post.title}</h2>
               <p>{post.blogSummary}</p>
             </div>
           </Link>

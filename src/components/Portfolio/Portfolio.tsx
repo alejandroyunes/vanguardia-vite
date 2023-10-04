@@ -3,7 +3,8 @@ import Title from "../../components/Title/Title"
 import Button from "../../components/Button/Button"
 import Suitcase from "../../pages/translate/svgs/portfolio/suitcase"
 import Technologies from "./Technologies/Technologies"
-import Github from "../Footer/svgs/github"
+import Github from '../../pages/translate/svgs/portfolio/github'
+import { useReadLocalStorage } from "usehooks-ts"
 
 interface PorfolioProps {
   title: string
@@ -20,6 +21,8 @@ interface PorfolioProps {
 }
 
 export default function Portfolio({ title, items, subtitle }: PorfolioProps) {
+
+  const lang = useReadLocalStorage('language')
 
   return (
     <PortfolioContainer>
@@ -45,7 +48,7 @@ export default function Portfolio({ title, items, subtitle }: PorfolioProps) {
 
               <div className="buttons">
                 <Button
-                  label="Ver Sitio"
+                  label={lang === 'english' ? 'view site': 'ver sitio'}
                   category="primary"
                   size="sm"
                   icon={Suitcase}
@@ -54,9 +57,13 @@ export default function Portfolio({ title, items, subtitle }: PorfolioProps) {
                   }
                 />
                 <div className="portfolio-repo">
-                  <a href={e.github} target="_blank">
-                    <Github arial-label="svg element" />
-                  </a>
+                  <Button
+                    label={lang === 'english' ? 'view repo': 'ver repo'}
+                    icon={Github}
+                    onClick={() =>
+                      window.open(e.github, "_blank")
+                    }
+                  />
                 </div>
               </div>
             </div>

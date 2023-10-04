@@ -28,19 +28,9 @@ export const PortfolioContainer = styled.div`
 		.buttons {
 			display: flex;
 			margin: 32px 0 16px;
-
 			.portfolio-repo {
 				margin-left: 8px;
 				cursor: pointer;
-				svg {
-					height: 42px;
-					width: 50px;
-				}
-				svg:hover {
-      			transform: scale(.94);
-    			  box-shadow: 0 1px 8px rgba(${({ theme }) => theme.palette.black}, 0.14),
-      				0 3px 8px rgba(${({ theme }) => theme.palette.black}, 0.11);
-				}
 			}
 		}
 		.child-two {

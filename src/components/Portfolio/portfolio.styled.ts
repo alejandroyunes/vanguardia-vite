@@ -56,8 +56,10 @@ export const PortfolioContainer = styled.div`
 			grid-template-columns: repeat(1, auto);
 			grid-template-rows: repeat(2, auto);
 			margin: 0px auto 60px;
-			h2 {
-				font-size: 2em;
+			.item-info {
+				h2 {
+					font-size: 2em;
+				}
 			}
 		}
 	}

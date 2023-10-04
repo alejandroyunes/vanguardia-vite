@@ -7,9 +7,9 @@ export const lightTheme: DefaultTheme = {
   bodyColor: "#ffffff",
   textColor: "#212121",
   palette: {
-    black: "#212121",
+    black: "#192533",
     white: "#ffffff",
-    gray: "#666666",
+    gray: "#555555",
     red: "#ae3c43",
     primary: {
       main: "#216397",

@@ -51,13 +51,13 @@ export default function BlogArticle() {
           </div>
 
           <div className="meta-box">
-            {/* <div className="ad-banner__short">
-            </div> */}
+            <div className="ad-banner__short">
+            </div>
             <div className="share">
               <ul>
                 <li className="item published">
                   <Time />
-                  {post.time} min read
+                  lectura de {post.time} min
                 </li>
                 <li className="item tags">
                   {post.related.map((e, index: React.Key) => (

@@ -9,7 +9,9 @@ export const PortfolioContainer = styled.div`
 		margin: 0px auto 80px;
 		padding: 0 24px;
 		grid-template-columns: repeat(2, .5fr);
-		h2 {
+
+		.item-info {
+			h2 {
 			font-weight: bold;
 			color: ${({ theme }) => theme.palette.primary.main};
 			font-size: 2.8rem;
@@ -22,9 +24,24 @@ export const PortfolioContainer = styled.div`
 			padding: 16px 0;
 			font-weight: 400;
 		}
+		}
 		.buttons {
 			display: flex;
-			margin-top: 16px;
+			margin: 32px 0 16px;
+
+			.portfolio-repo {
+				margin-left: 8px;
+				cursor: pointer;
+				svg {
+					height: 42px;
+					width: 50px;
+				}
+				svg:hover {
+      			transform: scale(.94);
+    			  box-shadow: 0 1px 8px rgba(${({ theme }) => theme.palette.black}, 0.14),
+      				0 3px 8px rgba(${({ theme }) => theme.palette.black}, 0.11);
+				}
+			}
 		}
 		.child-two {
 			margin: auto 0;

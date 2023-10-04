@@ -121,6 +121,9 @@ export const BlogArticleContainer = styled.section`
           }
         }
       }
+      @media (max-width: ${({ theme }) => theme.breakpoint.sm}) {
+        margin-right: 0;
+      }
     }
     .meta-box {
       grid-area: meta;
@@ -169,13 +172,13 @@ export const BlogArticleContainer = styled.section`
         margin: 0 0 20px 0;
         height: 180px;
         width: 100%;
-        /* background-color: lightpink; */
+        background-color: lightpink;
       }
       .ad-banner__long {
         margin-top: 20px;
         height: 400px;
         width: 100%;
-        /* background-color: lightblue; */
+        background-color: lightblue;
       }
       @media (max-width: ${({ theme }) => theme.breakpoint.sm}) {
         position: relative;
@@ -230,7 +233,7 @@ export const BlogArticleContainer = styled.section`
       margin: 20px 0;
       height: 380px;
       width: 100%;
-      /* background-color: lightpink; */
+      background-color: lightpink;
       @media (max-width: ${({ theme }) => theme.breakpoint.sm}) {
         display: none;
       }

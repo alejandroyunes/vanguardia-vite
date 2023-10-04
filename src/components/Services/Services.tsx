@@ -27,30 +27,24 @@ export default function Services({ title, subtitle, cards }: ServicesProps) {
 
   return (
     <ServicesContainer>
-      <Title title={title} />
-
-      <div className="subtitle">
-        <p>
-          <strong>{subtitle}</strong>
-        </p>
-      </div>
+      <Title title={title} message={subtitle} />
 
       <div className="services-three-columns">
-        {cards.map((e, i) => (
+        {cards.map((card, i) => (
           <div className="child-one" key={i}>
             <div className="design-svg">
-              <e.image  arial-label={e.alt}/>
+              <card.image  arial-label={card.alt}/>
             </div>
-            <h2>{e.title}</h2>
+            <h2>{card.title}</h2>
             <p>
-              {e.subtitle}
+              {card.subtitle}
             </p>
           </div>
         ))}
 
       </div>
 
-      <Title title={"Tecnologías"} />
+      <Title title={"Tecnologías"} message="usamos technologia "/>
 
       <div className="services-tech">
         <div className="child-one">

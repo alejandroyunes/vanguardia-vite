@@ -4,7 +4,12 @@ export const TitleContainer = styled.div`
   margin: 32px auto;
   padding: 0 16px;
 	max-width: ${({ theme }) => theme.breakpoint.md};
-  h2 {
+  &.left {
+    h1, h2 {
+      text-align: left;
+    }
+  }
+  p {
     margin-top: 0px;
     text-align: center;
     font-size: 1.2rem;

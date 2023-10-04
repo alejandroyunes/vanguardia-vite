@@ -33,7 +33,7 @@ export const spanish = {
       alt: "dispositivo móvil",
 			title: 'Adaptabilidad Móvil',
 			subtitle: 'Diseños Completamente Adaptables',
-			message: 'En el mundo actual, existen más de 5 mil millones de usuarios únicos de dispositivos móviles, lo que equivale al 67% de la población global',
+			message: 'En el mundo actual, existen más de 5 mil millones de usuarios únicos de dispositivos móviles, lo que equivale al 67% de la población global.',
 			viewMore: false,
 		},
 		{
@@ -89,7 +89,7 @@ export const english = {
 			title: 'Mobile Adaptability',
       alt: "Mobile device",
 			subtitle: 'Fully Responsive Designs',
-			message: 'In today\'s world, there are more than 5 billion unique users of mobile devices, which accounts for 67% of the global population',
+			message: 'In today\'s world, there are more than 5 billion unique users of mobile devices, which accounts for 67% of the global population.',
 			viewMore: false,
 		},
 		{
@@ -97,7 +97,7 @@ export const english = {
       alt: "Rocket animation",
 			title: 'Digital Strategy',
 			subtitle: 'Boosting in the Digital World',
-			message: 'Digital strategies to promote brands, engage with the audience, and achieve business goals effectively',
+			message: 'Digital strategies to promote brands, engage with the audience, and achieve business goals effectively.',
 			viewMore: false,
 		}
   ],

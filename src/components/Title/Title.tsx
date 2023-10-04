@@ -3,13 +3,15 @@ import { TitleContainer } from './title.styled';
 interface TitleProps {
   title?: string
   message?: string
+  left?: boolean
 }
 
-export default function Title({ title, message }: TitleProps) {
+export default function Title({ title, message, left }: TitleProps) {
+  
   return (
-    <TitleContainer>
+    <TitleContainer className={left ? 'left' : ''}>
       <h1>{title}</h1>
-      <h2>{message}</h2>
+      <p>{message}</p>
     </TitleContainer>
   )
 }

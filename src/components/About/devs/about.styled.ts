@@ -19,7 +19,6 @@ export const AboutContainer = styled.div`
       display: flex;
       align-items: center;
       p {
-        font-weight: bold;
         color: ${({ theme }) => theme.textColor};
         font-size: 1.5rem;
         line-height: 1.2;
@@ -51,13 +50,16 @@ export const AboutContainer = styled.div`
   .about-subtitle {
     padding-top: 12px;
     p {
-      font-weight: 400;
-      color: ${({ theme }) => theme.palette.secondary.main};
-      font-size: 1.3rem;
-      line-height: 1.2;
       max-width: 760px;
       margin: 0 auto;
       text-align: center;
+
+      strong {
+        font-weight: 400;
+        color: ${({ theme }) => theme.palette.gray};
+        font-size: 1.3rem;
+        line-height: 1.2;
+      }
       @media (max-width: ${({ theme }) => theme.breakpoint.sm}) {
         font-size: 1.2rem;
       }

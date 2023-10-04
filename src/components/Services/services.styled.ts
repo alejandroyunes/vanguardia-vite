@@ -2,17 +2,6 @@ import styled from 'styled-components'
 
 export const ServicesContainer = styled.div`
 	padding: 0 24px;
-	.subtitle {
-		max-width:  ${({ theme }) => theme.breakpoint.md};
-		margin: 0 auto;
-    p {
-      color: ${({ theme }) => theme.textColor};
-		  text-align: center;
-			font-weight: bold;
-    	font-size: 1.4rem;
-    	line-height: 1.2;
-	  }
-	}
 
 	.services-three-columns {
 		max-width: ${({ theme }) => theme.breakpoint.md};

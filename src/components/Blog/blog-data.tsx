@@ -1,4 +1,3 @@
-import linuxWindows from "../../assets/blog/linux-windows.jpg"
 import wordpress from "../../assets/blog/wordpress.jpg"
 import css from "../../assets/blog/css.jpg"
 import react from "../../assets/blog/react.jpg"
@@ -11,7 +10,6 @@ import linuxWindowsArticle from './BlogArticle/images/linux-windows.webp'
 export interface BlogDataTypes {
   id: number
   title: string
-  url: string
   blogPageSummary: string
   articleSummary: string
   time: string
@@ -33,14 +31,14 @@ export const blogData: BlogDataTypes[] = [
   {
     id: 1,
     title: "¿Cómo instalar Linux Mint junto con Windows 11?",
-    url: linuxWindows,
+    image: linuxWindowsArticle,
+    alt: "",
     blogPageSummary: "Esta guía te mostrará cómo correr Linux Mint y Windows juntos en un mismo PC.",
     articleSummary: "Esta guía te mostrará cómo correr Linux Mint y Windows juntos en un mismo PC. Los pasos mencionados sirven para las distribuciones de Linux Mint. Bueno, veamos cómo arrancar Linux de forma dual en un sistema Windows.",
     time: "5",
     related: ["Windows", "Linux", "Systems"],
     shared: ["Twitter", "LinkedIn", "Facebook"],
     date: "Octubre 3, 2023",
-    image: linuxWindowsArticle,
     step: [
       {
         title: "Haz una copia de seguridad [opcional]",
@@ -80,7 +78,8 @@ export const blogData: BlogDataTypes[] = [
   {
     id: 2,
     title: "Cómo instalar un sitio web en menos de 20 minutos.",
-    url: wordpress,
+    image: wordpress,
+    alt: "",
     blogPageSummary: "Si ya tienes un dominio y hosting en SiteGround es más sencillo, pero si no, no te preocupes.",
     articleSummary: "Si ya tienes un dominio y hosting en SiteGround realmente lo podemos hacer en menos de 5 minutos, pero si no, no te preocupes vamos a instalarlo en nuestro equipo local.",
     time: "10",
@@ -113,7 +112,8 @@ export const blogData: BlogDataTypes[] = [
   {
     id: 3,
     title: "¿Cosas que puedes hacer con CSS hoy?",
-    url: css,
+    image: css,
+    alt: "",
     blogPageSummary: "Hoy aprenderemos varias cosas útiles que puedes hacer hoy con CSS moderno.",
     articleSummary: "Hoy aprenderemos varias cosas útiles que puedes hacer hoy con CSS moderno. Si adoptamos un enfoque pragmático y progresivo para nuestro CSS, las cosas seguirán mejorando cada vez más en nuestros proyectos.",
     time: "12",
@@ -136,7 +136,8 @@ export const blogData: BlogDataTypes[] = [
   {
     id: 4,
     title: "¿Cómo instalar React?",
-    url: react,
+    image: react,
+    alt: "",
     blogPageSummary:
       "Primero que nada necesitamos tener NodeJs instalado para poder correr paquetes npm.",
     articleSummary:
@@ -164,7 +165,8 @@ export const blogData: BlogDataTypes[] = [
   {
     id: 5,
     title: "¿Cuáles son los mejores plugins para un sitio en WordPress?",
-    url: wordpressPlugin,
+    image: wordpressPlugin,
+    alt: "",
     blogPageSummary: "Si ya tienes un dominio y hosting en SiteGround, es más sencillo, pero si no, no te preocupes.",
     articleSummary: "Si ya tienes un dominio y hosting en SiteGround, realmente lo podemos hacer en menos de 5 minutos, pero si no, no te preocupes, vamos a instalarlo en nuestro equipo local.",
     time: "12",
@@ -187,7 +189,8 @@ export const blogData: BlogDataTypes[] = [
   {
     id: 6,
     title: "¿Cuáles son los mejores programas para diseñar?",
-    url: figma,
+    image: figma,
+    alt: "",
     blogPageSummary: "Si ya tienes un dominio y hosting en SiteGround, es más sencillo, pero si no, no te preocupes.",
     articleSummary: "Si ya tienes un dominio y hosting en SiteGround, realmente lo podemos hacer en menos de 5 minutos, pero si no, no te preocupes, vamos a instalarlo en nuestro equipo local.",
     time: "12",
@@ -210,7 +213,8 @@ export const blogData: BlogDataTypes[] = [
   {
     id: 7,
     title: "Mejores recursos para aprender a programar",
-    url: wordpressPlugin,
+    image: wordpressPlugin,
+    alt: "",
     blogPageSummary: "Si ya tienes un dominio y hosting en SiteGround, es más sencillo, pero si no, no te preocupes.",
     articleSummary: "Si ya tienes un dominio y hosting en SiteGround, realmente lo podemos hacer en menos de 5 minutos, pero si no, no te preocupes, vamos a instalarlo en nuestro equipo local.",
     time: "12",
@@ -233,7 +237,8 @@ export const blogData: BlogDataTypes[] = [
   {
     id: 8,
     title: "Github & Bitbucket",
-    url: bitbucket,
+    image: bitbucket,
+    alt: "",
     blogPageSummary: "Si ya tienes un dominio y hosting en SiteGround, es más sencillo, pero si no, no te preocupes.",
     articleSummary: "Si ya tienes un dominio y hosting en SiteGround, realmente lo podemos hacer en menos de 5 minutos, pero si no, no te preocupes, vamos a instalarlo en nuestro equipo local.",
     time: "12",
@@ -256,7 +261,8 @@ export const blogData: BlogDataTypes[] = [
   {
     id: 9,
     title: "Mejores recursos para aprender a programar",
-    url: htmlcssjs,
+    image: htmlcssjs,
+    alt: "",
     blogPageSummary: "Si ya tienes un dominio y hosting en SiteGround, es más sencillo, pero si no, no te preocupes.",
     articleSummary: "Si ya tienes un dominio y hosting en SiteGround, realmente lo podemos hacer en menos de 5 minutos, pero si no, no te preocupes, vamos a instalarlo en nuestro equipo local.",
     time: "12",

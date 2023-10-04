@@ -41,7 +41,7 @@ export default function Portfolio({ title, items, subtitle }: PorfolioProps) {
                 </p>
               </div>
 
-              <Technologies technologies={...e.technologies} />
+              <Technologies technologies={e.technologies} />
 
               <div className="buttons">
                 <Button

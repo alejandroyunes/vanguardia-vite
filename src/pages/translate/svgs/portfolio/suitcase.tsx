@@ -1,12 +1,15 @@
 export default function Suitcase() {
 
   return (
-    <svg 
-      focusable="false" 
-      viewBox="0 0 24 24" 
-      fill="#fff" 
-      aria-hidden="true">
-        <path fillRule="evenodd"
-         d="M14 6V4h-4v2h4zM4 8v11h16V8H4zm16-2c1.11 0 2 .89 2 2v11c0 1.11-.89 2-2 2H4c-1.11 0-2-.89-2-2l.01-11c0-1.11.88-2 1.99-2h4V4c0-1.11.89-2 2-2h4c1.11 0 2 .89 2 2v2h4z"></path></svg>
+    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+      <g>
+        <path fill="#fff" d="M0,0.002v511.996h512v-18.071V0.002H0z M475.859,475.856H36.141v-364.43h439.718V475.856z" />
+        <rect x="78.305" y="167.994" fill="#fff" width="355.386" height="96.723" />
+        <rect x="295.152" y="309.894" fill="#fff" width="138.538" height="118.968" />
+        <rect x="78.305" y="311.694" fill="#fff" width="162.631" height="18.07" />
+        <rect x="78.305" y="408.991" fill="#fff" width="162.631" height="18.071" />
+        <rect x="78.305" y="360.347" fill="#fff" width="162.631" height="18.071" />
+      </g>
+    </svg>
   )
 }

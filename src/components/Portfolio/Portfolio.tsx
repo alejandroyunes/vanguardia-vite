@@ -29,51 +29,48 @@ export default function Portfolio({ title, items, subtitle }: PorfolioProps) {
       <Title title={title} message={subtitle} />
 
       {items.map((e, i) => (
-        <>
-          <div className="portfolio-billboard" key={i}>
-            <div className="child-one">
+        <div className="portfolio-billboard" key={i}>
+          <div className="child-one">
 
-              <div className="item-info">
-                <h2>
-                  <strong>
-                    {e.title}
-                  </strong>
-                </h2>
-                <p>
-                  {e.subtitle}
-                </p>
-              </div>
+            <div className="item-info">
+              <h2>
+                <strong>
+                  {e.title}
+                </strong>
+              </h2>
+              <p>
+                {e.subtitle}
+              </p>
+            </div>
 
-              <Technologies technologies={e.technologies} />
+            <Technologies technologies={e.technologies} />
 
-              <div className="buttons">
+            <div className="buttons">
+              <Button
+                label={lang === 'english' ? 'view site' : 'ver sitio'}
+                category="primary"
+                size="sm"
+                icon={Suitcase}
+                onClick={() =>
+                  window.open(e.url, "_blank")
+                }
+              />
+              <div className="portfolio-repo">
                 <Button
-                  label={lang === 'english' ? 'view site': 'ver sitio'}
-                  category="primary"
-                  size="sm"
-                  icon={Suitcase}
+                  label={lang === 'english' ? 'view repo' : 'ver repo'}
+                  icon={Github}
                   onClick={() =>
-                    window.open(e.url, "_blank")
+                    window.open(e.github, "_blank")
                   }
                 />
-                <div className="portfolio-repo">
-                  <Button
-                    label={lang === 'english' ? 'view repo': 'ver repo'}
-                    icon={Github}
-                    onClick={() =>
-                      window.open(e.github, "_blank")
-                    }
-                  />
-                </div>
               </div>
             </div>
-
-            <div className="child-two">
-              <img src={e.image} alt={e.alt} />
-            </div>
           </div>
-        </>
 
+          <div className="child-two">
+            <img src={e.image} alt={e.alt} />
+          </div>
+        </div>
       ))
       }
     </PortfolioContainer >

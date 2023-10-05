@@ -10,7 +10,7 @@ export interface BillboardProps {
 
 export default function Billboard(props: BillboardProps) {
 
-  const { title, subtitle, button, image, alt } = props
+  const { title, subtitle, image, alt } = props
 
   return (
     <BillboardContainer>

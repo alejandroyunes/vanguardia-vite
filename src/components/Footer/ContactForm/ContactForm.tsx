@@ -4,11 +4,20 @@ import { yupResolver } from "@hookform/resolvers/yup"
 import * as yup from "yup"
 import ReCAPTCHA from "react-google-recaptcha"
 import useCommentApi from "./hooks/useCommentApi"
-import { FooterProps } from "../Footer"
 
-type ContactProps = Pick<FooterProps['contact'], 'name' | 'email' | 'comment' | 'button' | 'required' | 'nameValid' | 'emailValid' | 'commentValid' | 'langRecaptcha'>;
+export interface ContactFormProps {
+    name: string
+    email: string
+    comment: string
+    button: string
+    nameValid: string
+    emailValid: string
+    commentValid: string
+    required: string
+    langRecaptcha: boolean
+}
 
-export default function contactForm(props: ContactProps) {
+export default function contactForm(props: ContactFormProps) {
 
   const {name, email, comment, button, required, nameValid, emailValid, commentValid, langRecaptcha } = props
 

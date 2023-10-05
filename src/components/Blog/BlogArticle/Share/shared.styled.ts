@@ -1,6 +1,6 @@
 import styled from "styled-components"
 
-export const ToolContainer = styled.div`
+export const ShareContainer = styled.div`
   display: inline-flex;
   justify-content: center;
   align-items: center;

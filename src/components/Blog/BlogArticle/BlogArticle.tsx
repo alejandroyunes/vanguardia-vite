@@ -2,11 +2,10 @@ import avatarImg from './images/alejo.webp'
 import { BlogDataTypes } from "../blog-data"
 import { BlogArticleContainer } from "./blog-article.styled"
 import Time from "./svgs/time"
-import Twitter from "./svgs/twitter"
-import Star from "./svgs/star"
 
 import useFetchBlogArticle from "../hooks/useFetchBlogArticle"
 import Tools from './Tools/Tools'
+import Shared from './Share/Shared'
 
 export default function BlogArticle() {
 
@@ -63,14 +62,7 @@ export default function BlogArticle() {
                   <Tools tools={post.related} />
                 </li>
                 <li className="item">
-                  <Star />
-                  Saved for offline reading
-                </li>
-                <li className="item">
-                  <Twitter />
-                  Share on
-                  <a href="/">Twitter </a>&
-                  <a href="/"> LinkedIn</a>
+                    <Shared icons={post.shared}/>
                 </li>
               </ul>
             </div>

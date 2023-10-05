@@ -21,9 +21,9 @@ export default function Billboard(props: BillboardProps) {
         <h2>
           {subtitle}
         </h2>
-        <div className="billboard-contact">
+        {/* <div className="billboard-contact">
           <a href="#contact">{button}</a>
-        </div>
+        </div> */}
       </div>
 
       <div className="billboard-svg">

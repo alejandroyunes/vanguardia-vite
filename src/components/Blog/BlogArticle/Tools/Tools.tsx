@@ -36,7 +36,7 @@ export default function Tools({ tools }: ToolsTypes) {
       <ToolContainer key={index}>
 
         <div className="icon-svg">
-          <ToolsItem tool={tool} />
+          <ToolsItem tool={tool} arial-label="svg icon"/>
         </div>
 
         <div className="text">

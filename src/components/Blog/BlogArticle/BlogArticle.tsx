@@ -1,12 +1,12 @@
-import avatarImg from "./alejo.webp"
+import avatarImg from './images/alejo.webp'
 import { BlogDataTypes } from "../blog-data"
 import { BlogArticleContainer } from "./blog-article.styled"
 import Time from "./svgs/time"
 import Twitter from "./svgs/twitter"
-import Tool from './svgs/tool'
 import Star from "./svgs/star"
-import React from "react"
+
 import useFetchBlogArticle from "../hooks/useFetchBlogArticle"
+import Tools from './Tools/Tools'
 
 export default function BlogArticle() {
 
@@ -43,7 +43,7 @@ export default function BlogArticle() {
                     <strong>{step.step} </strong>
                     {step.description}
                   </p>
-                  {step.resource && 
+                  {step.resource &&
                     <span aria-label="link">⬇️📦 <a href={step.resource}>{step.resource}</a></span>}
                 </div>
               ))}
@@ -55,24 +55,18 @@ export default function BlogArticle() {
             </div>
             <div className="share">
               <ul>
-                <li className="item published">
+                <li className="item">
                   <Time />
                   lectura de {post.time} min
                 </li>
-                <li className="item tags">
-                  {post.related.map((e, index: React.Key) => (
-                    <React.Fragment key={index}>
-                      <Tool />
-                      <a href="/category/css">{e}</a>
-                      <span>,</span>
-                    </React.Fragment>
-                  ))}
+                <li className="item">
+                  <Tools tools={post.related} />
                 </li>
-                <li className="item author">
+                <li className="item">
                   <Star />
                   Saved for offline reading
                 </li>
-                <li className="item twitter">
+                <li className="item">
                   <Twitter />
                   Share on
                   <a href="/">Twitter </a>&

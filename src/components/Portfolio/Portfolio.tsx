@@ -1,10 +1,10 @@
 import { PortfolioContainer } from "./portfolio.styled"
 import Title from "../../components/Title/Title"
 import Button from "../../components/Button/Button"
-import Suitcase from "../../pages/translate/svgs/portfolio/suitcase"
 import Technologies from "./Technologies/Technologies"
 import Github from '../../pages/translate/svgs/portfolio/github'
 import { useReadLocalStorage } from "usehooks-ts"
+import Website from "../../pages/translate/svgs/portfolio/website"
 
 interface PorfolioProps {
   title: string
@@ -50,7 +50,7 @@ export default function Portfolio({ title, items, subtitle }: PorfolioProps) {
                 label={lang === 'english' ? 'view site' : 'ver sitio'}
                 category="primary"
                 size="sm"
-                icon={Suitcase}
+                icon={Website}
                 onClick={() =>
                   window.open(e.url, "_blank")
                 }

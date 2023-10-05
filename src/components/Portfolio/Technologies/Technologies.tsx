@@ -6,7 +6,7 @@ import NextJs from "./svgs/nextjs"
 import Scss from "./svgs/scss"
 import Styled from "./svgs/styled"
 import Typescript from "./svgs/typescript"
-import { ToolContainer } from "./technolgies"
+import { ToolContainer } from "./technolgies.styled"
 
 
 interface TechnologiesTypes {
@@ -35,7 +35,7 @@ function PortfolioItem({ item }: PortolioItemProps) {
   }
 
   const selectedComponent = componentMap[item]
-  return selectedComponent || null;
+  return selectedComponent || null
 }
 
 export default function Technologies({ technologies }: TechnologiesTypes) {
@@ -57,7 +57,5 @@ export default function Technologies({ technologies }: TechnologiesTypes) {
       </ToolContainer>
 
     ))
-
-
-  );
+  )
 }

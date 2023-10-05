@@ -36,7 +36,7 @@ export const blogData: BlogDataTypes[] = [
     blogPageSummary: "Esta guía te mostrará cómo correr Linux Mint y Windows juntos en un mismo PC.",
     articleSummary: "Esta guía te mostrará cómo correr Linux Mint y Windows juntos en un mismo PC. Los pasos mencionados sirven para las distribuciones de Linux Mint. Bueno, veamos cómo arrancar Linux de forma dual en un sistema Windows.",
     time: "5",
-    related: ["Windows", "Linux", "Systems"],
+    related: ["Windows", "Linux"],
     shared: ["Twitter", "LinkedIn", "Facebook"],
     date: "Octubre 3, 2023",
     step: [

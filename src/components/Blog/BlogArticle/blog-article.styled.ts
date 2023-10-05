@@ -150,9 +150,6 @@ export const BlogArticleContainer = styled.section`
           span {
             padding-right: 4px;
           }
-        }
-
-        .published, .tags, .author, .twitter {
           display: flex;
           svg {
             height: 18px;
@@ -160,7 +157,7 @@ export const BlogArticleContainer = styled.section`
             margin-right: 8px;
           }
         }
-
+        
         @media (max-width: ${({ theme }) => theme.breakpoint.sm}) {
           margin: 0 0 16px 0;
         }

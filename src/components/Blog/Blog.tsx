@@ -11,9 +11,6 @@ export default function Blog() {
   const lang = useReadLocalStorage('language')
   const language = lang === 'spanish' ? spanish : english
 
-
-console.log(posts)
-
   return (
     <>
       <Title title={language.title} message={language.subtitle} />

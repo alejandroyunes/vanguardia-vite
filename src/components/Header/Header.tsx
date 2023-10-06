@@ -32,7 +32,7 @@ export default function Header({ links } : LinkItemProps) {
       <HeaderContainer>
         <Logo className="nav-logo">
           <Link to='/'>
-          <img src={logo} alt="Alejandro Web Logo" />
+            <img src={logo} alt="Alejandro Web Logo" />
           </Link>
         </Logo>
         <NavContainer>

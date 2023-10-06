@@ -18,7 +18,7 @@ export const Logo = styled.div`
   padding-top: 2px;
   img {
     width: 45px;
-    height: auto;
+    height: 45px;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   }
   @media(max-width: ${({theme}) => theme.breakpoint.xs}){

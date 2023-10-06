@@ -4,7 +4,7 @@ import Windows from "./svgs/windows"
 import { ToolContainer } from "./tools.styled"
 
 interface ToolsTypes {
-  tools: string[]
+  tools: string[] | undefined
 }
 
 interface ComponentMap {
@@ -31,7 +31,7 @@ function ToolsItem({ tool }: PortolioItemProps) {
 export default function Tools({ tools }: ToolsTypes) {
 
   return (
-    tools.map((tool, index) => (
+    tools?.map((tool, index) => (
 
       <ToolContainer key={index}>
 

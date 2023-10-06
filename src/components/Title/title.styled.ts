@@ -14,7 +14,7 @@ export const TitleContainer = styled.div`
     text-align: center;
     font-size: 1.2rem;
 		font-weight: 400;
-    color: ${({ theme }) => theme.palette.gray};
+    color: ${({ theme }) => theme.textColor};
   }
   h1 {
     text-align: center;

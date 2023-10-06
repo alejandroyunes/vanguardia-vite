@@ -1,15 +1,18 @@
 import { useState, useEffect } from "react"
-import { BlogDataTypes, blogData } from "../blog-data"
-// import { useReadLocalStorage } from "usehooks-ts"
+import { BlogDataTypes, spanish, english } from "../blog-data"
+import { useReadLocalStorage } from "usehooks-ts"
 
 export default function useFetchBlogData() {
-  const [posts, setPosts] = useState<BlogDataTypes[]>([])
-  // const lang = useReadLocalStorage('language')
 
+  const lang = useReadLocalStorage('language')
+  const language = lang === 'spanish' ? spanish : english
 
-  const fetch = () => {
+  const [posts, setPosts] = useState<BlogDataTypes>()
+
+  const fetch = async () => {
+
     try {
-      setPosts(blogData)
+      setPosts(language)
     } catch (err) {
       console.error(err)
     }
@@ -17,7 +20,7 @@ export default function useFetchBlogData() {
 
   useEffect(() => {
     fetch()
-  }, [])
+  }, [lang])
 
   return {
     posts

@@ -4,7 +4,7 @@ import Facebook from "./svgs/facebook";
 import Linkedin from "./svgs/linkedin";
 
 interface ShareTypes {
-  icons: string[]
+  icons: string[] | undefined
 }
 
 interface ComponentMap {
@@ -31,7 +31,7 @@ function SharedItem({ tool }: PortolioItemProps) {
 export default function Share({ icons }: ShareTypes) {
 
   return (
-    icons.map((icon, index) => (
+    icons?.map((icon, index) => (
 
       <ShareContainer key={index}>
 

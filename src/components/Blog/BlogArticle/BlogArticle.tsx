@@ -1,5 +1,4 @@
 import avatarImg from './images/alejo.webp'
-import { BlogDataTypes } from "../blog-data"
 import { BlogArticleContainer } from "./blog-article.styled"
 import Time from "./svgs/time"
 
@@ -9,34 +8,34 @@ import Shared from './Share/Shared'
 
 export default function BlogArticle() {
 
-  const { postFiltered } = useFetchBlogArticle()
+  const { post } = useFetchBlogArticle()
 
   return (
     <BlogArticleContainer>
-      {postFiltered.map((post: BlogDataTypes, index) => (
-        <div className="article" key={index}>
 
+      {post && post.blog.map((e, i) => (
+        <div className="article" key={i}>
           <div className="title">
 
             <div className="article-date">
-              <span>{post.date}</span>
+              <span>{e.date}</span>
             </div>
             <div className="article-title">
-              <h1>{post.title}</h1>
+              <h1>{e.title}</h1>
             </div>
 
           </div>
 
           <div className="content">
             <div className="article-summary">
-              {post.articleSummary}
+              {e.articleSummary}
             </div>
             <div className="article-image">
-              <img src={post.image} alt="" />
+              <img src={e.image} alt="" />
             </div>
             <div className="article-summary__body">
-              {post.step.map((step, index) => (
-                <div key={index} className="step">
+              {e.step.map((step, i) => (
+                <div key={i} className="step">
                   <h2>{step.title}</h2>
                   <p>
                     <strong>{step.step} </strong>
@@ -50,24 +49,24 @@ export default function BlogArticle() {
           </div>
 
           <div className="meta-box">
-            <div className="ad-banner__short">
-            </div>
+            {/* <div className="ad-banner__short">
+            </div> */}
             <div className="share">
               <ul>
                 <li className="item">
                   <Time />
-                  lectura de {post.time} min
+                  lectura de {e.time} min
                 </li>
                 <li className="item">
-                  <Tools tools={post.related} />
+                  <Tools tools={e.related} />
                 </li>
                 <li className="item">
-                    <Shared icons={post.shared}/>
+                  <Shared icons={e.shared} />
                 </li>
               </ul>
             </div>
-            <div className="ad-banner__long">
-            </div>
+            {/* <div className="ad-banner__long">
+            </div> */}
           </div>
 
         </div>
@@ -80,19 +79,19 @@ export default function BlogArticle() {
             <img src={avatarImg} alt="Avatar" className="avatar" />
           </div>
           <div className="article-author-title">
-            <p>Alejandro Cano</p>
+            <p>{post?.author}</p>
           </div>
         </div>
         <div className="article-author-description">
           <p>
-            Un diseñador independiente y desarrollador front-end dedicado a mejorar la experiencia de todos en la web, con un enfoque centrado en la mejora progresiva y el perfeccionamiento constante.
+            {post?.description}
           </p>
         </div>
 
-        <div className="ad-banner__long-left">
+        {/* <div className="ad-banner__long-left">
         </div>
         <div className="ad-banner__long-left">
-        </div>
+        </div> */}
 
       </div>
 

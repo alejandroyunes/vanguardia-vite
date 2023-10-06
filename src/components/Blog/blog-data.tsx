@@ -1,10 +1,10 @@
-import wordpress from "../../assets/blog/wordpress.jpg"
-import css from "../../assets/blog/css.jpg"
-import react from "../../assets/blog/react.jpg"
-import wordpressPlugin from "../../assets/blog/wordpress-plugins.jpg"
-import figma from "../../assets/blog/figma-xd.jpg"
-import bitbucket from "../../assets/blog/githubbitbucket.jpg"
-import htmlcssjs from "../../assets/blog/htmlcssjs.jpg"
+// import wordpress from "../../assets/blog/wordpress.jpg"
+// import css from "../../assets/blog/css.jpg"
+// import react from "../../assets/blog/react.jpg"
+// import wordpressPlugin from "../../assets/blog/wordpress-plugins.jpg"
+// import figma from "../../assets/blog/figma-xd.jpg"
+// import bitbucket from "../../assets/blog/githubbitbucket.jpg"
+// import htmlcssjs from "../../assets/blog/htmlcssjs.jpg"
 import linuxWindowsArticle from './BlogArticle/images/linux-windows.webp'
 
 

@@ -27,7 +27,7 @@ export default function Billboard(props: BillboardProps) {
       </div>
 
       <div className="billboard-svg">
-        <img src={image} alt={alt} />
+        <img src={image} alt={alt} width="540" height="304"/>
       </div>
 
     </BillboardContainer>

@@ -29,10 +29,6 @@ export const BillboardTwoContainer = styled.div`
 	p {
 	color: ${({ theme }) => theme.textColor};
 	}
-	img {
-		max-height: 380px;
-		width: auto;
-	}
 @media(max-width: ${({ theme }) => theme.breakpoint.sm}) {
 	grid-template-columns: repeat(1, auto);
 	grid-template-rows: repeat(2, auto);
@@ -60,51 +56,56 @@ export const BillboardRight = styled.div`
 	position: relative;
 	margin: 0 auto;
 	img {
-		width: 100%;
+		width: 611px;
 		height: auto;
 	}
-		.btn-video {
-			display: block;
-			position: relative;
+	@media(max-width: ${({ theme }) => theme.breakpoint.sm}){
+		img {
+			width: 380px;
 		}
-		.btn-video:before {
-			content: "";
-			position: absolute;
-			top: 10px;
-			left: 10px;
-			right: 10px;
-			bottom: 10px;
-			background: rgba(0, 0, 0, 0.1);
-			opacity: 0;
-			visibility: hidden;
-			-webkit-transition: 0.3s all ease;
-			-o-transition: 0.3s all ease;
-			transition: 0.3s all ease;
-		}
-		.btn-video .wrap-icon-play {
-			position: absolute;
-			top: 50%;
-			left: 50%;
-			width: 50px;
-			height: 50px;
-			background: whitesmoke;
-			border-radius: 50%;
-			-webkit-transform: translate(-50%, -50%);
-			-ms-transform: translate(-50%, -50%);
-			transform: translate(-50%, -50%);
-			-webkit-box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.5);
-			box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.5);
-		}
-		.btn-video .wrap-icon-play > svg {
-			position: absolute;
-			top: 50%;
-			left: 50%;
-			-webkit-transform: translate(-50%, -50%);
-			-ms-transform: translate(-50%, -50%);
-			transform: translate(-50%, -50%);
-		}
-		.btn-video:hover:before {
-			opacity: 1;
-			visibility: visible;
-		}
+  }
+	.btn-video {
+		display: block;
+		position: relative;
+	}
+	.btn-video:before {
+		content: "";
+		position: absolute;
+		top: 10px;
+		left: 10px;
+		right: 10px;
+		bottom: 10px;
+		background: rgba(0, 0, 0, 0.1);
+		opacity: 0;
+		visibility: hidden;
+		-webkit-transition: 0.3s all ease;
+		-o-transition: 0.3s all ease;
+		transition: 0.3s all ease;
+	}
+	.btn-video .wrap-icon-play {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		width: 50px;
+		height: 50px;
+		background: whitesmoke;
+		border-radius: 50%;
+		-webkit-transform: translate(-50%, -50%);
+		-ms-transform: translate(-50%, -50%);
+		transform: translate(-50%, -50%);
+		-webkit-box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.5);
+		box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.5);
+	}
+	.btn-video .wrap-icon-play > svg {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		-webkit-transform: translate(-50%, -50%);
+		-ms-transform: translate(-50%, -50%);
+		transform: translate(-50%, -50%);
+	}
+	.btn-video:hover:before {
+		opacity: 1;
+		visibility: visible;
+	}
 `

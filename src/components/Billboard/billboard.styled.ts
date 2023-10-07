@@ -5,6 +5,7 @@ export const BillboardContainer = styled.div`
     display: grid;
     grid-template-columns: auto auto;
     margin: 0 auto;
+    gap: 0;
     max-width: ${({ theme }) => theme.breakpoint.md};
     @media(max-width: ${({ theme }) => theme.breakpoint.xs}){
       display: grid;
@@ -17,13 +18,14 @@ export const BillboardContainer = styled.div`
       margin: auto 0;
       @media(max-width: ${({ theme }) => theme.breakpoint.xs}){
       padding-right: 0;
-      padding-bottom: 32px; 
       }
       h1 {
         font-weight: bold;
         color: ${({ theme }) => theme.palette.primary.main};
         font-size: 3rem;
-        line-height: 1.2;
+        @media(max-width: ${({ theme }) => theme.breakpoint.sm}){
+          font-size: 2.6rem;
+        }
       }
       h2 {
         color: ${({ theme }) => theme.textColor};

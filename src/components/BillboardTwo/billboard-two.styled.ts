@@ -21,8 +21,8 @@ export const BillboardTwoContainer = styled.div`
 		padding: 16px 0;
 		font-weight: 400;
 	}
-	h3 {
-		color: ${({ theme }) => theme.palette.red};
+	p {
+		color: ${({ theme }) => theme.palette.gray};
 		font-weight: 500;
 		font-size: 16px;
 	}

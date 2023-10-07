@@ -32,7 +32,7 @@ export default function BillboardTwo(props: BillboardTwoTypes) {
 	return (
 		<BillboardTwoContainer>
 			<BillboardLeft>
-				<h3>{label}</h3>
+				<p>{label}</p>
 				<h1>{title}</h1>
 				<h2>{subtitle}</h2>
 				<ul>

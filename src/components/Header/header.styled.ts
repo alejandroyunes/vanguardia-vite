@@ -129,6 +129,11 @@ export const HamburgerMenu = styled.div`
     -webkit-user-select: none;
     user-select: none;
   }
+  #toggleMenu label {
+    visibility: hidden;
+    position: absolute;
+    left: -9999px;
+  }
 
   #toggleMenu a {
     text-decoration: none;

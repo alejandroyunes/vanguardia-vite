@@ -12,12 +12,18 @@ export interface FooterProps {
   title: string
   subtitle: string
   label: string,
+  socialLinkText: {
+    facebook: string
+    instagram: string
+    twitter: string
+    github: string
+  }
 }
 
 export default function Footer(props: FooterProps) {
 
-  const { title, subtitle } = props
-
+  const { title, subtitle, socialLinkText } = props
+  
   return (
     <FooterContainer>
       <div className="footer-left">
@@ -41,10 +47,22 @@ export default function Footer(props: FooterProps) {
         </div>
 
         <div className="footer__social">
-          <a href="https://www.instagram.com/vanguardiawebtech" target="_blank"><InstagramIcon /></a>
-          <a href="https://www.facebook.com/vanguardiawebtech" target="_blank"><FacebookIcon /></a>
-          <a href="https://www.twitter.com/vanguardiawebt"><TwitterIcon /></a>
-          <a href="https://www.github.com/alejandroyunes" target="_blank"><GitHubIcon /></a>
+          <a href="https://www.instagram.com/vanguardiawebtech" target="_blank">
+            <InstagramIcon />
+            <span className="visually-hidden">{socialLinkText.instagram}</span>
+          </a>
+          <a href="https://www.facebook.com/vanguardiawebtech" target="_blank">
+            <FacebookIcon />
+            <span className="visually-hidden">{socialLinkText.facebook}</span>
+          </a>
+          <a href="https://www.twitter.com/vanguardiawebt">
+            <TwitterIcon />
+            <span className="visually-hidden">{socialLinkText.twitter}</span>
+          </a>
+          <a href="https://www.github.com/alejandroyunes" target="_blank">
+            <GitHubIcon />
+            <span className="visually-hidden">{socialLinkText.github}</span>
+          </a>
         </div>
       </div>
 

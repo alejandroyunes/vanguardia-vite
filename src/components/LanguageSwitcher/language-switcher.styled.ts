@@ -5,7 +5,7 @@ export const LanguageContainer = styled.div`
   display: flex;
   margin-right: 4px;
   span {
-    color: ${({ theme }) => theme.palette.primary.main};
+    color: ${({ theme }) => theme.palette.gray};
     padding: 16px 10px;
     -webkit-tap-highlight-color: transparent;
     cursor: pointer;

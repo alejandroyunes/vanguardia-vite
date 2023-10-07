@@ -119,9 +119,11 @@ export const HamburgerMenu = styled.div`
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   position: relative;
   margin-top: 13px;
+  
   @media(max-width: 756px){
     display: block;
   }
+
   #toggleMenu {
     top: 16px;
     right: 0px;
@@ -129,6 +131,7 @@ export const HamburgerMenu = styled.div`
     -webkit-user-select: none;
     user-select: none;
   }
+
   #toggleMenu label {
     visibility: hidden;
     position: absolute;

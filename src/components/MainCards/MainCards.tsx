@@ -21,7 +21,7 @@ const { cards } = props
         <CarouselContainer showThumbs={false}>
           {cards.map((e, i) => {
             return (
-              <div className="card-wrapper" key={i}>
+              <div className="card-wrapper" key={i} aria-label={e.alt}>
                 <div className="card-img">
                   <img src={e.image} alt={e.alt} />
                 </div>

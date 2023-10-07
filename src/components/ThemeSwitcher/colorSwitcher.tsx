@@ -11,12 +11,12 @@ export default function ColorSwitcher() {
 			<input
 				type="checkbox"
 				defaultChecked={theme.name === 'darkmode' ? true : false}
-				id="toggler"
+				id="color-toggler"
 				onChange={() => {
 					theme.name === 'darkmode' ? setTheme(lightTheme) : setTheme(darkTheme)
 				}}
 			/>
-			<label htmlFor="toggler" className="toggle">
+			<label htmlFor="color-toggler" className="toggle">
 				<span className="star star1"></span>
 				<span className="star star2"></span>
 				<span className="star star3"></span>

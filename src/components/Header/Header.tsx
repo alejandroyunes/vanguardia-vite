@@ -54,10 +54,10 @@ export default function Header({ links } : LinkItemProps) {
           </NavItems>
           <HamburgerMenu>
             <div id="toggleMenu">
-              <label htmlFor="toggler-switcher">test</label>
+              <label htmlFor="menu-switcher">menu</label>
               <input
                 type="checkbox"
-                id="toggler-switcher"
+                id="menu-switcher"
                 checked={isActive}
                 onChange={() => setIsActive(!isActive)}
               />

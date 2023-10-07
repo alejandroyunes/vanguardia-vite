@@ -13,7 +13,7 @@ export const spanish = {
     subtitle: "Somos una agencia digital líder con amplia experiencia en diseño y desarrollo. Nos especializamos en la creación de productos móviles y aplicativos web.",
     button: "Contáctanos",
     image: Animation,
-    alt: "contruyendo una app con componentes"
+    alt: "Avatars construyendo un sitio web por componentes animada"
   },
   titleOne: {
     title: "Technologías",
@@ -22,7 +22,7 @@ export const spanish = {
   mainCards: [
     {
 			image: ResponsiveDesignIcon,
-      alt: "PC en escritorio",
+      alt: "Icono de un monitor o PC",
 			title: 'Simple y Efectivo',
 			subtitle: 'Apps de Alto Rendimiento',
 			message: 'Deja una impresión duradera en tus clientes con una aplicación rápida, moderna, personalizada y con un diseño gráfico de vanguardia.',
@@ -30,7 +30,7 @@ export const spanish = {
 		},
 		{
 			image: MobileDesignIcon,
-      alt: "dispositivo móvil",
+      alt: "Icono de un celuar",
 			title: 'Adaptabilidad Móvil',
 			subtitle: 'Diseños Completamente Adaptables',
 			message: 'En el mundo actual, existen más de 5 mil millones de usuarios únicos de dispositivos móviles, lo que equivale al 67% de la población global.',
@@ -38,7 +38,7 @@ export const spanish = {
 		},
 		{
 			image: RocketAnimation,
-      alt: "Animación de Cohete",
+      alt: "Icono de un Cohete",
 			title: 'Estrategia Digital',
 			subtitle: 'Elevando en el Mundo Digital',
 			message: 'Estrategias digitales para promover marcas, interactuar con el público y lograr objetivos comerciales con eficacia',
@@ -60,6 +60,13 @@ export const spanish = {
   titleTwo: {
     title: "Diseñado para Todos los dispositivos",
     message: "Diseños Creativos"
+  },
+  mainDesign: {
+    altImageOne: "Icono de computador con avatar sentado sobre el teclado",
+    altImageTwo: "Icono de celular acostado con imagenes saliendo de él sobre redes sociales",
+    altImageThree: "Icono de computador con avatar de seguridad",
+    altImageFour: "Icono de computador con avatar señalando estadísticas sobre una tablet",
+    altImageFive: "Icono de computador con avatar de usuario y su autenticación",
   }
 }
 
@@ -69,7 +76,7 @@ export const english = {
     subtitle: "We are a leading digital agency with extensive experience in design and development. We specialize in the creation of mobile products and web applications.",
     button: "Contact us",
     image: Animation,
-    alt: "web design and development creation"
+    alt: "Avatars constructing a website by components animated"
   },
   titleOne: {
     title: "Technologies",
@@ -78,8 +85,8 @@ export const english = {
   mainCards: [
     {
 			image: ResponsiveDesignIcon,
-      alt: "Desktop and PC",
-			title: 'Effective and Simple',
+      alt: "Icon of a monitor or PC",
+			title: 'Simple yet Effective',
 			subtitle: 'High-Performance Apps',
 			message: 'Leave a lasting impression on your customers with a fast, modern, customized application featuring cutting-edge graphic design.',
 			viewMore: false,
@@ -87,14 +94,14 @@ export const english = {
 		{
 			image: MobileDesignIcon,
 			title: 'Mobile Adaptability',
-      alt: "Mobile device",
+      alt: "Icon of a mobile device",
 			subtitle: 'Fully Responsive Designs',
 			message: 'In today\'s world, there are more than 5 billion unique users of mobile devices, which accounts for 67% of the global population.',
 			viewMore: false,
 		},
 		{
 			image: RocketAnimation,
-      alt: "Rocket animation",
+      alt: "Icon of a Rocket",
 			title: 'Digital Strategy',
 			subtitle: 'Boosting in the Digital World',
 			message: 'Digital strategies to promote brands, engage with the audience, and achieve business goals effectively.',
@@ -116,5 +123,12 @@ export const english = {
   titleTwo: {
     title: "Designed for All Devices",
     message: "Creative Designs"
-  }
+  },
+  mainDesign: {
+    altImageOne: "Icon of a computer with an avatar sitting on the keyboard",
+    altImageTwo: "Icon of a horizontal mobile phone with images coming out of it of social media",
+    altImageThree: "Icon of a computer with a security avatar",
+    altImageFour: "Icon of a computer with an avatar pointing at statistics on a tablet",
+    altImageFive: "Icon of a computer with a user avatar and authentication"
+}
 }

@@ -18,7 +18,7 @@ export default function App() {
       <MainCards cards={[...language.mainCards]} />
       <BillboardTwo {...language.billboardTwo}/>
       <Title title={language.titleTwo.title} message={language.titleTwo.message} />
-      <MainDesign />
+      <MainDesign {...language.mainDesign}/>
     </>
   );
 }

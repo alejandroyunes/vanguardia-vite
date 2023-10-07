@@ -5,7 +5,6 @@ export const MainDesignContainer = styled.div`
   margin: 0 auto;
   grid-template-columns: repeat(2, .5);
   grid-template-rows: repeat(1, 1fr);
-  gap: 4px 4px;
 	max-width: ${({ theme }) => theme.breakpoint.md};
   grid-template-areas:
     "image-one image-one image-two image-three"
@@ -60,7 +59,6 @@ export const MainDesignContainer = styled.div`
 @media(max-width: ${({ theme }) => theme.breakpoint.sm}) {
     grid-template-columns: auto;
     grid-template-rows: repeat(4, .5);
-    gap: 16px 16px;
     padding-top: 30px;
     grid-template-areas:
     "image-one image-one" 

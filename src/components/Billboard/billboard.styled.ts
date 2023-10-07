@@ -52,8 +52,7 @@ export const BillboardContainer = styled.div`
       }
       @media(max-width: ${({ theme }) => theme.breakpoint.sm}){
        img {
-          width: 400px;
-          height: auto;
+          height: 329px;
         }
       }
       @media(max-width: ${({ theme }) => theme.breakpoint.xs}){

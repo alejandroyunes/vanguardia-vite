@@ -56,12 +56,13 @@ export const BillboardRight = styled.div`
 	position: relative;
 	margin: 0 auto;
 	img {
-		width: 611px;
-		height: auto;
+		width: auto;
+		height: 420px;
 	}
-	@media(max-width: ${({ theme }) => theme.breakpoint.sm}){
+	@media(max-width: ${({ theme }) => theme.breakpoint.xs}){
 		img {
-			width: 380px;
+			width: 100%;
+      height: auto;
 		}
   }
 	.btn-video {

@@ -9,7 +9,7 @@ export const lightTheme: DefaultTheme = {
   palette: {
     black: "#192533",
     white: "#ffffff",
-    gray: "#555555",
+    gray: "#39393A",
     red: "#ae3c43",
     primary: {
       main: "#216397",

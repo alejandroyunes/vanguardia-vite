@@ -55,7 +55,7 @@ export const darkTheme: DefaultTheme = {
   palette: {
     black: "#212121",
     white: "#ffffff",
-    gray: "#666666",
+    gray: "#39393A",
     red: "#ae3c43",
     primary: {
       main: "#508ebc",

@@ -6,6 +6,7 @@ export const CardContainer = styled.div`
   margin: 0 auto;
   justify-content: center;
   max-width:  ${({ theme }) => theme.breakpoint.sm};
+  text-align: center;
 
 	.card-wrapper  {
     padding: 24px;
@@ -13,7 +14,7 @@ export const CardContainer = styled.div`
     background-color: ${({ theme }) => theme.palette.white};
     border-radius: 0.5rem;
     width: 280px;
-    height: 440px;
+    height: 400px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     @media(max-width: ${({ theme }) => theme.breakpoint.sm}){
       margin: 8px;
@@ -21,13 +22,9 @@ export const CardContainer = styled.div`
     }
   }
 
-  .card-img {
-    text-align: center;
-  }
-
   img {
-    width: 140px;
-    height: 140px;
+    width: 100px;
+    height: 100px;
   }
   h2 {
     font-size: 1.5rem;

@@ -6,13 +6,18 @@ import ColorSwitcher from "../ThemeSwitcher/colorSwitcher"
 import LanguageSwitcher from "../LanguageSwitcher/LanguageSwitcher"
 
 interface LinkItemProps {
-  links: {
-    link: string;
-    path: string;
-  }[]
+  headerProps: {
+    links: {
+      link: string;
+      path: string;
+    }[],
+    arialLabel: string
+  }
 }
 
-export default function Header({ links } : LinkItemProps) {
+export default function Header({ headerProps }: LinkItemProps) {
+
+  const { links, arialLabel } = headerProps
 
   let navigate = useNavigate()
   const location = useLocation()
@@ -26,7 +31,6 @@ export default function Header({ links } : LinkItemProps) {
     }
     navigate(path)
   }
-
   return (
     <>
       <HeaderContainer>
@@ -54,7 +58,7 @@ export default function Header({ links } : LinkItemProps) {
           </NavItems>
           <HamburgerMenu>
             <div id="toggleMenu">
-              <label htmlFor="menu-switcher">menu</label>
+              <label htmlFor="menu-switcher" className="visually-hidden">{arialLabel}</label>
               <input
                 type="checkbox"
                 id="menu-switcher"

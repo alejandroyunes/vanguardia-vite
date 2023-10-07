@@ -27,4 +27,13 @@ html {
     font-weight: normal;
     margin: 0;
   }
+  .visually-hidden {
+    position: absolute;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px);
+    white-space: nowrap; /* Added for extra safety */
+  }
 `;

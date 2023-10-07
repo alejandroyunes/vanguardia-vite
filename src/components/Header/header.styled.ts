@@ -132,12 +132,6 @@ export const HamburgerMenu = styled.div`
     user-select: none;
   }
 
-  #toggleMenu label {
-    visibility: hidden;
-    position: absolute;
-    left: -9999px;
-  }
-
   #toggleMenu a {
     text-decoration: none;
     color: ${({ theme }) => theme.palette.primary.main};

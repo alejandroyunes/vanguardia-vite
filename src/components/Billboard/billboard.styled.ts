@@ -47,12 +47,19 @@ export const BillboardContainer = styled.div`
 		.billboard-svg {
       text-align: center;
       img {
-        width: 540px;
-        height: auto;
+        width: auto;
+        height: 440px;
       }
       @media(max-width: ${({ theme }) => theme.breakpoint.sm}){
        img {
-          width: 380px;
+          width: 400px;
+          height: auto;
+        }
+      }
+      @media(max-width: ${({ theme }) => theme.breakpoint.xs}){
+       img {
+          width: 100%;
+          height: 440px;
         }
       }
     }

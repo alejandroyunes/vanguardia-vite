@@ -19,17 +19,17 @@ export default function ColorSwitcher() {
 
 	return (
 		<div className="toggle-input">
-			<label htmlFor="color-toggler" className="visually-hidden">{language.inputLabel}r</label>
+			<label htmlFor="toggler" className="visually-hidden">{language.inputLabel}r</label>
 
 			<input
 				type="checkbox"
 				defaultChecked={theme.name === 'darkmode' ? true : false}
-				id="color-toggler"
+				id="toggler"
 				onChange={() => {
 					theme.name === 'darkmode' ? setTheme(lightTheme) : setTheme(darkTheme)
 				}}
 			/>
-			<label className="toggle">
+			<label htmlFor="toggler" className="toggle">
 				<span className="star star1"></span>
 				<span className="star star2"></span>
 				<span className="star star3"></span>

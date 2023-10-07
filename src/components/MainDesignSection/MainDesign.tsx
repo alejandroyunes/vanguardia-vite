@@ -1,27 +1,28 @@
-import WhiteMountains from "./Assets/images/white-mountains.webp"
-import GreenDesign from "./Assets/images/green-design-mockup.webp"
-import Rocket from "./Assets/svgs/rocket/Rocket"
-import GirlFloating from './Assets/svgs/GirlFloating'
-import MiniVan from './Assets/images/minivan-design.webp'
+import Search from './Assets/svgs/search.svg'
+import Share from './Assets/svgs/share.svg'
+
 import { MainDesignContainer } from "./main-design.styled"
+import Http from "./Assets/svgs/http.svg"
+import Security from './Assets/svgs/security.svg'
+import Auth from './Assets/svgs/authentication.svg'
 
 export default function MainDesign() {
   return (
     <MainDesignContainer>
       <div className="image-one">
-        <img src={MiniVan} alt="" />
+        <img src={Http} alt="" />
       </div>
       <div className="image-two">
-        <Rocket />
+        <img src={Share} alt="" />
       </div>
       <div className="image-three">
-        <img src={WhiteMountains} alt="" />
+        <img src={Security} alt="" />
       </div>
       <div className="image-four">
-        <img src={GreenDesign} alt="" />
+        <img src={Search} alt="" />
       </div>
       <div className="image-five">
-        <GirlFloating />
+        <img src={Auth} alt="" />
       </div>
     </MainDesignContainer>
   )

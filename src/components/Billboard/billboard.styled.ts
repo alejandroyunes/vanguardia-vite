@@ -24,24 +24,13 @@ export const BillboardContainer = styled.div`
         color: ${({ theme }) => theme.palette.primary.main};
         font-size: 3rem;
         line-height: 1.2;
-        @media(max-width: ${({ theme }) => theme.breakpoint.sm}){
-          font-size: 2.6rem;
-        }
-        @media(max-width: ${({ theme }) => theme.breakpoint.xs}){
-          font-size: 2rem;
-        }
       }
       h2 {
         color: ${({ theme }) => theme.textColor};
-        font-size: 1.2rem;
+        font-size: 1.5rem;
         line-height: 2rem;
         padding: 20px 0 28px;
         font-weight: 400;
-        @media(max-width: ${({ theme }) => theme.breakpoint.sm}){
-          font-size: 1rem;
-          font-weight: 400;
-          line-height: 1.225;
-        }
       }
     }
 		.billboard-svg {

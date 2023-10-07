@@ -12,13 +12,15 @@ export const MainDesignContainer = styled.div`
     "image-one image-one image-four image-five";
   img {
     width: 100%;
-    height: 100%;
+    height: 220px;
   }
-
   .image-one {
     grid-area: image-one;
     position: relative;
-    transform: rotateY(180deg);
+    img {
+      width: 100%;
+      height: 480px;
+    }
   }
 
   .image-one:hover .overlay-red {
@@ -34,6 +36,7 @@ export const MainDesignContainer = styled.div`
   .image-three {
     grid-area: image-three;
     position: relative;
+    transform: rotateY(180deg);
   }
   .image-three:hover .overlay-red {
     opacity: 1;
@@ -48,6 +51,7 @@ export const MainDesignContainer = styled.div`
   .image-five {
     grid-area: image-five;
     position: relative;
+    transform: rotateY(180deg);
   }
   .image-five:hover .overlay-red {
     opacity: 1;

@@ -42,7 +42,7 @@ const { cards } = props
           return (
             <div className="card-wrapper" key={i}>
               <div className="card-img">
-                <img src={e.image} alt={e.alt}/>
+                <img src={e.image} alt={e.alt} width="100" height="100"/>
               </div>
               <h2>{e.title}</h2>
               <h3>{e.subtitle}</h3>

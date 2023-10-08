@@ -19,8 +19,6 @@ export default function ColorSwitcher() {
 
 	return (
 		<div className="toggle-input">
-			<label htmlFor="toggler" className="visually-hidden">{language.inputLabel}r</label>
-
 			<input
 				type="checkbox"
 				defaultChecked={theme.name === 'darkmode' ? true : false}
@@ -41,6 +39,8 @@ export default function ColorSwitcher() {
 					<span className="crater crater2"></span>
 					<span className="crater crater3"></span>
 				</span>
+
+				<span className="visually-hidden">{language.inputLabel}</span>
 			</label>
 		</div>
 	)

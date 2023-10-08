@@ -1,25 +1,23 @@
 import { CardContainer, MobileCardContainer, DesktopCardContainer } from "./main-cards.styled";
 import 'react-responsive-carousel/lib/styles/carousel.min.css'
 import { Carousel as CarouselContainer } from 'react-responsive-carousel'
+import { MainCardProps } from "../../pages/translate/app"
 
-interface MainCardProps {
-  cards: {
-    image: string
-    alt: string
-    title: string
-    subtitle: string
-    message: string
-    viewMore: boolean
-  }[]
+type MainCProps = {
+  mainCards: MainCardProps[]
 }
-export default function MainCards(props: MainCardProps) {
-  const { cards } = props
+
+
+export default function MainCards({mainCards}: MainCProps) {
+
+
+  console.log(mainCards)
 
   return (
     <CardContainer>
       <MobileCardContainer>
         <CarouselContainer showThumbs={false}>
-          {cards.map((e, i) => {
+          {mainCards.map((e, i) => {
             return (
               <div className="card-wrapper" key={i}>
                 <div className="card-img">
@@ -38,7 +36,7 @@ export default function MainCards(props: MainCardProps) {
       </MobileCardContainer>
 
       <DesktopCardContainer>
-        {cards.map((e, i) => {
+        {mainCards.map((e, i) => {
           return (
             <div className="card-wrapper" key={i}>
               <div className="card-img">

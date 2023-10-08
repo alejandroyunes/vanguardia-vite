@@ -6,6 +6,44 @@ import RocketAnimation from "./svgs/main-cards/rocket.svg"
 
 import Dashboard from './images/app/billboard-two.webp'
 
+export interface BillboardProps {
+  title: string
+  subtitle: string
+  button: string
+  image: string
+  alt: string
+}
+
+export interface MainCardProps {
+    image: string
+    alt: string
+    title: string
+    subtitle: string
+    message: string
+    viewMore: boolean
+}
+
+export interface BillboardTwoTypes {
+	label: string
+	title: string
+	subtitle: string
+	listOne: string
+	listTwo: string
+	listThree: string
+	listFour: string
+	labelFooter: string
+	image: string
+	alt: string
+}
+
+export interface mainDesignTypes {
+  altImageOne: string
+  altImageTwo: string
+  altImageThree: string
+  altImageFour: string
+  altImageFive: string
+}
+
 
 export const spanish = {
   billboard: {
@@ -69,7 +107,6 @@ export const spanish = {
     altImageFive: "Icono de computador con avatar de usuario y su autenticación",
   },
   meta: "Somos una agencia digital líder con amplia experiencia en diseño y desarrollo. Nos especializamos en la creación de productos móviles y aplicativos web."
-
 }
 
 export const english = {
@@ -132,6 +169,6 @@ export const english = {
     altImageThree: "Icon of a computer with a security avatar",
     altImageFour: "Icon of a computer with an avatar pointing at statistics on a tablet",
     altImageFive: "Icon of a computer with a user avatar and authentication"
-},
-meta: "We are a leading digital agency with extensive experience in design and development. We specialize in the creation of mobile products and web applications."
+  },
+  meta: "We are a leading digital agency with extensive experience in design and development. We specialize in the creation of mobile products and web applications."
 }

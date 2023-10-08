@@ -5,14 +5,7 @@ import { MainDesignContainer } from "./main-design.styled"
 import Http from "./Assets/svgs/http.svg"
 import Security from './Assets/svgs/security.svg'
 import Auth from './Assets/svgs/authentication.svg'
-
-interface mainDesignTypes {
-  altImageOne: string
-  altImageTwo: string
-  altImageThree: string
-  altImageFour: string
-  altImageFive: string
-}
+import { mainDesignTypes } from '../../pages/translate/app'
 
 export default function MainDesign(props: mainDesignTypes) {
   return (

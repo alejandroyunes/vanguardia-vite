@@ -1,12 +1,6 @@
+import { BillboardProps } from "../../pages/translate/app";
 import { BillboardContainer } from "./billboard.styled"
 
-export interface BillboardProps {
-  title: string
-  subtitle: string
-  button: string
-  image: string
-  alt: string
-}
 
 export default function Billboard(props: BillboardProps) {
 

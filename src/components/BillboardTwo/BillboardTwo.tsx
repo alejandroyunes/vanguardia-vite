@@ -1,18 +1,7 @@
+import { BillboardTwoTypes } from '../../pages/translate/app'
 import { BillboardTwoContainer, BillboardRight, BillboardLeft } from './billboard-two.styled'
 import Checkmark from './svg/Checkmark'
 
-type BillboardTwoTypes = {
-	label: string
-	title: string
-	subtitle: string
-	listOne: string
-	listTwo: string
-	listThree: string
-	listFour: string
-	labelFooter: string
-	image: string
-	alt: string
-}
 
 export default function BillboardTwo(props: BillboardTwoTypes) {
 

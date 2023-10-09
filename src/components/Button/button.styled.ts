@@ -7,7 +7,7 @@ export const ButtonContainer = styled.div`
     margin-right: 6px;
     box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
     background-color: ${({ theme }) => theme.palette.primary.main};
-    color: white;
+    color: ${({ theme }) => theme.bodyColor};
     letter-spacing: 0.5px;
     text-transform: capitalize;
     border: none;
@@ -39,9 +39,11 @@ export const ButtonContainer = styled.div`
 
     &__icon {
       padding: 5px 0 0 8px;
+      color: red;
       svg {
         width: 24px;
         height: 24px;
+        fill: ${({ theme }) => theme.bodyColor};
       }
     .btn-center{
         text-align: center;

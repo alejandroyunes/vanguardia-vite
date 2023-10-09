@@ -12,7 +12,7 @@ export const lightTheme: DefaultTheme = {
     gray: "#39393A",
     red: "#ae3c43",
     primary: {
-      main: "#216397",
+      main: "#1B5079",
       contrastText: "#172846",
     },
     secondary: {

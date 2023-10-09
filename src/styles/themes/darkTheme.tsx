@@ -58,7 +58,7 @@ export const darkTheme: DefaultTheme = {
     gray: "#39393A",
     red: "#ae3c43",
     primary: {
-      main: "#508ebc",
+      main: "#7AA4C8",
       contrastText: "#868686",
     },
     secondary: {

@@ -1,8 +1,8 @@
-import portfolioRestaurant from './images/portfolio/portfolio-restaurant.jpg'
-import iphoneCase from "./images/portfolio/iphone.jpg"
-import drPuerta from "./images/portfolio/drpuerta.jpg"
-import hotels from "./images/portfolio/hotels.jpg"
-import punkies from "./images/portfolio/punkies2.jpg"
+import portfolioRestaurant from './images/portfolio/restaurant.webp'
+import iphoneCase from "./images/portfolio/iphone.webp"
+import drPuerta from "./images/portfolio/drpuerta.webp"
+import hotels from "./images/portfolio/hotels.webp"
+import punkies from "./images/portfolio/punkies.webp"
 
 export const spanish = {
   title: "Portafolio",

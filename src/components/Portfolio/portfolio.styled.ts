@@ -8,7 +8,7 @@ export const PortfolioContainer = styled.div`
 		grid-gap: 30px;
 		margin: 0px auto 80px;
 		padding: 0 24px;
-		grid-template-columns: repeat(2, .5fr);
+		grid-template-columns: repeat(2, auto);
 
 		.item-info {
 			h2 {
@@ -34,11 +34,23 @@ export const PortfolioContainer = styled.div`
 			}
 		}
 		.child-two {
-			margin: auto 0;
+			display: flex;
+			justify-content: center;
 			img {
-				width: 100%;
+				width: auto;
 				max-height: auto;
 				}
+			@media (max-width: ${({ theme }) => theme.breakpoint.sm}) { 
+				img {
+					width: auto;
+				}
+			}
+			@media (max-width: ${({ theme }) => theme.breakpoint.xs}) { 
+				img {
+					height: auto;
+					width: 100%;
+				}
+			}
 		}
 
 		@media (max-width: ${({ theme }) => theme.breakpoint.sm}) {

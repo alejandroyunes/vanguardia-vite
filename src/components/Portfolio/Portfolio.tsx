@@ -30,7 +30,7 @@ export default function Portfolio({ title, items, subtitle }: PorfolioProps) {
 
       <HelmetProvider>
         <Helmet>
-
+          {subtitle}
         </Helmet>
       </HelmetProvider>
 
@@ -76,7 +76,7 @@ export default function Portfolio({ title, items, subtitle }: PorfolioProps) {
           </div>
 
           <div className="child-two">
-            <img src={e.image} alt={e.alt} />
+            <img src={e.image} alt={e.alt} width="600" height="400"/>
           </div>
         </div>
       ))

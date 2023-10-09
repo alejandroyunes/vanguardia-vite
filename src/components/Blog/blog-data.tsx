@@ -104,7 +104,7 @@ export const spanish: BlogDataTypes = {
           title: "Comenzaremos nuestra lista con el elemento 'Dataset'.",
           step: "Primero:",
           description: "Para crear una entrada de datos y una lista, utilizamos tanto la etiqueta 'input' como 'datalist'. La propiedad 'list' del elemento 'input' hace referencia al 'datalist', lo que nos permite tener una entrada donde podemos ingresar datos.",
-          code: "<label for='languages'>language:</label>\n<input \n    list='languages'\n    id='language-choice'\n    name='language-choice'>\n\n<datalist id='languages'>\n    <option value='Javascript'>\n    <option value='Java'>\n    <option value='Swift'>\n    <option value='Go'>\n    <option value='PHP'>\n</datalist>",
+          code: "<label for='languages'>language:</label>\n<input list='languages' id='language-choice' name='language-choice'>\n\n<datalist id='languages'>\n    <option value='Javascript'>\n    <option value='Java'>\n    <option value='Swift'>\n    <option value='Go'>\n    <option value='PHP'>\n</datalist>",
           img: datasetImg,
           imgAlt: "Ejemplo de elemento dataset de html"
         },

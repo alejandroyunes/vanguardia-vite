@@ -154,12 +154,16 @@ export const BlogArticleContainer = styled.section`
             font-family: monospace;
             font-size: 1em;
             line-height: 1.6;
-            margin: 10px 0;
+            margin: 1em 0;
             width: 100%;
-            overflow: auto;
             padding: 10px 8px;
             display: block;
-            word-wrap: break-word;
+            border-radius: 16px;
+            overflow: auto;
+            overflow-wrap: normal;
+            padding: 1em;
+            white-space: pre-line;
+            word-wrap: normal;
           }
           img {
             height: auto;

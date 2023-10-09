@@ -1,6 +1,7 @@
 import linuxWindowsArticle from './BlogArticle/images/linux-windows.webp'
 
 import datasetImg from './BlogArticle/images/dataset.webp'
+import HTML5Img from './BlogArticle/images/html5blog.webp'
 
 
 export type BlogArticleType = {
@@ -91,7 +92,7 @@ export const spanish: BlogDataTypes = {
       id: 2,
       title: "Explorando las Poderosas Etiquetas HTML5 para una Web Moderna",
       meta: "",
-      image: linuxWindowsArticle,
+      image: HTML5Img,
       alt: "Pinguino de Linux y fondo de Windows",
       blogPageSummary: "Descubre las Innovadoras Etiquetas HTML que Simplifican Nuestra Vida en la Web",
       articleSummary: "Me sorprende cuántas etiquetas desconocía; algunas de ellas ya las había explorado de manera superficial, mientras que otras apenas las había utilizado. A continuación, echaremos un vistazo a algunas de ellas.",

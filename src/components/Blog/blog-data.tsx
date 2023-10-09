@@ -59,35 +59,29 @@ export const spanish: BlogDataTypes = {
       step: [
         {
           title: "Haz una copia de seguridad [opcional]",
-          step: "Paso 1:",
           description: "Siempre es bueno tener una copia de seguridad, por si acaso pasa algo. Descarga la imagen ISO según tu sistema operativo de Windows.",
           resource: "https://www.microsoft.com/en-us/software-download/"
         },
         {
           title: "Descarga la distribución de Linux Mint",
-          step: "Paso 2:",
           description: "Ingresa al sitio oficial de Linux Mint y navega hacia la sección de descargas. Busca la distribución que más te guste y descárgala. Posiblemente tomará un poco de tiempo dependiendo de tu conexión a Internet.",
           resource: "https://linuxmint.com/"
         },
         {
           title: "Descarga Rufus para crear unidades de arranque USB",
-          step: "Paso 3:",
           description: "Haz clic derecho sobre el instalador de Rufus y ejecútalo como administrador. Luego, en 'Dispositivo', selecciona la USB y en 'Seleccionar' busca la imagen ISO de Linux.  En 'Esquema de partición', es importante seleccionar 'GPT' si el sistema de destino es UEFI.  Haz clic en 'Empezar' y luego en 'OK' en el modo 'Imagen ISO (recomendado)'.",
           resource: "https://rufus.ie/es/"
         },
         {
           title: "Arranque desde el BIOS",
-          step: "Paso 4:",
           description: "Para acceder a nuestro BIOS depende de nuestro equipo, pero si al iniciar el equipo y presionando F2, F12 o F10 no funciona, debemos buscar con que botón permite ingresar al BIOS."
         },
         {
           title: "Instalación de Linux Mint",
-          step: "Paso 5:",
           description: "El instalador de Linux Mint nos permite particionar nuestro disco duro. Debemos seleccionar 'OEM install' (for manufacturers), elegimos nuestros ajustes, y seguimos los pasos de instalación. Luego, seleccionamos 'Instalar Linux Mint junto a Windows Boot Manager. Ajustamos nuestro espacio de almacenamiento y continuamos."
         },
         {
           title: "Seleccionar sistema operativo al iniciar",
-          step: "Paso 6:",
           description: "Ya solo nos queda reiniciar y seleccionar el sistema operativo que deseamos usar y disfrutar. 🍾🎉"
         }
       ]
@@ -107,7 +101,6 @@ export const spanish: BlogDataTypes = {
       step: [
         {
           title: "Comenzaremos nuestra lista con el elemento 'Dataset'",
-          step: "1:",
           description: "Para crear una entrada de datos y una lista, utilizamos tanto la etiqueta 'input' como 'datalist'. La propiedad 'list' del elemento 'input' hace referencia al 'datalist', lo que nos permite tener una entrada donde podemos ingresar datos.",
           code: "<label for='languages'>language:</label>\n<input list='languages' id='language-choice' name='language-choice'>\n\n<datalist id='languages'>\n    <option value='Javascript'>\n    <option value='Java'>\n    <option value='Swift'>\n    <option value='Go'>\n    <option value='PHP'>\n</datalist>",
           img: datasetImg,
@@ -117,7 +110,6 @@ export const spanish: BlogDataTypes = {
         },
         {
           title: "Inputs para capturar imagen, videos y audio",
-          step: "2:",
           description: "Este código HTML representa un formulario que permite a los usuarios cargar imágenes o videos en un servidor web.  El atributo capture nos permite acceder a la cámara de los dispositivos móviles.",
           img: typeFile,
           imgAlt: "código HTML para enviar fotos y videos al servidor nativo",
@@ -126,7 +118,6 @@ export const spanish: BlogDataTypes = {
         },
         {
           title: "La etiqueta <dialog> en HTML para Cuadros de Diálogo Modales",
-          step: "3:",
           description: "La etiqueta <dialog> en HTML se utiliza para crear un cuadro de diálogo modal en una página web. Un cuadro de diálogo modal es una ventana emergente que bloquea la interacción con el resto de la página hasta que el usuario interactúa con él o lo cierra.",
           img: dialogHtmlImg,
           imgAlt: "Código de ejemplo para un dialog en html",
@@ -135,18 +126,15 @@ export const spanish: BlogDataTypes = {
         },
         {
           title: "Uso de las Etiquetas <details> y <summary> en HTML para Contenido Colapsable",
-          step: "4:",
           description: "`<details>` y `<summary>` en HTML crean secciones colapsables. El contenido en `<details>` está oculto inicialmente y se expande al hacer clic en `<summary>`. Son útiles para mostrar información adicional de manera ordenada y permiten a los usuarios controlar qué contenido ver, mejorando la usabilidad web."
         },
         {
           title: "Propiedad de HTML Popover nos muestra elemento flotable",
-          step: "5:",
           description: "Un popover es una ventana emergente que muestra información extra o opciones al interactuar con un elemento en una aplicación o sitio web. Se utiliza para ofrecer detalles adicionales y se puede cerrar haciendo clic en cualquier parte fuera de él.",
           code: "<button id='popoverButton'>Mostrar Popover</button>\n<div id='popoverContent' class='popover'>This is an example.\n</div>"
         },
         {
           title: "Definiendo Elementos de Búsqueda",
-          step: "6:",
           description: "El elemento <search> nos permite definir elementos que forman parte de una búsqueda, proporcionando una estructura para agrupar y organizar los componentes relacionados con la búsqueda.",
           code: "<search>\n<form>\n<label for='search'>Buscar:</label>\n<input type='search' id='search' name='search' placeholder='Ingrese su búsqueda'>\n<button type='submit'>Buscar</button>\n</form>\n</search>"
         },
@@ -396,7 +384,6 @@ export const english: BlogDataTypes = {
       step: [
         {
           title: "We'll start our list with the 'Dataset' element",
-          step: "1:",
           description: "To create a data input and list, we use both the 'input' and 'datalist' tags. The 'list' attribute of the 'input' element refers to the 'datalist', allowing us to have an input where we can enter data.",
           code: "<label for='languages'>language:</label>\n<input list='languages' id='language-choice' name='language-choice'>\n\n<datalist id='languages'>\n    <option value='Javascript'>\n    <option value='Java'>\n    <option value='Swift'>\n    <option value='Go'>\n    <option value='PHP'>\n</datalist>",
           img: datasetImg,
@@ -406,7 +393,6 @@ export const english: BlogDataTypes = {
         },
         {
           title: "Inputs for Capturing Images, Videos, and Audio",
-          step: "2:",
           description: "This HTML code represents a form that allows users to upload images or videos to a web server. The 'capture' attribute allows us to access the cameras on mobile devices.",
           img: typeFile,
           imgAlt: "HTML code for uploading photos and videos to the native server",
@@ -415,7 +401,6 @@ export const english: BlogDataTypes = {
         },
         {
           title: "The HTML <dialog> Element for Modal Dialog Boxes",
-          step: "3:",
           description: "The HTML <dialog> element is used to create a modal dialog box on a web page. A modal dialog box is a popup window that blocks interaction with the rest of the page until the user interacts with it or closes it.",
           img: dialogHtmlImg,
           imgAlt: "Example code for an HTML dialog",
@@ -424,18 +409,15 @@ export const english: BlogDataTypes = {
         },
         {
           title: "Using <details> and <summary> Tags in HTML for Collapsible Content",
-          step: "4:",
           description: "`<details>` and `<summary>` in HTML create collapsible sections. The content in `<details>` is initially hidden and expands when clicking `<summary>`. They are useful for displaying additional information neatly and allowing users to control what content they see, improving web usability."
         },
         {
           title: "HTML Popover Property Displays Floating Element",
-          step: "5:",
           description: "A popover is a popup window that displays additional information or options when interacting with an element in an application or website. It is used to provide additional details and can be closed by clicking anywhere outside of it.",
           code: "<button id='popoverButton'>Show Popover</button>\n<div id='popoverContent' class='popover'>This is an example.\n</div>"
         },
         {
           title: "Defining Search Elements",
-          step: "6:",
           description: "The <search> element allows us to define elements that are part of a search, providing a structure to group and organize components related to the search.",
           code: "<search>\n<form>\n<label for='search'>Search:</label>\n<input type='search' id='search' name='search' placeholder='Enter your search'>\n<button type='submit'>Search</button>\n</form>\n</search>"
         },
@@ -617,5 +599,3 @@ export const english: BlogDataTypes = {
     },
   ]
 }
-
-

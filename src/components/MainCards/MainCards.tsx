@@ -7,11 +7,7 @@ type MainCProps = {
   mainCards: MainCardProps[]
 }
 
-
 export default function MainCards({mainCards}: MainCProps) {
-
-
-  console.log(mainCards)
 
   return (
     <CardContainer>

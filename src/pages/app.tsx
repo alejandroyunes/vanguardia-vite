@@ -5,7 +5,7 @@ import Title from "../components/Title/Title"
 import BillboardTwo from "../components/BillboardTwo/BillboardTwo"
 import { useReadLocalStorage } from "usehooks-ts"
 import { english, spanish } from "./translate/app"
-import { Helmet } from 'react-helmet'
+import { Helmet, HelmetProvider } from 'react-helmet-async';
 
 export default function App() {
   const lang = useReadLocalStorage('language')
@@ -13,9 +13,11 @@ export default function App() {
 
   return (
     <>
-      <Helmet>
-        <meta name="description" content={language.meta} />
-      </Helmet>
+      <HelmetProvider>
+        <Helmet>
+          <meta name="description" content={language.meta} />
+        </Helmet>
+      </HelmetProvider>
       <Billboard {...language?.billboard} />
       <Title title={language.titleOne.title} message={language.titleOne.message} />
       <MainCards mainCards={language.mainCards} />

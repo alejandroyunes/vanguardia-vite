@@ -14,8 +14,6 @@ export default function BlogArticle() {
   return (
     <BlogArticleContainer>
 
-
-
       {post && post.blog.map((e, i) => (
         <div className="article" key={i}>
 
@@ -49,11 +47,20 @@ export default function BlogArticle() {
                 <div key={i} className="step">
                   <h2>{step.title}</h2>
                   <p>
-                    <strong>{step.step} </strong>
+                    <strong>{step.step}</strong>
                     {step.description}
                   </p>
+                  {step.list?.map((item) => <ul><li> {item} </li></ul>)}
+
+                  {step.code &&
+                    <pre>
+                      <code>
+                        {step.code}
+                      </code>
+                    </pre>}
                   {step.resource &&
                     <span aria-label="link">⬇️📦 <a href={step.resource}>{step.resource}</a></span>}
+
                 </div>
               ))}
             </div>

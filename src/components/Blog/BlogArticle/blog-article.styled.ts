@@ -118,7 +118,27 @@ export const BlogArticleContainer = styled.section`
 
             strong {
               font-weight: 600;
+              padding-right: 8px;
               color: ${({ theme }) => theme.palette.red};
+            }
+          }
+          ul {
+            padding-bottom: 10px;
+            li::before {
+              content: "↬";
+              display: inline;
+              font-style: normal;
+              letter-spacing: 2px;
+              font-size: 1em;
+              padding-left: 16px;
+              margin: 0;
+              font-weight: 600;
+              color: ${({ theme }) => theme.palette.red};
+              text-transform: uppercase;
+            }
+
+            li {
+              list-style-type: none;
             }
           }
           span {
@@ -126,11 +146,28 @@ export const BlogArticleContainer = styled.section`
               color: ${({ theme }) => theme.palette.primary.main};
             }
           }
+          pre {
+            background: ${({ theme }) => theme.textColor};
+            border: 1px solid #ddd;
+            border-left: 3px solid #f36d33;
+            color: ${({ theme }) => theme.bodyColor};
+            page-break-inside: avoid;
+            font-family: monospace;
+            font-size: 15px;
+            line-height: 1.6;
+            margin: 10px 0;
+            max-width: 100%;
+            overflow: auto;
+            padding: 1em 1.5em;
+            display: block;
+            word-wrap: break-word;
+          }
         }
       }
-      @media (max-width: ${({ theme }) => theme.breakpoint.sm}) {
+    }
+    @media (max-width: ${({ theme }) => theme.breakpoint.sm}) {
         margin-right: 0;
-      }
+    }
     }
     .meta-box {
       grid-area: meta;
@@ -195,7 +232,7 @@ export const BlogArticleContainer = styled.section`
         }
       }
     }
-  }
+
 
   .article-author {
     grid-area: author;

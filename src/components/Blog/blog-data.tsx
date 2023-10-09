@@ -20,8 +20,9 @@ export type StepType = {
   title: string
   step: string
   description: string
+  list?: string[]
+  code?: string
   resource?: string | undefined
-  items?: string[]
 }
 
 export interface BlogDataTypes {

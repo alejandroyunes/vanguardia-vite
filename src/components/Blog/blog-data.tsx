@@ -1,5 +1,7 @@
 import linuxWindowsArticle from './BlogArticle/images/linux-windows.webp'
 
+import datasetImg from './BlogArticle/images/dataset.webp'
+
 
 export type BlogArticleType = {
   id: number
@@ -22,6 +24,8 @@ export type StepType = {
   description: string
   list?: string[]
   code?: string
+  img?: string
+  imgAlt?: string
   resource?: string | undefined
 }
 
@@ -85,22 +89,24 @@ export const spanish: BlogDataTypes = {
     },
     {
       id: 2,
-      title: "¿Cómo instalar Linux Mint junto con Windows 11?",
-      meta: "Aprende cómo instalar Linux Mint junto a Windows 11.",
+      title: "Explorando las Poderosas Etiquetas HTML5 para una Web Moderna",
+      meta: "",
       image: linuxWindowsArticle,
       alt: "Pinguino de Linux y fondo de Windows",
-      blogPageSummary: "Esta guía te mostrará cómo correr Linux Mint y Windows juntos en un mismo PC.",
-      articleSummary: "Esta guía te mostrará cómo correr Linux Mint y Windows juntos en un mismo PC. Los pasos mencionados sirven para las distribuciones de Linux Mint. Bueno, veamos cómo arrancar Linux de forma dual en un sistema Windows.",
+      blogPageSummary: "Descubre las Innovadoras Etiquetas HTML que Simplifican Nuestra Vida en la Web",
+      articleSummary: "Me sorprende cuántas etiquetas desconocía; algunas de ellas ya las había explorado de manera superficial, mientras que otras apenas las había utilizado. A continuación, echaremos un vistazo a algunas de ellas.",
       time: "5",
-      related: ["Windows", "Linux"],
+      related: ["HTML"],
       shared: ["Twitter", "LinkedIn"],
-      date: "Octubre 3, 2023",
+      date: "Octubre 9, 2023",
       step: [
         {
-          title: "Haz una copia de seguridad [opcional]",
-          step: "Paso 1:",
-          description: "Siempre es bueno tener una copia de seguridad, por si acaso pasa algo. Descarga la imagen ISO según tu sistema operativo de Windows.",
-          resource: "https://www.microsoft.com/en-us/software-download/"
+          title: "Comenzaremos nuestra lista con el elemento 'Dataset'.",
+          step: "Primero:",
+          description: "Para crear una entrada de datos y una lista, utilizamos tanto la etiqueta 'input' como 'datalist'. La propiedad 'list' del elemento 'input' hace referencia al 'datalist', lo que nos permite tener una entrada donde podemos ingresar datos.",
+          code: "<label for='languages'>language:</label>\n<input \n    list='languages'\n    id='language-choice'\n    name='language-choice'>\n\n<datalist id='languages'>\n    <option value='Javascript'>\n    <option value='Java'>\n    <option value='Swift'>\n    <option value='Go'>\n    <option value='PHP'>\n</datalist>",
+          img: datasetImg,
+          imgAlt: "Ejemplo de elemento dataset de html"
         },
         {
           title: "Descarga la distribución de Linux Mint",

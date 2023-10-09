@@ -69,7 +69,6 @@ export const BlogArticleContainer = styled.section`
     }
     .content {
       grid-area: content;
-      margin-right: 16px;
       .article-summary::before {
         content: "Breve Resumen ↬ ";
         display: inline;
@@ -149,18 +148,22 @@ export const BlogArticleContainer = styled.section`
           pre {
             background: ${({ theme }) => theme.textColor};
             border: 1px solid #ddd;
-            border-left: 3px solid #f36d33;
+            border-left: 3px solid ${({ theme }) => theme.palette.red};
             color: ${({ theme }) => theme.bodyColor};
             page-break-inside: avoid;
             font-family: monospace;
-            font-size: 15px;
+            font-size: 1em;
             line-height: 1.6;
             margin: 10px 0;
-            max-width: 100%;
+            width: 100%;
             overflow: auto;
-            padding: 1em 1.5em;
+            padding: 10px 8px;
             display: block;
             word-wrap: break-word;
+          }
+          img {
+            height: auto;
+            max-width: 100%;
           }
         }
       }
@@ -174,6 +177,7 @@ export const BlogArticleContainer = styled.section`
       position: sticky;
       top: 60px;
       height: fit-content;
+      margin-left: 16px;
       .share {
         background: ${({ theme }) => theme.palette.secondary.contrastText};
         padding: 8px 8px;
@@ -224,6 +228,7 @@ export const BlogArticleContainer = styled.section`
       @media (max-width: ${({ theme }) => theme.breakpoint.sm}) {
         position: relative;
         top: 0;
+        margin-left: 0;
         .ad-banner__long {
           display: none;
         }

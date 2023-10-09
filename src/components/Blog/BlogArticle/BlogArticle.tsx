@@ -1,6 +1,6 @@
 import avatarImg from './images/alejo.webp'
 import { BlogArticleContainer } from "./blog-article.styled"
-import Time from "./svgs/time"
+import Time from './Time/time'
 
 import useFetchBlogArticle from "../hooks/useFetchBlogArticle"
 import Tools from './Tools/Tools'
@@ -58,6 +58,9 @@ export default function BlogArticle() {
                         {step.code}
                       </code>
                     </pre>}
+
+                  {step.img && <img src={step.img} alt={step.imgAlt} />}
+
                   {step.resource &&
                     <span aria-label="link">⬇️📦 <a href={step.resource}>{step.resource}</a></span>}
 

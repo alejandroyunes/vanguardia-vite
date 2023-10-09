@@ -1,3 +1,4 @@
+import Html from "./svgs/html"
 import Linux from "./svgs/linux"
 import Systems from "./svgs/systems"
 import Windows from "./svgs/windows"
@@ -21,6 +22,7 @@ function ToolsItem({ tool }: PortolioItemProps) {
     Linux: <Linux />,
     Windows: <Windows />,
     Systems: <Systems />,
+    HTML: <Html />,
   }
 
   const selectedComponent = componentMap[tool]

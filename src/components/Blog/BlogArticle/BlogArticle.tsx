@@ -59,7 +59,7 @@ export default function BlogArticle() {
                       </code>
                     </pre>}
 
-                  {step.img && <img src={step.img} alt={step.imgAlt} height="500" />}
+                  {step.img && <img src={step.img} alt={step.imgAlt} height={step.imgHeight} width={step.imgWidth} />}
 
                   {step.resource &&
                     <span aria-label="link">⬇️📦 <a href={step.resource}>{step.resource}</a></span>}

@@ -29,6 +29,8 @@ export type StepType = {
   code?: string
   img?: string
   imgAlt?: string
+  imgWidth?: string
+  imgHeight?: string
   resource?: string | undefined
 }
 
@@ -109,21 +111,27 @@ export const spanish: BlogDataTypes = {
           description: "Para crear una entrada de datos y una lista, utilizamos tanto la etiqueta 'input' como 'datalist'. La propiedad 'list' del elemento 'input' hace referencia al 'datalist', lo que nos permite tener una entrada donde podemos ingresar datos.",
           code: "<label for='languages'>language:</label>\n<input list='languages' id='language-choice' name='language-choice'>\n\n<datalist id='languages'>\n    <option value='Javascript'>\n    <option value='Java'>\n    <option value='Swift'>\n    <option value='Go'>\n    <option value='PHP'>\n</datalist>",
           img: datasetImg,
-          imgAlt: "Ejemplo de elemento dataset de html"
+          imgAlt: "Ejemplo de elemento dataset de html",
+          imgWidth: "640",
+          imgHeight: "230"
         },
         {
           title: "Inputs para capturar imagen, videos y audio",
           step: "2:",
           description: "Este código HTML representa un formulario que permite a los usuarios cargar imágenes o videos en un servidor web.  El atributo capture nos permite acceder a la cámara de los dispositivos móviles.",
           img: typeFile,
-          imgAlt: "código HTML para enviar fotos y videos al servidor nativo"
+          imgAlt: "código HTML para enviar fotos y videos al servidor nativo",
+          imgWidth: "566",
+          imgHeight: "310"
         },
         {
           title: "La etiqueta <dialog> en HTML para Cuadros de Diálogo Modales",
           step: "3:",
           description: "La etiqueta <dialog> en HTML se utiliza para crear un cuadro de diálogo modal en una página web. Un cuadro de diálogo modal es una ventana emergente que bloquea la interacción con el resto de la página hasta que el usuario interactúa con él o lo cierra.",
           img: dialogHtmlImg,
-          imgAlt: "Código de ejemplo para un dialog en html"
+          imgAlt: "Código de ejemplo para un dialog en html",
+          imgWidth: "646",
+          imgHeight: "503"
         },
         {
           title: "Uso de las Etiquetas <details> y <summary> en HTML para Contenido Colapsable",
@@ -392,21 +400,27 @@ export const english: BlogDataTypes = {
           description: "To create a data input and list, we use both the 'input' and 'datalist' tags. The 'list' attribute of the 'input' element refers to the 'datalist', allowing us to have an input where we can enter data.",
           code: "<label for='languages'>language:</label>\n<input list='languages' id='language-choice' name='language-choice'>\n\n<datalist id='languages'>\n    <option value='Javascript'>\n    <option value='Java'>\n    <option value='Swift'>\n    <option value='Go'>\n    <option value='PHP'>\n</datalist>",
           img: datasetImg,
-          imgAlt: "Example of HTML dataset element"
+          imgAlt: "Example of HTML dataset element",
+          imgWidth: "640",
+          imgHeight: "230"
         },
         {
           title: "Inputs for Capturing Images, Videos, and Audio",
           step: "2:",
           description: "This HTML code represents a form that allows users to upload images or videos to a web server. The 'capture' attribute allows us to access the cameras on mobile devices.",
           img: typeFile,
-          imgAlt: "HTML code for uploading photos and videos to the native server"
+          imgAlt: "HTML code for uploading photos and videos to the native server",
+          imgWidth: "566",
+          imgHeight: "310"
         },
         {
           title: "The HTML <dialog> Element for Modal Dialog Boxes",
           step: "3:",
           description: "The HTML <dialog> element is used to create a modal dialog box on a web page. A modal dialog box is a popup window that blocks interaction with the rest of the page until the user interacts with it or closes it.",
           img: dialogHtmlImg,
-          imgAlt: "Example code for an HTML dialog"
+          imgAlt: "Example code for an HTML dialog",
+          imgWidth: "646",
+          imgHeight: "503"
         },
         {
           title: "Using <details> and <summary> Tags in HTML for Collapsible Content",

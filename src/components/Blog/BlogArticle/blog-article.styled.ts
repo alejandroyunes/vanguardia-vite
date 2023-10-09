@@ -135,9 +135,13 @@ export const BlogArticleContainer = styled.section`
               color: ${({ theme }) => theme.palette.red};
               text-transform: uppercase;
             }
-
             li {
               list-style-type: none;
+            }
+            @media (max-width: ${({ theme }) => theme.breakpoint.xs}){
+              li::before {
+                padding-left: 0;
+              }
             }
           }
           span {

@@ -146,9 +146,8 @@ export const BlogArticleContainer = styled.section`
             }
           }
           pre {
-            background: ${({ theme }) => theme.textColor};
-            border: 1px solid #ddd;
-            color: ${({ theme }) => theme.bodyColor};
+            background: ${({ theme }) => theme.palette.black};
+            color: ${({ theme }) => theme.palette.white};
             page-break-inside: avoid;
             font-family: monospace;
             font-size: 1em;

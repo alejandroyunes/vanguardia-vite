@@ -75,8 +75,8 @@ export default function BlogArticle() {
             <div className="share">
               <ul>
                 <li className="item">
-                  <Time />
-                  lectura de {e.time} min
+                  <Time /> 
+                  {e.time} min
                 </li>
                 <li className="item">
                   <Tools tools={e.related} />

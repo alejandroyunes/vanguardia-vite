@@ -17,6 +17,8 @@ interface ServicesProps {
   title: string
   subtitle: string
   meta: string
+  technologies: string
+  techSubtitle: string
   iconMeta: {
     node: string
     typescript: string
@@ -36,7 +38,7 @@ interface ServicesProps {
     }[]
   }
 
-export default function Services({ title, subtitle, cards, meta, iconMeta }: ServicesProps) {
+export default function Services({ title, subtitle, cards, meta, iconMeta, technologies, techSubtitle }: ServicesProps) {
 
   return (
     <ServicesContainer>
@@ -63,7 +65,7 @@ export default function Services({ title, subtitle, cards, meta, iconMeta }: Ser
 
       </div>
 
-      <Title title={"Tecnologías"} message="usamos technologia " />
+      <Title title={technologies} message={techSubtitle} />
 
       <div className="services-tech">
         <div className="child-one">

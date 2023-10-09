@@ -1,5 +1,7 @@
 import Html from "./svgs/html"
+import Javascript from "./svgs/javascript"
 import Linux from "./svgs/linux"
+import NodeJS from "./svgs/node"
 import Systems from "./svgs/systems"
 import Windows from "./svgs/windows"
 import { ToolContainer } from "./tools.styled"
@@ -23,6 +25,8 @@ function ToolsItem({ tool }: PortolioItemProps) {
     Windows: <Windows />,
     Systems: <Systems />,
     HTML: <Html />,
+    JavaScript: <Javascript />,
+    Node: <NodeJS />
   }
 
   const selectedComponent = componentMap[tool]

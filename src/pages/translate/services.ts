@@ -6,6 +6,8 @@ export const spanish = {
     title: "Servicios",
     subtitle: "Somos una empresa especializada en diseño y desarrollo web que se dedica a la creación de sitios web altamente efectivos para marcas y startups líderes en la industria en Medellín y el mundo. Nuestros proyectos se enfocan en generar tráfico, fomentar la participación y aumentar las conversiones.",
     meta: "Especializamos en diseño y desarrollo web para marcas y startups en Medellín y a nivel mundial. Nuestro enfoque: tráfico, participación, conversiones.",
+    technologies: "Tehnologías",
+    techSubtitle: "Usamos estas technologías",
     iconMeta: {
       node: "Icono de Nodejs",
       typescript: "Icono de TypeScript",
@@ -73,5 +75,7 @@ export const english = {
         image: GuyWebsite,
         alt: "Megaphone and cellphone social media."
       }
-    ]
+    ],
+    technologies: "Technologies",
+    techSubtitle: "We use these technologies",
 }

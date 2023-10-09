@@ -31,7 +31,7 @@ export type StepType = {
   imgAlt?: string
   imgWidth?: string
   imgHeight?: string
-  resource?: string | undefined
+  resource?: string
 }
 
 export interface BlogDataTypes {

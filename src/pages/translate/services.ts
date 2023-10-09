@@ -6,19 +6,6 @@ export const spanish = {
     title: "Servicios",
     subtitle: "Somos una empresa especializada en diseño y desarrollo web que se dedica a la creación de sitios web altamente efectivos para marcas y startups líderes en la industria en Medellín y el mundo. Nuestros proyectos se enfocan en generar tráfico, fomentar la participación y aumentar las conversiones.",
     meta: "Especializamos en diseño y desarrollo web para marcas y startups en Medellín y a nivel mundial. Nuestro enfoque: tráfico, participación, conversiones.",
-    technologies: "Tehnologías",
-    techSubtitle: "Usamos estas technologías",
-    iconMeta: {
-      node: "Icono de Nodejs",
-      typescript: "Icono de TypeScript",
-      apache: "Icono de Apache",
-      nginx: "Icono de Nginx",
-      wordpress: "Icono de Wordpress",
-      html: "Icono de HTML",
-      css: "Icono de CSS",
-      javascript: "Icono de JavaScript",
-      react: "Icono de React",
-    },
     cards: [
       {
         title: "Diseño Web",
@@ -45,17 +32,6 @@ export const english = {
     title: "Services",
     subtitle: "We are a company specialized in web design and development, dedicated to creating highly effective websites for leading brands and startups in Medellín and around the world. Our projects focus on generating traffic, encouraging engagement, and increasing conversions.",
     meta: "We specialize in web design and development for brands and startups in Medellín and worldwide. Our focus: traffic, engagement, conversions.",
-    iconMeta: {
-      node: "Node.js Icon",
-      typescript: "TypeScript Icon",
-      apache: "Apache Icon",
-      nginx: "Nginx Icon",
-      wordpress: "WordPress Icon",
-      html: "HTML Icon",
-      css: "CSS Icon",
-      javascript: "JavaScript Icon",
-      react: "React Icon",
-    },
     cards: [
       {
         title: "Web Design",
@@ -75,7 +51,5 @@ export const english = {
         image: GuyWebsite,
         alt: "Megaphone and cellphone social media."
       }
-    ],
-    technologies: "Technologies",
-    techSubtitle: "We use these technologies",
+    ]
 }

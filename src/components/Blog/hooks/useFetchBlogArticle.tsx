@@ -11,7 +11,6 @@ export default function useFetchBlogArticle() {
   const [post, setPost] = useState<BlogDataTypes>()
   const { posts } = useFetchBlogData()
 
-
   const fetch = () => {
 
     try {
@@ -33,7 +32,6 @@ export default function useFetchBlogArticle() {
       console.error(err);
     }
   }
-
 
   useEffect(() => {
     fetch()

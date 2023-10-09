@@ -41,6 +41,7 @@ export const BlogArticleContainer = styled.section`
       .article-date {
         span {
         font-style: italic;
+        font-weight: 500;
         display: block;
           color: ${({ theme }) => theme.palette.red};
         }
@@ -88,13 +89,19 @@ export const BlogArticleContainer = styled.section`
       }
       .article-image {
         margin: 24px 0;
+        display: flex;
+        justify-content: center;
         img {
-          height: auto;
-          max-width: 100%;
+          height: 300px;
+          max-width: auto;
 
         }
       @media (max-width: ${({ theme }) => theme.breakpoint.sm}) {
         text-align: center;
+        img {
+          height: auto;
+          max-width: 100%;
+        }
       }
       }
       .article-summary__body {
@@ -104,13 +111,13 @@ export const BlogArticleContainer = styled.section`
             font-size: 24px;
             padding: 8px 0;
             color: ${({ theme }) => theme.palette.primary.main};
-            }
+          }
           p {
             padding-bottom: 8px;
             color: ${({ theme }) => theme.textColor};
 
             strong {
-              font-weight: bold;
+              font-weight: 600;
               color: ${({ theme }) => theme.palette.red};
             }
           }

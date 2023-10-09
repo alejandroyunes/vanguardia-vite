@@ -10,6 +10,7 @@ import { Helmet, HelmetProvider } from "react-helmet-async"
 interface PorfolioProps {
   title: string
   subtitle: string
+  meta: string
   items: {
     title: string
     subtitle: string
@@ -21,7 +22,7 @@ interface PorfolioProps {
   }[]
 }
 
-export default function Portfolio({ title, items, subtitle }: PorfolioProps) {
+export default function Portfolio({ title, items, subtitle, meta }: PorfolioProps) {
 
   const lang = useReadLocalStorage('language')
 
@@ -30,7 +31,7 @@ export default function Portfolio({ title, items, subtitle }: PorfolioProps) {
 
       <HelmetProvider>
         <Helmet>
-          {subtitle}
+          {meta}
         </Helmet>
       </HelmetProvider>
 

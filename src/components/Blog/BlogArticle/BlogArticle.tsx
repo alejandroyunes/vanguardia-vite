@@ -5,6 +5,7 @@ import Time from "./svgs/time"
 import useFetchBlogArticle from "../hooks/useFetchBlogArticle"
 import Tools from './Tools/Tools'
 import Shared from './Share/Shared'
+import { Helmet, HelmetProvider } from 'react-helmet-async'
 
 export default function BlogArticle() {
 
@@ -13,8 +14,18 @@ export default function BlogArticle() {
   return (
     <BlogArticleContainer>
 
+
+
       {post && post.blog.map((e, i) => (
         <div className="article" key={i}>
+
+          <HelmetProvider>
+            <Helmet>
+              <meta name="description" content={e.meta} />
+            </Helmet>
+          </HelmetProvider>
+
+
           <div className="title">
 
             <div className="article-date">
@@ -31,7 +42,7 @@ export default function BlogArticle() {
               {e.articleSummary}
             </div>
             <div className="article-image">
-              <img src={e.image} alt="" />
+              <img src={e.image} alt={e.alt} height="300" width="530" />
             </div>
             <div className="article-summary__body">
               {e.step.map((step, i) => (

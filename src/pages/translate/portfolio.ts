@@ -7,6 +7,7 @@ import punkies from "./images/portfolio/punkies2.jpg"
 export const spanish = {
   title: "Portafolio",
   subtitle: "Nuestro portafolio encontrarás una amplia variedad de ejemplos que incluyen la creación de sitios web y aplicaciones web, abarcando desde proyectos personales y colaborativos hasta trabajos para empresas privadas.",
+  meta: "Explora nuestro portafolio con diversos ejemplos de sitios web y aplicaciones web, desde proyectos personales hasta trabajos corporativos.",
   items: [
     {
       title: 'Punkies y Cerebro',
@@ -59,6 +60,7 @@ export const spanish = {
 export const english = {
     title: "Portfolio",
     subtitle: "In our portfolio, you will find a wide variety of examples that include the creation of websites and web applications, ranging from personal and collaborative projects to work for private companies.",
+    meta: "In our portfolio, you will find a wide variety of examples that include the creation of websites and web applications, ranging from personal and collaborative projects to work for private companies.",
     items: [
       {
         title: 'Punkies y Cerebro',

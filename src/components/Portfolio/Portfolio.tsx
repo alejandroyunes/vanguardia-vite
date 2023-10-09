@@ -26,13 +26,14 @@ export default function Portfolio({ title, items, subtitle, meta }: PorfolioProp
 
   const lang = useReadLocalStorage('language')
   return (
-    <>
+
+      <PortfolioContainer>
+
       <HelmetProvider>
         <Helmet>
-          {meta}
+        <meta name="description" content={meta}/>
         </Helmet>
       </HelmetProvider>
-      <PortfolioContainer>
 
         <Title title={title} message={subtitle} />
 
@@ -82,6 +83,5 @@ export default function Portfolio({ title, items, subtitle, meta }: PorfolioProp
         ))
         }
       </PortfolioContainer >
-    </>
   )
 }

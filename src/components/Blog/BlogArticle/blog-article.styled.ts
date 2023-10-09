@@ -148,7 +148,6 @@ export const BlogArticleContainer = styled.section`
           pre {
             background: ${({ theme }) => theme.textColor};
             border: 1px solid #ddd;
-            border-left: 3px solid ${({ theme }) => theme.palette.red};
             color: ${({ theme }) => theme.bodyColor};
             page-break-inside: avoid;
             font-family: monospace;

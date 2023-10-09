@@ -47,7 +47,7 @@ export default function BlogArticle() {
                 <div key={i} className="step">
                   <h2>{step.title}</h2>
                   <p>
-                    <strong>{step.step}</strong>
+                    {step.step && <strong>{step.step}</strong>}
                     {step.description}
                   </p>
                   {step.list?.map((item) => <ul><li> {item} </li></ul>)}
@@ -59,7 +59,7 @@ export default function BlogArticle() {
                       </code>
                     </pre>}
 
-                  {step.img && <img src={step.img} alt={step.imgAlt} />}
+                  {step.img && <img src={step.img} alt={step.imgAlt} height="500" />}
 
                   {step.resource &&
                     <span aria-label="link">⬇️📦 <a href={step.resource}>{step.resource}</a></span>}

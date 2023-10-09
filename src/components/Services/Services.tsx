@@ -68,33 +68,33 @@ export default function Services({ title, subtitle, cards, meta, iconMeta }: Ser
       <div className="services-tech">
         <div className="child-one">
           <div className="node-svg">
-            <img src={NodeSvg} alt="" />
+            <img src={NodeSvg} alt={iconMeta.node} width="120" height="80" />
           </div>
           <div className="typescript-svg">
-            <img src={TypescriptSvg} alt={iconMeta.typescript} />
+            <img src={TypescriptSvg} alt={iconMeta.typescript} width="80" height="80" />
           </div>
           <div className="apache-svg">
-            <img src={ApacheSvg} alt={iconMeta.apache} />
+            <img src={ApacheSvg} alt={iconMeta.apache} width="80" height="160" />
           </div>
           <div className="nginx-svg">
-            <img src={NginxSvg} alt={iconMeta.nginx} />
+            <img src={NginxSvg} alt={iconMeta.nginx} width="80" height="80"/>
           </div>
           <div className="wordpress-svg">
-            <img src={WordpressSvg} alt={iconMeta.wordpress} />
+            <img src={WordpressSvg} alt={iconMeta.wordpress}  width="80" height="80"/>
           </div>
         </div>
         <div className="child-two">
           <div className="html-svg">
-            <img src={HtmlSvg} alt={iconMeta.html} />
+            <img src={HtmlSvg} alt={iconMeta.html} width="80" height="80" />
           </div>
           <div className="css-svg">
-            <img src={CssSvg} alt={iconMeta.css} />
+            <img src={CssSvg} alt={iconMeta.css} width="80" height="80" />
           </div>
           <div className="js-svg">
-            <img src={JsSvg} alt={iconMeta.javascript} />
+            <img src={JsSvg} alt={iconMeta.javascript} width="80" height="80" />
           </div>
           <div className="react-svg">
-            <img src={ReactSvg} alt={iconMeta.react} />
+            <img src={ReactSvg} alt={iconMeta.react} width="80" height="80" />
           </div>
         </div>
       </div>

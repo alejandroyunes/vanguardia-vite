@@ -127,6 +127,53 @@ export const spanish: BlogDataTypes = {
         }
       ]
     },
+    {
+      id: 3,
+      title: "¿Cómo instalar Linux Mint junto con Windows 11?",
+      image: linuxWindowsArticle,
+      alt: "",
+      blogPageSummary: "Esta guía te mostrará cómo correr Linux Mint y Windows juntos en un mismo PC.",
+      articleSummary: "Esta guía te mostrará cómo correr Linux Mint y Windows juntos en un mismo PC. Los pasos mencionados sirven para las distribuciones de Linux Mint. Bueno, veamos cómo arrancar Linux de forma dual en un sistema Windows.",
+      time: "5",
+      related: ["Windows", "Linux"],
+      shared: ["Twitter", "LinkedIn"],
+      date: "Octubre 3, 2023",
+      step: [
+        {
+          title: "Haz una copia de seguridad [opcional]",
+          step: "Paso 1:",
+          description: "Siempre es bueno tener una copia de seguridad, por si acaso pasa algo. Descarga la imagen ISO según tu sistema operativo de Windows.",
+          resource: "https://www.microsoft.com/en-us/software-download/"
+        },
+        {
+          title: "Descarga la distribución de Linux Mint",
+          step: "Paso 2:",
+          description: "Ingresa al sitio oficial de Linux Mint y navega hacia la sección de descargas. Busca la distribución que más te guste y descárgala. Posiblemente tomará un poco de tiempo dependiendo de tu conexión a Internet.",
+          resource: "https://linuxmint.com/"
+        },
+        {
+          title: "Descarga Rufus para crear unidades de arranque USB",
+          step: "Paso 3:",
+          description: "Haz clic derecho sobre el instalador de Rufus y ejecútalo como administrador. Luego, en 'Dispositivo', selecciona la USB y en 'Seleccionar' busca la imagen ISO de Linux.  En 'Esquema de partición', es importante seleccionar 'GPT' si el sistema de destino es UEFI.  Haz clic en 'Empezar' y luego en 'OK' en el modo 'Imagen ISO (recomendado)'.",
+          resource: "https://rufus.ie/es/"
+        },
+        {
+          title: "Arranque desde el BIOS",
+          step: "Paso 4:",
+          description: "Para acceder a nuestro BIOS depende de nuestro equipo, pero si al iniciar el equipo y presionando F2, F12 o F10 no funciona, debemos buscar con que botón permite ingresar al BIOS."
+        },
+        {
+          title: "Instalación de Linux Mint",
+          step: "Paso 5:",
+          description: "El instalador de Linux Mint nos permite particionar nuestro disco duro. Debemos seleccionar 'OEM install' (for manufacturers), elegimos nuestros ajustes, y seguimos los pasos de instalación. Luego, seleccionamos 'Instalar Linux Mint junto a Windows Boot Manager. Ajustamos nuestro espacio de almacenamiento y continuamos."
+        },
+        {
+          title: "Seleccionar sistema operativo al iniciar",
+          step: "Paso 6:",
+          description: "Ya solo nos queda reiniciar y seleccionar el sistema operativo que deseamos usar y disfrutar. 🍾🎉"
+        }
+      ]
+    },
   ]
 }
 

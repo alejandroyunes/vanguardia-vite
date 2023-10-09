@@ -56,7 +56,7 @@ export const AboutContainer = styled.div`
 
       strong {
         font-weight: 400;
-        color: ${({ theme }) => theme.palette.gray};
+        color: ${({ theme }) => theme.textColor};
         font-size: 1.3rem;
         line-height: 1.2;
       }

@@ -5,6 +5,7 @@ import Technologies from "./Technologies/Technologies"
 import Github from '../../pages/translate/svgs/portfolio/github'
 import { useReadLocalStorage } from "usehooks-ts"
 import Website from "../../pages/translate/svgs/portfolio/website"
+import { Helmet, HelmetProvider } from "react-helmet-async"
 
 interface PorfolioProps {
   title: string
@@ -26,6 +27,13 @@ export default function Portfolio({ title, items, subtitle }: PorfolioProps) {
 
   return (
     <PortfolioContainer>
+
+      <HelmetProvider>
+        <Helmet>
+
+        </Helmet>
+      </HelmetProvider>
+
       <Title title={title} message={subtitle} />
 
       {items.map((e, i) => (

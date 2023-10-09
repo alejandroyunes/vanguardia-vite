@@ -11,29 +11,48 @@ import NginxSvg from "../../pages/translate/svgs/services/technologies//nginx-n.
 import ApacheSvg from "../../pages/translate/svgs/services/technologies/apache.svg"
 
 import { ServicesContainer } from "./services.styled"
+import { Helmet, HelmetProvider } from "react-helmet-async"
 
 interface ServicesProps {
   title: string
   subtitle: string
-  cards: {
-    title: string
-    subtitle: string
-    image: () => React.ReactNode
-    alt: string
-  }[]
-}
+  meta: string
+  iconMeta: {
+    node: string
+    typescript: string
+    apache: string
+    nginx: string
+    wordpress: string
+    html: string
+    css: string
+    javascript: string
+    react: string
+  }
+    cards: {
+      title: string
+      subtitle: string
+      image: () => React.ReactNode
+      alt: string
+    }[]
+  }
 
-export default function Services({ title, subtitle, cards }: ServicesProps) {
+export default function Services({ title, subtitle, cards, meta, iconMeta }: ServicesProps) {
 
   return (
     <ServicesContainer>
+      <HelmetProvider>
+        <Helmet>
+          <meta name="description" content={meta} />
+        </Helmet>
+      </HelmetProvider>
+
       <Title title={title} message={subtitle} />
 
       <div className="services-three-columns">
         {cards.map((card, i) => (
           <div className="child-one" key={i}>
             <div className="design-svg">
-              <card.image  arial-label={card.alt}/>
+              <card.image arial-label={card.alt} />
             </div>
             <h2>{card.title}</h2>
             <p>
@@ -44,7 +63,7 @@ export default function Services({ title, subtitle, cards }: ServicesProps) {
 
       </div>
 
-      <Title title={"Tecnologías"} message="usamos technologia "/>
+      <Title title={"Tecnologías"} message="usamos technologia " />
 
       <div className="services-tech">
         <div className="child-one">
@@ -52,30 +71,30 @@ export default function Services({ title, subtitle, cards }: ServicesProps) {
             <img src={NodeSvg} alt="" />
           </div>
           <div className="typescript-svg">
-            <img src={TypescriptSvg} alt="" />
+            <img src={TypescriptSvg} alt={iconMeta.typescript} />
           </div>
           <div className="apache-svg">
-            <img src={ApacheSvg} alt="" />
+            <img src={ApacheSvg} alt={iconMeta.apache} />
           </div>
           <div className="nginx-svg">
-            <img src={NginxSvg} alt="" />
+            <img src={NginxSvg} alt={iconMeta.nginx} />
           </div>
           <div className="wordpress-svg">
-            <img src={WordpressSvg} alt="" />
+            <img src={WordpressSvg} alt={iconMeta.wordpress} />
           </div>
         </div>
         <div className="child-two">
           <div className="html-svg">
-            <img src={HtmlSvg} alt="" />
+            <img src={HtmlSvg} alt={iconMeta.html} />
           </div>
           <div className="css-svg">
-            <img src={CssSvg} alt="" />
+            <img src={CssSvg} alt={iconMeta.css} />
           </div>
           <div className="js-svg">
-            <img src={JsSvg} alt="" />
+            <img src={JsSvg} alt={iconMeta.javascript} />
           </div>
           <div className="react-svg">
-            <img src={ReactSvg} alt="" />
+            <img src={ReactSvg} alt={iconMeta.react} />
           </div>
         </div>
       </div>

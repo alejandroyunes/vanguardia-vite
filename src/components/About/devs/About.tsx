@@ -1,15 +1,22 @@
 import linkedin from "./assets/web-design.webp"
 import { AboutContainer } from "./about.styled"
+import { Helmet, HelmetProvider } from "react-helmet-async"
 
 interface AboutProps {
   title: string
   subtitle: string
   alt: string
+  meta: string
 }
 
-export default function About({ title, subtitle, alt }: AboutProps) {
+export default function About({ title, subtitle, alt, meta }: AboutProps) {
   return (
     <AboutContainer>
+      <HelmetProvider>
+        <Helmet>
+          <meta name="description" content={meta} />
+        </Helmet>
+      </HelmetProvider>
       <div className="about-us-info">
         <div className="about-title">
           <p>
@@ -19,7 +26,7 @@ export default function About({ title, subtitle, alt }: AboutProps) {
           </p>
         </div>
         <div className="about-image">
-          <img className="about-logo" src={linkedin} alt={alt} />
+          <img className="about-logo" src={linkedin} alt={alt} width="300" height="400" />
         </div>
       </div>
 

@@ -106,7 +106,7 @@ export const spanish = {
     altImageFour: "Icono de computador con avatar señalando estadísticas sobre una tablet",
     altImageFive: "Icono de computador con avatar de usuario y su autenticación",
   },
-  meta: "Somos una agencia digital líder con amplia experiencia en diseño y desarrollo. Nos especializamos en la creación de productos móviles y aplicativos web."
+  meta: "Somos una agencia digital líder con amplia experiencia en diseño y desarrollo. Nos especializamos en la creación de productos móviles y aplicaciones web."
 }
 
 export const english = {
@@ -170,5 +170,5 @@ export const english = {
     altImageFour: "Icon of a computer with an avatar pointing at statistics on a tablet",
     altImageFive: "Icon of a computer with a user avatar and authentication"
   },
-  meta: "We are a leading digital agency with extensive experience in design and development. We specialize in the creation of mobile products and web applications."
+  meta: "Leading digital agency with expertise in mobile product and web application design and development"
 }

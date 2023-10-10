@@ -89,7 +89,7 @@ export const spanish = {
     listThree: "Creatividad, marketing digital, SEO y más",
     listFour: "Soporte y escalabilidad",
     labelFooter: "Podemos ayudarte a conseguir un dominio que se ajuste a tu negocio, el alojamiento y un diseño web profesional de calidad.",
-    image: Dashboard,
+    image: "https://res.cloudinary.com/dcpdkock3/image/upload/v1696905664/billboard/jaeiptpllby7kmizfnym.webp",
     alt: 'Imagen con estadísticas de un sitio web',
   },
   titleTwo: {

@@ -17,9 +17,9 @@ export const spanish = {
       subtitle: "Una Landing Page desarrollada en Next, caracterizada por un diseño original y altamente adaptable. Este sitio tiene componentes únicos que garantizan una experiencia original y totalmente responsive en cualquier dispositivo.",
       image: 'https://res.cloudinary.com/dcpdkock3/image/upload/v1696903838/portfolio/t8gzzfw9wo74clefqi2v.webp',
       alt: "Aplicación web para dr puerta",
-      url: "https://'https://res.cloudinary.com/dcpdkock3/image/upload/v1696903838/portfolio/t8gzzfw9wo74clefqi2v.webp'.com",
+      url: "https://www.drpuerta.com",
       technologies: ['Next', 'SCSS', 'Styled', 'TypeScript'],
-      github: "https://github.com/alejandroyunes/'https://res.cloudinary.com/dcpdkock3/image/upload/v1696903838/portfolio/t8gzzfw9wo74clefqi2v.webp'"
+      github: "https://github.com/alejandroyunes/drpuertanext"
     },
     {
       title: 'Experiencia Japonesa',
@@ -44,9 +44,9 @@ export const spanish = {
       subtitle: "Estudio de caso: Página en HTML, CSS, JavaScript vanilla. Diseño original y responsive. Licencia Premium de imagenes (uso ilimitado sin atribución)",
       image: 'https://res.cloudinary.com/dcpdkock3/image/upload/v1696903838/portfolio/lnzoyc3jdf718jggxx6s.webp',
       alt: "Case study web app for 'https://res.cloudinary.com/dcpdkock3/image/upload/v1696903838/portfolio/lnzoyc3jdf718jggxx6s.webp'",
-      url: "https://hoteles-react.netlify.app/Rooms",
+      url: "https://hoteles-react.netlify.com",
       technologies: ['HTML', 'CSS', 'JavaScript'],
-      github: "https://github.com/alejandroyunes/'https://res.cloudinary.com/dcpdkock3/image/upload/v1696903838/portfolio/lnzoyc3jdf718jggxx6s.webp'-app-with-react"
+      github: "https://github.com/alejandroyunes/hotels-app-with-react"
     }
   ]
 }
@@ -70,9 +70,9 @@ export const english = {
         subtitle: "A Landing Page developed in Next, characterized by an original and highly adaptable design. This site features unique components that ensure an original and fully responsive experience on any device.",
         image: 'https://res.cloudinary.com/dcpdkock3/image/upload/v1696903838/portfolio/t8gzzfw9wo74clefqi2v.webp',
         alt: "Web application for dr puerta",
-        url: "https://'https://res.cloudinary.com/dcpdkock3/image/upload/v1696903838/portfolio/t8gzzfw9wo74clefqi2v.webp'.com",
+        url: "https://www.drpuerta.com",
         technologies: ['Next', 'SCSS', 'Styled', 'TypeScript'],
-        github: "https://github.com/alejandroyunes/'https://res.cloudinary.com/dcpdkock3/image/upload/v1696903838/portfolio/t8gzzfw9wo74clefqi2v.webp'"
+        github: "https://github.com/alejandroyunes/drpuertanext"
       },
       {
         title: 'Japanese Experience',
@@ -97,9 +97,9 @@ export const english = {
         subtitle: "Case study: Website in HTML, CSS, and vanilla JavaScript. Original and Responsive Design. Premium Image License (Unlimited Usage without Attribution).",
         image: 'https://res.cloudinary.com/dcpdkock3/image/upload/v1696903838/portfolio/lnzoyc3jdf718jggxx6s.webp',
         alt: "Case study app about 'https://res.cloudinary.com/dcpdkock3/image/upload/v1696903838/portfolio/lnzoyc3jdf718jggxx6s.webp'",
-        url: "https://hoteles-react.netlify.app/Rooms",
+        url: "https://hoteles-react.netlify.com",
         technologies: ['HTML', 'CSS', 'JavaScript'],
-        github: "https://github.com/alejandroyunes/'https://res.cloudinary.com/dcpdkock3/image/upload/v1696903838/portfolio/lnzoyc3jdf718jggxx6s.webp'-app-with-react"
+        github: "https://github.com/alejandroyunes/hotels-app-with-react"
       }
     ]
 }

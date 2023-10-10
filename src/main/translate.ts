@@ -19,7 +19,11 @@ export const spanish = {
       },
       {
         link: 'Blog',
-        path: '/Blog'
+        path: '/blog'
+      },
+      {
+        link: 'Contacto',
+        path: '/contact'
       }
     ],
     arialLabel: 'Botón del menú',
@@ -60,6 +64,10 @@ export const english = {
         link: "Blog",
         path: '/blog',
       },
+      {
+        link: 'Contact',
+        path: '/contact'
+      }
     ],
     arialLabel: 'Menu button',
   },

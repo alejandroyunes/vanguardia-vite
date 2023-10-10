@@ -9,6 +9,7 @@ import ErrorPage from '../../pages/error-page.tsx'
 
 import BlogArticle from '../../components/Blog/BlogArticle/BlogArticle.tsx'
 import Layout from '../layout.tsx'
+import Contact from "../../pages/contact.tsx"
 
 
 const routerConfig: RouteObject[] = [
@@ -35,6 +36,11 @@ const routerConfig: RouteObject[] = [
       {
         path: '/blog',
         element: <Blog />,
+        errorElement: <ErrorPage />
+      },
+      {
+        path: '/contact',
+        element: <Contact />,
         errorElement: <ErrorPage />
       },
       {

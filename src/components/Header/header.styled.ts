@@ -1,16 +1,16 @@
 import styled from 'styled-components'
 
 export const HeaderContainer = styled.header`
-position: sticky;
-top: 0px;
-height: 50px;
-display: flex;
-justify-content: space-between;
-background: white;
-z-index: 10;
-@media(max-width: ${({theme}) => theme.breakpoint.xs}){
-  height: 42px;
-}
+  position: sticky;
+  top: 0px;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  background: white;
+  z-index: 10;
+  @media(max-width: ${({theme}) => theme.breakpoint.xs}){
+    height: 42px;
+  }
 `
 
 export const Logo = styled.div`
@@ -22,8 +22,9 @@ export const Logo = styled.div`
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   }
   @media(max-width: ${({theme}) => theme.breakpoint.xs}){
-    width: 38px;
-    padding-top: 4px;
+    img {
+      height: 40px;
+    }
 }
 `
 

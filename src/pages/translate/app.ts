@@ -3,8 +3,6 @@ import MobileDesignIcon from './svgs/main-cards/mobile-design-icon.svg'
 import ResponsiveDesignIcon from "./svgs/main-cards/responsive-design-icon.svg"
 import RocketAnimation from "./svgs/main-cards/rocket.svg"
 
-import Dashboard from './images/app/billboard-two.webp'
-
 export interface BillboardProps {
   title: string
   subtitle: string
@@ -155,7 +153,7 @@ export const english = {
     listThree: "Creativity, digital marketing, SEO, and more",
     listFour: "Support and scalability",
     labelFooter: "We can assist you in getting a domain that fits your business, hosting, and high-quality professional web design.",
-    image: Dashboard,
+    image: "https://res.cloudinary.com/dcpdkock3/image/upload/v1696905664/billboard/jaeiptpllby7kmizfnym.webp",
     alt: "Image with website statistics"
   },
   titleTwo: {

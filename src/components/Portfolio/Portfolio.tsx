@@ -35,7 +35,7 @@ export default function Portfolio({ title, items, subtitle, meta }: PorfolioProp
         </Helmet>
       </HelmetProvider>
 
-        <Title title={title} message={subtitle} />
+        {/* <Title title={title} message={subtitle} /> */}
 
         {items.map((e, i) => (
           <div className="portfolio-billboard" key={i}>

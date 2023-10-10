@@ -6,7 +6,7 @@ export const PortfolioContainer = styled.div`
 		max-width: ${({ theme }) => theme.breakpoint.md};
 		min-height: 100%;
 		grid-gap: 30px;
-		margin: 0px auto 80px;
+		margin: 40px auto 80px;
 		padding: 0 24px;
 		grid-template-columns: repeat(2, auto);
 
@@ -57,7 +57,7 @@ export const PortfolioContainer = styled.div`
 			grid-gap: 30px 30px;
 			grid-template-columns: repeat(1, auto);
 			grid-template-rows: repeat(2, auto);
-			margin: 0px auto 60px;
+			margin: 40px auto 60px;
 			.item-info {
 				h2 {
 					font-size: 2em;

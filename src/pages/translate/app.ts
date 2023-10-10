@@ -3,6 +3,8 @@ import MobileDesignIcon from './svgs/main-cards/mobile-design-icon.svg'
 import ResponsiveDesignIcon from "./svgs/main-cards/responsive-design-icon.svg"
 import RocketAnimation from "./svgs/main-cards/rocket.svg"
 
+import AnimationBillboard from './svgs/billboard/animationBillboard.svg'
+
 export interface BillboardProps {
   title: string
   subtitle: string
@@ -47,7 +49,7 @@ export const spanish = {
     title: "Construimos Experiencias Web Asombrosas",
     subtitle: "Somos una agencia digital líder con amplia experiencia en diseño y desarrollo. Nos especializamos en la creación de productos móviles y aplicativos web.",
     button: "Contáctanos",
-    image: "https://res.cloudinary.com/dcpdkock3/image/upload/v1696904843/billboard/opgczj30ciiooihs29ss.webp",
+    image: AnimationBillboard,
     alt: "Avatars construyendo un sitio web por componentes animada"
   },
   titleOne: {
@@ -89,7 +91,7 @@ export const spanish = {
     listThree: "Creatividad, marketing digital, SEO y más",
     listFour: "Soporte y escalabilidad",
     labelFooter: "Podemos ayudarte a conseguir un dominio que se ajuste a tu negocio, el alojamiento y un diseño web profesional de calidad.",
-    image: "https://res.cloudinary.com/dcpdkock3/image/upload/v1696905664/billboard/jaeiptpllby7kmizfnym.webp",
+    image: 'https://res.cloudinary.com/dcpdkock3/image/upload/v1696905664/billboard/jaeiptpllby7kmizfnym.webp',
     alt: 'Imagen con estadísticas de un sitio web',
   },
   titleTwo: {
@@ -111,7 +113,7 @@ export const english = {
     title: "Building Amazing Web Experiences",
     subtitle: "We are a leading digital agency with extensive experience in design and development. We specialize in the creation of mobile products and web applications.",
     button: "Contact us",
-    image: 'https://res.cloudinary.com/dcpdkock3/image/upload/v1696904843/billboard/opgczj30ciiooihs29ss.webp',
+    image: AnimationBillboard,
     alt: "Avatars constructing a website by components animated"
   },
   titleOne: {

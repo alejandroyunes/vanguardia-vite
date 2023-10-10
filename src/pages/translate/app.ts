@@ -1,4 +1,3 @@
-import Animation from './svgs/app/animation.svg'
 
 import MobileDesignIcon from './svgs/main-cards/mobile-design-icon.svg'
 import ResponsiveDesignIcon from "./svgs/main-cards/responsive-design-icon.svg"
@@ -50,7 +49,7 @@ export const spanish = {
     title: "Construimos Experiencias Web Asombrosas",
     subtitle: "Somos una agencia digital líder con amplia experiencia en diseño y desarrollo. Nos especializamos en la creación de productos móviles y aplicativos web.",
     button: "Contáctanos",
-    image: Animation,
+    image: "https://res.cloudinary.com/dcpdkock3/image/upload/v1696904843/billboard/opgczj30ciiooihs29ss.webp",
     alt: "Avatars construyendo un sitio web por componentes animada"
   },
   titleOne: {
@@ -114,7 +113,7 @@ export const english = {
     title: "Building Amazing Web Experiences",
     subtitle: "We are a leading digital agency with extensive experience in design and development. We specialize in the creation of mobile products and web applications.",
     button: "Contact us",
-    image: Animation,
+    image: 'https://res.cloudinary.com/dcpdkock3/image/upload/v1696904843/billboard/opgczj30ciiooihs29ss.webp',
     alt: "Avatars constructing a website by components animated"
   },
   titleOne: {

@@ -153,7 +153,7 @@ export default function AlejandroPage({
                               ))}
                             </ul>
                             <ul className="mt-2 flex flex-wrap" aria-label="Technologies used">
-                              {job.technologies.map((tech, i) => (
+                              {job.technologies?.map((tech, i) => (
                                 <li className="mr-1.5 mt-2" key={i}>
                                   <div className="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300 ">
                                     {tech}

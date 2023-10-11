@@ -9,6 +9,7 @@ export const spanish = {
     aboutTextOne: "En 2017, decidí volver a retomar las habilidades de desarrollo web que había adquirido cuando era más joven. Hoy en día, he recorrido un largo camino en mi viaje autodidacta para avivar mis habilidades de programación.",
     aboutTextTwo: "Mi enfoque principal en estos días es construir soluciones basadas en la web para empresas de todo el mundo. También creo contenido de blogs de programación que abarca todo lo relacionado con sistemas informáticos.",
     aboutTextThree: "Cuando no estoy en la computadora, generalmente estoy tocando la guitarra o haciendo ejercicio.",
+    view: 'Ver',
     jobs: [
       {
         date: "Aug — Present",
@@ -109,6 +110,7 @@ export const english = {
     aboutTextOne: "Back in 2017, I decided to revisit the web development skills I had acquired when I was younger. Fast-forward to today, I've come a long way in my self-taught journey to rekindle my programming abilities.",
     aboutTextTwo: "My main focus these days is building web-based solutions for companies around the world. I also create programming blog content that covers everything related to computer systems.",
     aboutTextThree: "When I’m not at the computer, I’m usually playing guitar or exercising.",
+    view: 'View Full',
     jobs: [
       {
         date: "Aug — Present",

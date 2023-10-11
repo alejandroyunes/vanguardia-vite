@@ -30,12 +30,12 @@ export type JobsType = {
 
 export type ProjectProps = {
   projectsArr: {
-    title: string;
-    titleCompany: string;
-    companyUrl: string;
-    img: string;
-    description: string;
-    technologies: string[];
+    title: string
+    titleCompany: string
+    companyUrl: string
+    img: string
+    description?: string
+    technologies?: string[]
   }
 }
 

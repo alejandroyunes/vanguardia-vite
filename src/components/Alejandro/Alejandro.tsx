@@ -13,6 +13,7 @@ interface AlejandroProps {
   aboutTextThree: string
   jobs?: JobsType[]
   projectsArr?: ProjectProps[]
+  view: string
 }
 
 export type JobsType = {

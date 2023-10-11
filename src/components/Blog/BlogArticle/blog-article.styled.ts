@@ -177,72 +177,73 @@ export const BlogArticleContainer = styled.section`
     @media (max-width: ${({ theme }) => theme.breakpoint.sm}) {
         margin-right: 0;
     }
-    }
-    .meta-box {
-      grid-area: meta;
-      position: sticky;
-      top: 60px;
-      height: fit-content;
-      margin-left: 16px;
-      .share {
-        background: ${({ theme }) => theme.palette.secondary.contrastText};
-        padding: 8px 8px;
+  }
+  
+  .meta-box {
+    grid-area: meta;
+    position: sticky;
+    top: 60px;
+    height: fit-content;
+    margin-left: 16px;
+    .share {
+      background: ${({ theme }) => theme.palette.secondary.contrastText};
+      padding: 8px 8px;
+      list-style: none;
+      border-radius: 11px;
+      font-size: 0.8em;
+      .item {
         list-style: none;
-        border-radius: 11px;
-        font-size: 0.8em;
-        .item {
-          list-style: none;
-          line-height: 1.4;
-          padding: 4px 8px;
-          color: ${({ theme }) => theme.palette.black};
-          a {
-            background-color: transparent;
-            text-decoration-skip-ink: auto;
-            text-decoration-line: underline;
-            color: #006fc6;
-          }
-          span {
-            padding-right: 4px;
-          }
-          display: flex;
-          svg {
-            height: 18px;
-            width: 18px;
-            margin-right: 8px;
-          }
+        line-height: 1.4;
+        padding: 4px 8px;
+        color: ${({ theme }) => theme.palette.black};
+        a {
+          background-color: transparent;
+          text-decoration-skip-ink: auto;
+          text-decoration-line: underline;
+          color: #006fc6;
         }
-        
-        @media (max-width: ${({ theme }) => theme.breakpoint.sm}) {
-          margin: 0 0 16px 0;
+        span {
+          padding-right: 4px;
         }
-        @media (max-width: ${({ theme }) => theme.breakpoint.xs}) {
-          width: 100%;
+        display: flex;
+        svg {
+          height: 18px;
+          width: 18px;
+          margin-right: 8px;
         }
+      }
+      
+      @media (max-width: ${({ theme }) => theme.breakpoint.sm}) {
+        margin: 0 0 16px 0;
+      }
+      @media (max-width: ${({ theme }) => theme.breakpoint.xs}) {
+        width: 100%;
+      }
+    }
+    .ad-banner__short {
+      margin: 0 0 20px 0;
+      height: 180px;
+      width: 100%;
+      background-color: lightpink;
+    }
+    .ad-banner__long {
+      margin-top: 20px;
+      height: 400px;
+      width: 100%;
+      background-color: lightblue;
+    }
+    @media (max-width: ${({ theme }) => theme.breakpoint.sm}) {
+      position: relative;
+      top: 0;
+      margin-left: 0;
+      .ad-banner__long {
+        display: none;
       }
       .ad-banner__short {
-        margin: 0 0 20px 0;
-        height: 180px;
-        width: 100%;
-        background-color: lightpink;
-      }
-      .ad-banner__long {
-        margin-top: 20px;
-        height: 400px;
-        width: 100%;
-        background-color: lightblue;
-      }
-      @media (max-width: ${({ theme }) => theme.breakpoint.sm}) {
-        position: relative;
-        top: 0;
-        margin-left: 0;
-        .ad-banner__long {
-          display: none;
-        }
-        .ad-banner__short {
-          display: none;
-        }
+        display: none;
       }
     }
+  }
 
 
   .article-author {

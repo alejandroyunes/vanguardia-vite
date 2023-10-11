@@ -8,11 +8,10 @@ export const PortfolioContainer = styled.div`
 		grid-gap: 30px;
 		margin: 40px auto 80px;
 		padding: 0 24px;
-		grid-template-columns: repeat(2, auto);
+		grid-template-columns: repeat(2, .5fr);
 
 		.item-info {
 			h2 {
-			font-weight: bold;
 			color: ${({ theme }) => theme.palette.primary.main};
 			font-size: 2.8rem;
 			line-height: 1.2;
@@ -25,7 +24,7 @@ export const PortfolioContainer = styled.div`
 			font-weight: 400;
 		}
 		}
-		.buttons {
+		.buttons-portfolio {
 			display: flex;
 			margin: 32px 0 16px;
 			.portfolio-repo {
@@ -36,17 +35,17 @@ export const PortfolioContainer = styled.div`
 		.child-two {
 			display: flex;
 			justify-content: center;
-			img {
+			.portfolio-image {
 				width: auto;
 				max-height: auto;
 				}
 			@media (max-width: ${({ theme }) => theme.breakpoint.sm}) { 
-				img {
+				.portfolio-image {
 					width: auto;
 				}
 			}
 			@media (max-width: ${({ theme }) => theme.breakpoint.xs}) { 
-				img {
+				.portfolio-image {
 					height: auto;
 					width: 100%;
 				}

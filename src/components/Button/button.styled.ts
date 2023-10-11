@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const ButtonContainer = styled.div`
-  .btn {
+  .btn-vanguardia {
     border-radius: 36px;
     padding: 8px 40px;
     margin-right: 6px;
@@ -21,11 +21,11 @@ export const ButtonContainer = styled.div`
         box-shadow: 0 1px 8px rgba(${({ theme }) => theme.palette.black}, 0.14),
         0 3px 8px rgba(${({ theme }) => theme.palette.black}, 0.11);
     }
-    &__wrapper{
+    .btn-wrapper{
       display: flex;
       align-items: center;
     }
-    &__label{
+    .btn-label{
       font-size: 1.08rem;
       letter-spacing: 40;
       @media (max-width: ${({ theme }) => theme.breakpoint.sm}) {     
@@ -33,11 +33,11 @@ export const ButtonContainer = styled.div`
         padding-top: 2px;
       }
     }
-    &__icon_div{
+    .btn-vanguardia-icon{
       align-items: center;
     }
 
-    &__icon {
+    &btn-icon {
       padding: 5px 0 0 8px;
       color: red;
       svg {

@@ -24,17 +24,17 @@ const Button: FC<ButtonProps> = ({
  < ButtonContainer>
     <button
       type={type}
-      className='btn'
+      className='btn-vanguardia'
       disabled={disabled}
       onClick={onClick}
       autoFocus={!!autofocus}
     >
-      <div className="btn__wrapper">
-        <div className="btn__label">{label}</div>
+      <div className="btn-wrapper">
+        <div className="btn-label">{label}</div>
 
         {Icon && (
-          <div className="btn__icon_div">
-            <span className="btn__icon">
+          <div className="btn-vanguardia-icon">
+            <span className="btn-icon">
               <Icon />
             </span>
           </div>

@@ -51,7 +51,7 @@ export default function Portfolio({ items, meta }: PorfolioProps) {
 
             <Technologies technologies={e.technologies} />
 
-            <div className="buttons">
+            <div className="buttons-portfolio">
               <Button
                 label={lang === 'english' ? 'view site' : 'ver sitio'}
                 category="primary"
@@ -74,7 +74,7 @@ export default function Portfolio({ items, meta }: PorfolioProps) {
           </div>
 
           <div className="child-two">
-            <img src={e.image} alt={e.alt} width="600" height="400" />
+            <img className="portfolio-image" src={e.image} alt={e.alt} width="600" height="400" />
           </div>
         </div>
       ))

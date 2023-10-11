@@ -10,6 +10,7 @@ import ErrorPage from '../../pages/error-page.tsx'
 import BlogArticle from '../../components/Blog/BlogArticle/BlogArticle.tsx'
 import Layout from '../layout.tsx'
 import Contact from "../../pages/contact.tsx"
+import AlejandroPage from "../../pages/alejandro.tsx"
 
 
 const routerConfig: RouteObject[] = [
@@ -41,6 +42,11 @@ const routerConfig: RouteObject[] = [
       {
         path: '/contact',
         element: <Contact />,
+        errorElement: <ErrorPage />
+      },
+      {
+        path: '/alejandro',
+        element: <AlejandroPage />,
         errorElement: <ErrorPage />
       },
       {

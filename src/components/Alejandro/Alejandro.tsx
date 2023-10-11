@@ -36,7 +36,6 @@ export type ProjectProps = {
     img: string
     description?: string
     technologies?: string[]
-    view: string
 }
 
 export default function AlejandroPage({

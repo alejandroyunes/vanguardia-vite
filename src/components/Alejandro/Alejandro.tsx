@@ -1,5 +1,6 @@
 import LinkIconSvg from "../../pages/translate/svgs/alejandro/LinkIconSvg"
 import ArrowUp from "../../pages/translate/svgs/alejandro/ArrowUp"
+import { Helmet, HelmetProvider } from "react-helmet-async"
 
 interface AlejandroProps {
   image: string
@@ -55,6 +56,11 @@ export default function AlejandroPage({
   return (
 
     <div>
+      <HelmetProvider>
+        <Helmet>
+          <meta name="description" content='Alejandro Cano CV' />
+        </Helmet>
+      </HelmetProvider>
       <div className="__variable_20b187 group/spotlight relative">
 
 
@@ -192,7 +198,7 @@ export default function AlejandroPage({
                   </ol>
 
                   <div className="mt-12">
-                    <a className="inline-flex items-center font-medium leading-tight font-semibold" aria-label="View Full Résumé" href="/alejandro-cv.pdf" target="_blank">
+                    <a className="inline-flex items-center font-medium leading-tight font-semibold" aria-label="View Full Résumé" href="/Alejandro-Cano-CV23.pdf" target="_blank">
                       <span>
                         <span className="border-b border-transparent pb-px transition  motion-reduce:transition-none">{view} {/* */} </span>
                         <span className="whitespace-nowrap"><span className="border-b border-transparent pb-px transition group-hover:border-teal-300 motion-reduce:transition-none">CV</span>

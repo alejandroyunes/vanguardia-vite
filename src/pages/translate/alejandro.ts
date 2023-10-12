@@ -117,7 +117,7 @@ export const english = {
         title: "Fullstack Developer",
         titleCompany: "vanguardia.tech",
         companyUrl: "https://www.vanguardia.tech",
-        description: "Developed and styled interative Single Page Application (SPA) including the UI and UX with React, Next.js, MongoDB, Express.js, and incorporating both Restful APIs and GraphQL to improve the user experience with this robust and modern tech stack.",
+        description: "Developed and styled interactive Single Page Application (SPA) including the UI and UX with React, Next.js, MongoDB, Express.js, and incorporating both Restful APIs and GraphQL to improve the user experience with this robust and modern tech stack.",
         urls: [
           {
             relatedUrl: "Punkies y Cerebro",
@@ -189,7 +189,7 @@ export const english = {
         technologies: ['TypeScript', 'React', 'Next', 'Styled']
       },
       {
-        title: " App creation in React",
+        title: "App creation in React",
         titleCompany: "Vanguardia.tech",
         companyUrl: "https://www.vanguardia.tech",
         img: "https://res.cloudinary.com/dcpdkock3/image/upload/v1697055978/alejandro-cv/y3dtvku1lbnchwob8jod.webp",

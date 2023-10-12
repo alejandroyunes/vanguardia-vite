@@ -114,7 +114,7 @@ export const english = {
     jobs: [
       {
         date: "Aug — Present",
-        title: "Fullstack Developer",
+        title: "Full Stack Developer",
         titleCompany: "vanguardia.tech",
         companyUrl: "https://www.vanguardia.tech",
         description: "Developed and styled interactive Single Page Application (SPA) including the UI and UX with React, Next.js, MongoDB, Express.js, and incorporating both Restful APIs and GraphQL to improve the user experience with this robust and modern tech stack.",
@@ -132,7 +132,7 @@ export const english = {
       },
       {
         date: "June — Aug 2023",
-        title: "FrontEnd Developer",
+        title: "Front End Developer",
         titleCompany: "Grupo R5",
         companyUrl: "https://www.grupor5.com",
         description: "Developed and styled interative web components delivering high-quality code.",
@@ -140,7 +140,7 @@ export const english = {
       },
       {
         date: "2020 — Jun 2023",
-        title: "FrontEnd Developer",
+        title: "Front End Developer",
         titleCompany: "Inxeption",
         companyUrl: "https://www.inxeption.com",
         description: "Worked with the UI team to engineer and improve major features of Inxeption ledger.",
@@ -148,7 +148,7 @@ export const english = {
       },
       {
         date: "2019 — 2020",
-        title: "FrontEnd Developer",
+        title: "Front End Developer",
         titleCompany: "Inaltect S.A.S.",
         companyUrl: "https://www.inaltec.com.co",
         description: "Developed and maintained mobile Bancolombia features.",

@@ -67,11 +67,11 @@ export default function AlejandroPage({
         <div className="mx-auto min-h-screen max-w-screen-xl px-6 py-12 font-sans md:px-12 md:py-20 lg:px-24 lg:py-0">
 
           <div className="lg:flex lg:justify-between lg:gap-4">
+
             <header className="lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-1/2 lg:flex-col lg:justify-between lg:py-24">
               <div>
                 <h1 className="text-4xl font-bold tracking-tight   sm:text-5xl">
                   <span className="group/korok inline-flex lg:cursor-[url(''),_pointer] lg:font-medium ">
-
                     <span className="group-hover/korok:text-red-400 transition duration-75 group-hover/korok:-translate-y-px delay-[50ms]" aria-hidden="true">A</span>
                     <span className="group-hover/korok:text-orange-400 transition duration-75 group-hover/korok:-translate-y-px delay-[75ms]" aria-hidden="true">l</span>
                     <span className="group-hover/korok:text-yellow-400 transition duration-75 group-hover/korok:-translate-y-px delay-[100ms]" aria-hidden="true">e</span>
@@ -132,7 +132,6 @@ export default function AlejandroPage({
             <main id="content" className="pt-24 lg:w-1/2 lg:py-24">
 
               <section id={about} className="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24" aria-label="About me">
-
                 <div className="sticky top-0 z-20 -mx-6 mb-4 w-screen bg-slate-900/75 px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:sr-only lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:opacity-0">
                   <h2 className="text-sm font-bold uppercase tracking-widest text-slate-200 lg:sr-only">{about}</h2>
                 </div>

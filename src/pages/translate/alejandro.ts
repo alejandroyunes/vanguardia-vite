@@ -16,7 +16,7 @@ export const spanish = {
         title: "Fullstack Developer",
         titleCompany: "vanguardia.tech",
         companyUrl: "https://www.vanguardia.tech",
-        description: "Desarrollé y diseñé una  Single Page  (SPA  interactiva, que incluye la interfaz de usuario (UI) y la experiencia del usuario (UX), utilizando React, Next.js, MongoDB, Express.js e incorporando tanto APIs Restful como GraphQL para mejorar la experiencia del usuario con este sólida y moderna  stack de tecnología.",
+        description: "Desarrollo y diseño de Single Page Apps utilizando React, Next.js, MongoDB, Express.js. incorporando tanto Restful APIs como GraphQL mejorando la experiencia del usuario con esta stack moderna de tecnología.",
         urls: [
           {
             relatedUrl: "Punkies y Cerebro",
@@ -34,7 +34,7 @@ export const spanish = {
         title: "FrontEnd Developer",
         titleCompany: "Grupo R5",
         companyUrl: "https://www.grupor5.com",
-        description: "Desarrollé y diseñé componentes web interactivos con código robusto y de alta calidad.",
+        description: "Desarrollo y diseño de componentes web interactivos con código de alta calidad.",
         technologies: ['TypeScript', 'React', 'Styled', 'GraphQL']
       },
       {
@@ -42,7 +42,7 @@ export const spanish = {
         title: "FrontEnd Developer",
         titleCompany: "Inxeption",
         companyUrl: "https://www.inxeption.com",
-        description: "Trabajé con el equipo UI para diseñar y mejorar características importantes de la principal app de Inxeption.",
+        description: "Trabajé con el equipo UI para diseñar y mejorar características importantes de las principal app de Inxeption.",
         technologies: ['TypeScript', 'React', 'Styled', 'GraphQL']
       },
       {
@@ -66,7 +66,7 @@ export const spanish = {
         title: "System Engineer",
         titleCompany: "Oralaser",
         companyUrl: "https://oralaser.com.co/",
-        description: "Gestión y supervisión de la infraestructura de sistemas de TI instalados. Administración de LAN: HP ProLiant G5, G6 con Windows Server 2008R2, incluyendo controlador de dominio (DC), Active Directory (AD), Servicio de nombres de dominio (DNS), Protocolo de configuración dinámica de host (DHCP), políticas de seguridad, consola de antivirus y soporte para usuarios finales inalámbricos. Además, participé en las primeras etapas del desarrollo del sitio web.",
+        description: "Gestión y supervisión de la infraestructura de sistemas de TI instalados. Administración de LAN: HP ProLiant G5, G6 con Win Server 2008R2, incluyendo DC, AD, DNS, DHCP, políticas de seguridad, consola de antivirus y soporte para usuarios finales inalámbricos. Además, participé en las primeras etapas del desarrollo del sitio web.",
         technologies: ['Windows Server', 'DNS', 'DHCP', 'Security Policies']
       }
     ],
@@ -110,7 +110,7 @@ export const english = {
     aboutTextOne: "Back in 2017, I decided to revisit the web development skills I had acquired when I was younger. Fast-forward to today, I've come a long way in my self-taught journey to rekindle my programming abilities.",
     aboutTextTwo: "My main focus these days is building web-based solutions for companies around the world. I also create programming blog content that covers everything related to computer systems.",
     aboutTextThree: "When I’m not at the computer, I’m usually playing guitar or exercising.",
-    view: 'View Full',
+    view: 'View',
     jobs: [
       {
         date: "Aug — Present",
@@ -135,7 +135,7 @@ export const english = {
         title: "FrontEnd Developer",
         titleCompany: "Grupo R5",
         companyUrl: "https://www.grupor5.com",
-        description: "Developed and styled interative web components delivering high-quality and robust code.",
+        description: "Developed and styled interative web components delivering high-quality code.",
         technologies: ['TypeScript', 'React', 'Styled', 'GraphQL']
       },
       {
@@ -189,7 +189,7 @@ export const english = {
         technologies: ['TypeScript', 'React', 'Next', 'Styled']
       },
       {
-        title: "Creación de app en React",
+        title: " App creation in React",
         titleCompany: "Vanguardia.tech",
         companyUrl: "https://www.vanguardia.tech",
         img: "https://res.cloudinary.com/dcpdkock3/image/upload/v1697055978/alejandro-cv/y3dtvku1lbnchwob8jod.webp",

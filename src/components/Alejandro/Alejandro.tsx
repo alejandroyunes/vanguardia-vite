@@ -30,12 +30,12 @@ export type JobsType = {
 }
 
 export type ProjectProps = {
-    title: string
-    titleCompany: string
-    companyUrl: string
-    img: string
-    description?: string
-    technologies?: string[]
+  title: string
+  titleCompany: string
+  companyUrl: string
+  img: string
+  description?: string
+  technologies?: string[]
 }
 
 export default function AlejandroPage({
@@ -63,9 +63,9 @@ export default function AlejandroPage({
           <div className="lg:flex lg:justify-between lg:gap-4">
             <header className="lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-1/2 lg:flex-col lg:justify-between lg:py-24">
               <div>
-                <h1 className="text-4xl font-bold tracking-tight text-slate-200 sm:text-5xl">
-                  <span className="group/korok inline-flex lg:cursor-[url('/images/koroks/Elma.png'),_pointer] lg:font-medium lg:text-slate-200">
-                    <span className="sr-only">Korok seeds</span>
+                <h1 className="text-4xl font-bold tracking-tight   sm:text-5xl">
+                  <span className="group/korok inline-flex lg:cursor-[url(''),_pointer] lg:font-medium ">
+
                     <span className="group-hover/korok:text-red-400 transition duration-75 group-hover/korok:-translate-y-px delay-[50ms]" aria-hidden="true">A</span>
                     <span className="group-hover/korok:text-orange-400 transition duration-75 group-hover/korok:-translate-y-px delay-[75ms]" aria-hidden="true">l</span>
                     <span className="group-hover/korok:text-yellow-400 transition duration-75 group-hover/korok:-translate-y-px delay-[100ms]" aria-hidden="true">e</span>
@@ -83,15 +83,30 @@ export default function AlejandroPage({
                     <span className="group-hover/korok:text-orange-400 transition duration-75 group-hover/korok:-translate-y-px delay-[350ms]" aria-hidden="true">o</span>
                   </span>
                 </h1>
-                <h2 className="mt-3 text-lg font-medium tracking-tight text-slate-200 sm:text-xl">Front End Developer</h2>
+                <h2 className="mt-3 text-lg font-medium tracking-tight  sm:text-xl">Front End Developer</h2>
                 <p className="mt-4 max-w-xs leading-normal">{subtitle}</p>
                 <nav className="nav hidden lg:block" aria-label="In-page jump links">
                   <ul className="mt-16 w-max">
-                    <li><a className="group flex items-center py-3 active" href={`#${about}`}><span className="nav-indicator mr-4 h-px w-8 bg-slate-600 transition-all group-hover:w-16 group-hover:bg-slate-200 group-focus-visible:w-16 group-focus-visible:bg-slate-200 motion-reduce:transition-none" /><span className="nav-text text-xs font-bold uppercase tracking-widest text-slate-500 group-hover:text-slate-200 group-focus-visible:text-slate-200">{about}</span></a>
+                    <li><a className="group flex items-center py-3 active" href={`#${about}`}><span className="nav-indicator mr-4 h-px w-8 bg-slate-600 transition-all group-hover:w-16 group-hover:bg-slate-200 group-focus-visible:w-16 group-focus-visible:bg-slate-200 motion-reduce:transition-none" />
+                      <span className="nav-text text-xs font-bold uppercase tracking-widest">
+                        {about}
+                      </span>
+                    </a>
                     </li>
-                    <li><a className="group flex items-center py-3" href={`#${experience}`}><span className="nav-indicator mr-4 h-px w-8 bg-slate-600 transition-all group-hover:w-16 group-hover:bg-slate-200 group-focus-visible:w-16 group-focus-visible:bg-slate-200 motion-reduce:transition-none" /><span className="nav-text text-xs font-bold uppercase tracking-widest text-slate-500 group-hover:text-slate-200 group-focus-visible:text-slate-200">{experience}</span></a>
+                    <li>
+                      <a className="group flex items-center py-3" href={`#${experience}`}><span className="nav-indicator mr-4 h-px w-8 bg-slate-600 transition-all group-hover:w-16 group-hover:bg-slate-200 group-focus-visible:w-16 group-focus-visible:bg-slate-200 motion-reduce:transition-none" />
+                        <span className="nav-text text-xs font-bold uppercase tracking-widest">
+                          {experience}
+                        </span>
+                      </a>
                     </li>
-                    <li><a className="group flex items-center py-3" href={`#${projects}`}><span className="nav-indicator mr-4 h-px w-8 bg-slate-600 transition-all group-hover:w-16 group-hover:bg-slate-200 group-focus-visible:w-16 group-focus-visible:bg-slate-200 motion-reduce:transition-none" /><span className="nav-text text-xs font-bold uppercase tracking-widest text-slate-500 group-hover:text-slate-200 group-focus-visible:text-slate-200">{projects}</span></a>
+                    <li>
+                      <a className="group flex items-center py-3" href={`#${projects}`}>
+                        <span className="nav-indicator mr-4 h-px w-8 bg-slate-600 transition-all group-hover:w-16 group-hover:bg-slate-200 group-focus-visible:w-16 group-focus-visible:bg-slate-200 motion-reduce:transition-none" />
+                        <span className="nav-text text-xs font-bold uppercase tracking-widest">
+                          {projects}
+                        </span>
+                      </a>
                     </li>
                   </ul>
                 </nav>
@@ -135,11 +150,11 @@ export default function AlejandroPage({
                         <div className="group relative z-0 grid pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50">
                           <div className="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-slate-800/50 lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:group-hover:drop-shadow-lg">
                           </div>
-                          <header className="z-10 mb-2 mt-1 text-xs font-semibold uppercase tracking-wide text-slate-500 sm:col-span-2" aria-label="July to December 2017">{job.date}</header>
+                          <header className="z-10 mb-2 mt-1 text-xs font-semibold uppercase tracking-wide sm:col-span-2" aria-label="July to December 2017">{job.date}</header>
                           <div className="z-10 sm:col-span-6">
-                            <h3 className="font-medium leading-snug text-slate-200">
+                            <h3 className="font-medium leading-snug ">
                               <div>
-                                <a className="inline-flex items-baseline font-medium leading-tight text-slate-200 hover:text-teal-300 focus-visible:text-teal-300  group/link text-base" href={job.companyUrl} target="_blank" rel="noreferrer" aria-label="UI Engineer Co-op at Apple">
+                                <a className="inline-flex items-baseline font-medium leading-tight  hover:text-teal-300 focus-visible:text-teal-300  group/link text-base" href={job.companyUrl} target="_blank" rel="noreferrer" aria-label="UI Engineer Co-op at Apple">
                                   <span className="absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block" />
                                   <span>{job.title} · {/* */}
                                     <span className="inline-block">
@@ -150,12 +165,11 @@ export default function AlejandroPage({
                                 </a>
                               </div>
                             </h3>
-                            <p className="mt-2 text-sm leading-normal">{job.description}
-                            </p>
+                            <p className="mt-2 text-sm leading-normal group-hover:text-slate-100 group-focus-visible:text-slate-100">{job.description}</p>
                             <ul className="mt-2 flex flex-wrap" aria-label="Related links">
                               {job.urls?.map((url, i) => (
                                 <li className="mr-4" key={i}>
-                                  <a className="relative mt-2 inline-flex items-center text-sm font-medium text-slate-300 hover:text-teal-300 focus-visible:text-teal-300" href={url.url} target="_blank" rel="noreferrer">
+                                  <a className="relative mt-2 inline-flex items-center text-sm font-medium hover:text-teal-300 focus-visible:text-teal-300" href={url.url} target="_blank" rel="noreferrer">
                                     <LinkIconSvg />
                                     <span>{url.relatedUrl}</span>
                                   </a>
@@ -165,7 +179,7 @@ export default function AlejandroPage({
                             <ul className="mt-2 flex flex-wrap" aria-label="Technologies used">
                               {job.technologies?.map((tech, i) => (
                                 <li className="mr-1.5 mt-2" key={i}>
-                                  <div className="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300 ">
+                                  <div className="flex items-center rounded-full bg-teal-400/50 px-3 py-1 text-xs font-medium leading-5">
                                     {tech}
                                   </div>
                                 </li>
@@ -209,7 +223,7 @@ export default function AlejandroPage({
 
                           <div className="z-10 sm:order-2 sm:col-span-6">
                             <h3>
-                              <a className="inline-flex items-baseline font-medium leading-tight text-slate-200 hover:text-teal-300 focus-visible:text-teal-300  group/link text-base" href={project.companyUrl} target="_blank" rel="noreferrer" aria-label="Spotify Profile">
+                              <a className="inline-flex items-baseline font-medium leading-tight hover:text-teal-300 focus-visible:text-teal-300  group/link text-base" href={project.companyUrl} target="_blank" rel="noreferrer" aria-label="Spotify Profile">
                                 <span className="absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block" />
                                 <span>
                                   {project.title} {/* */}
@@ -222,7 +236,7 @@ export default function AlejandroPage({
                                 </span>
                               </a>
                             </h3>
-                            <p className="mt-2 text-sm leading-normal">{project.description}</p>
+                            <p className="mt-2 text-sm leading-normal group-hover:text-slate-100 group-focus-visible:text-slate-100">{project.description}</p>
                             <ul className="mt-2 flex flex-wrap" aria-label="Technologies used:">
                               {project.technologies?.map((e, i) => (
                                 <li className="mr-1.5 mt-2" key={i}>

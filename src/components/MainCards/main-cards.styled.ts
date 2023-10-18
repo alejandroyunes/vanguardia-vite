@@ -20,6 +20,10 @@ export const CardContainer = styled.div`
       margin: 8px;
       padding: 16px;
     }
+    .card-img {
+      display: flex;
+      justify-content: center;
+    }
   }
 
   img {

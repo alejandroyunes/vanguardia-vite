@@ -34,9 +34,11 @@ export const BlogContainer = styled.div`
   }
   
   .child-card {
-    text-align: center;
     margin: 24px 0;
     padding: 0 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   img {

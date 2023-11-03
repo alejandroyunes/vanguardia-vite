@@ -389,7 +389,7 @@ export const english: BlogDataTypes = {
   description: "A freelance designer and dedicated front-end developer committed to enhancing everyone's web experience, with a focus on progressive improvement and constant refinement.",
   blog: [
     {
-      id: 1,
+      id: 3,
       title: "How to Install Linux Mint Alongside Windows 11?",
       meta: "Learn how to install Linux Mint alongside Windows 11.",
       image: linuxWindowsArticle,
@@ -494,7 +494,7 @@ export const english: BlogDataTypes = {
       ]
     },
     {
-      id: 3,
+      id: 1,
       title: "Web Development Career Guide",
       meta: "Discover essential skills and insights for a successful web development career in our comprehensive guide.",
       image: webDev,

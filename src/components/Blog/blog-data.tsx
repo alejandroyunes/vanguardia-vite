@@ -8,7 +8,14 @@ const webDev = 'https://res.cloudinary.com/dcpdkock3/image/upload/v1698377831/bl
 const NodeExpressServer = 'https://res.cloudinary.com/dcpdkock3/image/upload/v1698957906/blog/mcygclsb4g0jj5jrchuj.webp'
 const NodeExpressServerPackage = "https://res.cloudinary.com/dcpdkock3/image/upload/v1698969420/blog/articles/express-apollo-server/yfhq2ar29havuwrqkkvm.webp"
 const NodeExpressServerNodemon = "https://res.cloudinary.com/dcpdkock3/image/upload/v1698969281/blog/articles/express-apollo-server/cb6ipencimfoidlji9st.webp"
+const NodeExpressServerTsConfig = "https://res.cloudinary.com/dcpdkock3/image/upload/v1698982069/blog/articles/express-apollo-server/cnya3ezkbt2nig1chalj.webp"
 const NodeExpressServerIndex = "https://res.cloudinary.com/dcpdkock3/image/upload/v1698969281/blog/articles/express-apollo-server/uetfdarc7lpqdbqfxvjb.webp"
+const NodeExpressServerGraphQL = "https://res.cloudinary.com/dcpdkock3/image/upload/v1698982347/blog/articles/express-apollo-server/bnyl6josz6cm2llcxeah.webp"
+const NodeExpressServerGraphQLResolver = "https://res.cloudinary.com/dcpdkock3/image/upload/v1698983929/blog/articles/express-apollo-server/qdgulxunkh6sck7q7857.webp"
+const NodeExpressServerGraphQLServices = "https://res.cloudinary.com/dcpdkock3/image/upload/v1698984511/blog/articles/express-apollo-server/kxyolrs7qkmgnwa7ey3r.webp"
+const NodeExpressServerGraphQLExtract = "https://res.cloudinary.com/dcpdkock3/image/upload/v1698986621/blog/articles/express-apollo-server/fjnyzh4gedjsn0kwx4wi.webp"
+const NodeExpressServerGraphQLTypeDefs = "https://res.cloudinary.com/dcpdkock3/image/upload/v1698988912/blog/articles/express-apollo-server/xdrmg8oq3grvkszwdjt4.webp"
+const NodeExpressServerPrisma = "https://res.cloudinary.com/dcpdkock3/image/upload/v1698990416/blog/articles/express-apollo-server/bchrvctdzhaf6iye6l8c.webp"
 
 export type BlogArticleType = {
   id: number
@@ -51,7 +58,7 @@ export const spanish: BlogDataTypes = {
     {
       id: 1,
       title: "Arquitectura de servidor moderno y de alto rendimiento",
-      meta: "Este servidor está construido utilizando Node.js y Express para manejar las solicitudes HTTP. Utiliza TypeScript para agregar tipado estático a todo el código. La API se implementa utilizando GraphQL con Apollo Server como el servidor GraphQL. Los datos se almacenan en una base de datos PostgreSQL y se acceden a través de Prisma, un ORM (Object-Relational Mapping) para Node.js",
+      meta: "Este servidor está construido utilizando Node.js y Express.  Utilizando GraphQL con Apollo Server como el servidor GraphQL. Los datos se almacenan en una base de datos PostgreSQL y se acceden a través de Prisma.",
       image: NodeExpressServer,
       alt: "Diagrama de Arquitectura del Servidor con Node.js, Express, TypeScript, GraphQL, Apollo Server, PostgreSQL y Prisma",
       blogPageSummary: "Guía para crear un Servidor con Node.js, Express, TypeScript, GraphQL, Apollo Server, PostgreSQL y Prisma.",
@@ -81,7 +88,7 @@ export const spanish: BlogDataTypes = {
           imgWidth: "311"
         },
         {
-          title: "Configuración de Nodemon y scripts de npm",
+          title: "Configuración de Nodemon",
           description: "Nodemon es una herramienta que nos permite reiniciar automáticamente el servidor cuando se detectan cambios en el código. Para configurarlo, creamos un archivo nodemon.json en la raíz del proyecto y agregamos el siguiente código:",
           img: NodeExpressServerNodemon,
           imgAlt: "Configuración de Nodemon para el servidor",
@@ -89,10 +96,18 @@ export const spanish: BlogDataTypes = {
           imgWidth: "283"
         },
         {
+          title: "Agregar tsconfig.json",
+          description: "Esta configuración define las opciones del compilador para un proyecto TypeScript, incluyendo detalles como la versión de destino, el soporte para decoradores experimentales, el sistema de módulos, y otras configuraciones relacionadas con la estricta comprobación de tipos. Además, establece las rutas de inclusión de archivos y directorios para el compilador TypeScript.",
+          img: NodeExpressServerTsConfig,
+          imgAlt: "Configuración de tsconfig",
+          imgHeight: "382",
+          imgWidth: "400"
+        },
+        {
           title: "Servidor web utilizando Express.js con GraphQL",
-          description: "Este código configura un servidor web Express habilitado para GraphQL en la ruta '/graphql' y proporciona una ruta raíz que responde con un mensaje hello world para rutas HTTP. Al ejecutarse, el servidor se inicia en el puerto 4000 y queda listo para atender solicitudes.",
+          description: "Este código configura un servidor web Express habilitado para GraphQL en la ruta '/graphql' y proporciona una ruta raíz que responde con un mensaje ' hello world' para rutas HTTP. Al ejecutarse, el servidor se inicia en el puerto 4000 y queda listo para atender solicitudes.",
           img: NodeExpressServerIndex,
-          imgAlt: "Configuración de Nodemon para el servidor",
+          imgAlt: "Configuración de Index en expressjs",
           imgHeight: "565",
           imgWidth: "507",
           list: [
@@ -100,14 +115,59 @@ export const spanish: BlogDataTypes = {
             "Configura un servidor Express en un puerto (4000 o definido por variable de entorno).",
             "Define un servidor GraphQL con tipos y resolvers.",
             "Configura middleware para manejar CORS y solicitudes JSON y URL codificadas.",
-            "Expone una ruta  para el servidor GraphQL.",
-            "Configura una ruta raíz que responde con Hello World!",
             "Inicia el servidor Express y muestra mensajes en la consola con las URL del servidor web y GraphQL cuando está listo."
           ]
         },
-
         {
-          description: "Si has llegado hasta aquí, te agradezco por tu atención. Espero que alguno de estos consejos de HTML te haya resultado útil."
+          title: "Agregar configuración de GraphQL",
+          description: "Este código importa módulos, como el sistema de archivos 'fs' y 'path' de Node, y resuelve tipos GraphQL definidos en archivos. Luego, combina estos tipos en una sola definición 'typeDefs' y configura los resolvers para consultas y mutaciones relacionadas con usuarios y publicaciones.",
+          img: NodeExpressServerGraphQL,
+          imgAlt: "Configuración de GraphQL",
+          imgHeight: "273",
+          imgWidth: "700"
+        },
+        {
+          title: "Agregar resolvers para consultas y mutaciones",
+          description: "Este código define resolvers para consultas y mutaciones relacionadas con usuarios y publicaciones. Los resolvers son funciones que se ejecutan cuando se realiza una consulta o mutación GraphQL. Cada resolver recibe argumentos, realiza una operación y devuelve un resultado.",
+          img: NodeExpressServerGraphQLResolver,
+          imgAlt: "Configuración de GraphQL resolvers",
+          imgHeight: "273",
+          imgWidth: "700"
+        },
+        {
+          title: "Funciones de resolución y gestión de usuarios en GraphQL con Prisma",
+          description: "Este código importa módulos relacionados con Prisma y GraphQL, y define funciones para interactuar con la base de datos y realizar operaciones relacionadas con usuarios. Estas operaciones incluyen obtener usuarios, obtener un usuario por ID y crear un nuevo usuario en la base de datos a través de Prisma. El código también incluye la extracción de selecciones GraphQL para determinar si se deben incluir detalles adicionales, como publicaciones, al obtener usuarios o un usuario específico.",
+          img: NodeExpressServerGraphQLServices,
+          imgAlt: "Configuración de servicios para GraphQL",
+          imgHeight: "827",
+          imgWidth: "620"
+        },
+        {
+          title: "Gestión de selecciones de campos en consultas GraphQL",
+          description: "Este código ofrece funciones para gestionar selecciones de campos en consultas GraphQL. Aprovecha la información de resolución GraphQL para extraer y procesar las selecciones de campos, lo que resulta valioso para determinar qué datos deben recuperarse de la base de datos en función de la consulta GraphQL. Además, en caso de que el campo no exista, proporciona un resultado vacío, mejorando el desempeño del sistema.",
+          img: NodeExpressServerGraphQLExtract,
+          imgAlt: "Gestión de selecciones de campos en consultas GraphQL",
+          imgHeight: "286",
+          imgWidth: "482"
+        },
+        {
+          title: "Adicionalmente, agregamos los typesDefs para usuario y publicación",
+          description: "Esto describe los types y mutations de GraphQL con tres tipos principales: 'User,' 'UserInput,' 'Query,' y 'Mutation.' El tipo 'User tiene campos como 'id,' 'email,' 'username,' y 'posts,' y se utiliza para representar usuarios y sus relaciones con publicaciones. 'UserInput' se utiliza para ingresar información de usuario en mutaciones. 'Query' proporciona operaciones para recuperar usuarios o un usuario específico. 'Mutation' ofrece operaciones para crear, actualizar y eliminar usuarios en la base de datos a través de GraphQL.",
+          img: NodeExpressServerGraphQLTypeDefs,
+          imgAlt: "Types y mutaciones de GraphQL",
+          imgHeight: "294",
+          imgWidth: "500"
+        },
+        {
+          title: "Esquema Prisma para Usuarios y Publicaciones en PostgreSQL",
+          description: "Este fragmento de código define un esquema Prisma que representa modelos de datos para usuarios y publicaciones en una base de datos PostgreSQL. También configura la generación del cliente de Prisma para interactuar con la base de datos.  Agregamos nuestra base de datos en el archivo .env, y luego ejecutamos el comando 'npx prisma generate' para generar el cliente de Prisma.",
+          img: NodeExpressServerPrisma,
+          imgAlt: "Schema de Prisma para usuarios y publicaciones",
+          imgHeight: "294",
+          imgWidth: "500"
+        },
+        {
+          description: "Si has llegado hasta aquí, te agradezco por tu atención. Espero que esta plantilla te pueda resultar útil."
         }
       ]
     },
@@ -389,112 +449,123 @@ export const english: BlogDataTypes = {
   description: "A freelance designer and dedicated front-end developer committed to enhancing everyone's web experience, with a focus on progressive improvement and constant refinement.",
   blog: [
     {
-      id: 3,
-      title: "How to Install Linux Mint Alongside Windows 11?",
-      meta: "Learn how to install Linux Mint alongside Windows 11.",
-      image: linuxWindowsArticle,
-      alt: "Linux penguin and Windows background",
-      blogPageSummary: "This guide will show you how to run Linux Mint and Windows together on the same PC.",
-      articleSummary: "This guide will show you how to run Linux Mint and Windows together on the same PC. The steps mentioned are applicable to Linux Mint distributions. Well, let's see how to dual boot Linux on a Windows system.",
-      time: "5",
-      related: ["Windows", "Linux"],
+      id: 1,
+      title: "Modern and High-Performance Server Architecture",
+      meta: "Server built using Node.js and Express to handle HTTP requests. Implemented using GraphQL with Apollo Server as the GraphQL server. Data is stored in a PostgreSQL database and accessed through Prisma.",
+      image: NodeExpressServer,
+      alt: "Server Architecture Diagram with Node.js, Express, TypeScript, GraphQL, Apollo Server, PostgreSQL, and Prisma",
+      blogPageSummary: "Guide to Creating a Server with Node.js, Express, TypeScript, GraphQL, Apollo Server, PostgreSQL, and Prisma.",
+      articleSummary: "This server is built using Node.js and Express to handle HTTP requests. It uses TypeScript to add static typing to the entire codebase. The API is implemented using GraphQL with Apollo Server as the GraphQL server. Data is stored in a PostgresSQL database and accessed through Prisma, an Object-Relational Mapping (ORM) for Node.js.",
+      time: "15",
+      related: ["Node"],
       shared: ["Twitter", "LinkedIn"],
-      date: "October 3, 2023",
+      date: "November 02, 2023",
       step: [
         {
-          title: "Make a Backup [Optional]",
-          step: "Step 1:",
-          description: "It's always good to have a backup, just in case. Download the ISO image according to your Windows operating system.",
-          resource: "https://www.microsoft.com/en-us/software-download/"
+          title: "Setting Up the Environment: Installing Node and Initial Configuration",
+          description: "Getting Started: Ensure you have Node and a package manager like npm, pnpm, or yarn installed on your system. Once confirmed, run the 'npm init -y' command in your chosen directory from the terminal. This will establish a basic project configuration. In the next step, we'll focus on installing the necessary dependencies for our server.",
+          resource: "https://nodejs.org/",
         },
         {
-          title: "Download the Linux Mint Distribution",
-          step: "Step 2:",
-          description: "Go to the official Linux Mint website and navigate to the downloads section. Find the distribution you like the most and download it. It may take some time depending on your internet connection.",
-          resource: "https://linuxmint.com/"
+          title: "Dependency Installation",
+          description: "First and foremost, you have the link to the GitHub repo with all the code in the link below. In this step, we'll install the necessary dependencies for our server. We'll start by installing both regular and development dependencies.",
+          resource: "https://github.com/alejandroyunes/express-apollo-postgres-prisma",
+          list: [
+            "npm i @apollo/server @apollo/client cors dotenv express graphql",
+            "npm i -D @types/cors @types/express @types/node nodemon prisma ts-node typescript",
+            "Make sure to create npm scripts for running the server and the client."
+          ],
+          img: NodeExpressServerPackage,
+          imgAlt: "Node.js packages for the server",
+          imgHeight: "553",
+          imgWidth: "311"
         },
         {
-          title: "Download Rufus to Create USB Boot Drives",
-          step: "Step 3:",
-          description: "Right-click on the Rufus installer and run it as an administrator. Then, under 'Device,' select the USB and under 'Select,' locate the Linux ISO image. In 'Partition scheme,' it's important to select 'GPT' if the target system is UEFI. Click 'Start,' and then 'OK' in 'ISO Image mode (recommended).'",
-          resource: "https://rufus.ie/es/"
+          title: "Setting up Nodemon",
+          description: "Nodemon is a tool that allows us to automatically restart the server when code changes are detected. To configure it, we create a nodemon.json file in the project's root directory and add the following code:",
+          img: NodeExpressServerNodemon,
+          imgAlt: "Nodemon configuration for the server",
+          imgHeight: "112",
+          imgWidth: "283"
         },
         {
-          title: "Boot from the BIOS",
-          step: "Step 4:",
-          description: "Accessing the BIOS depends on your computer, but if pressing F2, F12, or F10 during startup doesn't work, you should look for the key that allows you to enter the BIOS."
+          title: "Add tsconfig.json",
+          description: "This configuration defines compiler options for a TypeScript project, including details like the target version, support for experimental decorators, the module system, and other settings related to strict type checking. It also sets the file and directory inclusion paths for the TypeScript compiler.",
+          img: NodeExpressServerTsConfig,
+          imgAlt: "tsconfig configuration",
+          imgHeight: "382",
+          imgWidth: "400"
         },
         {
-          title: "Linux Mint Installation",
-          step: "Step 5:",
-          description: "The Linux Mint installer allows us to partition our hard drive. We should select 'OEM install' (for manufacturers), choose our settings, and follow the installation steps. Then, select 'Install Linux Mint alongside Windows Boot Manager.' Adjust your storage space and proceed."
+          title: "Creating a Web Server Using Express.js with GraphQL",
+          description: "This code configures an Express web server enabled for GraphQL at the '/graphql' endpoint and provides a root route that responds with a 'hello world' message for HTTP requests. When executed, the server starts on port 4000 and is ready to handle requests.",
+          img: NodeExpressServerIndex,
+          imgAlt: "expressjs index configuration",
+          imgHeight: "565",
+          imgWidth: "507",
+          list: [
+            "The code imports libraries such as Express, CORS, dotenv, and Apollo Server.",
+            "It configures an Express server on a port (either 4000 or as defined by an environment variable).",
+            "It defines a GraphQL server with types and resolvers.",
+            "It sets up middleware to handle CORS, JSON requests, and URL encoding.",
+            "It starts the Express server and displays messages in the console with the URLs for the web server and GraphQL when it's ready."
+          ]
         },
         {
-          title: "Select Operating System at Startup",
-          step: "Step 6:",
-          description: "All that's left is to restart and select the operating system you want to use and enjoy. 🍾🎉"
+          title: "Adding GraphQL Configuration",
+          description: "This code imports modules, such as the Node 'fs' (file system) and 'path,' and resolves GraphQL types defined in files. It then combines these types into a single 'typeDefs' definition and configures resolvers for queries and mutations related to users and posts.",
+          img: NodeExpressServerGraphQL,
+          imgAlt: "GraphQL configuration",
+          imgHeight: "273",
+          imgWidth: "700"
+        },
+        {
+          title: "Adding Resolvers for Queries and Mutations",
+          description: "This code defines resolvers for queries and mutations related to users and posts. Resolvers are functions that are executed when a GraphQL query or mutation is made. Each resolver receives arguments, performs an operation, and returns a result.",
+          img: NodeExpressServerGraphQLResolver,
+          imgAlt: "Resolvers configuration for GraphQL",
+          imgHeight: "273",
+          imgWidth: "700"
+        },
+        {
+          title: "User Resolution and Management Functions in GraphQL with Prisma",
+          description: "This code imports modules related to Prisma and GraphQL and defines functions to interact with the database and perform user-related operations. These operations include getting users, fetching a user by ID, and creating a new user in the database using Prisma. The code also includes the extraction of GraphQL selections to determine whether additional details, such as posts, should be included when fetching users or a specific user.",
+          img: NodeExpressServerGraphQLServices,
+          imgAlt: "Setting up services for GraphQL",
+          imgHeight: "827",
+          imgWidth: "620"
+        },
+        {
+          title: "Managing Field Selections in GraphQL Queries",
+          description: "This code provides functions for managing field selections in GraphQL queries. It leverages GraphQL resolution information to extract and process field selections, which is valuable for determining what data should be retrieved from the database based on the GraphQL query. Additionally, if the field doesn't exist, it provides an empty result, improving system performance.",
+          img: NodeExpressServerGraphQLExtract,
+          imgAlt: "Managing Field Selections in GraphQL Queries",
+          imgHeight: "286",
+          imgWidth: "482"
+        },
+        {
+          title: "Additionally, we add the typeDefs for user and post.",
+          description: "This describes the GraphQL types and mutations with three main types: 'User,' 'UserInput,' 'Query,' and 'Mutation.' The 'User' type has fields like 'id,' 'email,' 'username,' and 'posts,' and it's used to represent users and their relationships with posts. 'UserInput' is used for entering user information in mutations. 'Query' provides operations to fetch users or a specific user. 'Mutation' offers operations to create, update, and delete users in the database through GraphQL.",
+          img: NodeExpressServerGraphQLTypeDefs,
+          imgAlt: "GraphQL Types and Mutations",
+          imgHeight: "294",
+          imgWidth: "500"
+        },
+        {
+          title: "Prisma Schema for Users and Posts in PostgreSQL",
+          description: "This code snippet defines a Prisma schema that represents data models for users and posts in a PostgreSQL database. It also configures the generation of the Prisma client to interact with the database. We add our database connection information in the .env file, and then run the 'npx prisma generate' command to generate the Prisma client.",
+          img: NodeExpressServerPrisma,
+          imgAlt: "Prisma Schema for Users and Posts",
+          imgHeight: "294",
+          imgWidth: "500"
+        },
+        {
+          description: "If you've made it this far, I thank you for your attention. I hope this template can be helpful to you."
         }
       ]
     },
     {
       id: 2,
-      title: "Exploring Powerful HTML5 Tags for a Modern Web",
-      meta: "Discover the potential of HTML5 tags to transform your website into a modern and interactive experience.",
-      image: HTML5Img,
-      alt: "HTML 5 logo for the modern web",
-      blogPageSummary: "Explore Innovative HTML Tags That Simplify Our Lives on the Web.",
-      articleSummary: "I'm amazed at how many tags I didn't know; some of them I had explored only superficially, while others I had barely used. Next, we'll take a look at some of them.",
-      time: "4",
-      related: ["Windows", "Linux"],
-      shared: ["Twitter", "LinkedIn"],
-      date: "October 9, 2023",
-      step: [
-        {
-          title: "We'll start our list with the 'Dataset' element",
-          description: "To create a data input and list, we use both the 'input' and 'datalist' tags. The 'list' attribute of the 'input' element refers to the 'datalist', allowing us to have an input where we can enter data.",
-          code: "<label for='languages'>language:</label>\n<input list='languages' id='language-choice' name='language-choice'>\n\n<datalist id='languages'>\n    <option value='Javascript'>\n    <option value='Java'>\n    <option value='Swift'>\n    <option value='Go'>\n    <option value='PHP'>\n</datalist>",
-          img: datasetImg,
-          imgAlt: "Example of HTML dataset element",
-          imgWidth: "640",
-          imgHeight: "230"
-        },
-        {
-          title: "Inputs for Capturing Images, Videos, and Audio",
-          description: "This HTML code represents a form that allows users to upload images or videos to a web server. The 'capture' attribute allows us to access the cameras on mobile devices.",
-          img: typeFile,
-          imgAlt: "HTML code for uploading photos and videos to the native server",
-          imgWidth: "566",
-          imgHeight: "310"
-        },
-        {
-          title: "The HTML <dialog> Element for Modal Dialog Boxes",
-          description: "The HTML <dialog> element is used to create a modal dialog box on a web page. A modal dialog box is a popup window that blocks interaction with the rest of the page until the user interacts with it or closes it.",
-          img: dialogHtmlImg,
-          imgAlt: "Example code for an HTML dialog",
-          imgWidth: "646",
-          imgHeight: "503"
-        },
-        {
-          title: "Using <details> and <summary> Tags in HTML for Collapsible Content",
-          description: "`<details>` and `<summary>` in HTML create collapsible sections. The content in `<details>` is initially hidden and expands when clicking `<summary>`. They are useful for displaying additional information neatly and allowing users to control what content they see, improving web usability."
-        },
-        {
-          title: "HTML Popover Property Displays Floating Element",
-          description: "A popover is a popup window that displays additional information or options when interacting with an element in an application or website. It is used to provide additional details and can be closed by clicking anywhere outside of it.",
-          code: "<button id='popoverButton'>Show Popover</button>\n<div id='popoverContent' class='popover'>This is an example.\n</div>"
-        },
-        {
-          title: "Defining Search Elements",
-          description: "The <search> element allows us to define elements that are part of a search, providing a structure to group and organize components related to the search.",
-          code: "<search>\n<form>\n<label for='search'>Search:</label>\n<input type='search' id='search' name='search' placeholder='Enter your search'>\n<button type='submit'>Search</button>\n</form>\n</search>"
-        },
-        {
-          description: "If you've made it this far, thank you. I hope you found some of these HTML tips useful."
-        }
-      ]
-    },
-    {
-      id: 1,
       title: "Web Development Career Guide",
       meta: "Discover essential skills and insights for a successful web development career in our comprehensive guide.",
       image: webDev,
@@ -661,6 +732,111 @@ export const english: BlogDataTypes = {
             "Contextual Understanding: Maintain engagement.",
             "Testing and Analytics."
           ]
+        }
+      ]
+    },
+    {
+      id: 3,
+      title: "Exploring Powerful HTML5 Tags for a Modern Web",
+      meta: "Discover the potential of HTML5 tags to transform your website into a modern and interactive experience.",
+      image: HTML5Img,
+      alt: "HTML 5 logo for the modern web",
+      blogPageSummary: "Explore Innovative HTML Tags That Simplify Our Lives on the Web.",
+      articleSummary: "I'm amazed at how many tags I didn't know; some of them I had explored only superficially, while others I had barely used. Next, we'll take a look at some of them.",
+      time: "4",
+      related: ["Windows", "Linux"],
+      shared: ["Twitter", "LinkedIn"],
+      date: "October 9, 2023",
+      step: [
+        {
+          title: "We'll start our list with the 'Dataset' element",
+          description: "To create a data input and list, we use both the 'input' and 'datalist' tags. The 'list' attribute of the 'input' element refers to the 'datalist', allowing us to have an input where we can enter data.",
+          code: "<label for='languages'>language:</label>\n<input list='languages' id='language-choice' name='language-choice'>\n\n<datalist id='languages'>\n    <option value='Javascript'>\n    <option value='Java'>\n    <option value='Swift'>\n    <option value='Go'>\n    <option value='PHP'>\n</datalist>",
+          img: datasetImg,
+          imgAlt: "Example of HTML dataset element",
+          imgWidth: "640",
+          imgHeight: "230"
+        },
+        {
+          title: "Inputs for Capturing Images, Videos, and Audio",
+          description: "This HTML code represents a form that allows users to upload images or videos to a web server. The 'capture' attribute allows us to access the cameras on mobile devices.",
+          img: typeFile,
+          imgAlt: "HTML code for uploading photos and videos to the native server",
+          imgWidth: "566",
+          imgHeight: "310"
+        },
+        {
+          title: "The HTML <dialog> Element for Modal Dialog Boxes",
+          description: "The HTML <dialog> element is used to create a modal dialog box on a web page. A modal dialog box is a popup window that blocks interaction with the rest of the page until the user interacts with it or closes it.",
+          img: dialogHtmlImg,
+          imgAlt: "Example code for an HTML dialog",
+          imgWidth: "646",
+          imgHeight: "503"
+        },
+        {
+          title: "Using <details> and <summary> Tags in HTML for Collapsible Content",
+          description: "`<details>` and `<summary>` in HTML create collapsible sections. The content in `<details>` is initially hidden and expands when clicking `<summary>`. They are useful for displaying additional information neatly and allowing users to control what content they see, improving web usability."
+        },
+        {
+          title: "HTML Popover Property Displays Floating Element",
+          description: "A popover is a popup window that displays additional information or options when interacting with an element in an application or website. It is used to provide additional details and can be closed by clicking anywhere outside of it.",
+          code: "<button id='popoverButton'>Show Popover</button>\n<div id='popoverContent' class='popover'>This is an example.\n</div>"
+        },
+        {
+          title: "Defining Search Elements",
+          description: "The <search> element allows us to define elements that are part of a search, providing a structure to group and organize components related to the search.",
+          code: "<search>\n<form>\n<label for='search'>Search:</label>\n<input type='search' id='search' name='search' placeholder='Enter your search'>\n<button type='submit'>Search</button>\n</form>\n</search>"
+        },
+        {
+          description: "If you've made it this far, thank you. I hope you found some of these HTML tips useful."
+        }
+      ]
+    },
+    {
+      id: 4,
+      title: "How to Install Linux Mint Alongside Windows 11?",
+      meta: "Learn how to install Linux Mint alongside Windows 11.",
+      image: linuxWindowsArticle,
+      alt: "Linux penguin and Windows background",
+      blogPageSummary: "This guide will show you how to run Linux Mint and Windows together on the same PC.",
+      articleSummary: "This guide will show you how to run Linux Mint and Windows together on the same PC. The steps mentioned are applicable to Linux Mint distributions. Well, let's see how to dual boot Linux on a Windows system.",
+      time: "5",
+      related: ["Windows", "Linux"],
+      shared: ["Twitter", "LinkedIn"],
+      date: "October 3, 2023",
+      step: [
+        {
+          title: "Make a Backup [Optional]",
+          step: "Step 1:",
+          description: "It's always good to have a backup, just in case. Download the ISO image according to your Windows operating system.",
+          resource: "https://www.microsoft.com/en-us/software-download/"
+        },
+        {
+          title: "Download the Linux Mint Distribution",
+          step: "Step 2:",
+          description: "Go to the official Linux Mint website and navigate to the downloads section. Find the distribution you like the most and download it. It may take some time depending on your internet connection.",
+          resource: "https://linuxmint.com/"
+        },
+        {
+          title: "Download Rufus to Create USB Boot Drives",
+          step: "Step 3:",
+          description: "Right-click on the Rufus installer and run it as an administrator. Then, under 'Device,' select the USB and under 'Select,' locate the Linux ISO image. In 'Partition scheme,' it's important to select 'GPT' if the target system is UEFI. Click 'Start,' and then 'OK' in 'ISO Image mode (recommended).'",
+          resource: "https://rufus.ie/es/"
+        },
+        {
+          title: "Boot from the BIOS",
+          step: "Step 4:",
+          description: "Accessing the BIOS depends on your computer, but if pressing F2, F12, or F10 during startup doesn't work, you should look for the key that allows you to enter the BIOS."
+        },
+        {
+          title: "Linux Mint Installation",
+          step: "Step 5:",
+          description: "The Linux Mint installer allows us to partition our hard drive. We should select 'OEM install' (for manufacturers), choose our settings, and follow the installation steps. Then, select 'Install Linux Mint alongside Windows Boot Manager.' Adjust your storage space and proceed."
+        },
+        {
+          title: "Select Operating System at Startup",
+          step: "Step 6:",
+          description: "All that's left is to restart and select the operating system you want to use and enjoy. 🍾🎉"
         }
       ]
     },

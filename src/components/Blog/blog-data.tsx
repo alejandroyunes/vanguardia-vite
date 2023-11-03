@@ -1,10 +1,14 @@
-import linuxWindowsArticle from './BlogArticle/images/linux-windows.webp'
+const linuxWindowsArticle = 'https://res.cloudinary.com/dcpdkock3/image/upload/v1698377830/blog/vb8hiwp1l43tscwoye3q.webp'
 
-import datasetImg from './BlogArticle/images/dataset.webp'
-import HTML5Img from './BlogArticle/images/html5blog.webp'
-import dialogHtmlImg from './BlogArticle/images/dialogHtml.webp'
-import typeFile from './BlogArticle/images/typeFile.webp'
-import webDev from './BlogArticle/images/webdev.webp'
+const datasetImg = 'https://res.cloudinary.com/dcpdkock3/image/upload/v1698377830/blog/m2yyvr6jft0a8j1ws8rj.webp'
+const HTML5Img = 'https://res.cloudinary.com/dcpdkock3/image/upload/v1698377831/blog/kkc4eb4flw5qgmjpmdro.webp'
+const dialogHtmlImg = 'https://res.cloudinary.com/dcpdkock3/image/upload/v1698377831/blog/y8ilxs7nfswjoshlij4z.webp'
+const typeFile = 'https://res.cloudinary.com/dcpdkock3/image/upload/v1698377831/blog/vhgqvp2jx4bt90tcrrof.webp'
+const webDev = 'https://res.cloudinary.com/dcpdkock3/image/upload/v1698377831/blog/o8uhw4gqb4wdjj6nrnef.webp'
+const NodeExpressServer = 'https://res.cloudinary.com/dcpdkock3/image/upload/v1698957906/blog/mcygclsb4g0jj5jrchuj.webp'
+const NodeExpressServerPackage = "https://res.cloudinary.com/dcpdkock3/image/upload/v1698969420/blog/articles/express-apollo-server/yfhq2ar29havuwrqkkvm.webp"
+const NodeExpressServerNodemon = "https://res.cloudinary.com/dcpdkock3/image/upload/v1698969281/blog/articles/express-apollo-server/cb6ipencimfoidlji9st.webp"
+const NodeExpressServerIndex = "https://res.cloudinary.com/dcpdkock3/image/upload/v1698969281/blog/articles/express-apollo-server/uetfdarc7lpqdbqfxvjb.webp"
 
 export type BlogArticleType = {
   id: number
@@ -46,105 +50,69 @@ export const spanish: BlogDataTypes = {
   blog: [
     {
       id: 1,
-      title: "¿Cómo instalar Linux Mint junto con Windows 11?",
-      meta: "Aprende cómo instalar Linux Mint junto a Windows 11.",
-      image: linuxWindowsArticle,
-      alt: "Pinguino de Linux y fondo de Windows",
-      blogPageSummary: "Esta guía te mostrará cómo correr Linux Mint y Windows juntos en un mismo PC.",
-      articleSummary: "Esta guía te mostrará cómo correr Linux Mint y Windows juntos en un mismo PC. Los pasos mencionados sirven para las distribuciones de Linux Mint. Bueno, veamos cómo arrancar Linux de forma dual en un sistema Windows.",
-      time: "5",
-      related: ["Windows", "Linux"],
+      title: "Arquitectura de servidor moderno y de alto rendimiento",
+      meta: "Este servidor está construido utilizando Node.js y Express para manejar las solicitudes HTTP. Utiliza TypeScript para agregar tipado estático a todo el código. La API se implementa utilizando GraphQL con Apollo Server como el servidor GraphQL. Los datos se almacenan en una base de datos PostgreSQL y se acceden a través de Prisma, un ORM (Object-Relational Mapping) para Node.js",
+      image: NodeExpressServer,
+      alt: "Diagrama de Arquitectura del Servidor con Node.js, Express, TypeScript, GraphQL, Apollo Server, PostgreSQL y Prisma",
+      blogPageSummary: "Guía para crear un Servidor con Node.js, Express, TypeScript, GraphQL, Apollo Server, PostgreSQL y Prisma.",
+      articleSummary: "Este servidor será construido utilizando Node.js y Express para manejar las solicitudes HTTP. Utiliza TypeScript para agregar tipado estático a todo el código. La API se implementa utilizando GraphQL con Apollo Server como el servidor GraphQL. Los datos se almacenan en una base de datos PostgreSQL y se acceden a través de Prisma, un ORM (Object-Relational Mapping) para Node.js.",
+      time: "15",
+      related: ["Node"],
       shared: ["Twitter", "LinkedIn"],
-      date: "Octubre 3, 2023",
+      date: "Noviembre 02, 2023",
       step: [
         {
-          title: "Haz una copia de seguridad [opcional]",
-          description: "Siempre es bueno tener una copia de seguridad, por si acaso pasa algo. Descarga la imagen ISO según tu sistema operativo de Windows.",
-          resource: "https://www.microsoft.com/en-us/software-download/"
+          title: "Preparando el Entorno: Instalación de Node y Configuración Inicial",
+          description: "Para comenzar, es esencial asegurarse de tener Node y un gestor de paquetes como npm, pnpm o yarn instalados en tu sistema. Una vez confirmada su instalación, puedes ejecutar el comando 'npm init -y' en la carpeta de tu elección desde la terminal. Esto establecerá una configuración básica para tu proyecto. En el siguiente paso, nos enfocaremos en la instalación de las dependencias necesarias para nuestro servidor.",
+          resource: "https://nodejs.org/",
         },
         {
-          title: "Descarga la distribución de Linux Mint",
-          description: "Ingresa al sitio oficial de Linux Mint y navega hacia la sección de descargas. Busca la distribución que más te guste y descárgala. Posiblemente tomará un poco de tiempo dependiendo de tu conexión a Internet.",
-          resource: "https://linuxmint.com/"
+          title: "Instalación de Dependencias",
+          description: "Antes que nada tienes el link al repo de github con todo el código en el link inferior. En este paso, instalaremos las dependencias necesarias para nuestro servidor. Comenzaremos instalando las dependencias y dependencias de desarrollo.",
+          resource: "https://github.com/alejandroyunes/express-apollo-postgres-prisma",
+          list: [
+            "npm i @apollo/server @apollo/client cors dotenv express graphql",
+            "npm i -D @types/cors @types/express @types/node nodemon prisma ts-node typescript",
+            "Asegúrate de crear los scripts de npm para ejecutar el servidor y el cliente."
+          ],
+          img: NodeExpressServerPackage,
+          imgAlt: "Paquetes de Node.js para el servidor",
+          imgHeight: "553",
+          imgWidth: "311"
         },
         {
-          title: "Descarga Rufus para crear unidades de arranque USB",
-          description: "Haz clic derecho sobre el instalador de Rufus y ejecútalo como administrador. Luego, en 'Dispositivo', selecciona la USB y en 'Seleccionar' busca la imagen ISO de Linux.  En 'Esquema de partición', es importante seleccionar 'GPT' si el sistema de destino es UEFI.  Haz clic en 'Empezar' y luego en 'OK' en el modo 'Imagen ISO (recomendado)'.",
-          resource: "https://rufus.ie/es/"
+          title: "Configuración de Nodemon y scripts de npm",
+          description: "Nodemon es una herramienta que nos permite reiniciar automáticamente el servidor cuando se detectan cambios en el código. Para configurarlo, creamos un archivo nodemon.json en la raíz del proyecto y agregamos el siguiente código:",
+          img: NodeExpressServerNodemon,
+          imgAlt: "Configuración de Nodemon para el servidor",
+          imgHeight: "112",
+          imgWidth: "283"
         },
         {
-          title: "Arranque desde el BIOS",
-          description: "Para acceder a nuestro BIOS depende de nuestro equipo, pero si al iniciar el equipo y presionando F2, F12 o F10 no funciona, debemos buscar con que botón permite ingresar al BIOS."
+          title: "Servidor web utilizando Express.js con GraphQL",
+          description: "Este código configura un servidor web Express habilitado para GraphQL en la ruta '/graphql' y proporciona una ruta raíz que responde con un mensaje hello world para rutas HTTP. Al ejecutarse, el servidor se inicia en el puerto 4000 y queda listo para atender solicitudes.",
+          img: NodeExpressServerIndex,
+          imgAlt: "Configuración de Nodemon para el servidor",
+          imgHeight: "565",
+          imgWidth: "507",
+          list: [
+            "El código importa bibliotecas como Express, CORS, dotenv y Apollo Server.",
+            "Configura un servidor Express en un puerto (4000 o definido por variable de entorno).",
+            "Define un servidor GraphQL con tipos y resolvers.",
+            "Configura middleware para manejar CORS y solicitudes JSON y URL codificadas.",
+            "Expone una ruta  para el servidor GraphQL.",
+            "Configura una ruta raíz que responde con Hello World!",
+            "Inicia el servidor Express y muestra mensajes en la consola con las URL del servidor web y GraphQL cuando está listo."
+          ]
         },
-        {
-          title: "Instalación de Linux Mint",
-          description: "El instalador de Linux Mint nos permite particionar nuestro disco duro. Debemos seleccionar 'OEM install' (for manufacturers), elegimos nuestros ajustes, y seguimos los pasos de instalación. Luego, seleccionamos 'Instalar Linux Mint junto a Windows Boot Manager. Ajustamos nuestro espacio de almacenamiento y continuamos."
-        },
-        {
-          title: "Seleccionar sistema operativo al iniciar",
-          description: "Ya solo nos queda reiniciar y seleccionar el sistema operativo que deseamos usar y disfrutar. 🍾🎉"
-        }
-      ]
-    },
-    {
-      id: 2,
-      title: "Explorando algunas Etiquetas HTML5 Poderosas para una Web Moderna",
-      meta: "Descubre el potencial de las etiquetas HTML5 para transformar tu web en una experiencia moderna e interactiva",
-      image: HTML5Img,
-      alt: "Logo HTML 5 para la web moderna",
-      blogPageSummary: "Descubre las Innovadoras Etiquetas HTML que Simplifican Nuestra Vida en la Web.",
-      articleSummary: "Me sorprende cuántas etiquetas desconocía; algunas de ellas ya las había explorado de manera superficial, mientras que otras apenas las había utilizado. A continuación, echaremos un vistazo a algunas de ellas.",
-      time: "4",
-      related: ["HTML"],
-      shared: ["Twitter", "LinkedIn"],
-      date: "Octubre 9, 2023",
-      step: [
-        {
-          title: "Comenzaremos nuestra lista con el elemento 'Dataset'",
-          description: "Para crear una entrada de datos y una lista, utilizamos tanto la etiqueta 'input' como 'datalist'. La propiedad 'list' del elemento 'input' hace referencia al 'datalist', lo que nos permite tener una entrada donde podemos ingresar datos.",
-          code: "<label for='languages'>language:</label>\n<input list='languages' id='language-choice' name='language-choice'>\n\n<datalist id='languages'>\n    <option value='Javascript'>\n    <option value='Java'>\n    <option value='Swift'>\n    <option value='Go'>\n    <option value='PHP'>\n</datalist>",
-          img: datasetImg,
-          imgAlt: "Ejemplo de elemento dataset de html",
-          imgWidth: "640",
-          imgHeight: "230"
-        },
-        {
-          title: "Inputs para capturar imagen, videos y audio",
-          description: "Este código HTML representa un formulario que permite a los usuarios cargar imágenes o videos en un servidor web.  El atributo capture nos permite acceder a la cámara de los dispositivos móviles.",
-          img: typeFile,
-          imgAlt: "código HTML para enviar fotos y videos al servidor nativo",
-          imgWidth: "566",
-          imgHeight: "310"
-        },
-        {
-          title: "La etiqueta <dialog> en HTML para Cuadros de Diálogo Modales",
-          description: "La etiqueta <dialog> en HTML se utiliza para crear un cuadro de diálogo modal en una página web. Un cuadro de diálogo modal es una ventana emergente que bloquea la interacción con el resto de la página hasta que el usuario interactúa con él o lo cierra.",
-          img: dialogHtmlImg,
-          imgAlt: "Código de ejemplo para un dialog en html",
-          imgWidth: "646",
-          imgHeight: "503"
-        },
-        {
-          title: "Uso de las Etiquetas <details> y <summary> en HTML para Contenido Colapsable",
-          description: "`<details>` y `<summary>` en HTML crean secciones colapsables. El contenido en `<details>` está oculto inicialmente y se expande al hacer clic en `<summary>`. Son útiles para mostrar información adicional de manera ordenada y permiten a los usuarios controlar qué contenido ver, mejorando la usabilidad web."
-        },
-        {
-          title: "Propiedad de HTML Popover nos muestra elemento flotable",
-          description: "Un popover es una ventana emergente que muestra información extra o opciones al interactuar con un elemento en una aplicación o sitio web. Se utiliza para ofrecer detalles adicionales y se puede cerrar haciendo clic en cualquier parte fuera de él.",
-          code: "<button id='popoverButton'>Mostrar Popover</button>\n<div id='popoverContent' class='popover'>This is an example.\n</div>"
-        },
-        {
-          title: "Definiendo Elementos de Búsqueda",
-          description: "El elemento <search> nos permite definir elementos que forman parte de una búsqueda, proporcionando una estructura para agrupar y organizar los componentes relacionados con la búsqueda.",
-          code: "<search>\n<form>\n<label for='search'>Buscar:</label>\n<input type='search' id='search' name='search' placeholder='Ingrese su búsqueda'>\n<button type='submit'>Buscar</button>\n</form>\n</search>"
-        },
+
         {
           description: "Si has llegado hasta aquí, te agradezco por tu atención. Espero que alguno de estos consejos de HTML te haya resultado útil."
         }
       ]
     },
     {
-      id: 3,
+      id: 2,
       title: "Guía de Carrera en Desarrollo Web",
       meta: "Descubre habilidades esenciales y perspectivas para una exitosa carrera en desarrollo web en nuestra guía integral.",
       image: webDev,
@@ -311,6 +279,105 @@ export const spanish: BlogDataTypes = {
             "Comprensión Contextual: Mantener la participación del usuario.",
             "Pruebas y Análisis."
           ]
+        }
+      ]
+    },
+    {
+      id: 3,
+      title: "Explorando algunas Etiquetas HTML5 Poderosas para una Web Moderna",
+      meta: "Descubre el potencial de las etiquetas HTML5 para transformar tu web en una experiencia moderna e interactiva",
+      image: HTML5Img,
+      alt: "Logo HTML 5 para la web moderna",
+      blogPageSummary: "Descubre las Innovadoras Etiquetas HTML que Simplifican Nuestra Vida en la Web.",
+      articleSummary: "Me sorprende cuántas etiquetas desconocía; algunas de ellas ya las había explorado de manera superficial, mientras que otras apenas las había utilizado. A continuación, echaremos un vistazo a algunas de ellas.",
+      time: "4",
+      related: ["HTML"],
+      shared: ["Twitter", "LinkedIn"],
+      date: "Octubre 9, 2023",
+      step: [
+        {
+          title: "Comenzaremos nuestra lista con el elemento 'Dataset'",
+          description: "Para crear una entrada de datos y una lista, utilizamos tanto la etiqueta 'input' como 'datalist'. La propiedad 'list' del elemento 'input' hace referencia al 'datalist', lo que nos permite tener una entrada donde podemos ingresar datos.",
+          code: "<label for='languages'>language:</label>\n<input list='languages' id='language-choice' name='language-choice'>\n\n<datalist id='languages'>\n    <option value='Javascript'>\n    <option value='Java'>\n    <option value='Swift'>\n    <option value='Go'>\n    <option value='PHP'>\n</datalist>",
+          img: datasetImg,
+          imgAlt: "Ejemplo de elemento dataset de html",
+          imgWidth: "640",
+          imgHeight: "230"
+        },
+        {
+          title: "Inputs para capturar imagen, videos y audio",
+          description: "Este código HTML representa un formulario que permite a los usuarios cargar imágenes o videos en un servidor web.  El atributo capture nos permite acceder a la cámara de los dispositivos móviles.",
+          img: typeFile,
+          imgAlt: "código HTML para enviar fotos y videos al servidor nativo",
+          imgWidth: "566",
+          imgHeight: "310"
+        },
+        {
+          title: "La etiqueta <dialog> en HTML para Cuadros de Diálogo Modales",
+          description: "La etiqueta <dialog> en HTML se utiliza para crear un cuadro de diálogo modal en una página web. Un cuadro de diálogo modal es una ventana emergente que bloquea la interacción con el resto de la página hasta que el usuario interactúa con él o lo cierra.",
+          img: dialogHtmlImg,
+          imgAlt: "Código de ejemplo para un dialog en html",
+          imgWidth: "646",
+          imgHeight: "503"
+        },
+        {
+          title: "Uso de las Etiquetas <details> y <summary> en HTML para Contenido Colapsable",
+          description: "`<details>` y `<summary>` en HTML crean secciones colapsables. El contenido en `<details>` está oculto inicialmente y se expande al hacer clic en `<summary>`. Son útiles para mostrar información adicional de manera ordenada y permiten a los usuarios controlar qué contenido ver, mejorando la usabilidad web."
+        },
+        {
+          title: "Propiedad de HTML Popover nos muestra elemento flotable",
+          description: "Un popover es una ventana emergente que muestra información extra o opciones al interactuar con un elemento en una aplicación o sitio web. Se utiliza para ofrecer detalles adicionales y se puede cerrar haciendo clic en cualquier parte fuera de él.",
+          code: "<button id='popoverButton'>Mostrar Popover</button>\n<div id='popoverContent' class='popover'>This is an example.\n</div>"
+        },
+        {
+          title: "Definiendo Elementos de Búsqueda",
+          description: "El elemento <search> nos permite definir elementos que forman parte de una búsqueda, proporcionando una estructura para agrupar y organizar los componentes relacionados con la búsqueda.",
+          code: "<search>\n<form>\n<label for='search'>Buscar:</label>\n<input type='search' id='search' name='search' placeholder='Ingrese su búsqueda'>\n<button type='submit'>Buscar</button>\n</form>\n</search>"
+        },
+        {
+          description: "Si has llegado hasta aquí, te agradezco por tu atención. Espero que alguno de estos consejos de HTML te haya resultado útil."
+        }
+      ]
+    },
+    {
+      id: 4,
+      title: "¿Cómo instalar Linux Mint junto con Windows 11?",
+      meta: "Aprende cómo instalar Linux Mint junto a Windows 11.",
+      image: linuxWindowsArticle,
+      alt: "Pinguino de Linux y fondo de Windows",
+      blogPageSummary: "Esta guía te mostrará cómo correr Linux Mint y Windows juntos en un mismo PC.",
+      articleSummary: "Esta guía te mostrará cómo correr Linux Mint y Windows juntos en un mismo PC. Los pasos mencionados sirven para las distribuciones de Linux Mint. Bueno, veamos cómo arrancar Linux de forma dual en un sistema Windows.",
+      time: "5",
+      related: ["Windows", "Linux"],
+      shared: ["Twitter", "LinkedIn"],
+      date: "Octubre 3, 2023",
+      step: [
+        {
+          title: "Haz una copia de seguridad [opcional]",
+          description: "Siempre es bueno tener una copia de seguridad, por si acaso pasa algo. Descarga la imagen ISO según tu sistema operativo de Windows.",
+          resource: "https://www.microsoft.com/en-us/software-download/"
+        },
+        {
+          title: "Descarga la distribución de Linux Mint",
+          description: "Ingresa al sitio oficial de Linux Mint y navega hacia la sección de descargas. Busca la distribución que más te guste y descárgala. Posiblemente tomará un poco de tiempo dependiendo de tu conexión a Internet.",
+          resource: "https://linuxmint.com/"
+        },
+        {
+          title: "Descarga Rufus para crear unidades de arranque USB",
+          description: "Haz clic derecho sobre el instalador de Rufus y ejecútalo como administrador. Luego, en 'Dispositivo', selecciona la USB y en 'Seleccionar' busca la imagen ISO de Linux.  En 'Esquema de partición', es importante seleccionar 'GPT' si el sistema de destino es UEFI.  Haz clic en 'Empezar' y luego en 'OK' en el modo 'Imagen ISO (recomendado)'.",
+          resource: "https://rufus.ie/es/"
+        },
+        {
+          title: "Arranque desde el BIOS",
+          description: "Para acceder a nuestro BIOS depende de nuestro equipo, pero si al iniciar el equipo y presionando F2, F12 o F10 no funciona, debemos buscar con que botón permite ingresar al BIOS."
+        },
+        {
+          title: "Instalación de Linux Mint",
+          description: "El instalador de Linux Mint nos permite particionar nuestro disco duro. Debemos seleccionar 'OEM install' (for manufacturers), elegimos nuestros ajustes, y seguimos los pasos de instalación. Luego, seleccionamos 'Instalar Linux Mint junto a Windows Boot Manager. Ajustamos nuestro espacio de almacenamiento y continuamos."
+        },
+        {
+          title: "Seleccionar sistema operativo al iniciar",
+          description: "Ya solo nos queda reiniciar y seleccionar el sistema operativo que deseamos usar y disfrutar. 🍾🎉"
         }
       ]
     }

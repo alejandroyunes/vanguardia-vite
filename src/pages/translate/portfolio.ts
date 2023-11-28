@@ -4,7 +4,7 @@ export const spanish = {
   meta: "Explora nuestro portafolio con diversos ejemplos de sitios web y aplicaciones web, desde proyectos personales hasta trabajos corporativos.",
   items: [
     {
-      title: 'Irrigador Dental',
+      title: 'Irrigadores Dental',
       subtitle: "Sitio web en React con un diseño único y altamente flexible que garantiza una completa capacidad de respuesta en todos los dispositivos.",
       image: 'https://res.cloudinary.com/dcpdkock3/image/upload/v1701188611/portfolio/dental-irrigator_xa3pyl.webp',
       alt: "Web application for dental irrigator",

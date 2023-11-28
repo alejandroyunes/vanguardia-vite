@@ -4,6 +4,15 @@ export const spanish = {
   meta: "Explora nuestro portafolio con diversos ejemplos de sitios web y aplicaciones web, desde proyectos personales hasta trabajos corporativos.",
   items: [
     {
+      title: 'Irrigador Dental',
+      subtitle: "Sitio web en React con un diseño único y altamente flexible que garantiza una completa capacidad de respuesta en todos los dispositivos.",
+      image: 'https://res.cloudinary.com/dcpdkock3/image/upload/v1701188611/portfolio/dental-irrigator_xa3pyl.webp',
+      alt: "Web application for dental irrigator",
+      url: "https://dental-irrigator.net",
+      technologies: ['React', 'Styled', 'TypeScript'],
+      github: 'https://github.com/alejandroyunes/oral-irrigators'
+    },
+    {
       title: 'Punkies y Cerebro',
       subtitle: "Construimos este sitio web utilizando tecnologías de vanguardia como Next, Strapi y Mongo. Nuestro énfasis se centra en un diseño único y altamente flexible que garantiza una completa capacidad de respuesta en todos los dispositivos.",
       image: 'https://res.cloudinary.com/dcpdkock3/image/upload/v1696903838/portfolio/v1mocn0dzxlin7t2qa1n.webp',
@@ -56,6 +65,15 @@ export const english = {
     subtitle: "In our portfolio, you will find a wide variety of examples that include the creation of websites and web applications, ranging from personal and collaborative projects to work for private companies.",
     meta: "In our portfolio, you will find a wide variety of examples that include the creation of websites and web applications, ranging from personal and collaborative projects to work for private companies.",
     items: [
+      {
+        title: 'Dental Irrigators',
+        subtitle: "This website with cutting-edge technologies such as React. Unique and highly flexible design, guaranteeing complete responsiveness on all devices.",
+        image: 'https://res.cloudinary.com/dcpdkock3/image/upload/v1701188611/portfolio/dental-irrigator_xa3pyl.webp',
+        alt: "Web application for dental irrigator",
+        url: "https://dental-irrigator.net",
+        technologies: ['React', 'Styled', 'TypeScript'],
+        github: 'https://github.com/alejandroyunes/oral-irrigators'
+      },
       {
         title: 'Punkies y Cerebro',
         subtitle: "We built this website with cutting-edge technologies such as Next, Strapi, and Mongo. Our emphasis is on unique and highly flexible design, guaranteeing complete responsiveness on all devices.",

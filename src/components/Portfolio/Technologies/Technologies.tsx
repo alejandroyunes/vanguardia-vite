@@ -5,6 +5,7 @@ import MongoDb from "./svgs/mongodb"
 import NextJs from "./svgs/nextjs"
 import Scss from "./svgs/scss"
 import Styled from "./svgs/styled"
+import React from './svgs/react'
 import Typescript from "./svgs/typescript"
 import { ToolContainer } from "./technolgies.styled"
 
@@ -32,6 +33,7 @@ function PortfolioItem({ item }: PortolioItemProps) {
     TypeScript: <Typescript />,
     HTML: <Html />,
     CSS: <Css />,
+    React: <React />
   }
 
   const selectedComponent = componentMap[item]

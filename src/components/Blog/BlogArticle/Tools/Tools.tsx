@@ -4,6 +4,7 @@ import Linux from "./svgs/linux"
 import NodeJS from "./svgs/node"
 import Systems from "./svgs/systems"
 import Windows from "./svgs/windows"
+import React from "./svgs/react"
 import { ToolContainer } from "./tools.styled"
 
 interface ToolsTypes {
@@ -26,7 +27,8 @@ function ToolsItem({ tool }: PortolioItemProps) {
     Systems: <Systems />,
     HTML: <Html />,
     JavaScript: <Javascript />,
-    Node: <NodeJS />
+    Node: <NodeJS />,
+    React: <React />
   }
 
   const selectedComponent = componentMap[tool]
@@ -42,7 +44,7 @@ export default function Tools({ tools }: ToolsTypes) {
       <ToolContainer key={index}>
 
         <div className="icon-svg">
-          <ToolsItem tool={tool} arial-label="svg icon"/>
+          <ToolsItem tool={tool} arial-label="svg icon" />
         </div>
 
         <div className="text">

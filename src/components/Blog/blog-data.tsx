@@ -17,6 +17,13 @@ const NodeExpressServerGraphQLExtract = "https://res.cloudinary.com/dcpdkock3/im
 const NodeExpressServerGraphQLTypeDefs = "https://res.cloudinary.com/dcpdkock3/image/upload/v1698988912/blog/articles/express-apollo-server/xdrmg8oq3grvkszwdjt4.webp"
 const NodeExpressServerPrisma = "https://res.cloudinary.com/dcpdkock3/image/upload/v1698990416/blog/articles/express-apollo-server/bchrvctdzhaf6iye6l8c.webp"
 const NextStyleX = "https://res.cloudinary.com/dcpdkock3/image/upload/v1702595741/blog/tfco6gqkkqrvwer8xhns.webp"
+const NextStyleXDependencies = "https://res.cloudinary.com/dcpdkock3/image/upload/v1702598521/blog/articles/next-app-style-x/a6d9i37uatdhabgmjxkx.webp"
+const NextStyleXBabel = "https://res.cloudinary.com/dcpdkock3/image/upload/v1702599012/blog/articles/next-app-style-x/ikeujy9dxxqepiscn9jg.webp"
+const NextStyleXTsConfig = "https://res.cloudinary.com/dcpdkock3/image/upload/v1702599163/blog/articles/next-app-style-x/vj5nd8ewqsfvp94n9cjy.webp"
+const NextStyleXEslint = "https://res.cloudinary.com/dcpdkock3/image/upload/v1702599324/blog/articles/next-app-style-x/jpp9emuygb4zv6xv52ah.webp"
+const NextStyleXNextConfig = "https://res.cloudinary.com/dcpdkock3/image/upload/v1702599513/blog/articles/next-app-style-x/cxy3zobcgsgxmp6iue3l.webp"
+
+
 
 export type BlogArticleType = {
   id: number
@@ -58,117 +65,76 @@ export const spanish: BlogDataTypes = {
   blog: [
     {
       id: 1,
-      title: "Next app con Stlye X",
-      meta: "Este servidor está construido utilizando Node.js y Express.  Utilizando GraphQL con Apollo Server como el servidor GraphQL. Los datos se almacenan en una base de datos PostgreSQL y se acceden a través de Prisma.",
+      title: "Next 14 app con Style X",
+      meta: "Una guía paso a paso para configurar la aplicación Next 14 con Style X. En el mundo siempre cambiante de la tecnología, mantenerse al día significa adoptar las últimas innovaciones.",
       image: NextStyleX,
-      alt: "Diagrama de Arquitectura del Servidor con Node.js, Express, TypeScript, GraphQL, Apollo Server, PostgreSQL y Prisma",
-      blogPageSummary: "Guía para crear un Servidor con Node.js, Express, TypeScript, GraphQL, Apollo Server, PostgreSQL y Prisma.",
-      articleSummary: "Este servidor será construido utilizando Node.js y Express para manejar las solicitudes HTTP. Utiliza TypeScript para agregar tipado estático a todo el código. La API se implementa utilizando GraphQL con Apollo Server como el servidor GraphQL. Los datos se almacenan en una base de datos PostgreSQL y se acceden a través de Prisma, un ORM (Object-Relational Mapping) para Node.js.",
-      time: "15",
-      related: ["Node"],
+      alt: "Next 14 app con Style X",
+      blogPageSummary: "Una guía paso a paso para configurar la aplicación Next 14 con Style X. En el mundo siempre cambiante de la tecnología, mantenerse al día significa adoptar las últimas innovaciones.",
+      articleSummary: "Una de esas innovaciones es Next 14, un framework poderoso que promete transformar tu aplicación web. Instalaremos también Style X para nuestros estilos. En esta guía, te guiaremos a través del proceso de instalación de la Next App y Style X.",
+      time: "10",
+      related: ["React"],
       shared: ["Twitter", "LinkedIn"],
-      date: "Noviembre 02, 2023",
+      date: "14 de diciembre de 2023",
       step: [
         {
-          title: "Preparando el Entorno: Instalación de Node y Configuración Inicial",
-          description: "Para comenzar, es esencial asegurarse de tener Node y un gestor de paquetes como npm, pnpm o yarn instalados en tu sistema. Una vez confirmada su instalación, puedes ejecutar el comando 'npm init -y' en la carpeta de tu elección desde la terminal. Esto establecerá una configuración básica para tu proyecto. En el siguiente paso, nos enfocaremos en la instalación de las dependencias necesarias para nuestro servidor.",
-          resource: "https://nodejs.org/",
+          title: "Configuración del entorno: Configuración inicial",
+          description: "Primeros pasos: Asegúrate de tener Node y un administrador de paquetes como npm, pnpm o yarn instalados en tu sistema. Una vez confirmado, ejecuta el comando 'npm init -y' en el directorio elegido desde la terminal. Esto establecerá una configuración básica del proyecto. En el siguiente paso, nos centraremos en instalar las dependencias necesarias para nuestra aplicación.",
+          resource: "https://nodejs.org/en",
         },
         {
-          title: "Instalación de Dependencias",
-          description: "Antes que nada tienes el link al repo de github con todo el código en el link inferior. En este paso, instalaremos las dependencias necesarias para nuestro servidor. Comenzaremos instalando las dependencias y dependencias de desarrollo.",
-          resource: "https://github.com/alejandroyunes/express-apollo-postgres-prisma",
+          title: "Instalación de dependencias",
+          description: "Primero y ante todo, tienes el enlace al repositorio de GitHub con todo el código en el enlace a continuación. En este paso, instalaremos las dependencias necesarias para nuestro servidor. Comenzaremos instalando tanto dependencias regulares como de desarrollo.",
+          resource: "https://github.com/alejandroyunes/stylex-next-app",
           list: [
-            "npm i @apollo/server @apollo/client cors dotenv express graphql",
-            "npm i -D @types/cors @types/express @types/node nodemon prisma ts-node typescript",
-            "Asegúrate de crear los scripts de npm para ejecutar el servidor y el cliente."
+            "Next 14",
+            "Style X",
+            "Babel",
+            "Typescript",
+            "Eslint"
           ],
-          img: NodeExpressServerPackage,
-          imgAlt: "Paquetes de Node.js para el servidor",
-          imgHeight: "553",
-          imgWidth: "311"
+          img: NextStyleXDependencies,
+          imgAlt: "Next 14 app con Style X",
+          imgHeight: "895",
+          imgWidth: "570"
         },
         {
-          title: "Configuración de Nodemon",
-          description: "Nodemon es una herramienta que nos permite reiniciar automáticamente el servidor cuando se detectan cambios en el código. Para configurarlo, creamos un archivo nodemon.json en la raíz del proyecto y agregamos el siguiente código:",
-          img: NodeExpressServerNodemon,
-          imgAlt: "Configuración de Nodemon para el servidor",
-          imgHeight: "112",
-          imgWidth: "283"
+          title: "Configuración de Babel",
+          description: "Babel es un compilador de JavaScript popular que permite a los desarrolladores escribir código en la última versión de ECMAScript (el nombre oficial de la especificación del lenguaje JavaScript) y luego transformarlo o transpilarlo a una versión anterior de JavaScript compatible con la mayoría de los navegadores y entornos:",
+          img: NextStyleXBabel,
+          imgAlt: "Configuración de Babel para la próxima aplicación y Style X",
+          imgHeight: "621",
+          imgWidth: "483"
         },
         {
           title: "Agregar tsconfig.json",
-          description: "Esta configuración define las opciones del compilador para un proyecto TypeScript, incluyendo detalles como la versión de destino, el soporte para decoradores experimentales, el sistema de módulos, y otras configuraciones relacionadas con la estricta comprobación de tipos. Además, establece las rutas de inclusión de archivos y directorios para el compilador TypeScript.",
-          img: NodeExpressServerTsConfig,
+          description: "Esta configuración define opciones del compilador para un proyecto TypeScript, incluyendo detalles como la versión de destino, el soporte para decoradores experimentales, el sistema de módulos y otras configuraciones relacionadas con la comprobación estricta de tipos. También establece las rutas de inclusión de archivos y directorios para el compilador TypeScript. Me gusta establecer el src/app porque estará bajo la carpeta de node_modules.",
+          img: NextStyleXTsConfig,
           imgAlt: "Configuración de tsconfig",
-          imgHeight: "382",
-          imgWidth: "400"
+          imgHeight: "1032",
+          imgWidth: "688"
         },
         {
-          title: "Servidor web utilizando Express.js con GraphQL",
-          description: "Este código configura un servidor web Express habilitado para GraphQL en la ruta '/graphql' y proporciona una ruta raíz que responde con un mensaje ' hello world' para rutas HTTP. Al ejecutarse, el servidor se inicia en el puerto 4000 y queda listo para atender solicitudes.",
-          img: NodeExpressServerIndex,
-          imgAlt: "Configuración de Index en expressjs",
-          imgHeight: "565",
-          imgWidth: "507",
-          list: [
-            "El código importa bibliotecas como Express, CORS, dotenv y Apollo Server.",
-            "Configura un servidor Express en un puerto (4000 o definido por variable de entorno).",
-            "Define un servidor GraphQL con tipos y resolvers.",
-            "Configura middleware para manejar CORS y solicitudes JSON y URL codificadas.",
-            "Inicia el servidor Express y muestra mensajes en la consola con las URL del servidor web y GraphQL cuando está listo."
-          ]
+          title: "Agregar eslintrc.js",
+          description: "ESLint es una herramienta ampliamente utilizada y de código abierto para el análisis estático de código en JavaScript. Ayuda a los desarrolladores a identificar y corregir problemas en su código mediante la aplicación de un conjunto de normas o reglas de codificación.",
+          img: NextStyleXEslint,
+          imgAlt: "Configuración de Eslint",
+          imgHeight: "265",
+          imgWidth: "597"
         },
         {
-          title: "Agregar configuración de GraphQL",
-          description: "Este código importa módulos, como el sistema de archivos 'fs' y 'path' de Node, y resuelve tipos GraphQL definidos en archivos. Luego, combina estos tipos en una sola definición 'typeDefs' y configura los resolvers para consultas y mutaciones relacionadas con usuarios y publicaciones.",
-          img: NodeExpressServerGraphQL,
-          imgAlt: "Configuración de GraphQL",
-          imgHeight: "273",
-          imgWidth: "700"
+          title: "Agregar next.config.js",
+          description: "next.config.js es un archivo de configuración utilizado en Next.js. Este archivo nos permite personalizar varios aspectos del proceso de construcción y del comportamiento en tiempo de ejecución de Next.js.",
+          img: NextStyleXNextConfig,
+          imgAlt: "Configuración de next config",
+          imgHeight: "265",
+          imgWidth: "597"
         },
         {
-          title: "Agregar resolvers para consultas y mutaciones",
-          description: "Este código define resolvers para consultas y mutaciones relacionadas con usuarios y publicaciones. Los resolvers son funciones que se ejecutan cuando se realiza una consulta o mutación GraphQL. Cada resolver recibe argumentos, realiza una operación y devuelve un resultado.",
-          img: NodeExpressServerGraphQLResolver,
-          imgAlt: "Configuración de GraphQL resolvers",
-          imgHeight: "273",
-          imgWidth: "700"
+          title: "Crear page.tsx y el diseño",
+          description: "Esta sección es bastante extensa, así que puedes copiar la página, el diseño y globalTokens.stylex.ts para completar la instalación de una aplicación Next limpia con Style X desde el repositorio de GitHub.",
         },
         {
-          title: "Funciones de resolución y gestión de usuarios en GraphQL con Prisma",
-          description: "Este código importa módulos relacionados con Prisma y GraphQL, y define funciones para interactuar con la base de datos y realizar operaciones relacionadas con usuarios. Estas operaciones incluyen obtener usuarios, obtener un usuario por ID y crear un nuevo usuario en la base de datos a través de Prisma. El código también incluye la extracción de selecciones GraphQL para determinar si se deben incluir detalles adicionales, como publicaciones, al obtener usuarios o un usuario específico.",
-          img: NodeExpressServerGraphQLServices,
-          imgAlt: "Configuración de servicios para GraphQL",
-          imgHeight: "827",
-          imgWidth: "620"
-        },
-        {
-          title: "Gestión de selecciones de campos en consultas GraphQL",
-          description: "Este código ofrece funciones para gestionar selecciones de campos en consultas GraphQL. Aprovecha la información de resolución GraphQL para extraer y procesar las selecciones de campos, lo que resulta valioso para determinar qué datos deben recuperarse de la base de datos en función de la consulta GraphQL. Además, en caso de que el campo no exista, proporciona un resultado vacío, mejorando el desempeño del sistema.",
-          img: NodeExpressServerGraphQLExtract,
-          imgAlt: "Gestión de selecciones de campos en consultas GraphQL",
-          imgHeight: "286",
-          imgWidth: "482"
-        },
-        {
-          title: "Adicionalmente, agregamos los typesDefs para usuario y publicación",
-          description: "Esto describe los types y mutations de GraphQL con tres tipos principales: 'User,' 'UserInput,' 'Query,' y 'Mutation.' El tipo 'User tiene campos como 'id,' 'email,' 'username,' y 'posts,' y se utiliza para representar usuarios y sus relaciones con publicaciones. 'UserInput' se utiliza para ingresar información de usuario en mutaciones. 'Query' proporciona operaciones para recuperar usuarios o un usuario específico. 'Mutation' ofrece operaciones para crear, actualizar y eliminar usuarios en la base de datos a través de GraphQL.",
-          img: NodeExpressServerGraphQLTypeDefs,
-          imgAlt: "Types y mutaciones de GraphQL",
-          imgHeight: "294",
-          imgWidth: "500"
-        },
-        {
-          title: "Esquema Prisma para Usuarios y Publicaciones en PostgreSQL",
-          description: "Este fragmento de código define un esquema Prisma que representa modelos de datos para usuarios y publicaciones en una base de datos PostgreSQL. También configura la generación del cliente de Prisma para interactuar con la base de datos.  Agregamos nuestra base de datos en el archivo .env, y luego ejecutamos el comando 'npx prisma generate' para generar el cliente de Prisma.",
-          img: NodeExpressServerPrisma,
-          imgAlt: "Schema de Prisma para usuarios y publicaciones",
-          imgHeight: "294",
-          imgWidth: "500"
-        },
-        {
-          description: "Si has llegado hasta aquí, te agradezco por tu atención. Espero que esta plantilla te pueda resultar útil."
+          description: "Si has llegado hasta aquí, te agradezco tu atención. Espero que esta plantilla te sea útil."
         }
       ]
     },
@@ -570,111 +536,70 @@ export const english: BlogDataTypes = {
       title: "Next 14 app with Style X",
       meta: "A Step-by-Step Guide to configure Next 14 App with Style X. In the ever-evolving world of technology, staying ahead means embracing the latest innovations.",
       image: NextStyleX,
-      alt: "Server Architecture Diagram with Node.js, Express, TypeScript, GraphQL, Apollo Server, PostgreSQL, and Prisma",
+      alt: "Next 14 app with Style X",
       blogPageSummary: "A Step-by-Step Guide to configure Next 14 App with Style X. In the ever-evolving world of technology, staying ahead means embracing the latest innovations.",
-      articleSummary: "One such innovation is the Next 14 app, a powerful tool that promises to transform your digital experience. To add a touch of sophistication and personalization, we'll be installing it with Style X. In this guide, we'll walk you through the process of installing the Next App and elevating it with Style X.",
-      time: "15",
+      articleSummary: "One such innovation is the Next 14 app, a powerful framework that promises to transform your web app. To add a the newest technology, we'll be installing it with Style X. In this guide, we'll walk you through the process of installing the Next App and elevating it with Style X.",
+      time: "10",
       related: ["React"],
       shared: ["Twitter", "LinkedIn"],
       date: "December 14, 2023",
       step: [
         {
-          title: "Setting Up the Environment: Installing Node and Initial Configuration",
-          description: "Getting Started: Ensure you have Node and a package manager like npm, pnpm, or yarn installed on your system. Once confirmed, run the 'npm init -y' command in your chosen directory from the terminal. This will establish a basic project configuration. In the next step, we'll focus on installing the necessary dependencies for our server.",
-          resource: "https://nodejs.org/",
+          title: "Setting Up the Environment: Initial Configuration",
+          description: "Getting Started: Ensure you have Node and a package manager like npm, pnpm, or yarn installed on your system. Once confirmed, run the 'npm init -y' command in your chosen directory from the terminal. This will establish a basic project configuration. In the next step, we'll focus on installing the necessary dependencies for our app.",
+          resource: "https://nodejs.org/en",
         },
         {
           title: "Dependency Installation",
           description: "First and foremost, you have the link to the GitHub repo with all the code in the link below. In this step, we'll install the necessary dependencies for our server. We'll start by installing both regular and development dependencies.",
-          resource: "https://github.com/alejandroyunes/express-apollo-postgres-prisma",
+          resource: "https://github.com/alejandroyunes/stylex-next-app",
           list: [
-            "npm i @apollo/server @apollo/client cors dotenv express graphql",
-            "npm i -D @types/cors @types/express @types/node nodemon prisma ts-node typescript",
-            "Make sure to create npm scripts for running the server and the client."
+            "Next 14",
+            "Style X",
+            "Babel",
+            "Typescript",
+            "Eslint"
           ],
-          img: NodeExpressServerPackage,
-          imgAlt: "Node.js packages for the server",
-          imgHeight: "553",
-          imgWidth: "311"
+          img: NextStyleXDependencies,
+          imgAlt: "Next 14 app with Style X",
+          imgHeight: "895",
+          imgWidth: "570"
         },
         {
-          title: "Setting up Nodemon",
-          description: "Nodemon is a tool that allows us to automatically restart the server when code changes are detected. To configure it, we create a nodemon.json file in the project's root directory and add the following code:",
-          img: NodeExpressServerNodemon,
-          imgAlt: "Nodemon configuration for the server",
-          imgHeight: "112",
-          imgWidth: "283"
+          title: "Setting up Babel",
+          description: "Babel is a popular JavaScript compiler that allows developers to write code in the latest version of ECMAScript (the official name for the JavaScript language specification) and then transform or transpile it into an older version of JavaScript that is compatible with most browsers and environments:",
+          img: NextStyleXBabel,
+          imgAlt: "Babel configuration for the next app and style x",
+          imgHeight: "621",
+          imgWidth: "483"
         },
         {
           title: "Add tsconfig.json",
-          description: "This configuration defines compiler options for a TypeScript project, including details like the target version, support for experimental decorators, the module system, and other settings related to strict type checking. It also sets the file and directory inclusion paths for the TypeScript compiler.",
-          img: NodeExpressServerTsConfig,
+          description: "This configuration defines compiler options for a TypeScript project, including details like the target version, support for experimental decorators, the module system, and other settings related to strict type checking. It also sets the file and directory inclusion paths for the TypeScript compiler. I like to set the src/app because it will be under the node_modules folder.",
+          img: NextStyleXTsConfig,
           imgAlt: "tsconfig configuration",
-          imgHeight: "382",
-          imgWidth: "400"
+          imgHeight: "1032",
+          imgWidth: "688"
         },
         {
-          title: "Creating a Web Server Using Express.js with GraphQL",
-          description: "This code configures an Express web server enabled for GraphQL at the '/graphql' endpoint and provides a root route that responds with a 'hello world' message for HTTP requests. When executed, the server starts on port 4000 and is ready to handle requests.",
-          img: NodeExpressServerIndex,
-          imgAlt: "expressjs index configuration",
-          imgHeight: "565",
-          imgWidth: "507",
-          list: [
-            "The code imports libraries such as Express, CORS, dotenv, and Apollo Server.",
-            "It configures an Express server on a port (either 4000 or as defined by an environment variable).",
-            "It defines a GraphQL server with types and resolvers.",
-            "It sets up middleware to handle CORS, JSON requests, and URL encoding.",
-            "It starts the Express server and displays messages in the console with the URLs for the web server and GraphQL when it's ready."
-          ]
+          title: "Add eslintrc.js",
+          description: "ESLint is a widely used open-source tool for static code analysis in JavaScript. It helps developers identify and fix problems in their code by enforcing a set of coding standards or rules.",
+          img: NextStyleXEslint,
+          imgAlt: "Eslint configuration",
+          imgHeight: "265",
+          imgWidth: "597"
         },
         {
-          title: "Adding GraphQL Configuration",
-          description: "This code imports modules, such as the Node 'fs' (file system) and 'path,' and resolves GraphQL types defined in files. It then combines these types into a single 'typeDefs' definition and configures resolvers for queries and mutations related to users and posts.",
-          img: NodeExpressServerGraphQL,
-          imgAlt: "GraphQL configuration",
-          imgHeight: "273",
-          imgWidth: "700"
+          title: "Add next.config.js",
+          description: "next.config.js is a configuration file used in Next.js, This file allows us to customize various aspects of the Next.js build process and runtime behavior.",
+          img: NextStyleXNextConfig,
+          imgAlt: "next config configuration",
+          imgHeight: "265",
+          imgWidth: "597"
         },
         {
-          title: "Adding Resolvers for Queries and Mutations",
-          description: "This code defines resolvers for queries and mutations related to users and posts. Resolvers are functions that are executed when a GraphQL query or mutation is made. Each resolver receives arguments, performs an operation, and returns a result.",
-          img: NodeExpressServerGraphQLResolver,
-          imgAlt: "Resolvers configuration for GraphQL",
-          imgHeight: "273",
-          imgWidth: "700"
-        },
-        {
-          title: "User Resolution and Management Functions in GraphQL with Prisma",
-          description: "This code imports modules related to Prisma and GraphQL and defines functions to interact with the database and perform user-related operations. These operations include getting users, fetching a user by ID, and creating a new user in the database using Prisma. The code also includes the extraction of GraphQL selections to determine whether additional details, such as posts, should be included when fetching users or a specific user.",
-          img: NodeExpressServerGraphQLServices,
-          imgAlt: "Setting up services for GraphQL",
-          imgHeight: "827",
-          imgWidth: "620"
-        },
-        {
-          title: "Managing Field Selections in GraphQL Queries",
-          description: "This code provides functions for managing field selections in GraphQL queries. It leverages GraphQL resolution information to extract and process field selections, which is valuable for determining what data should be retrieved from the database based on the GraphQL query. Additionally, if the field doesn't exist, it provides an empty result, improving system performance.",
-          img: NodeExpressServerGraphQLExtract,
-          imgAlt: "Managing Field Selections in GraphQL Queries",
-          imgHeight: "286",
-          imgWidth: "482"
-        },
-        {
-          title: "Additionally, we add the typeDefs for user and post.",
-          description: "This describes the GraphQL types and mutations with three main types: 'User,' 'UserInput,' 'Query,' and 'Mutation.' The 'User' type has fields like 'id,' 'email,' 'username,' and 'posts,' and it's used to represent users and their relationships with posts. 'UserInput' is used for entering user information in mutations. 'Query' provides operations to fetch users or a specific user. 'Mutation' offers operations to create, update, and delete users in the database through GraphQL.",
-          img: NodeExpressServerGraphQLTypeDefs,
-          imgAlt: "GraphQL Types and Mutations",
-          imgHeight: "294",
-          imgWidth: "500"
-        },
-        {
-          title: "Prisma Schema for Users and Posts in PostgreSQL",
-          description: "This code snippet defines a Prisma schema that represents data models for users and posts in a PostgreSQL database. It also configures the generation of the Prisma client to interact with the database. We add our database connection information in the .env file, and then run the 'npx prisma generate' command to generate the Prisma client.",
-          img: NodeExpressServerPrisma,
-          imgAlt: "Prisma Schema for Users and Posts",
-          imgHeight: "294",
-          imgWidth: "500"
+          title: "Create the page.tsx and the layout",
+          description: "This section is quite large, so you can go ahead and copy the page, layout and globalTokens.stylex.ts to complete the installattion of a clean Next app with Style X from the github repo.",
         },
         {
           description: "If you've made it this far, I thank you for your attention. I hope this template can be helpful to you."

@@ -4,6 +4,15 @@ export const spanish = {
   meta: "Explora nuestro portafolio con diversos ejemplos de sitios web y aplicaciones web, desde proyectos personales hasta trabajos corporativos.",
   items: [
     {
+      title: 'Epic Compras',
+      subtitle: "Este sitio de e-commerce está creado con Next 14 y el sistema de diseño styleX.",
+      image: 'https://res.cloudinary.com/dcpdkock3/image/upload/v1704797973/portfolio/esciaamhei52ngkt2oyr.webp',
+      alt: "Web application for Epic Compras",
+      url: "https://epicompras.vercel.app",
+      technologies: ['Next', 'TypeScript'],
+      github: 'https://github.com/alejandroyunes/epicompras'
+    },
+    {
       title: 'Irrigadores Dental',
       subtitle: "Sitio web en React con un diseño único y altamente flexible que garantiza una completa capacidad de respuesta en todos los dispositivos.",
       image: 'https://res.cloudinary.com/dcpdkock3/image/upload/v1701188611/portfolio/dental-irrigator_xa3pyl.webp',
@@ -61,63 +70,72 @@ export const spanish = {
 }
 
 export const english = {
-    title: "Portfolio",
-    subtitle: "In our portfolio, you will find a wide variety of examples that include the creation of websites and web applications, ranging from personal and collaborative projects to work for private companies.",
-    meta: "In our portfolio, you will find a wide variety of examples that include the creation of websites and web applications, ranging from personal and collaborative projects to work for private companies.",
-    items: [
-      {
-        title: 'Dental Irrigators',
-        subtitle: "This website with cutting-edge technologies such as React. Unique and highly flexible design, guaranteeing complete responsiveness on all devices.",
-        image: 'https://res.cloudinary.com/dcpdkock3/image/upload/v1701188611/portfolio/dental-irrigator_xa3pyl.webp',
-        alt: "Web application for dental irrigator",
-        url: "https://dental-irrigator.net",
-        technologies: ['React', 'Styled', 'TypeScript'],
-        github: 'https://github.com/alejandroyunes/oral-irrigators'
-      },
-      {
-        title: 'Punkies y Cerebro',
-        subtitle: "We built this website with cutting-edge technologies such as Next, Strapi, and Mongo. Our emphasis is on unique and highly flexible design, guaranteeing complete responsiveness on all devices.",
-        image: 'https://res.cloudinary.com/dcpdkock3/image/upload/v1696903838/portfolio/v1mocn0dzxlin7t2qa1n.webp',
-        alt: "Web application for punkies y cerebro",
-        url: "https://punkiesycerebro.com",
-        technologies: ['Next', 'SCSS', 'Styled', 'Mongo', 'TypeScript'],
-        github: 'https://github.com/alejandroyunes/punkies-tailwind'
-      },
-      {
-        title: 'Dr Puerta',
-        subtitle: "A Landing Page developed in Next, characterized by an original and highly adaptable design. This site features unique components that ensure an original and fully responsive experience on any device.",
-        image: 'https://res.cloudinary.com/dcpdkock3/image/upload/v1696903838/portfolio/t8gzzfw9wo74clefqi2v.webp',
-        alt: "Web application for dr puerta",
-        url: "https://www.drpuerta.com",
-        technologies: ['Next', 'SCSS', 'Styled', 'TypeScript'],
-        github: "https://github.com/alejandroyunes/drpuertanext"
-      },
-      {
-        title: 'Japanese Experience',
-        subtitle: "Our latest case study showcases a website developed exclusively using standard HTML, CSS, and JavaScript. It is distinguished by its original design and complete adaptability, ensuring an optimal experience on all devices.",
-        image: 'https://res.cloudinary.com/dcpdkock3/image/upload/v1696903839/portfolio/nkv4zg7ci419ytsmimwg.webp',
-        alt: "Web application for Japanese restaurant",
-        url: "https://capable-creponne-253cb7.netlify.app/",
-        technologies: ['HTML', 'CSS', 'JavaScript'],
-        github: "https://github.com/alejandroyunes/japanese-restaurant"
-      },
-      {
-        title: 'Iphone 12',
-        subtitle: "We present you an exciting case study of a website created with HTML, CSS, and vanilla JavaScript. It stands out for its authentic design and complete adaptability, ensuring an exceptional experience on all devices.",
-        image: 'https://res.cloudinary.com/dcpdkock3/image/upload/v1696903839/portfolio/ohcmabxhgemc3qlawbel.webp',
-        alt: "Case study for iphone web app",
-        url: "https://gentle-bonbon-985a86.netlify.app/",
-        technologies: ['HTML', 'CSS', 'JavaScript'],
-        github: "https://github.com/alejandroyunes/iphone12"
-      },
-      {
-        title: 'Hoteles.com',
-        subtitle: "Case study: Website in HTML, CSS, and vanilla JavaScript. Original and Responsive Design. Premium Image License (Unlimited Usage without Attribution).",
-        image: 'https://res.cloudinary.com/dcpdkock3/image/upload/v1696903838/portfolio/lnzoyc3jdf718jggxx6s.webp',
-        alt: "Case study app about 'https://res.cloudinary.com/dcpdkock3/image/upload/v1696903838/portfolio/lnzoyc3jdf718jggxx6s.webp'",
-        url: "https://hoteles-react.netlify.com",
-        technologies: ['HTML', 'CSS', 'JavaScript'],
-        github: "https://github.com/alejandroyunes/hotels-app-with-react"
-      }
-    ]
+  title: "Portfolio",
+  subtitle: "In our portfolio, you will find a wide variety of examples that include the creation of websites and web applications, ranging from personal and collaborative projects to work for private companies.",
+  meta: "In our portfolio, you will find a wide variety of examples that include the creation of websites and web applications, ranging from personal and collaborative projects to work for private companies.",
+  items: [
+    {
+      title: 'Epic Compras',
+      subtitle: "This e-commerce site is build with Next 14 and styleX design system.",
+      image: 'https://res.cloudinary.com/dcpdkock3/image/upload/v1704797973/portfolio/esciaamhei52ngkt2oyr.webp',
+      alt: "Web application for Epic Compras",
+      url: "https://epicompras.vercel.app",
+      technologies: ['Next', 'TypeScript'],
+      github: 'https://github.com/alejandroyunes/epicompras'
+    },
+    {
+      title: 'Dental Irrigators',
+      subtitle: "This website with cutting-edge technologies such as React. Unique and highly flexible design, guaranteeing complete responsiveness on all devices.",
+      image: 'https://res.cloudinary.com/dcpdkock3/image/upload/v1701188611/portfolio/dental-irrigator_xa3pyl.webp',
+      alt: "Web application for dental irrigator",
+      url: "https://dental-irrigator.net",
+      technologies: ['React', 'Styled', 'TypeScript'],
+      github: 'https://github.com/alejandroyunes/oral-irrigators'
+    },
+    {
+      title: 'Punkies y Cerebro',
+      subtitle: "We built this website with cutting-edge technologies such as Next, Strapi, and Mongo. Our emphasis is on unique and highly flexible design, guaranteeing complete responsiveness on all devices.",
+      image: 'https://res.cloudinary.com/dcpdkock3/image/upload/v1696903838/portfolio/v1mocn0dzxlin7t2qa1n.webp',
+      alt: "Web application for punkies y cerebro",
+      url: "https://punkiesycerebro.com",
+      technologies: ['Next', 'SCSS', 'Styled', 'Mongo', 'TypeScript'],
+      github: 'https://github.com/alejandroyunes/punkies-tailwind'
+    },
+    {
+      title: 'Dr Puerta',
+      subtitle: "A Landing Page developed in Next, characterized by an original and highly adaptable design. This site features unique components that ensure an original and fully responsive experience on any device.",
+      image: 'https://res.cloudinary.com/dcpdkock3/image/upload/v1696903838/portfolio/t8gzzfw9wo74clefqi2v.webp',
+      alt: "Web application for dr puerta",
+      url: "https://www.drpuerta.com",
+      technologies: ['Next', 'SCSS', 'Styled', 'TypeScript'],
+      github: "https://github.com/alejandroyunes/drpuertanext"
+    },
+    {
+      title: 'Japanese Experience',
+      subtitle: "Our latest case study showcases a website developed exclusively using standard HTML, CSS, and JavaScript. It is distinguished by its original design and complete adaptability, ensuring an optimal experience on all devices.",
+      image: 'https://res.cloudinary.com/dcpdkock3/image/upload/v1696903839/portfolio/nkv4zg7ci419ytsmimwg.webp',
+      alt: "Web application for Japanese restaurant",
+      url: "https://capable-creponne-253cb7.netlify.app/",
+      technologies: ['HTML', 'CSS', 'JavaScript'],
+      github: "https://github.com/alejandroyunes/japanese-restaurant"
+    },
+    {
+      title: 'Iphone 12',
+      subtitle: "We present you an exciting case study of a website created with HTML, CSS, and vanilla JavaScript. It stands out for its authentic design and complete adaptability, ensuring an exceptional experience on all devices.",
+      image: 'https://res.cloudinary.com/dcpdkock3/image/upload/v1696903839/portfolio/ohcmabxhgemc3qlawbel.webp',
+      alt: "Case study for iphone web app",
+      url: "https://gentle-bonbon-985a86.netlify.app/",
+      technologies: ['HTML', 'CSS', 'JavaScript'],
+      github: "https://github.com/alejandroyunes/iphone12"
+    },
+    {
+      title: 'Hoteles.com',
+      subtitle: "Case study: Website in HTML, CSS, and vanilla JavaScript. Original and Responsive Design. Premium Image License (Unlimited Usage without Attribution).",
+      image: 'https://res.cloudinary.com/dcpdkock3/image/upload/v1696903838/portfolio/lnzoyc3jdf718jggxx6s.webp',
+      alt: "Case study app about 'https://res.cloudinary.com/dcpdkock3/image/upload/v1696903838/portfolio/lnzoyc3jdf718jggxx6s.webp'",
+      url: "https://hoteles-react.netlify.com",
+      technologies: ['HTML', 'CSS', 'JavaScript'],
+      github: "https://github.com/alejandroyunes/hotels-app-with-react"
+    }
+  ]
 }

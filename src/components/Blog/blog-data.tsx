@@ -61,7 +61,7 @@ export interface BlogDataTypes {
 
 export const spanish: BlogDataTypes = {
   author: "Alejandro Cano",
-  description: "Un diseñador independiente y desarrollador front-end dedicado a mejorar la experiencia de todos en la web, con un enfoque centrado en la mejora progresiva y el perfeccionamiento constante.",
+  description: "Un diseñador independiente y desarrollador front-end dedicado a mejorar algo de la experiencia en la web, con un enfoque centrado en la mejora progresiva y el perfeccionamiento constante.",
   blog: [
     {
       id: 1,
@@ -529,7 +529,7 @@ export const spanish: BlogDataTypes = {
 
 export const english: BlogDataTypes = {
   author: "Alejandro Cano",
-  description: "A freelance designer and dedicated front-end developer committed to enhancing everyone's web experience, with a focus on progressive improvement and constant refinement.",
+  description: "A freelance designer and dedicated front-end developer committed to enhance something in web experience, with a focus on progressive improvement and constant refinement.",
   blog: [
     {
       id: 1,

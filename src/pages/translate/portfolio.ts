@@ -26,7 +26,7 @@ export const spanish = {
       subtitle: "Construimos este sitio web utilizando tecnologías de vanguardia como Next, Strapi y Mongo. Nuestro énfasis se centra en un diseño único y altamente flexible que garantiza una completa capacidad de respuesta en todos los dispositivos.",
       image: 'https://res.cloudinary.com/dcpdkock3/image/upload/v1696903838/portfolio/v1mocn0dzxlin7t2qa1n.webp',
       alt: "Aplicación web para punkies y cerebro",
-      url: "https://punkiesycerebro.com",
+      url: "https://punkies-tailwind.vercel.app/",
       technologies: ['Next', 'SCSS', 'Styled', 'Mongo', 'TypeScript'],
       github: 'https://github.com/alejandroyunes/punkies-tailwind'
     },
@@ -97,7 +97,7 @@ export const english = {
       subtitle: "We built this website with cutting-edge technologies such as Next, Strapi, and Mongo. Our emphasis is on unique and highly flexible design, guaranteeing complete responsiveness on all devices.",
       image: 'https://res.cloudinary.com/dcpdkock3/image/upload/v1696903838/portfolio/v1mocn0dzxlin7t2qa1n.webp',
       alt: "Web application for punkies y cerebro",
-      url: "https://punkiesycerebro.com",
+      url: "https://punkies-tailwind.vercel.app/",
       technologies: ['Next', 'SCSS', 'Styled', 'Mongo', 'TypeScript'],
       github: 'https://github.com/alejandroyunes/punkies-tailwind'
     },

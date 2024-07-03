@@ -51,7 +51,7 @@ export const english = {
       },
       {
         link: "About me",
-        path: "/about-me",
+        path: "/about",
       },
       {
         link: "Services",

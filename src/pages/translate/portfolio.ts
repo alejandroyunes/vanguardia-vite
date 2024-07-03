@@ -37,6 +37,28 @@ export const spanish = {
       github: "https://github.com/alejandroyunes/inmobiliaria-vue-scss",
     },
     {
+      title: "Solar Renewable Energy",
+      subtitle:
+        "Un sitio web desarrollado en Vue con un diseño exclusivo y extremadamente adaptable, garantizando una respuesta óptima en todos los dispositivos.",
+      image:
+        "https://res.cloudinary.com/dcpdkock3/image/upload/v1719990514/portfolio/sienar_ibbhsk.webp",
+      alt: "Web application for Sienar",
+      url: "https://sienar.ch/",
+      technologies: ["Vue", "TypeScript", "SCSS"],
+      github: "https://github.com/alejandroyunes/vue-solar",
+    },
+    {
+      title: "Elevate Your Sound",
+      subtitle:
+        "Un sitio web desarrollado en Vue con un diseño exclusivo y extremadamente adaptable, garantizando una respuesta óptima en todos los dispositivos.",
+      image:
+        "https://res.cloudinary.com/dcpdkock3/image/upload/v1719990776/portfolio/music_a4cm3u.webp",
+      alt: "Web application for Music PC",
+      url: "https://musicps.ch/",
+      technologies: ["Vue", "TypeScript", "SCSS"],
+      github: "https://github.com/alejandroyunes/vue-scss-music",
+    },
+    {
       title: "Punkies y Cerebro",
       subtitle:
         "Construimos este sitio web utilizando tecnologías de vanguardia como Next, Strapi y Mongo. Nuestro énfasis se centra en un diseño único y altamente flexible que garantiza una completa capacidad de respuesta en todos los dispositivos.",
@@ -131,6 +153,28 @@ export const english = {
       url: "https://estrella-immobilien.ch/",
       technologies: ["Vue", "TypeScript", "SCSS"],
       github: "https://github.com/alejandroyunes/inmobiliaria-vue-scss",
+    },
+    {
+      title: "Solar Renewable Energy",
+      subtitle:
+        "A website developed in Vue with an exclusive and extremely adaptable design, ensuring optimal responsiveness on all devices.",
+      image:
+        "https://res.cloudinary.com/dcpdkock3/image/upload/v1719990514/portfolio/sienar_ibbhsk.webp",
+      alt: "Web application for Sienar",
+      url: "https://sienar.ch/",
+      technologies: ["Vue", "TypeScript", "SCSS"],
+      github: "https://github.com/alejandroyunes/vue-solar",
+    },
+    {
+      title: "Elevate Your Sound",
+      subtitle:
+        "A website developed in Vue with an exclusive and extremely adaptable design, ensuring optimal responsiveness on all devices.",
+      image:
+        "https://res.cloudinary.com/dcpdkock3/image/upload/v1719990776/portfolio/music_a4cm3u.webp",
+      alt: "Web application for Music PC",
+      url: "https://musicps.ch/",
+      technologies: ["Vue", "TypeScript", "SCSS"],
+      github: "https://github.com/alejandroyunes/vue-scss-music",
     },
     {
       title: "Punkies y Cerebro",

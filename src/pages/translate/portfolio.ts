@@ -31,10 +31,10 @@ export const spanish = {
         "Sitio web en Vue con un diseño único y altamente flexible que garantiza una completa capacidad de respuesta en todos los dispositivos.",
       image:
         "https://res.cloudinary.com/dcpdkock3/image/upload/v1719990065/portfolio/estrella_vildgz.webp",
-      alt: "Web application for dental irrigator",
+      alt: "Web application for Estrella Immobilien",
       url: "https://estrella-immobilien.ch/",
       technologies: ["Vue", "TypeScript", "SCSS"],
-      github: "https://github.com/alejandroyunes/oral-irrigators",
+      github: "https://github.com/alejandroyunes/inmobiliaria-vue-scss",
     },
     {
       title: "Punkies y Cerebro",
@@ -120,6 +120,17 @@ export const english = {
       url: "https://dental-irrigator.net",
       technologies: ["React", "Styled", "TypeScript"],
       github: "https://github.com/alejandroyunes/oral-irrigators",
+    },
+    {
+      title: "Estrella Immobilien",
+      subtitle:
+        "A website in Vue with a unique and highly flexible design that ensures full responsiveness across all devices.",
+      image:
+        "https://res.cloudinary.com/dcpdkock3/image/upload/v1719990065/portfolio/estrella_vildgz.webp",
+      alt: "Web application for Estrella Immobilien",
+      url: "https://estrella-immobilien.ch/",
+      technologies: ["Vue", "TypeScript", "SCSS"],
+      github: "https://github.com/alejandroyunes/inmobiliaria-vue-scss",
     },
     {
       title: "Punkies y Cerebro",

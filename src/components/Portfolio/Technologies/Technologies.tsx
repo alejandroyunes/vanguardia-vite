@@ -1,21 +1,21 @@
-import Css from "./svgs/css"
-import Html from "./svgs/html"
-import Javascript from "./svgs/javascript"
-import MongoDb from "./svgs/mongodb"
-import NextJs from "./svgs/nextjs"
-import Scss from "./svgs/scss"
-import Styled from "./svgs/styled"
-import React from './svgs/react'
-import Typescript from "./svgs/typescript"
-import { ToolContainer } from "./technolgies.styled"
-
+import Css from "./svgs/css";
+import Html from "./svgs/html";
+import Javascript from "./svgs/javascript";
+import MongoDb from "./svgs/mongodb";
+import NextJs from "./svgs/nextjs";
+import Scss from "./svgs/scss";
+import Styled from "./svgs/styled";
+import React from "./svgs/react";
+import Typescript from "./svgs/typescript";
+import Vue from "./svgs/vue";
+import { ToolContainer } from "./technolgies.styled";
 
 interface TechnologiesTypes {
-  technologies: string[]
+  technologies: string[];
 }
 
 interface PortolioItemProps {
-  item: string
+  item: string;
 }
 
 interface ComponentMap {
@@ -23,7 +23,6 @@ interface ComponentMap {
 }
 
 function PortfolioItem({ item }: PortolioItemProps) {
-
   const componentMap: ComponentMap = {
     Next: <NextJs />,
     SCSS: <Scss />,
@@ -33,31 +32,24 @@ function PortfolioItem({ item }: PortolioItemProps) {
     TypeScript: <Typescript />,
     HTML: <Html />,
     CSS: <Css />,
-    React: <React />
-  }
+    React: <React />,
+    Vue: <Vue />,
+  };
 
-  const selectedComponent = componentMap[item]
-  return selectedComponent || null
+  const selectedComponent = componentMap[item];
+  return selectedComponent || null;
 }
 
 export default function Technologies({ technologies }: TechnologiesTypes) {
-  return (
-    technologies.map((tech, index) => (
+  return technologies.map((tech, index) => (
+    <ToolContainer key={index}>
+      <div className="icon-svg">
+        <PortfolioItem item={tech} />
+      </div>
 
-      <ToolContainer key={index}>
-
-        <div className="icon-svg">
-          <PortfolioItem item={tech} />
-        </div>
-
-        <div className="text">
-          <p>
-            {tech}
-          </p>
-        </div>
-
-      </ToolContainer>
-
-    ))
-  )
+      <div className="text">
+        <p>{tech}</p>
+      </div>
+    </ToolContainer>
+  ));
 }

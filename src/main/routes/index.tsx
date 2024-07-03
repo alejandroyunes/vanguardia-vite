@@ -1,61 +1,60 @@
-import { RouteObject } from "react-router-dom"
+import { RouteObject } from "react-router-dom";
 
-import App from '../../pages/app.tsx'
-import About from '../../pages/about.tsx'
-import Services from '../../pages/services.tsx'
-import Blog from '../../pages/blog.tsx'
-import Portfolio from '../../pages/portfolio.tsx'
-import ErrorPage from '../../pages/error-page.tsx'
+import App from "../../pages/app.tsx";
+import About from "../../pages/about.tsx";
+import Services from "../../pages/services.tsx";
+import Blog from "../../pages/blog.tsx";
+import Portfolio from "../../pages/portfolio.tsx";
+import ErrorPage from "../../pages/error-page.tsx";
 
-import BlogArticle from '../../components/Blog/BlogArticle/BlogArticle.tsx'
-import Layout from '../layout.tsx'
-import Contact from "../../pages/contact.tsx"
-import AlejandroPage from "../../pages/alejandro.tsx"
-
+import BlogArticle from "../../components/Blog/BlogArticle/BlogArticle.tsx";
+import Layout from "../layout.tsx";
+import Contact from "../../pages/contact.tsx";
+import AlejandroPage from "../../pages/alejandro.tsx";
 
 const routerConfig: RouteObject[] = [
   {
-    path: '/',
+    path: "/",
     element: <Layout />,
     children: [
       { index: true, element: <App /> },
       {
-        path: '/about-us',
+        path: "/about",
         element: <About />,
-        errorElement: <ErrorPage />
+        errorElement: <ErrorPage />,
       },
       {
-        path: '/services',
+        path: "/services",
         element: <Services />,
-        errorElement: <ErrorPage />
+        errorElement: <ErrorPage />,
       },
       {
-        path: '/portfolio',
+        path: "/portfolio",
         element: <Portfolio />,
-        errorElement: <ErrorPage />
+        errorElement: <ErrorPage />,
       },
       {
-        path: '/blog',
+        path: "/blog",
         element: <Blog />,
-        errorElement: <ErrorPage />
+        errorElement: <ErrorPage />,
       },
       {
-        path: '/contact',
+        path: "/contact",
         element: <Contact />,
-        errorElement: <ErrorPage />
+        errorElement: <ErrorPage />,
       },
       {
-        path: '/alejandro',
+        path: "/alejandro",
         element: <AlejandroPage />,
-        errorElement: <ErrorPage />
+        errorElement: <ErrorPage />,
       },
       {
-        path: '/blog-article/:id',
+        path: "/blog-article/:id",
         element: <BlogArticle />,
-        errorElement: <ErrorPage />
+        errorElement: <ErrorPage />,
       },
-    ]
+    ],
   },
 ];
 
-export default routerConfig
+export default routerConfig;

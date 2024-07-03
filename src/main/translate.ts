@@ -3,83 +3,85 @@ export const spanish = {
     links: [
       {
         link: "Inicio",
-        path: '/',
+        path: "/",
       },
       {
-        link: 'Nosotros',
-        path: '/about-us'
+        link: "Sobre Mi",
+        path: "/about",
       },
       {
-        link: 'Servicios',
-        path: '/services'
+        link: "Servicios",
+        path: "/services",
       },
       {
-        link: 'Portafolio',
-        path: '/portfolio'
+        link: "Portafolio",
+        path: "/portfolio",
       },
       {
-        link: 'Blog',
-        path: '/blog'
+        link: "Blog",
+        path: "/blog",
       },
       {
-        link: 'Contacto',
-        path: '/contact'
-      }
+        link: "Contacto",
+        path: "/contact",
+      },
     ],
-    arialLabel: 'Botón del menú',
+    arialLabel: "Botón del menú",
   },
   footer: {
     title: "Nuestra Oficina",
-    subtitle: "Agencia digital líder con sólida experiencia en diseño y desarrollo.",
+    subtitle:
+      "Agencia digital líder con sólida experiencia en diseño y desarrollo.",
     label: "El clima en Medellín:",
     socialLinkText: {
-      facebook: 'Visítanos en Facebook',
-      instagram: 'Visítanos en Instagram',
-      twitter: 'Visítanos en Twitter',
-      github: 'Visítanos en Github',
-    }
-  }
-}
+      facebook: "Visítanos en Facebook",
+      instagram: "Visítanos en Instagram",
+      twitter: "Visítanos en Twitter",
+      github: "Visítanos en Github",
+    },
+  },
+};
 
 export const english = {
   headerProps: {
     links: [
       {
         link: "Home",
-        path: '/',
+        path: "/",
       },
       {
-        link: 'About us',
-        path: '/about-us'
+        link: "About me",
+        path: "/about-me",
       },
       {
         link: "Services",
-        path: '/services',
+        path: "/services",
       },
       {
         link: "Portfolio",
-        path: '/portfolio',
+        path: "/portfolio",
       },
       {
         link: "Blog",
-        path: '/blog',
+        path: "/blog",
       },
       {
-        link: 'Contact',
-        path: '/contact'
-      }
+        link: "Contact",
+        path: "/contact",
+      },
     ],
-    arialLabel: 'Menu button',
+    arialLabel: "Menu button",
   },
   footer: {
     title: "Our Office",
-    subtitle: "Leading digital agency with a strong background in design and development.",
+    subtitle:
+      "Leading digital agency with a strong background in design and development.",
     label: "The weather in Medellín:",
     socialLinkText: {
-      facebook: 'Visit us on Facebook',
-      instagram: 'Visit us on Instagram',
-      twitter: 'Visit us on Twitter',
-      github: 'Visit us on GitHub',
-    }
-  }
-}
+      facebook: "Visit us on Facebook",
+      instagram: "Visit us on Instagram",
+      twitter: "Visit us on Twitter",
+      github: "Visit us on GitHub",
+    },
+  },
+};

@@ -128,7 +128,7 @@ export const english = {
       image:
         "https://res.cloudinary.com/dcpdkock3/image/upload/v1719988063/portfolio/epicompras_a6ptej.webp",
       alt: "Web application for Epic Compras",
-      url: "https://epicompras.vercel.app",
+      url: "https://epicompras.com",
       technologies: ["Vue", "TypeScript", "SCSS"],
       github: "https://github.com/alejandroyunes/epicompras",
     },
